@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import './HomeProjects.css'; 
 import Icons from "../components/Icon";
 import BodlaButton from './Button'; // Ensure this path is correct
-import image from '../images/oneDestination.jpg'; // Import the image
+import oneDestination from '../images/oneDestination.jpg';
+import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
+import businessHub from '../images/businessHub.jpg';
+import golfViewRumanza from '../images/golfViewRumanza.jpg';
 import bHomes from '../images/bHomes-logo.png'; // Import logos
 import bHub from '../images/BHub-logo.png';
 import oneD from '../images/OneD-logo.png';
@@ -32,7 +35,7 @@ const HomeProjects = () => {
                     { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
                 ], // Amenities for Business Hub
             },
-            backgroundImage: image, // Use the imported image
+            backgroundImage: businessHub, // Use the imported image
         },
         {
             label: 'One Destination',
@@ -50,7 +53,7 @@ const HomeProjects = () => {
                     { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
                 ],
             },
-            backgroundImage: image, // Use the imported image
+            backgroundImage: oneDestination, // Use the imported image
         },
         {
             label: 'Golf View Rumanza',
@@ -68,7 +71,7 @@ const HomeProjects = () => {
                     { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
                 ], // Amenities for Golf View Rumanza
             },
-            backgroundImage: image, // Use the imported image
+            backgroundImage: golfViewRumanza, // Use the imported image
         },
         {
             label: 'Bodla Homes',
@@ -86,7 +89,7 @@ const HomeProjects = () => {
                     { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
                 ],// Amenities for Bodla Homes
             },
-            backgroundImage: image, // Use the imported image
+            backgroundImage: bodlaHomes8Marla, // Use the imported image
         },
     ];
 
