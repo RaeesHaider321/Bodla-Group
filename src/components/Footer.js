@@ -10,7 +10,7 @@ function Footer() {
     <footer className="text-white">
       <div className="overlay">
         <Container>
-          <div data-aos="fade-up" data-aos-duration="1000">
+          <div data-aos="fade-up">
             <UnlockProperty />
           </div>
 
@@ -55,10 +55,10 @@ function Footer() {
                       <FaPhone size={30} /> 061-1111-26352
                     </li>
                     <li>
-                      <FaEnvelope size={30} /> info@bodlabuilders.com
+                      <FaEnvelope size={30} /> info@bodlagroup.com
                     </li>
                     <li>
-                      <FaHeadphones size={30} /> support@bodlabuilders.com
+                      <FaHeadphones size={30} /> support@bodlagroup.com
                     </li>
                     <li>
                       <span><FaLocationPinLock size={30} /></span>
