@@ -1,6 +1,5 @@
-// ContactForm.jsx
 import React, { useState } from "react";
-import { Form, InputGroup, Row, Col } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import emailjs from "emailjs-com";
 import Icons from "../components/Icon";
 import BodlaButton from './Button';
