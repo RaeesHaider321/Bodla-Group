@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Card, Button, Row, Col, Container } from 'react-bootstrap';
+import { Carousel, Card, Row, Col, Container } from 'react-bootstrap';
 import './BodlaUpdates.css';
 import update1 from '../images/update-1.jpg';
 import update2 from '../images/update-2.jpg';
