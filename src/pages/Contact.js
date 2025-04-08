@@ -33,7 +33,7 @@ const Contact = () => {
                           <Card>
                             <Card.Body>
                               <Card.Title>Email</Card.Title>
-                              <p>info@bodlabuilders.com.pk</p>
+                              <p>info@bodlagroup.com</p>
                             </Card.Body>
                           </Card>
                         </Col>

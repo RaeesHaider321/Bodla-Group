@@ -28,7 +28,7 @@ export default function HistoryTimeline() {
                     <Col xs={12} md={5} data-aos="fade-right">
                         <h1 className='mb-4'>A History in Creating
                             Timeless <span>Facades</span> of Craftsmanship</h1>
-                            <BodlaButton text="Sign Up" icon={<Icons name="rightArrow" />} variant="primary" link="/Register"  />
+                            <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
                     </Col>
                     <Col xs={12} md={7} data-aos="zoom-in">
                         <Row>
