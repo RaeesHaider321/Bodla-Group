@@ -26,9 +26,8 @@ export default function HistoryTimeline() {
             <Container>
                 <Row className="justify-content align-items-center">
                     <Col xs={12} md={5} data-aos="fade-right">
-                        <h1 className='mb-4'>A History in Creating
-                            Timeless <span>Facades</span> of Craftsmanship</h1>
-                            <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
+                        <h2 className='mb-4'>A History in Creating Timeless <span>Facades</span> of Craftsmanship</h2>
+                        <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
                     </Col>
                     <Col xs={12} md={7} data-aos="zoom-in">
                         <Row>

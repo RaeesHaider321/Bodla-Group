@@ -10,7 +10,7 @@ export default function AboutHome() {
                         <Image src={aboutehome} alt='' />
                     </Col>
                     <Col xs={12} md={6} className='content' data-aos="fade-left">
-                        <h1>We are an alternative <br/> asset manager,   investor & developer</h1>
+                        <h2>We are an alternative <br/> asset manager,   investor & developer</h2>
                     </Col>
                 </Row>
             </Container>

@@ -18,7 +18,7 @@ export default function UtilitiesList() {
         {/* Heading Section */}
         <Row className="justify-content-center text-center mb-4">
           <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="200">
-            <h1>Explore More on <br /><span>Bodla Group</span></h1>
+            <h2>Explore More on <br /><span>Bodla Group</span></h2>
             <p>Duis vel eros non libero blandit iaculis. Suspendisse potenti. Maecenas eu lorem et sapien accumsan pretium. Donec dolor mauris</p>
           </Col>
         </Row>

@@ -1,5 +1,5 @@
 .trustedAdvisors h1{
-    /* text-transform: uppercase; */
+    text-transform: capitalize;
     color: white;
 }
 .trustedAdvisors{

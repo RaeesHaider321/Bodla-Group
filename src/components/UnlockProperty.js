@@ -11,7 +11,7 @@ export default function UnlockProperty() {
         <Col xs={12} md={9} className='card'>
             <Row className='content'>
                 <Col xs={12} md={6}>
-                <h1>Unlock Your Dream property Today!</h1>
+                <h3>Unlock Your Dream property Today!</h3>
                 <p>By Sending this Form I conform that I’ve read and accepted the privacy policy.</p>
                 <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/"  />
                 </Col>

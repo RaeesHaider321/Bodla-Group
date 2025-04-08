@@ -68,7 +68,7 @@ const ProductSlider = () => {
             <Container>
                 <Row>
                     <Col data-aos="fade-up" data-aos-delay="200">
-                        <h1>Current <br/><span>Promotions</span></h1>
+                        <h2>Current <br/><span>Promotions</span></h2>
                     </Col>
                 </Row>
             </Container>

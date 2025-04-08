@@ -15,7 +15,7 @@ const services = [
 export default function HomeServices() {
   return (
     <Container>
-      <h1 className='text-end'>Our Areas of <span>Expertise</span></h1>
+      <h2 className='text-end'>Our Areas of <span>Expertise</span></h2>
       <Row className="g-4">
         {services.map((service, index) => (
           <Col xs={12} md={4} key={service.id} data-aos="fade-up" data-aos-delay={`${index * 100}`}>

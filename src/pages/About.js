@@ -72,7 +72,7 @@ const About = () => {
           <Carousel.Item key={index}>
             <Image src={item.image} />
             <Carousel.Caption>
-              <h1 data-aos="fade-up" data-aos-delay="300">{item.title}</h1>
+              <h2 data-aos="fade-up" data-aos-delay="300">{item.title}</h2>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
@@ -96,7 +96,7 @@ const About = () => {
                   <Image src={dhaBodla} alt='Bodla Builders' />
                 </Col>
                 <Col xs={6} md={6} data-aos="fade-left" data-aos-delay="400">
-                  <h1>Collaboration with <span>DHA Multan</span></h1>
+                  <h2>Collaboration with <span>DHA Multan</span></h2>
                   <p className="text-justify">While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.</p>
                 </Col>
               </Row>
@@ -170,7 +170,7 @@ const About = () => {
         <Container className='text-center'>
           <Row className='justify-content-center'>
             <Col xs={12} md={9} data-aos="fade-up" data-aos-delay="200">
-              <h1>Bodla Group expanded <br />its <span>entrepreneurial</span> footsteps</h1>
+              <h2>Bodla Group expanded <br />its <span>entrepreneurial</span> footsteps</h2>
               <p>To capitalise its business strengths...</p>
             </Col>
           </Row>
@@ -192,7 +192,7 @@ const About = () => {
           <Row>
             <Col>
               <Card body className='p-5 text-center' data-aos="zoom-in" data-aos-delay="300">
-                <h1>With our deep sensitivity and passion for what is possible in <span>Multan's Real Estate Industry</span>, we ensure that every project, every land, and every investment yields lasting value</h1>
+                <h2>With our deep sensitivity and passion for what is possible in <span>Multan's Real Estate Industry</span>, we ensure that every project, every land, and every investment yields lasting value</h2>
               </Card>
             </Col>
           </Row>

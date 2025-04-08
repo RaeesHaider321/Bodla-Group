@@ -35,7 +35,7 @@ function CarouselFadeExample() {
                             <Row className='justify-content-center align-items-center'>
                                 <Col xs={6} md={6} data-aos="zoom-in">
                                     <Card.Body>
-                                        <h1 data-aos="fade-right">{update.title}</h1>
+                                        <h4 data-aos="fade-right">{update.title}</h4>
                                     </Card.Body>
                                 </Col>
                                 <Col xs={6} md={6} data-aos="zoom-in" data-aos-delay="100">

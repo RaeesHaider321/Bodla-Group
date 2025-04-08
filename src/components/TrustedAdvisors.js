@@ -19,7 +19,7 @@ const Counter = () => {
             <Container>
                 <Row>
                     <Col xs={12} md={5}>
-                        <h1>your most <br/>trusted <span>real estate</span> advisors</h1>
+                        <h2>your most <br/>trusted <span>real estate</span> advisors</h2>
                     </Col>
                     <Col xs={12} md={7} ref={ref} className="countUp">
                         <Row className="justify-content-center">
@@ -30,9 +30,9 @@ const Counter = () => {
                                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
                                         transition={{ duration: 0.8, delay: index * 0.3 }}
                                     >
-                                        <h1>
+                                        <h2>
                                             {inView && <CountUp end={stat.value} duration={2} suffix={stat.suffix || ""} />}
-                                        </h1>
+                                        </h2>
                                         <p>{stat.label}</p>
                                     </motion.div>
                                 </Col>
