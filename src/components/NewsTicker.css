@@ -1,0 +1,37 @@
+.news-ticker {
+    width: 100%;
+    overflow: hidden;
+    background: var(--golden-gradient);
+    color: var(--background);
+    padding: 0;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .ticker-content.paused {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  
+  .ticker-item {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+ 

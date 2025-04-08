@@ -1,0 +1,17 @@
+.trustedAdvisors h1{
+    /* text-transform: uppercase; */
+    color: white;
+}
+.trustedAdvisors{
+  background: var(--primary-gradient);
+  }
+.trustedAdvisors .overlay{
+    background: url('../images/blue-textureL.png') left top no-repeat;
+    width: 100%;
+    padding: 100px 0;
+    background-size: 45%;
+  }
+  .trustedAdvisors .overlay .row{
+    align-items: center;
+  }
+ 

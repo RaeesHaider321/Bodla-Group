@@ -1,0 +1,81 @@
+.slider-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+  }
+  
+  .product-item {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  .product-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link fill the entire card */
+}
+
+.product-link:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+
+.arrow {
+    top: -50px;
+    position: absolute;
+    border-radius: 100%;
+    background: var(--white);
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.arrow span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.arrow svg{
+    width: 70%;
+    fill: var(--primary);
+}
+.arrow.prev {
+    right: 12.5%;
+}
+.arrow.next{
+    right: 9%;
+}
+.arrow:hover{
+    background: var(--primary);
+}
+.arrow:hover svg{
+    fill: var(--white);
+}
+
+.slick-list .slick-track{
+    display: flex;
+    gap: 5px;
+}
+.product-item.card .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em; /* Adjust based on line height */
+    line-height: 1.5em; /* Set line height for proper spacing */
+  }
+  

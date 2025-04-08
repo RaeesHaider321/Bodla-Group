@@ -1,0 +1,23 @@
+.team{
+    text-align: justify;
+}
+.chairman-card {
+    padding: 3vw;
+}
+
+.designation {
+    background: linear-gradient(90deg, #B28425, #E4A730, #FFD16E, #CE9A2C, #9A681B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+}
+
+.team-social {
+    border-top: 0;
+}
+
+.team-social .social-icon {
+    width: 36px;
+    height: 36px;
+}
