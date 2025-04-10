@@ -131,7 +131,7 @@ const DHAMultan = () => {
           <Container>
             <Row>
               <Col xs={12} md={9}>
-                <h1>Collaboration with <br /><span>DHA Multan</span></h1>
+                <h3>Collaboration with <br /><span>DHA Multan</span></h3>
               </Col>
               <Col xs={12} md={3} className='text-end'>
               <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/" />

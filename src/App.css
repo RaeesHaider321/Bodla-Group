@@ -129,23 +129,15 @@ ul, li, a {
 }
 
 .carousel-caption {
-  left: 28%;
-  right: 28%;
-  height: 85vh;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100%;
   justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.4);
 }
-
-/* .carousel-caption h1 {
-  width: 100%;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-.carousel-caption h1 span {
-  font-size: 3rem;
-  font-weight: 700;
-} */
 
 .custom-carousel, .custom-img {
   height: 85vh;

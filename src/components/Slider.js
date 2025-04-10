@@ -1,4 +1,4 @@
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Row, Col } from 'react-bootstrap';
 import BookACallButton from './BookACallButton';
 import Icons from "../components/Icon"; 
 import oneDestination from '../images/oneDestination.jpg';
@@ -54,7 +54,8 @@ function NoTransitionExample() {
             alt={item.alt} 
           />
           <Carousel.Caption>
-            <div>
+            <Row className="justify-content-center align-items-center">
+              <Col xs={11} md={6}>
               <h1 data-aos="zoom-in">
                 {item.titlePart1} <span>{item.titlePart2}</span>
               </h1>
@@ -63,7 +64,8 @@ function NoTransitionExample() {
                 icon={<Icons name="rightArrow" />} 
                 link="/Contact"
               />
-            </div>
+              </Col>
+            </Row>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
