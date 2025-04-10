@@ -12,11 +12,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import ProjectDetail from "./pages/ProjectDetail";
+import ProjectDetails from "./pages/ProjectDetail";
 import Services from "./pages/Services";
-import ServiceDetail from "./pages/ServiceDetail";
+import ServiceDetails from "./pages/ServiceDetails";
 import Team from "./pages/Team";
 import DHAMultan from "./pages/DHAMultan";
+
 
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
@@ -64,9 +65,11 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Projects" element={<Projects />} />
-            <Route path="/Projects/:id" element={<ProjectDetail />} />
+            <Route path="/projects/:projectSlug" element={<ProjectDetails />} />
+            {/* <Route path="/Services" element={<Services />} />
+            <Route path="/Services/:servicesSlug" element={<ServiceDetail />} /> */}
             <Route path="/Services" element={<Services />} />
-            <Route path="/Services/:id" element={<ServiceDetail />} />
+            <Route path="/services/:serviceSlug" element={<ServiceDetails />} />
             <Route path="/DHAMultan" element={<DHAMultan />} />
             <Route path="/Team" element={<Team />} />
             <Route path="*" element={<NotFound />} />
