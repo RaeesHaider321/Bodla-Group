@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import NotFound from "./NotFound";
 const ServiceDetail = () => {
   const { id } = useParams();
 
@@ -16,7 +17,7 @@ const ServiceDetail = () => {
   const service = services.find((serv) => serv.id === parseInt(id));
 
   if (!service) {
-    return <Container>Service not found!</Container>;
+    return <NotFound />;
   }
 
   return (
