@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image, Card, ListGroup, Accordion } from 'react-bootstrap';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
+import NotFound from '../pages/NotFound'
 
 import service1 from '../images/businessHub.jpg';
 import service2 from '../images/businessHub.jpg';
@@ -146,7 +147,7 @@ const ServiceDetails = () => {
   const service = serviceDetails[serviceSlug];
 
   if (!service) {
-    return <div>Service not found</div>;
+    return <Container><NotFound/></Container>;
   }
 
   return (

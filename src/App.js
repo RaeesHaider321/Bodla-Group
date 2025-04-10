@@ -65,11 +65,9 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Projects" element={<Projects />} />
-            <Route path="/projects/:projectSlug" element={<ProjectDetails />} />
-            {/* <Route path="/Services" element={<Services />} />
-            <Route path="/Services/:servicesSlug" element={<ServiceDetail />} /> */}
+            <Route path="/Projects/:projectSlug" element={<ProjectDetails />} />
             <Route path="/Services" element={<Services />} />
-            <Route path="/services/:serviceSlug" element={<ServiceDetails />} />
+            <Route path="/Services/:serviceSlug" element={<ServiceDetails />} />
             <Route path="/DHAMultan" element={<DHAMultan />} />
             <Route path="/Team" element={<Team />} />
             <Route path="*" element={<NotFound />} />
