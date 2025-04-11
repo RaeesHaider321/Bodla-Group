@@ -1,9 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Row, Col, Image, Carousel, Card, CardBody } from 'react-bootstrap';
+import { Container, Row, Col, Image, Carousel, Card, CardBody, Table } from 'react-bootstrap';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
 import NotFound from '../pages/NotFound';
+import PageTitle from '../components/PageTitle';
 
 // Project Images (import all projects' images here)
 import oneDestination from '../images/oneDestination.jpg';
@@ -43,12 +44,19 @@ const projectTemplate = {
   video: sectorV, // default video
   floorPlans: [], // array of floor plan images
   virtualTour: virtualtour,
-  nearbyPlaces: [
-    'Place 1',
-    'Place 2',
-    'Place 3',
-    // Add more nearby places
-  ]
+  nearbyPlaces: [],
+  pricingPlans: [
+    {
+      category: '',
+      floor: '',
+      ratePerSft: '',
+      booking: '',
+      downPayment: '',
+      installmentPlan: '',
+      annualPayments: '',
+      onPossession: ''
+    }
+  ],
 };
 
 // Project Details Data
@@ -100,12 +108,106 @@ const projectDetails = {
         title: 'Area Unit Converter',
       }
     ],
+    nearbyPlaces: [
+      {
+        icon: 'mosque', // name of the icon from your Icons component
+        title: 'International Airport',
+      },
+      {
+        icon: 'mosque',
+        title: 'University',
+      },
+      {
+        icon: 'mosque',
+        title: 'Motorways',
+      },
+      {
+        icon: 'mosque',
+        title: 'Hospital',
+      },
+      {
+        icon: 'mosque',
+        title: 'Bypass Road',
+      },
+    ],
     images: [businessHub, oneDestination, bodlaHomes8Marla, golfViewRumanza],
     floorPlans: [floor1, floor1, floor1, floor1], // array of floor plan images
     location: 'DHA Multan, Pakistan',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.9287473577783!2d71.55361441037263!3d30.296090006500197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3924cbd1167128b5%3A0x79d6c7b73dd41cef!2sBusiness%20Hub%2C%20DHA%20Multan!5e0!3m2!1sen!2s!4v1744012574158!5m2!1sen!2s',
     size: '5 Acres',
-    status: 'Ongoing'
+    status: 'Ongoing',
+    pricingPlans: [
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Spacious Office',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Shops',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Restaurants',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: '1-3 Bed Luxury Apartments',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      }
+    ],
   },
   'one-destination': {
     ...projectTemplate,
@@ -151,6 +253,100 @@ const projectDetails = {
       {
         icon: 'mosque',
         title: 'Area Unit Converter',
+      }
+    ],
+    nearbyPlaces: [
+      {
+        icon: 'mosque', // name of the icon from your Icons component
+        title: 'International Airport',
+      },
+      {
+        icon: 'mosque',
+        title: 'University',
+      },
+      {
+        icon: 'mosque',
+        title: 'Motorways',
+      },
+      {
+        icon: 'mosque',
+        title: 'Hospital',
+      },
+      {
+        icon: 'mosque',
+        title: 'Bypass Road',
+      },
+    ],
+    pricingPlans: [
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Spacious Office',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Shops',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Restaurants',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: '1-3 Bed Luxury Apartments',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
       }
     ],
     images: [oneDestination, businessHub, golfViewRumanza, bodlaHomes8Marla],
@@ -202,6 +398,100 @@ const projectDetails = {
       {
         icon: 'mosque',
         title: 'Area Unit Converter',
+      }
+    ],
+    nearbyPlaces: [
+      {
+        icon: 'mosque', // name of the icon from your Icons component
+        title: 'International Airport',
+      },
+      {
+        icon: 'mosque',
+        title: 'University',
+      },
+      {
+        icon: 'mosque',
+        title: 'Motorways',
+      },
+      {
+        icon: 'mosque',
+        title: 'Hospital',
+      },
+      {
+        icon: 'mosque',
+        title: 'Bypass Road',
+      },
+    ],
+    pricingPlans: [
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Spacious Office',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Shops',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Restaurants',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: '1-3 Bed Luxury Apartments',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
       }
     ],
     images: [golfViewRumanza, oneDestination, businessHub, bodlaHomes8Marla],
@@ -256,6 +546,100 @@ const projectDetails = {
         title: 'Area Unit Converter',
       }
     ],
+    nearbyPlaces: [
+      {
+        icon: 'mosque', // name of the icon from your Icons component
+        title: 'International Airport',
+      },
+      {
+        icon: 'mosque',
+        title: 'University',
+      },
+      {
+        icon: 'mosque',
+        title: 'Motorways',
+      },
+      {
+        icon: 'mosque',
+        title: 'Hospital',
+      },
+      {
+        icon: 'mosque',
+        title: 'Bypass Road',
+      },
+    ],
+    pricingPlans: [
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Commercial Outlet',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Spacious Office',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Shops',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: 'Food Court Restaurants',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      },
+      {
+        category: '1-3 Bed Luxury Apartments',
+        floor: 'GF',
+        ratePerSft: '45,000',
+        booking: '5%',
+        downPayment: '25%',
+        installmentPlan: '3 Years',
+        annualPayments: '2 x 10%',
+        onPossession: '10%'
+      }
+    ],
     images: [bodlaHomes8Marla, golfViewRumanza, oneDestination, businessHub],
     floorPlans: [floor4, floor4, floor4, floor4], // array of floor plan images
     location: 'DHA Multan, Pakistan',
@@ -283,10 +667,8 @@ const ProjectDetails = () => {
               <h2>{project.title} <span>{project.spantitle}</span></h2>
             </Col>
           </Row>
-        </Container>
 
-        {/* Image Carousel */}
-        <Container>
+          {/* Image Carousel */}
           <Carousel className='mt-3' fade indicators={false} controls={false} interval={3000} pause={true}>
             {project.images.map((image, index) => (
               <Carousel.Item key={index}>
@@ -345,39 +727,34 @@ const ProjectDetails = () => {
             </CardBody>
           </Card>
         </Container>
-      </section>
-
-      {/* Nearby Places Section */}
-      <section>
-        <Container className='text-center'>
-          <h2 className='mb-4'>Nearby Places</h2>
-          <Row className='gy-3'>
-            {project.nearbyPlaces.map((place, index) => (
-              <Col xs={6} md={3} key={index}>
-                <Card className='h-100'>
+        {/* Nearby Places Section */}
+        <Container className='text-center mt-5'>
+          <PageTitle title="Nearby Places" data-aos="fade-up" />
+          <Row className='justify-content-center gy-4'>
+            {project.nearbyPlaces.map((nearby, index) => (
+              <Col xs={12} md={2} key={index}>
+                <Card className="h-100 amenity-card">
                   <CardBody>
-                    <Icons name="location" className='mb-2' />
-                    <p>{place}</p>
+                    <Row className="d-flex align-items-center">
+                      <Icons name={nearby.icon} />
+                      <p>{nearby.title}</p>
+                    </Row>
                   </CardBody>
                 </Card>
               </Col>
             ))}
           </Row>
         </Container>
-      </section>
-
-      {/* Virtual Tour Section */}
-      <section className='text-center'>
-        <h2 className='mb-4'>Virtual Tour</h2>
-        <div className='virtualtour mt-4'>
-          <Image src={project.virtualTour} alt='Virtual Tour' fluid />
-        </div>
-      </section>
-
-      {/* Floor Plans Section */}
-      <section>
-        <Container className='text-center'>
-          <h2 className='mb-4'>Floor Plans</h2>
+        {/* Virtual Tour Section */}
+        <Container className='text-center mt-5'>
+          <h2 className='mb-4'>Virtual Tour</h2>
+          <div className='virtualtour mt-4'>
+            <Image src={project.virtualTour} alt='Virtual Tour' fluid />
+          </div>
+        </Container>
+        {/* Floor Plans Section */}
+        <Container className='text-center mt-5'>
+          <PageTitle title="Floor Plans" data-aos="fade-up" />
           <Row className='gy-4'>
             {project.floorPlans.map((plan, index) => (
               <Col xs={12} md={6} key={index}>
@@ -386,14 +763,11 @@ const ProjectDetails = () => {
             ))}
           </Row>
         </Container>
-      </section>
-
-      {/* Video Section */}
-      <section>
-        <Container>
+        {/* Video Section */}
+        <Container className='text-center mt-5'>
           <Row className='justify-content-center'>
             <Col xs={12} lg={10}>
-              <h2 className='text-center mb-4'>Project Video</h2>
+              <PageTitle title="Project Video" data-aos="fade-up" />
               <video width="100%" controls>
                 <source src={project.video} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -401,22 +775,19 @@ const ProjectDetails = () => {
             </Col>
           </Row>
         </Container>
-      </section>
-
-      {/* Amenities and Project Facts Section */}
-      <section className="text-center">
-        <Container>
+        {/* Amenities and Project Facts Section */}
+        <Container className='text-center mt-5'>
           <Row className="gy-4">
             <Col xs={12} lg={12}>
-              <h2 className="mb-4">Amenities and Features</h2>
+              <PageTitle title="Amenities and Features" data-aos="fade-up" />
               <Row className='justify-content-center gy-4'>
-              {project.amenities.map((amenity, index) => (
+                {project.amenities.map((amenity, index) => (
                   <Col xs={12} md={2} key={index}>
                     <Card className="h-100 amenity-card">
                       <CardBody>
                         <Row className="d-flex align-items-center">
-                        <Icons name={amenity.icon}/>
-                        <p>{amenity.title}</p>
+                          <Icons name={amenity.icon} />
+                          <p>{amenity.title}</p>
                         </Row>
                       </CardBody>
                     </Card>
@@ -424,81 +795,40 @@ const ProjectDetails = () => {
                 ))}
               </Row>
             </Col>
-
-            {/* <Col xs={12} lg={4}>
-              <Card className="shadow-sm">
-                <Card.Body>
-                  <h4 className="mb-4">Project Facts</h4>
-                  <ul className="list-unstyled">
-                    <li className="mb-3">
-                      <strong>Location:</strong> {project.location}
-                    </li>
-                    <li className="mb-3">
-                      <strong>Size:</strong> {project.size}
-                    </li>
-                    <li className="mb-3">
-                      <strong>Status:</strong> {project.status}
-                    </li>
-                    <li className="mb-3">
-                      <strong>Developer:</strong> Bodla Group
-                    </li>
-                  </ul>
-                  <div className="d-grid gap-2">
-                    <BodlaButton
-                      text="Book Now"
-                      icon={<Icons name="rightArrow" />}
-                      variant="primary"
-                      link="/contact"
-                    />
-                    <BodlaButton
-                      text="Download Brochure"
-                      icon={<Icons name="download" />}
-                      variant="outline-primary"
-                      link="#"
-                    />
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col> */}
-          </Row>
-
-          {/* Gallery Section */}
-          <Row className="mt-5">
-            <Col xs={12}>
-              <h3 className="mb-4">Gallery</h3>
-              <Row className="g-3">
-                {project.images.map((image, index) => (
-                  <Col xs={6} md={3} key={index}>
-                    <Image
-                      src={image}
-                      alt={`${project.title} - ${index + 1}`}
-                      fluid
-                      className="rounded shadow-sm"
-                      style={{ height: '200px', width: '100%', objectFit: 'cover' }}
-                    />
-                  </Col>
-                ))}
-              </Row>
-            </Col>
           </Row>
         </Container>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="py-5 bg-primary text-white">
-        <Container>
-          <Row className="align-items-center">
-            <Col xs={12} md={8}>
-              <h3>Interested in {project.title}?</h3>
-              <p className="mb-md-0">Contact our sales team for more information and booking details.</p>
-            </Col>
-            <Col xs={12} md={4} className="text-md-end">
-              <BodlaButton
-                text="Contact Sales"
-                icon={<Icons name="phone" />}
-                variant="light"
-                link="/contact"
-              />
+        <Container className='text-center mt-5'>
+          <PageTitle title="Payment Plans" data-aos="fade-up" />
+          <Row>
+            <Col xs={12}>
+              <Table responsive striped bordered hover variant="dark">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Floor</th>
+                    <th>Rate/Sft</th>
+                    <th>Booking</th>
+                    <th>DP</th>
+                    <th>Instalment Plan</th>
+                    <th>Annual Payments</th>
+                    <th>On Possession</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {project.pricingPlans.map((plan, index) => (
+                    <tr key={`pricing-${index}`}>
+                      <td>{plan.category}</td>
+                      <td>{plan.floor}</td>
+                      <td>{plan.ratePerSft}</td>
+                      <td>{plan.booking}</td>
+                      <td>{plan.downPayment}</td>
+                      <td>{plan.installmentPlan}</td>
+                      <td>{plan.annualPayments}</td>
+                      <td>{plan.onPossession}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
             </Col>
           </Row>
         </Container>

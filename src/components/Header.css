@@ -68,7 +68,7 @@
   
   .navbar a.navbar-brand{ 
     width: 180px;
-    padding:0 ;
+    padding: 0 !important; ;
   }
   .navbar a.navbar-brand img{ 
     width: 100%;
