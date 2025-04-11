@@ -518,6 +518,13 @@ padding: 10px 20px;
   align-items: center;
 }
 /* project-detail */
+.project-detail .project-intro .card{
+  border-radius: 0;
+  padding: 30px;
+}
+.project-detail .project-intro .card:hover{
+  background: var(--card-background);
+}
 .project-detail .project-intro .project-logo,
 .project-detail .project-intro .project-dhaApproved{
   padding: 30px;
@@ -528,11 +535,11 @@ padding: 10px 20px;
 }
 .project-detail .project-intro .project-logo img,
 .project-detail .project-intro .project-dhaApproved img{
-  width: 150px;
+  width: 130px;
   height: auto;
 }
 .project-detail .project-intro .project-logo{
-   background: var(--card-background);
+   background: var(--background);
    
 }
 .project-detail .project-intro .project-dhaApproved{
