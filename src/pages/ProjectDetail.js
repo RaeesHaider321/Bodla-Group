@@ -724,12 +724,12 @@ const ProjectDetails = () => {
         </Container>
 
         {/* Virtual Tour Section */}
-        <Container className='text-center mt-5'>
+        <div className='text-center mt-5'>
           <h2 className='mb-4' data-aos="fade-up" data-aos-delay="100">Virtual Tour</h2>
           <div className='virtualtour mt-4' data-aos="fade-up" data-aos-delay="200">
             <Image src={project.virtualTour} alt='Virtual Tour' fluid />
           </div>
-        </Container>
+        </div>
 
         {/* Floor Plans Section */}
         <Container className='text-center mt-5'>
