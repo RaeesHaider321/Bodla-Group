@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Row, Col, Image, Carousel, Card, CardBody, Table } from 'react-bootstrap';
+import { Container, Row, Col, Image, Carousel, Card, CardBody, Table, Button } from 'react-bootstrap';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
 import NotFound from '../pages/NotFound';
@@ -22,6 +22,7 @@ import floor2 from '../images/floor2.jpg';
 import floor3 from '../images/floor3.jpg';
 import floor4 from '../images/floor4.jpg';
 import sectorV from '../videos/sector-v.mp4';
+import ctaOneD from '../images/ctaOneD.png';
 
 
 
@@ -76,37 +77,33 @@ const projectDetails = {
         title: 'Mosque',
       },
       {
-        icon: 'mosque',
+        icon: 'cctv',
         title: '24 Hour Security',
       },
       {
-        icon: 'mosque',
+        icon: 'powerBackup',
         title: '24 Hours Power Backup',
       },
       {
-        icon: 'mosque',
+        icon: 'elevators',
         title: 'High Speed Elevators',
       },
       {
-        icon: 'mosque',
+        icon: 'fireFighting',
         title: 'Fire Fighting System',
       },
       {
-        icon: 'mosque',
+        icon: 'firstAid',
         title: 'First Aid Facility',
       },
       {
-        icon: 'mosque',
+        icon: 'foodCourt',
         title: 'Food Court',
       },
       {
-        icon: 'mosque',
+        icon: 'airConditioning',
         title: 'Air Conditioned Common Areas',
       },
-      {
-        icon: 'mosque',
-        title: 'Area Unit Converter',
-      }
     ],
     nearbyPlaces: [
       {
@@ -223,37 +220,33 @@ const projectDetails = {
         title: 'Mosque',
       },
       {
-        icon: 'mosque',
+        icon: 'cctv',
         title: '24 Hour Security',
       },
       {
-        icon: 'mosque',
+        icon: 'powerBackup',
         title: '24 Hours Power Backup',
       },
       {
-        icon: 'mosque',
+        icon: 'elevators',
         title: 'High Speed Elevators',
       },
       {
-        icon: 'mosque',
+        icon: 'fireFighting',
         title: 'Fire Fighting System',
       },
       {
-        icon: 'mosque',
+        icon: 'firstAid',
         title: 'First Aid Facility',
       },
       {
-        icon: 'mosque',
+        icon: 'foodCourt',
         title: 'Food Court',
       },
       {
-        icon: 'mosque',
+        icon: 'airConditioning',
         title: 'Air Conditioned Common Areas',
       },
-      {
-        icon: 'mosque',
-        title: 'Area Unit Converter',
-      }
     ],
     nearbyPlaces: [
       {
@@ -368,37 +361,33 @@ const projectDetails = {
         title: 'Mosque',
       },
       {
-        icon: 'mosque',
+        icon: 'cctv',
         title: '24 Hour Security',
       },
       {
-        icon: 'mosque',
+        icon: 'powerBackup',
         title: '24 Hours Power Backup',
       },
       {
-        icon: 'mosque',
+        icon: 'elevators',
         title: 'High Speed Elevators',
       },
       {
-        icon: 'mosque',
+        icon: 'fireFighting',
         title: 'Fire Fighting System',
       },
       {
-        icon: 'mosque',
+        icon: 'firstAid',
         title: 'First Aid Facility',
       },
       {
-        icon: 'mosque',
+        icon: 'foodCourt',
         title: 'Food Court',
       },
       {
-        icon: 'mosque',
+        icon: 'airConditioning',
         title: 'Air Conditioned Common Areas',
       },
-      {
-        icon: 'mosque',
-        title: 'Area Unit Converter',
-      }
     ],
     nearbyPlaces: [
       {
@@ -514,37 +503,33 @@ const projectDetails = {
         title: 'Mosque',
       },
       {
-        icon: 'mosque',
+        icon: 'cctv',
         title: '24 Hour Security',
       },
       {
-        icon: 'mosque',
+        icon: 'powerBackup',
         title: '24 Hours Power Backup',
       },
       {
-        icon: 'mosque',
+        icon: 'elevators',
         title: 'High Speed Elevators',
       },
       {
-        icon: 'mosque',
+        icon: 'fireFighting',
         title: 'Fire Fighting System',
       },
       {
-        icon: 'mosque',
+        icon: 'firstAid',
         title: 'First Aid Facility',
       },
       {
-        icon: 'mosque',
+        icon: 'foodCourt',
         title: 'Food Court',
       },
       {
-        icon: 'mosque',
+        icon: 'airConditioning',
         title: 'Air Conditioned Common Areas',
       },
-      {
-        icon: 'mosque',
-        title: 'Area Unit Converter',
-      }
     ],
     nearbyPlaces: [
       {
@@ -663,21 +648,16 @@ const ProjectDetails = () => {
       <section className='project-detail'>
         <Container>
           <Row className='justify-content-center text-center'>
-            <Col xs={12} md={8}>
+            <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="100">
               <h2>{project.title} <span>{project.spantitle}</span></h2>
             </Col>
           </Row>
 
           {/* Image Carousel */}
-          <Carousel className='mt-3' fade indicators={false} controls={false} interval={3000} pause={true}>
+          <Carousel className='mt-3' fade indicators={false} controls={false} interval={3000} pause={true} data-aos="fade-up" data-aos-delay="200">
             {project.images.map((image, index) => (
               <Carousel.Item key={index}>
-                <Image
-                  src={image}
-                  alt={`${project.title} - ${index + 1}`}
-                  className="d-block w-100"
-                  style={{ maxHeight: '600px', objectFit: 'cover' }}
-                />
+                <Image src={image} alt={`${project.title} - ${index + 1}`} className="d-block w-100" style={{ maxHeight: '600px', objectFit: 'cover' }} />
               </Carousel.Item>
             ))}
           </Carousel>
@@ -685,31 +665,27 @@ const ProjectDetails = () => {
 
         {/* Project Intro */}
         <Container className='project-intro'>
-          <Card>
+          <Card data-aos="fade-up" data-aos-delay="300">
             <CardBody>
               <Row className="align-items-center">
-                <Col xs={12} md={7}>
+                <Col xs={12} md={7} data-aos="fade-right" data-aos-delay="400">
                   <h3 className="mb-4">{project.introTitle || project.title}</h3>
                   <p className="lead">{project.description}</p>
-                  <BodlaButton
-                    text="Book a Call"
-                    icon={<Icons name="rightArrow" />}
-                    link="/Contact"
-                  />
+                  <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} link="/Contact" />
                 </Col>
                 <Col xs={12} md={5} className="text-md-end">
                   <Row className='gy-4'>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="500">
                       <div className='project-dhaApproved'>
                         <Image src={project.dhaApproved} alt="DHA Approved" />
                       </div>
                     </Col>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="600">
                       <div className='project-logo'>
                         <Image src={project.logo} alt={`${project.title} Logo`} />
                       </div>
                     </Col>
-                    <Col xs={12} md={12} className='map'>
+                    <Col xs={12} md={12} className='map' data-aos="fade-left" data-aos-delay="700">
                       <iframe
                         src={project.mapEmbedUrl}
                         width="100%"
@@ -727,15 +703,16 @@ const ProjectDetails = () => {
             </CardBody>
           </Card>
         </Container>
+
         {/* Nearby Places Section */}
         <Container className='text-center mt-5'>
-          <PageTitle title="Nearby Places" data-aos="fade-up" />
+          <PageTitle title="Nearby Places" data-aos="fade-up" data-aos-delay="100" />
           <Row className='justify-content-center gy-4'>
             {project.nearbyPlaces.map((nearby, index) => (
-              <Col xs={12} md={2} key={index}>
+              <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
                 <Card className="h-100 amenity-card">
                   <CardBody>
-                    <Row className="d-flex align-items-center">
+                    <Row className="d-flex align-items-center justify-content-center">
                       <Icons name={nearby.icon} />
                       <p>{nearby.title}</p>
                     </Row>
@@ -745,47 +722,75 @@ const ProjectDetails = () => {
             ))}
           </Row>
         </Container>
+
         {/* Virtual Tour Section */}
         <Container className='text-center mt-5'>
-          <h2 className='mb-4'>Virtual Tour</h2>
-          <div className='virtualtour mt-4'>
+          <h2 className='mb-4' data-aos="fade-up" data-aos-delay="100">Virtual Tour</h2>
+          <div className='virtualtour mt-4' data-aos="fade-up" data-aos-delay="200">
             <Image src={project.virtualTour} alt='Virtual Tour' fluid />
           </div>
         </Container>
+
         {/* Floor Plans Section */}
         <Container className='text-center mt-5'>
-          <PageTitle title="Floor Plans" data-aos="fade-up" />
+          <PageTitle title="Floor Plans" data-aos="fade-up" data-aos-delay="100" />
           <Row className='gy-4'>
             {project.floorPlans.map((plan, index) => (
-              <Col xs={12} md={6} key={index}>
+              <Col xs={12} sm={6} md={6} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 100)}`} >
                 <Image src={plan} alt={`Floor Plan ${index + 1}`} />
               </Col>
             ))}
           </Row>
         </Container>
+        <Container className='mt-5'>
+          <div className='projects-cta' data-aos="fade-up">
+            <Row className='align-items-center'>
+              <Col xs={12} lg={6} className='content' data-aos="fade-right" data-aos-delay="100">
+                <h2>Start Your Business Today!</h2>
+                <h5>Secure Your Ideal Shop in Just a Few Clicks</h5>
+                <p>Find the perfect space for your business and take the first step toward success. Limited shops available—book yours now!</p>
+                <div className='dflex'>
+                  <BodlaButton
+                    text="Book a Call"
+                    icon={<Icons name="rightArrow" />}
+                    link="/Contact"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  />
+                </div>
+              </Col>
+              <Col xs={12} lg={6} className='amblum' data-aos="fade-left" data-aos-delay="200">
+                <Image src={ctaOneD} alt='' />
+              </Col>
+            </Row>
+          </div>
+        </Container>
         {/* Video Section */}
         <Container className='text-center mt-5'>
-          <Row className='justify-content-center'>
+          <Row className='justify-content-center text-center mt-5'>
             <Col xs={12} lg={10}>
-              <PageTitle title="Project Video" data-aos="fade-up" />
-              <video width="100%" controls>
-                <source src={project.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <PageTitle title="Project Video" data-aos="fade-up" data-aos-delay="100" />
+              <div data-aos="fade-up" data-aos-delay="200">
+                <video width="100%" controls>
+                  <source src={project.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </Col>
           </Row>
         </Container>
+
         {/* Amenities and Project Facts Section */}
         <Container className='text-center mt-5'>
           <Row className="gy-4">
             <Col xs={12} lg={12}>
-              <PageTitle title="Amenities and Features" data-aos="fade-up" />
+              <PageTitle title="Amenities and Features" data-aos="fade-up" data-aos-delay="100" />
               <Row className='justify-content-center gy-4'>
                 {project.amenities.map((amenity, index) => (
-                  <Col xs={12} md={2} key={index}>
+                  <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
                     <Card className="h-100 amenity-card">
                       <CardBody>
-                        <Row className="d-flex align-items-center">
+                        <Row className="d-flex align-items-center justify-content-center">
                           <Icons name={amenity.icon} />
                           <p>{amenity.title}</p>
                         </Row>
@@ -797,11 +802,12 @@ const ProjectDetails = () => {
             </Col>
           </Row>
         </Container>
+
         <Container className='text-center mt-5'>
-          <PageTitle title="Payment Plans" data-aos="fade-up" />
+          <PageTitle title="Payment Plans" data-aos="fade-up" data-aos-delay="100" />
           <Row>
-            <Col xs={12}>
-              <Table responsive striped bordered hover variant="dark">
+            <Col xs={12} data-aos="fade-up" data-aos-delay="200">
+              <Table responsive hover>
                 <thead>
                   <tr>
                     <th>Category</th>

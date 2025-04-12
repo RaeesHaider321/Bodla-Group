@@ -8,7 +8,7 @@
   --golden-gradient: linear-gradient(90deg, #E0B667, #DEBA5D, #FEEC96, #E7C270, #DEB45B);
   --primary-gradient: linear-gradient(65deg, #02A7F7, #004C6E, #00324C);
   --secondary-gradient: linear-gradient(5deg, #016891, #02B1F7);
-  --contact-card-gradient: linear-gradient(-127deg,  #0080BD, #003B57);
+  --contact-card-gradient: linear-gradient(-127deg, #0080BD, #003B57);
 }
 
 body,
@@ -29,50 +29,97 @@ a:hover {
   color: var(--background) !important;
 }
 
-h1, .h1, h1 span {
-  font-size: clamp(2.375rem, 3.5vw, 2.875rem); /* 38px to 46px */
+h1,
+.h1,
+h1 span {
+  font-size: clamp(2.375rem, 3.5vw, 2.875rem);
+  /* 38px to 46px */
   font-weight: 700;
 }
 
-h2, .h2, h2 span {
-  font-size: clamp(2rem, 3vw, 2.5rem); /* 32px to 40px */
+h2,
+.h2,
+h2 span {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  /* 32px to 40px */
   font-weight: 700;
 }
 
-h3, .h3, h3 span {
-  font-size: clamp(1.75rem, 2.5vw, 2.25rem); /* 28px to 36px */
+h3,
+.h3,
+h3 span {
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  /* 28px to 36px */
   font-weight: 500;
 }
 
-h4, .h4, h4 span {
-  font-size: clamp(1.5rem, 2vw, 2rem); /* 24px to 32px */
+h4,
+.h4,
+h4 span {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  /* 24px to 32px */
   font-weight: 500;
 }
 
-h5, .h5, h5 span {
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem); /* 20px to 24px */
+h5,
+.h5,
+h5 span {
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  /* 20px to 24px */
   font-weight: 500;
 }
 
-h6, .h6, h6 span {
-  font-size: clamp(1.125rem, 1.3vw, 1.25rem); /* 18px to 20px */
+h6,
+.h6,
+h6 span {
+  font-size: clamp(1.125rem, 1.3vw, 1.25rem);
+  /* 18px to 20px */
   font-weight: 500;
 }
 
-p, .p, p span {
-  font-size: clamp(0.8125rem, 0.8vw, 0.9375rem); /* 13px to 15px */
+p,
+.p,
+p span {
+  font-size: clamp(0.8125rem, 0.8vw, 0.9375rem);
+  /* 13px to 15px */
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   text-transform: capitalize;
 }
 
-h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, h5 span, .h5 span, h6 span, .h6 span, p span, .p span, .text-gold{
+h1 span,
+.h1 span,
+h2 span,
+.h2 span,
+h3 span,
+.h3 span,
+h4 span,
+.h4 span,
+h5 span,
+.h5 span,
+h6 span,
+.h6 span,
+p span,
+.p span,
+.text-gold {
   background: linear-gradient(90deg, #B28425, #E4A730, #FFD16E, #CE9A2C, #9A681B);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+
 img {
   display: block;
   width: 100%;
@@ -94,7 +141,9 @@ section {
   padding: 70px 0;
 }
 
-ul, li, a {
+ul,
+li,
+a {
   list-style: none;
   text-decoration: none;
 }
@@ -138,13 +187,17 @@ ul, li, a {
   bottom: 0;
   background: rgb(0, 0, 0, 0.4);
 }
-.carousel{
+
+.carousel {
   object-fit: cover;
 }
-.carousel-inner{
+
+.carousel-inner {
   height: 85vh;
 }
-.custom-carousel, .custom-img {
+
+.custom-carousel,
+.custom-img {
   height: 85vh;
   object-fit: cover;
 }
@@ -210,9 +263,11 @@ ul, li, a {
   font-size: 2rem;
   border-radius: 100%;
 }
+
 .card:hover .service-icon {
   background: var(--background);
 }
+
 .card .service-icon-img {
   width: 32px;
   height: 32px;
@@ -223,17 +278,21 @@ ul, li, a {
 .card-body .h5 {
   text-transform: capitalize;
 }
-.utilitiesCard .service-icon{
+
+.utilitiesCard .service-icon {
   margin-right: 20px;
 }
-.utilitiesCard .service-icon span{
+
+.utilitiesCard .service-icon span {
   display: flex;
 }
+
 .utilitiesCard a,
-.card-container a{
+.card-container a {
   text-decoration: none;
   color: var(--white);
 }
+
 .newsSubscription-body {
   background: #02A7F7 url('images/pattern.png');
   background-repeat: repeat;
@@ -243,31 +302,39 @@ ul, li, a {
   margin-top: 30px;
 }
 
-.newsSubscription{
+.newsSubscription {
   background: var(--background);
   color: var(--white) !important;
   border-radius: 30px;
   overflow: hidden;
- }
- .newsSubscription input::placeholder {
+}
+
+.newsSubscription input::placeholder {
   color: gray;
   opacity: 1;
 }
-.newsSubscription .form-control{
-border: 0;
-background: transparent;
-color: var(--white) !important;
+
+.newsSubscription .form-control {
+  border: 0;
+  background: transparent;
+  color: var(--white) !important;
 }
-.newsSubscription .btn-primary{
-background: var(--golden-gradient) !important;
-color: var(--background) !important;
-border-radius: 30px;
-padding: 10px 20px;
+
+.newsSubscription .btn-primary {
+  background: var(--golden-gradient) !important;
+  color: var(--background) !important;
+  border-radius: 30px;
+  padding: 10px 20px;
 }
-.newsSubscription.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating){
+
+.newsSubscription.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select,
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
+
 .newsSubscription.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: calc(var(--bs-border-width)* -1);
   border-top-left-radius: 30px;
@@ -275,32 +342,38 @@ padding: 10px 20px;
 }
 
 /* aboutCarousel */
-.aboutCarousel{
+.aboutCarousel {
   height: 85vh;
   overflow: hidden;
 }
-.aboutCarousel .carousel-item{
+
+.aboutCarousel .carousel-item {
   height: 85vh;
 }
-.aboutCarousel .carousel-caption{
+
+.aboutCarousel .carousel-caption {
   justify-content: end;
   align-items: end;
 }
 
-.bodlaSince{
+.bodlaSince {
   background: var(--primary-gradient);
   text-align: center;
 }
-.dhaBodla img{
+
+.dhaBodla img {
   width: 80%;
 }
-.cardImage img{
+
+.cardImage img {
   border-radius: 21px;
 }
-.text-justify{
+
+.text-justify {
   text-align: justify;
 }
-.logoImage{
+
+.logoImage {
   background: var(--golden-gradient);
   border-radius: 100%;
   width: 100px;
@@ -311,62 +384,75 @@ padding: 10px 20px;
   overflow: hidden;
   padding: 10px;
 }
-.projectGallery .col img{
+
+.projectGallery .col img {
   overflow: hidden;
   border-radius: 15px;
 }
-.projectGallery .col .oneD img{
+
+.projectGallery .col .oneD img {
   width: auto;
   height: 100%;
 }
 
 
-.creationsJourney .card .image{
+.creationsJourney .card .image {
   height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.creationsJourney .card .image img{
+
+.creationsJourney .card .image img {
   width: 70%;
 }
-.reit{
+
+.reit {
   background: var(--card-background);
   min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.expanded img{
+
+.expanded img {
   background: var(--white);
   border-radius: 100%;
   border: 1px solid var(--white);
 }
 
-.nav-tab{
+.nav-tab {
   border-bottom: 0;
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
   background: linear-gradient(90deg, #B28425, #E4A730, #FFD16E, #CE9A2C, #9A681B);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  
+
 }
-.nav-tabs  {
+
+.nav-tabs {
   display: flex;
   width: 100%;
 }
 
 .nav-tabs .nav-item {
-  flex: 1; /* This makes each item take equal width */
-  text-align: center; /* Optional: centers the text within each tab */
+  flex: 1;
+  /* This makes each item take equal width */
+  text-align: center;
+  /* Optional: centers the text within each tab */
 }
 
 .nav-tabs .nav-link {
-  width: 100%; /* Makes the link fill the entire nav-item */
-  display: block; /* Ensures the link takes full width */
+  width: 100%;
+  /* Makes the link fill the entire nav-item */
+  display: block;
+  /* Ensures the link takes full width */
 }
+
 .nav-tabs .nav-link {
   position: relative;
   color: var(--white);
@@ -394,109 +480,129 @@ padding: 10px 20px;
   width: 40%;
   background-color: var(--white);
 }
+
 .nav-tabs .nav-link.active::after {
   width: 40%;
   background-image: var(--golden-gradient);
   background-color: transparent;
 }
 
-.nav-tabs, .tab-content{
+.nav-tabs,
+.tab-content {
   background: var(--card-background);
   border-radius: 12px;
   border: 0;
 }
-.tab-content{
+
+.tab-content {
   padding: 20px;
 }
 
-.tab-content .card{
+.tab-content .card {
   background: var(--background);
   position: relative;
   overflow: hidden;
   text-align: center;
 }
+
 .tab-content .card:hover {
   background: var(--secondary-gradient);
 }
-.tab-content .card-body{
+
+.tab-content .card-body {
   position: relative;
 }
-.tab-content .dha-logo{
+
+.tab-content .dha-logo {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -100%);
   width: 80px;
   height: 80px;
   padding: 5px;
-  background:var(--white);
+  background: var(--white);
   border-radius: 100%;
 }
-.tab-content .card-thumb-img{
+
+.tab-content .card-thumb-img {
   height: 200px;
   width: 100%;
   overflow: hidden;
 }
-.tab-content .card-thumb-img img{
+
+.tab-content .card-thumb-img img {
   height: inherit;
 }
-.tab-content .card-body h5, .tab-content .card-body .h5 {
+
+.tab-content .card-body h5,
+.tab-content .card-body .h5 {
   margin-top: 10px;
 }
 
-.dhaMultanBanner{
+.dhaMultanBanner {
   background-image: url(../src/images/colaboration-bg.jpg);
-  background-size: cover ;
+  background-size: cover;
   background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0;
 }
-.dhaMultanBanner img{
-    width:250px
+
+.dhaMultanBanner img {
+  width: 250px
 }
-.contact-card{
+
+.contact-card {
   background: var(--contact-card-gradient);
   border-radius: 21px;
   margin-top: 30px;
 }
+
 .contact-card .card-body {
   padding: 50px;
 }
+
 .contact-card .card .card-body {
   padding: 15px;
 }
+
 .contact-card:hover {
   background: var(--contact-card-gradient);
 }
 
-.contact-form{
+.contact-form {
   background: var(--background);
   border-radius: 15px;
   padding: 30px;
 }
-.contact-form .form-control{
+
+.contact-form .form-control {
   background: rgb(255, 255, 255, .1);
-  border-color:rgb(255, 255, 255, .2);
+  border-color: rgb(255, 255, 255, .2);
 }
+
 .contact-form .form-control::placeholder,
 .contact-form .form-control::placeholder {
-  color: var(--white); /* Change to your desired color */
+  color: var(--white);
+  /* Change to your desired color */
   opacity: .7;
   font-weight: lighter;
 }
-.contact-us .contact-map{
+
+.contact-us .contact-map {
   margin-top: 50px;
   border-radius: 21px;
   overflow: hidden;
 }
 
 /* projects */
-.projects .project-thumb{
+.projects .project-thumb {
   background: var(--primary-gradient);
   padding: 15px;
   border-radius: 21px;
 }
+
 .projects .image-container {
   background-size: cover;
   background-position: center;
@@ -506,47 +612,116 @@ padding: 10px 20px;
   align-items: center;
   border-radius: 12px;
 }
-.projects .image-container img{
+
+.projects .image-container img {
   width: 150px;
   height: auto;
 }
-.projects .project-description{
+
+.projects .project-description {
   background: var(--primary-gradient);
   padding: 40px;
   border-radius: 21px;
   display: flex;
   align-items: center;
 }
+
 /* project-detail */
-.project-detail .project-intro .card{
+.project-detail .project-intro .card {
   border-radius: 0;
   padding: 30px;
 }
-.project-detail .project-intro .card:hover{
+
+.project-detail .project-intro .card:hover {
   background: var(--card-background);
 }
+
 .project-detail .project-intro .project-logo,
-.project-detail .project-intro .project-dhaApproved{
+.project-detail .project-intro .project-dhaApproved {
   padding: 30px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .project-detail .project-intro .project-logo img,
-.project-detail .project-intro .project-dhaApproved img{
+.project-detail .project-intro .project-dhaApproved img {
   width: 130px;
   height: auto;
 }
-.project-detail .project-intro .project-logo{
-   background: var(--background);
-   
+
+.project-detail .project-intro .project-logo {
+  background: var(--background);
+
 }
-.project-detail .project-intro .project-dhaApproved{
-   background: var(--primary);
+
+.project-detail .project-intro .project-dhaApproved {
+  background: var(--primary);
 }
-.project-detail .project-intro .map{
+
+.project-detail .project-intro .map {
   border-radius: 15px;
   overflow: hidden;
 }
 
+.table {
+  background-color: var(--card-background);
+  color: var(--white) !important;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: var(--primary);
+}
+
+.table thead tr th {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  font-weight: bold;
+  padding: 1rem 0.75rem;
+}
+
+.table tr td {
+  padding: 0.75rem;
+  background: var(--card-background) !important;
+}
+
+.table tr th:first-child,
+.table tr td:first-child {
+  text-align: left;
+}
+
+.table tr td,
+.table tr th {
+
+  color: var(--white) !important;
+  border-bottom: 1px solid rgb(255, 255, 255, .1)
+}
+
+.projects-cta{
+  border-radius: 21px;
+  background: var(--primary-gradient);
+  
+}
+.projects-cta .content{
+  padding: 40px;
+}
+.projects-cta .amblum{
+ margin-top: 30px;
+}
+.amenity-card p:last-child{
+  margin-bottom: 0;
+}
+.amenity-card span{
+  width: 80px;
+  margin-bottom: 10px;
+}
+.amenity-card span svg{
+  fill: var(--primary);
+}
+.amenity-card:hover span svg{
+  fill: var(--background);
+}
