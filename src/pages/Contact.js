@@ -13,11 +13,11 @@ const Contact = () => {
         <Container>
           <Card className='contact-card'>
             <Card.Body>
-              <Row className='justify-content-center align-items-center'>
+              <Row className='justify-content-center align-items-center gy-3'>
                 <Col xs={12} md={5}>
                   <ContactForm />
                 </Col>
-                <Col xs={6} md={7}>
+                <Col xs={12} md={7}>
                   <h1>Don’t hesitate to contact us!</h1>
                   <p>Whether you have questions, feedback, or need assistance, our team is here to help. You can contact us via email, phone, or through our website’s contact form. We value your input and look forward to connecting with you!</p>
                   <Row className='gy-4'>

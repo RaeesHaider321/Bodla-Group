@@ -185,7 +185,7 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='reit py-5 bg-light'>
+      <section className='reit py-5'>
         <Container className='text-center'>
           <h3 data-aos="flip-up" data-aos-delay="300">REIT</h3>
         </Container>
@@ -212,7 +212,7 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='deepSensitivity py-5 bg-dark text-white'>
+      <section className='deepSensitivity py-5'>
         <Container>
           <Row>
             <Col>
@@ -224,7 +224,7 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='py-5'>
+      {/* <section className='py-5'>
         <Container>
           <Row className='justify-content-center cardImage'>
             <Col xs={12} md={10}>
@@ -247,7 +247,7 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
     </>
   );
 };

@@ -347,12 +347,12 @@ a {
 
 /* aboutCarousel */
 .aboutCarousel {
-  height: 85vh;
+  max-height: 85vh;
   overflow: hidden;
 }
 
 .aboutCarousel .carousel-item {
-  height: 85vh;
+  max-height: 85vh;
 }
 
 .aboutCarousel .carousel-caption {

@@ -166,7 +166,7 @@ const Projects = () => {
               <h2>View Projects  On Map</h2>
               <p>Innovative Designs, Seamless Experiences</p>
               <Row>
-                <Col xs={11} md={12}>
+                <Col md={12}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.9287473577783!2d71.55361441037263!3d30.296090006500197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3924cbd1167128b5%3A0x79d6c7b73dd41cef!2sBusiness%20Hub%2C%20DHA%20Multan!5e0!3m2!1sen!2s!4v1744012574158!5m2!1sen!2s"
                     width="100%"
