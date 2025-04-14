@@ -24,8 +24,44 @@ import floor4 from '../images/floor4.jpg';
 import sectorV from '../videos/sector-v.mp4';
 import ctaOneD from '../images/ctaOneD.png';
 
-
-
+import NearbyLocations from '../components/NearbyLocations';
+const nearbyLocations = [
+  {
+    id: 1,
+    name: "Central Park",
+    distance: 0.5,
+  },
+  {
+    id: 2,
+    name: "Downtown Mall",
+    distance: 1.2,
+  },
+  {
+    id: 3,
+    name: "City Museum",
+    distance: 2.1,
+  },
+  {
+    id: 4,
+    name: "Riverside Walk",
+    distance: 3.0,
+  },
+  {
+    id: 5,
+    name: "Main Square",
+    distance: 0.8,
+  },
+  {
+    id: 6,
+    name: "Science Center",
+    distance: 2.5,
+  },
+  {
+    id: 7,
+    name: "Botanical Garden",
+    distance: 1.8,
+  }
+];
 // Project Data Template
 const projectTemplate = {
   id: 0,
@@ -646,7 +682,7 @@ const ProjectDetails = () => {
     <>
       {/* Hero Section */}
       <section className='project-detail'>
-        <Container>
+      <Container>
           <Row className='justify-content-center text-center'>
             <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="100">
               <h2>{project.title} <span>{project.spantitle}</span></h2>
@@ -703,7 +739,7 @@ const ProjectDetails = () => {
             </CardBody>
           </Card>
         </Container>
-
+        {/* <NearbyLocations locations={nearbyLocations} /> */}
         {/* Nearby Places Section */}
         <Container className='text-center mt-5'>
           <PageTitle title="Nearby Places" data-aos="fade-up" data-aos-delay="100" />

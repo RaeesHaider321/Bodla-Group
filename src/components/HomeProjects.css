@@ -80,7 +80,6 @@
 }
 
 .tabs-content .tab-data-section .amenities-list {
-    /* margin-top: 20px; */
     text-align: center;
 }
 
@@ -164,25 +163,13 @@
     .tabs-content .tab-data-section {
         padding: 15px;
     }
-
-    /* .tabs-content .tab-data-section h2 {
-        font-size: 20px;
-    }
-
-    .tabs-content .tab-data-section p {
-        font-size: 14px;
-    }
-
-    .tabs-content .tab-data-section .additional-details {
-        font-size: 12px;
-    } */
-
     .tabs {
         padding: 15px;
     }
 
     .tab-item {
-        padding: 8px 15px;
+        padding: 0;
+        font-size: 0.9rem;
     }
 }
 

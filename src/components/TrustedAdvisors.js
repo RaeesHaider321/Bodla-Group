@@ -24,7 +24,7 @@ const Counter = () => {
                     <Col xs={12} md={7} ref={ref} className="countUp">
                         <Row className="justify-content-center">
                             {stats.map((stat, index) => (
-                                <Col md={4} key={index} className="mb-4">
+                                <Col xs={4} sm={6} md={4} key={index} className="mb-4">
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}

@@ -26,13 +26,7 @@ export default function UtilitiesList() {
         {/* Utilities Cards with Animations */}
         <Row className="g-4 justify-content-end">
           {utilities.map((utility, index) => (
-            <Col
-              xs={12}
-              md={4}
-              key={utility.id}
-              data-aos="fade-up"
-              data-aos-delay={`${index * 150 + 300}`} // Staggered delay: 300ms, 450ms, 600ms, etc.
-            >
+            <Col xs={12} md={4} key={utility.id} data-aos="fade-up" data-aos-delay={`${index * 150 + 300}`} >
               <UtilitiesCard icon={utility.icon} title={utility.title} link={utility.link} />
             </Col>
           ))}

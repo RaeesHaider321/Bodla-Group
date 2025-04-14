@@ -5,7 +5,7 @@ export default function AboutHome() {
     return (
         <section>
             <Container className='aboutehome'>
-                <Row>
+                <Row className='gy-3'>
                     <Col xs={12} md={6} data-aos="fade-right">
                         <Image src={aboutehome} alt='' />
                     </Col>

@@ -33,12 +33,12 @@ function CarouselFadeExample() {
                     <Carousel.Item key={update.id}>
                         <Card>
                             <Row className='justify-content-center align-items-center'>
-                                <Col xs={6} md={6} data-aos="zoom-in">
+                                <Col xs={12} md={6} data-aos="zoom-in">
                                     <Card.Body>
                                         <h4 data-aos="fade-right">{update.title}</h4>
                                     </Card.Body>
                                 </Col>
-                                <Col xs={6} md={6} data-aos="zoom-in" data-aos-delay="100">
+                                <Col xs={12} md={6} data-aos="zoom-in" data-aos-delay="100">
                                     <Card.Img src={update.image} />
                                 </Col>
                             </Row>

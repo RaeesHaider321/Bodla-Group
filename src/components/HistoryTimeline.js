@@ -24,13 +24,13 @@ export default function HistoryTimeline() {
     return (
         <section className='pt-0'>
             <Container>
-                <Row className="justify-content align-items-center">
+                <Row className="justify-content align-items-center gy-3">
                     <Col xs={12} md={5} data-aos="fade-right">
                         <h2 className='mb-4'>A History in Creating Timeless <span>Facades</span> of Craftsmanship</h2>
                         <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
                     </Col>
                     <Col xs={12} md={7} data-aos="zoom-in">
-                        <Row>
+                        <Row className='gy-3'>
                             {cardData.map((card, index) => (
                                 <Col key={index} xs={12} md={6}>
                                     <CardComponent

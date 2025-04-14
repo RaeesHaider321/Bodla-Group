@@ -45,7 +45,7 @@ const carouselItems = [
 ];
 function NoTransitionExample() {
   return (
-    <Carousel fade  className="custom-carousel">
+    <Carousel fade  className="custom-carousel" indicators={false} controls={false} interval={3000} pause={true}>
       {carouselItems.map((item) => (
         <Carousel.Item key={item.id}>
           <img 

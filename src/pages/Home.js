@@ -45,7 +45,7 @@ const Home = () => {
         <UtilitiesList />
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="3300">
+       <div data-aos="fade-up" data-aos-duration="3300">
         <BodlaUpdates />
       </div>
 
