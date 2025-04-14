@@ -4,7 +4,7 @@ import UnlockProperty from './UnlockProperty';
 import logo from '../images/footer-logo.png';
 import { FaEnvelope, FaPhone, FaHeadphones } from 'react-icons/fa';
 import { FaLocationPinLock } from "react-icons/fa6";
-
+import Icon from "../components/Icon";
 function Footer() {
   return (
     <footer className="text-white">
@@ -23,49 +23,49 @@ function Footer() {
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1400">
                   <h5>Others</h5>
                   <ul className="list-unstyled">
-                    <li className="mb-2"><a href="/AreaUnitConvertor" className="text-light">Area Unit Convertor</a></li>
-                    <li className="mb-2"><a href="/ConstructionCostCalculator" className="text-light">Construction Cost Calculator</a></li>
-                    <li className="mb-2"><a href="/MediaCentre" className="text-light">Media Centre</a></li>
-                    <li className="mb-2"><a href="/Careers" className="text-light">Careers</a></li>
+                    <li><a href="/AreaUnitConvertor">Area Unit Convertor</a></li>
+                    <li><a href="/ConstructionCostCalculator">Construction Cost Calculator</a></li>
+                    <li><a href="/MediaCentre">Media Centre</a></li>
+                    <li><a href="/Careers">Careers</a></li>
                   </ul>
                 </Col>
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1600">
                   <h5>Quick Links</h5>
                   <ul className="list-unstyled">
-                    <li className="mb-2"><a href="/About" className="text-light">About Us</a></li>
-                    <li className="mb-2"><a href="/Projects" className="text-light">Projects</a></li>
-                    <li className="mb-2"><a href="/Team" className="text-light">Our Team</a></li>
-                    <li className="mb-2"><a href="/Contact" className="text-light">Contact</a></li>
+                    <li><a href="/About">About Us</a></li>
+                    <li><a href="/Projects">Projects</a></li>
+                    <li><a href="/Team">Our Team</a></li>
+                    <li><a href="/Contact">Contact</a></li>
                   </ul>
                 </Col>
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1800">
                   <h5>Services</h5>
                   <ul className="list-unstyled">
-                    <li className="mb-2"><a href="/constructors" className="text-light">Constructors</a></li>
-                    <li className="mb-2"><a href="/land-providers" className="text-light">Land Providers</a></li>
-                    <li className="mb-2"><a href="/developers" className="text-light">Developers</a></li>
-                    <li className="mb-2"><a href="/plot-traders" className="text-light">Plot Traders</a></li>
-                    <li className="mb-2"><a href="/marketers" className="text-light">Marketers</a></li>
+                    <li><a href="/constructors">Constructors</a></li>
+                    <li><a href="/land-providers">Land Providers</a></li>
+                    <li><a href="/developers">Developers</a></li>
+                    <li><a href="/plot-traders">Plot Traders</a></li>
+                    <li><a href="/marketers">Marketers</a></li>
                   </ul>
                 </Col>
                 <Col md={12} className="mb-4" data-aos="fade-up" data-aos-duration="2000">
                   <h5>Contact</h5>
-                  <ul className="list-unstyled contact">
-                    <li className="mb-3 d-flex align-items-start">
-                      <FaPhone className="mt-1 me-2" size={18} /> 
-                      <span>061-1111-26352</span>
+                  <ul className="list-unstyled">
+                    <li>
+                    <Icon name="phone" />
+                      061-1111-26352
                     </li>
-                    <li className="mb-3 d-flex align-items-start">
-                      <FaEnvelope className="mt-1 me-2" size={18} /> 
-                      <span>info@bodlagroup.com</span>
+                    <li>
+                    <Icon name="envelope" />
+                      info@bodlagroup.com
                     </li>
-                    <li className="mb-3 d-flex align-items-start">
-                      <FaHeadphones className="mt-1 me-2" size={18} /> 
-                      <span>support@bodlagroup.com</span>
+                    <li>
+                    <Icon name="support" />
+                    support@bodlagroup.com
                     </li>
-                    <li className="mb-3 d-flex align-items-start">
-                      <FaLocationPinLock className="mt-1 me-2" size={18} />
-                      <span>Business Hub, Central Square, Sector K Phase I DHA Multan</span>
+                    <li>
+                    <Icon name="location" />
+                      Business Hub, Central Square, Sector K Phase I DHA Multan
                     </li>
                   </ul>
                 </Col>

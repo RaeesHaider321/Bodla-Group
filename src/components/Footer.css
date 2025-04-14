@@ -66,22 +66,20 @@ footer .logo img{
   margin-top: 20px;
   margin-bottom: 0;
  }
- footer .conract{
-  list-style-type: none;
-  padding: 0;
- }
- footer .conract li{
-  display: inline-flex;
-  justify-content: center;
-  align-items: flex-start;
- }
- footer .conract li svg{
-  width: 15px;
-  margin-right: 10px;
- }
-
+footer li {
+  display: flex;
+  align-items: start;
+  gap: 8px; 
+  margin-bottom: 10px;
+}
+footer li svg {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  width: 18px;
+  height: 18px;
+  fill: var(--white);
+}
  footer li a{
   line-height: 24px;
-  margin-bottom: 12px;
   display: block;
+  color: var(--white);
  }
