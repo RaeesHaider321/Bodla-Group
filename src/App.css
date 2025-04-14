@@ -151,6 +151,18 @@ a {
   justify-content: center;
   border: 1px solid #D89E2D;
 }
+@media (max-width: 768px) {
+  .social-icon{
+    width: 36px;
+  height: 36px;
+  }
+}
+@media (max-width: 460px) {
+  .social-icon{
+    width: 28px;
+  height: 28px;
+  }
+}
 
 .social-icon:hover {
   color: var(--gradient-secondary);
