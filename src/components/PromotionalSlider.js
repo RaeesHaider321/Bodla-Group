@@ -53,9 +53,9 @@ const ProductSlider = () => {
     };
 
     const products = [
-        { id: 1, name: 'Luxury home with modern amenities, spacious interiors, and stunning views.', image: promotion1, link: '/product/1' },
-        { id: 2, name: 'Dream home featuring elegant design, top amenities, and prime location.', image: promotion2, link: '/product/2' },
-        { id: 3, name: 'High-ROI investment property in a thriving, well-connected neighborhood.', image: promotion3, link: '/product/3' },
+        { id: 1, name: 'Get your own Commercial Shop: Rs. 88,000/- per Month Installment.', image: promotion1, link: '/product/1' },
+        { id: 2, name: 'Get a Property from your Salary Cheque.', image: promotion2, link: '/product/2' },
+        { id: 3, name: 'Plots in Rumanza with just 5% Down-payment.', image: promotion3, link: '/product/3' },
         { id: 4, name: 'Affordable, stylish home with spacious rooms and excellent surroundings.', image: promotion4, link: '/product/4' },
         { id: 5, name: 'Move-in-ready home with modern fittings and a great location.', image: promotion3, link: '/product/5' },
         { id: 6, name: 'Exclusive property offering security, luxury, and world-class amenities.', image: promotion3, link: '/product/6' },
@@ -69,6 +69,7 @@ const ProductSlider = () => {
                 <Row>
                     <Col data-aos="fade-up" data-aos-delay="200">
                         <h2>Current <br/><span>Promotions</span></h2>
+                        <p>Grab our premium offers first!</p>
                     </Col>
                 </Row>
             </Container>
