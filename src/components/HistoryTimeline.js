@@ -9,14 +9,14 @@ const cardData = [
     {
         image: legacy,
         title: "Our Legacy",
-        description: "We are a trusted real estate company, creating exquisite homes.",
-        link: "/Legacy",
+        description: "Rooted in trust, rising with pride — our journey defines real estate excellence across DHA Multan.",
+        // link: "/Legacy",
     },
     {
         image: legacy,
         title: "Our Services",
-        description: "Shaping the future with innovative and sustainable designs.",
-        link: "/Services",
+        description: "Acquisition, Construction, Marketing, and beyond - We build possibilities with end-to-end real estate solutions.",
+        // link: "/Services",
     },
 ];
 
@@ -26,8 +26,8 @@ export default function HistoryTimeline() {
             <Container>
                 <Row className="justify-content align-items-center gy-3">
                     <Col xs={12} md={5} data-aos="fade-right">
-                        <h2 className='mb-4'>A History in Creating Timeless <span>Facades</span> of Craftsmanship</h2>
-                        <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
+                        <h2 className='mb-4'>Bodla Group as your one-stop shop, <span>overseeing every facet</span> of the real estate journey.</h2>
+                        <BodlaButton text="Reach Us Here!" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
                     </Col>
                     <Col xs={12} md={7} data-aos="zoom-in">
                         <Row className='gy-3'>

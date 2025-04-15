@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import UtilitiesCard from "../components/UtilitiesCard";
-import Icons from "../components/Icon"; // Import Icons component
+import Icons from "../components/Icon";
 
 const utilities = [
   { id: 1, icon: <Icons name="mathematics" />, title: "Area Unit Converter", link: "/Services" },
-  { id: 2, icon: <Icons name="calculator" />, title: "Construction Cost Calculator", link: "/Services" },
-  { id: 3, icon: <Icons name="propertyMarketing" />, title: "Unit Price Calculator", link: "/Services" },
+  { id: 2, icon: <Icons name="excavator" />, title: "Construction Cost Calculator", link: "/Services" },
+  { id: 3, icon: <Icons name="unitPriceCalculator" />, title: "Unit Price Calculator", link: "/Services" },
   { id: 4, icon: <Icons name="plotPriceCalculator" />, title: "Plot Price Calculator", link: "/Services" },
   { id: 5, icon: <Icons name="propertyFinder" />, title: "Property Finder", link: "/Services" },
 ];
@@ -15,7 +15,6 @@ export default function UtilitiesList() {
   return (
     <section>
       <Container >
-        {/* Heading Section */}
         <Row className="justify-content-center text-center mb-4">
           <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="200">
             <h2>Explore More on <br /><span>Bodla Group</span></h2>

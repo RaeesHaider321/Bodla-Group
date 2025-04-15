@@ -26,13 +26,17 @@ const HomeProjects = () => {
                 // details: 'Additional details for Business Hub.',
                 amenities: [
                     { name: 'Mosque', icon: <Icons name="mosque" />, },
-                    { name: '24 Hour Security', icon: <Icons name="cctv" /> },
-                    { name: 'High Speed Elevators', icon: <Icons name="elevators" /> },
                     { name: 'Food Court', icon: <Icons name="foodCourt" /> },
+                    { name: 'Kids Play Area', icon: <Icons name="airConditioning" /> },
+                    { name: 'High-speed Elevators & Escalators', icon: <Icons name="elevators" /> },
+                    { name: 'Central Fire Protection System', icon: <Icons name="fireFighting" /> },
+                    { name: 'Air Conditioned Corridors and Common Areas', icon: <Icons name="airConditioning" /> },
+                    { name: 'Ample Parking', icon: <Icons name="elevators" /> },
+                    { name: 'Double Entry', icon: <Icons name="elevators" /> },
+                    { name: 'Bridge connecting with DHA Main Office', icon: <Icons name="elevators" /> },
+                    { name: '24 Hour Security', icon: <Icons name="cctv" /> },
                     { name: 'First Aid', icon: <Icons name="firstAid" /> },
-                    { name: 'Fire Fighting System', icon: <Icons name="fireFighting" /> },
                     { name: '24 Hours Power backup', icon: <Icons name="powerBackup" /> },
-                    { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
                 ], // Amenities for Business Hub
             },
             backgroundImage: businessHub, // Use the imported image
@@ -43,14 +47,15 @@ const HomeProjects = () => {
                 logo: oneD,
                 link: '/one-destination', // Updated link
                 amenities: [
-                    { name: 'Mosque', icon: <Icons name="mosque" /> },
-                    { name: '24 Hour Security', icon: <Icons name="cctv" /> },
-                    { name: 'High Speed Elevators', icon: <Icons name="elevators" /> },
-                    { name: 'Food Court', icon: <Icons name="foodCourt" /> },
-                    { name: 'First Aid', icon: <Icons name="firstAid" /> },
-                    { name: 'Fire Fighting System', icon: <Icons name="fireFighting" /> },
-                    { name: '24 Hours Power backup', icon: <Icons name="powerBackup" /> },
-                    { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
+                    { name: 'Gymnasium', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Swimming Pool', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Roof-Top Restaurant', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Elevators', icon: <Icons name="elevators" /> }, 
+                    { name: 'Wide Corridors', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Multiple Entrances', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Ample Car Parking', icon: <Icons name="airConditioning" /> }, 
+                    { name: '24/7 Power Backup', icon: <Icons name="powerBackup" /> }, 
+                    { name: '24/7 Security', icon: <Icons name="cctv" /> },
                 ],
             },
             backgroundImage: oneDestination, // Use the imported image
@@ -61,14 +66,17 @@ const HomeProjects = () => {
                 logo: gvr,
                 link: '/golf-view-rumanza', // Updated link
                 amenities: [
-                    { name: 'Mosque', icon: <Icons name="mosque" /> },
-                    { name: '24 Hour Security', icon: <Icons name="cctv" /> },
-                    { name: 'High Speed Elevators', icon: <Icons name="elevators" /> },
-                    { name: 'Food Court', icon: <Icons name="foodCourt" /> },
-                    { name: 'First Aid', icon: <Icons name="firstAid" /> },
-                    { name: 'Fire Fighting System', icon: <Icons name="fireFighting" /> },
-                    { name: '24 Hours Power backup', icon: <Icons name="powerBackup" /> },
-                    { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
+                    { name: 'Gym',icon: <Icons name="airConditioning" /> },
+                    { name: 'Swimming pool',icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Kids play area', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Landscaped gardens',icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Private lounges', icon: <Icons name="airConditioning" /> },
+                    { name: 'Executive lift for penthouses',icon: <Icons name="elevators" /> }, 
+                    { name: 'Cargo, passenger lifts',icon: <Icons name="elevators" /> }, 
+                    { name: 'Garbage disposal',icon: <Icons name="airConditioning" /> },  
+                    { name: 'Stunning views', icon: <Icons name="airConditioning" /> },
+                    { name: 'Spacious parking',icon: <Icons name="airConditioning" /> },
+
                 ], // Amenities for Golf View Rumanza
             },
             backgroundImage: golfViewRumanza, // Use the imported image
@@ -79,14 +87,31 @@ const HomeProjects = () => {
                 logo: bHomes,
                 link: '/bodla-homes', // Updated link
                 amenities: [
-                    { name: 'Mosque', icon: <Icons name="mosque" /> },
-                    { name: '24 Hour Security', icon: <Icons name="cctv" /> },
-                    { name: 'High Speed Elevators', icon: <Icons name="elevators" /> },
-                    { name: 'Food Court', icon: <Icons name="foodCourt" /> },
-                    { name: 'First Aid', icon: <Icons name="firstAid" /> },
-                    { name: 'Fire Fighting System', icon: <Icons name="fireFighting" /> },
-                    { name: '24 Hours Power backup', icon: <Icons name="powerBackup" /> },
-                    { name: 'Air Conditioned Corridors', icon: <Icons name="airConditioning" /> },
+                    // 	5.2-Marla Bodla Homes
+                //    { name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
+                   { name: 'Drawing Room', icon: <Icons name="airConditioning" /> },
+                   { name: 'Family Lounge + Dinning', icon: <Icons name="airConditioning" /> },
+                   { name: 'Kitchen', icon: <Icons name="airConditioning" /> },
+                   { name: 'Backyard Service Space', icon: <Icons name="airConditioning" /> },
+                   { name: 'Beds + Attached Baths', icon: <Icons name="airConditioning" /> },
+                   { name: 'FF Kitchenette and Terrace Roof Top BBQ Terrace', icon: <Icons name="airConditioning" /> },
+                   { name: 'Roof Top Solar Panel Area', icon: <Icons name="airConditioning" /> },
+                   { name: 'Spacious Car Parking', icon: <Icons name="airConditioning" /> },
+                // 	8-Marla Bodla Homes
+                    // { name: 'Covered Area 2905 Sqft', icon: <Icons name="airConditioning" /> },
+                    { name: 'Evaporative Air Cooler', icon: <Icons name="airConditioning" /> },
+                    { name: 'Drawing Room', icon: <Icons name="airConditioning" /> },
+                    { name: 'Family Lounge + Dinning', icon: <Icons name="airConditioning" /> },
+                    // { name: 'Kitchen', icon: <Icons name="airConditioning" /> },
+                    // { name: 'Backyard Service Space', icon: <Icons name="airConditioning" /> },
+                    { name: 'Spacious Living Room', icon: <Icons name="airConditioning" /> },
+                    { name: 'Store Room / Maid Room', icon: <Icons name="airConditioning" /> },
+                    // { name: '5 Beds + Attached Baths', icon: <Icons name="airConditioning" /> },
+                    // { name: 'FF Kitchenette andTerrace', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Roof Top B BQ Terrace', icon: <Icons name="airConditioning" /> },
+                    { name: 'Roof Top Solar Panel Area', icon: <Icons name="airConditioning" /> },
+                    // { name: 'Spacious Car Parking (2 Cars)', icon: <Icons name="airConditioning" /> },
+
                 ],// Amenities for Bodla Homes
             },
             backgroundImage: bodlaHomes8Marla, // Use the imported image
@@ -109,16 +134,14 @@ const HomeProjects = () => {
                                 <p>{tabs[activeTab].content.details}</p>
                             </div> */}
                             {/* Render Amenities with Icons */}
-                            <div className="amenities-list">
-                                <ul>
-                                    {tabs[activeTab].content.amenities.map((amenity, index) => (
-                                        <li key={index}>
-                                            <span className="amenity-icon">{amenity.icon}</span>
-                                            <span className="amenity-name">{amenity.name}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                            <Row>
+                                {tabs[activeTab].content.amenities.map((amenity, index) => (
+                                    <Col xs={12} sm={3} md={4} lg={2} key={index}>
+                                        <span className="amenity-icon">{amenity.icon}</span>
+                                        <span className="amenity-name">{amenity.name}</span>
+                                    </Col>
+                                ))}
+                            </Row>
                         </div>
                         <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link={tabs[activeTab].content.link}  />
                     </div>

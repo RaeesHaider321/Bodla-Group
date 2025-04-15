@@ -16,7 +16,7 @@
     background-position: center;
     color: var(--white);
     position: relative;
-    transition: padding 0.3s ease;
+    transition: padding 0.5s ease;
 }
 
 .tabs-content .tab-data-section {
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+    transition: width 0.5s ease, height 0.5s ease, padding 0.5s ease;
     overflow: hidden;
 }
 
@@ -40,7 +40,7 @@
 
 .tabs-content .tab-data-section .logo {
     margin-bottom: 20px;
-    width: 200px;
+    width: 150px;
 }
 
 .tabs-content .tab-data-section .logo img {
@@ -53,7 +53,7 @@
     visibility: hidden;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
 }
 
 .tabs-content .tab-data-section:hover .amenities {
@@ -79,38 +79,12 @@
     color: var(--white);
 }
 
-.tabs-content .tab-data-section .amenities-list {
-    text-align: center;
-}
-
-.tabs-content .tab-data-section .amenities-list h3 {
-    font-size: clamp(1.125rem, 1.5vw, 1.25rem); /* 18px to 20px */
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-.tabs-content .tab-data-section .amenities-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.tabs-content .tab-data-section .amenity-icon{
     display: flex;
-    gap: 30px;
     justify-content: center;
-}
-
-.tabs-content .tab-data-section .amenities-list ul li {
-    font-size: 14px;
-    color: var(--white);
-    margin-bottom: 10px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     align-items: center;
 }
-
-.tabs-content .tab-data-section .amenities-list ul li .amenity-icon {
+.tabs-content .tab-data-section .amenity-icon span {
     width: 50px;
     height: 50px;
     color: var(--white);
@@ -141,7 +115,7 @@
     border: none;
     background-color: inherit;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-top 0.3s;
+    transition: background-color 0.5s, color 0.5s, border-top 0.5s;
     color: var(--white);
     border-top: 1px solid var(--white);
     text-align: left;

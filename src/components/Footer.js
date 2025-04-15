@@ -2,8 +2,6 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import SocialMedia from './SocialMedia';
 import UnlockProperty from './UnlockProperty';
 import logo from '../images/footer-logo.png';
-import { FaEnvelope, FaPhone, FaHeadphones } from 'react-icons/fa';
-import { FaLocationPinLock } from "react-icons/fa6";
 import Icon from "../components/Icon";
 function Footer() {
   return (

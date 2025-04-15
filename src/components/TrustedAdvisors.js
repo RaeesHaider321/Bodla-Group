@@ -5,8 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-    { label: "Total Houses Built", value: 1204 },
-    { label: "No. of Plots Traded", value: 650, suffix: "+" },
+    { label: "Years of Experience.", value: 11, suffix: "+" },
+    { label: "Number of Projects", value: 7 },
+    { label: "Property Traded", value: 5000, suffix: "+" },
     { label: "Satisfied Customers", value: 98, suffix: "%" },
 ];
 
@@ -24,7 +25,7 @@ const Counter = () => {
                     <Col xs={12} md={7} ref={ref} className="countUp">
                         <Row className="justify-content-center">
                             {stats.map((stat, index) => (
-                                <Col xs={4} sm={6} md={4} key={index} className="mb-4">
+                                <Col xs={3} sm={6} md={3} key={index} className="mb-4">
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}

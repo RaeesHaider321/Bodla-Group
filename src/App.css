@@ -729,3 +729,13 @@ a {
 .amenity-card:hover span svg{
   fill: var(--background);
 }
+
+.service-icon span{
+  width:40px;
+  height: 40px;
+  fill: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
