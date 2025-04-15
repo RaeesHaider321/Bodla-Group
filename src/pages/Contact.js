@@ -24,7 +24,7 @@ const Contact = () => {
                     <Col xs={12} md={12}>
                       <Card>
                         <Card.Body><Card.Title>Multan Head Office</Card.Title>
-                          <p>Business Hub, Central Square, Sector K Phase I DHA Multan</p></Card.Body>
+                          <p>Business Hub, Sector-k adjacent to DHA Main Head Office, DHA Multan</p></Card.Body>
                       </Card>
                     </Col>
                     <Col xs={12} md={12}>

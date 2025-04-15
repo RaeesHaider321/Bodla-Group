@@ -20,10 +20,33 @@ const Projects = () => {
 
   // Sample project data
   const projects = [
-    { id: 1, background: businessHub, logo: bHub, title: 'Business Hub', description: 'While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.' },
-    { id: 2, background: oneDestination, logo: oneD, title: 'One Destination', description: 'While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.' },
-    { id: 3, background: golfViewRumanza, logo: gvr, title: 'Golf View Rumanza', description: 'While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.' },
-    { id: 4, background: bodlaHomes8Marla, logo: bHomes, title: 'Bodla Homes', description: 'While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.' },
+    { id: 1, 
+      background: businessHub, 
+      logo: bHub, 
+      title: 'Business Hub', 
+      description: 'With Business Hub, reimagine the urban living with a dynamic multi-feature first grandiose mall of DHA Multan, residing adjacent to DHA Head Office, on 300ft wide Main Boulevard, ensuring its visibility and accessibility. Business Hub, a modernist 7-storey edifice stretches over an area of 18-kanal, integrating a perfect blend of expansive commercial outlets, marvelous offices and posh 1, 2, 3 – Bedroom Apartments precisely designed to keep pace with the evolving preferences of modern market. The mesmerizing views diligently fuses with the nexus of business opportunities, Central Business Square, creating a lifestyle beyond imagination. ', 
+    },
+    { id: 2, 
+      background: oneDestination, 
+      logo: oneD, 
+      title: 'One Destination',
+      description: 'In One Destination, experience the essence of contemporary retail haven at the most strategic location of DHA Multan, positioned in vicinity to Arena, Food Court, DHA Villas, Askari Villas, and DHA Commercial Arcade on 300ft-wide Main Boulevard, ensuring unmatched accessibility.',
+      secondDescription: 'One Destination goes beyond the ordinary, blending modern architectural brilliance with exquisite retreat. Our impeccable 4-storey project expands over an area of 2.78 acres, and is thoroughly designed to cover your multitude of choices.  One Destination features a fusion of Brand Outlets, A Digital Hub and Gold Souk. So, embrace your future with comfort at ONE DESTINATION.', 
+    },  
+    { id: 3, 
+      background: bodlaHomes8Marla, 
+      logo: bHomes, 
+      title: 'Bodla Homes', 
+      description: 'Bodla Builders proudly presents Bodla Homes in Sector "V" of DHA Multan, offering contemporary living in its 5.2-Marla and 8-Marla Villas. The 5.2 Marla villas (2220 sq.ft.) feature 4 bedrooms, spacious car parking, a rooftop BBQ, and solar panel space.The 8-Marla villas (2905 sq.ft.) are designed for luxury, featuring 5 bedrooms, 2-car parking, a backyard service area, a rooftop BBQ space, and solar panel provision.',
+      secondDescription:'Both villa categories are ideally located near Parks, a Masjid, Community Facilities, a 150ft wide road, Health & Education City, and Shah Shams Tabraiz Gate, offering complete luxury and convenience. ', 
+    },
+    { id: 4, 
+      background: golfViewRumanza, 
+      logo: gvr, 
+      title: 'Golf View Rumanza', 
+      description: 'Golf View Rumanza - DHA Multan is a premier apartment and commercial complex offering breathtaking views of Pakistan’s first Championship Signature 18-hole golf course, ‘Rumanza.’ Situated in one of the country’s most prestigious communities, this project spans 7.5 kanal and rises across 12 storeys.',
+      secondDescription:'With a mix of luxurious residential apartments and penthouses designed for an elite lifestyle, as well as commercial spaces that provide a prime location for businesses, Golf View Rumanza offers a unique opportunity for both residents and retailers to grow forward in a vibrant, upscale community.', 
+    },
   ];
 
   // Function to convert title into a slug
@@ -102,7 +125,7 @@ const Projects = () => {
         <Container>
           <Row className='align-items-center mb-5'>
             <Col xs={12} md={9}>
-              <h3 data-aos="fade-right">Projects<br /><span data-aos="fade-right" data-aos-delay="200">Innovative Designs, Seamless Experiences</span></h3>
+              <h3 data-aos="fade-right">Projects<br /><span data-aos="fade-right" data-aos-delay="200">Our Portfolio of Eminent Projects</span></h3>
             </Col>
             <Col xs={12} md={3} className='text-end'>
               <div data-aos="fade-left" data-aos-delay="300">
@@ -130,6 +153,7 @@ const Projects = () => {
                             <div className='content'>
                               <h4>{project.title}</h4>
                               <p>{project.description}</p>
+                              <p>{project.secondDescription}</p>
                             </div>
                           </div>
                         </Col>
@@ -163,8 +187,7 @@ const Projects = () => {
         <Container className='mt-4'>
           <Card>
             <CardBody>
-              <h2>View Projects  On Map</h2>
-              <p>Innovative Designs, Seamless Experiences</p>
+              <h2>Locate our Projects on Map</h2>
               <Row>
                 <Col md={12}>
                   <iframe
