@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { Form} from 'react-bootstrap';
+import BodlaButton from './Button';
+import Icons from "../components/Icon";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -124,8 +126,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container">
-      <h2>Contact Us</h2>
+    <div className="contact-form">
+      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
       {submitStatus === 'success' && (
         <div className="alert alert-success">
           Thank you for your message! We'll get back to you soon.
@@ -138,9 +140,9 @@ const ContactForm = () => {
       )}
       
       <form onSubmit={handleSubmit} noValidate>
-        <div className="form-group">
-          <label htmlFor="name">Name*</label>
-          <input
+      <Form.Group className="mb-3">
+          <Form.Label htmlFor="name">Name*</Form.Label>
+          <Form.Control placeholder="Full name"
             type="text"
             id="name"
             name="name"
@@ -148,12 +150,12 @@ const ContactForm = () => {
             onChange={handleChange}
             className={errors.name ? 'error' : ''}
           />
-          {errors.name && <span className="error-message">{errors.name}</span>}
-        </div>
+          {errors.name && <span className="error-message text-sm">{errors.name}</span>}
+        </Form.Group>
         
-        <div className="form-group">
-          <label htmlFor="email">Email*</label>
-          <input
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="email">Email*</Form.Label>
+          <Form.Control placeholder="Your email address"
             type="email"
             id="email"
             name="email"
@@ -161,12 +163,12 @@ const ContactForm = () => {
             onChange={handleChange}
             className={errors.email ? 'error' : ''}
           />
-          {errors.email && <span className="error-message">{errors.email}</span>}
-        </div>
+          {errors.email && <span className="error-message text-sm">{errors.email}</span>}
+        </Form.Group>
         
-        <div className="form-group">
-          <label htmlFor="phone">Phone Number*</label>
-          <input
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="phone">Phone Number*</Form.Label>
+          <Form.Control placeholder="Drop your digits here"
             type="tel"
             id="phone"
             name="phone"
@@ -174,25 +176,28 @@ const ContactForm = () => {
             onChange={handleChange}
             className={errors.phone ? 'error' : ''}
           />
-          {errors.phone && <span className="error-message">{errors.phone}</span>}
-        </div>
+          {errors.phone && <span className="error-message text-sm">{errors.phone}</span>}
+        </Form.Group>
         
-        <div className="form-group">
-          <label htmlFor="message">Message*</label>
-          <textarea
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="message">Message*</Form.Label>
+          <Form.Control as="textarea" rows={4} placeholder="Tell us what’s on your mind…"
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            rows="5"
             className={errors.message ? 'error' : ''}
-          ></textarea>
-          {errors.message && <span className="error-message">{errors.message}</span>}
-        </div>
+          />
+          {errors.message && <span className="error-message text-sm">{errors.message}</span>}
+        </Form.Group>
         
-        <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : 'Submit'}
-        </button>
+        <BodlaButton
+            disabled={isSubmitting}
+            text={isSubmitting ? 'Sending...' : 'Submit'}
+            icon={<Icons name="rightArrow" />}
+            variant="primary"
+            type="submit"
+          />
       </form>
     </div>
   );
