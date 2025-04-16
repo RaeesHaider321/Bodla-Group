@@ -93,7 +93,7 @@ const ContactForm = () => {
       
       try {
         // Using FormSubmit.co service to send the email
-        const response = await axios.post('https://formsubmit.co/ajax/raees.haider@bodlabuilders.com.pk', {
+        const response = await axios.post('https://formsubmit.co/ajax/support@bodlagroup.com', {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
