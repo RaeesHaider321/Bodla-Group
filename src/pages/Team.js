@@ -20,7 +20,8 @@ const bosses = [
     id: 1,
     name: "Sohaib Tariq Bodla",
     designation: "Chief Executive Officer",
-    description: "Our organization is built on a foundation of integrity, transparency, and professionalism. We believe in going above and beyond to ensure that our customers are satisfied with their investment. From the initial consultation to the final handover, we work closely with our customers to understand their needs.",
+    idescription: "‘We will grow Multan, and we will grow with DHA Multan. From the land to development, from building homes to tall buildings, we aim to be a part in every ounce of its development’",
+    description: "‘We will grow Multan, and we will grow with DHA Multan. From the land to development, from building homes to tall buildings, we aim to be a part in every ounce of its development’",
     image: ceo,
     social: {
       facebook: "#",
@@ -33,7 +34,8 @@ const bosses = [
     id: 2,
     name: "Junaid Tariq Bodla",
     designation: "Managing Director",
-    description: "Our organization is built on a foundation of integrity, transparency, and professionalism. We believe in going above and beyond to ensure that our customers are satisfied with their investment. From the initial consultation to the final handover, we work closely with our customers to understand their needs.",
+    idescription: "'We align our vision with the aspirations of our clients and investors and it is the actual synergy that drives our legacy of excellence'",
+    description: "Bodla Group's journey, from its inception as Bodla Builders to a trusted industry name defines our commitment to delivering excellence and upholding our values. Focused on DHA Multan, we have built a reputation for quality and innovation, driven by the unshakable trust of our clients and investors. This trust inspires us to redefine real estate standards and create impactful opportunities",
     image: md,
     social: {
       facebook: "#",
@@ -106,12 +108,10 @@ const directors = [
 const Team = () => {
   
   return (
+    <>
+      <PageTitle title="Meet your trusted team of " highlight="Passionate Professionals" />
     <section className='team'>
       <Container>
-        <div data-aos="fade-up">
-          <PageTitle title="Your Trusted Team of" highlight="Real Estate Professionals" />
-        </div>
-        
         <Card className='chairman-card' data-aos="fade-up" data-aos-delay="100">
           <Row className='justify-content-center align-items-center'>
             <Col xs={12} md={6}>
@@ -123,13 +123,15 @@ const Team = () => {
                 <p className='designation' data-aos="fade-left" data-aos-delay="100">Chairman</p>
                 <h5 data-aos="fade-left" data-aos-delay="150">CHAIRMAN'S MESSAGE</h5>
                 <Card.Text data-aos="fade-up" data-aos-delay="200">
-                  Our commitment to quality, innovation, and sustainability has been the cornerstone of our success, and we remain dedicated to these values. We have always believed in creating a lasting legacy by delivering exceptional projects that stand the test of time. Our team of experts works tirelessly to ensure that we meet and exceed our clients' expectations, and we strive to remain at the forefront of the latest technologies and techniques.
+                <i>‘When we construct a building, it’s never just for today or tomorrow—we are building a legacy for at least 100 years. We thoughtfully design every element to ensure enduring comfort and convenience for generations to come.’</i>
+                </Card.Text>
+                <Card.Text data-aos="fade-up" data-aos-delay="300">
+                Rooted in the belief ‘We grow as DHA grows,’ we aligned with DHA Multan, the most secure housing community, and our exceptional team of dealers, contractors & engineers. With future-focused designs, expert project management, and uncompromising quality, we deliver projects that are <b><span>Tangible, Sustainable, & Real,</span></b> always prioritizing the trust and investment of our valued customers.
                 </Card.Text>
               </Card.Body>
             </Col>
           </Row>
         </Card>
-        
         <section data-aos="fade-up" >
           <Row>
             {bosses.map((boss, index) => (
@@ -152,6 +154,7 @@ const Team = () => {
                           </div>
                         </Col>
                       </Row>
+                      <Card.Text><i>{boss.idescription}</i></Card.Text>
                       <Card.Text>{boss.description}</Card.Text>
                     </Card.Body>
                   </Card>
@@ -182,6 +185,7 @@ const Team = () => {
         </div>
       </Container>
     </section>
+    </>
   );
 };
 

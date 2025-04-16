@@ -71,7 +71,7 @@ function Footer() {
             </Col>
           </Row>
 
-          <Row className="justify-content-center align-items-center mb-4" data-aos="fade-up" data-aos-duration="2200">
+          <Row className="justify-content-center align-items-center mb-3" data-aos="fade-up" data-aos-duration="2200">
             <Col xs={12} sm={12} md={12} lg={8}>
               <SocialMedia />
             </Col>

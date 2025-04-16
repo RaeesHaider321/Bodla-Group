@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
 
 import Header from "./components/Header";
@@ -18,7 +18,6 @@ import ServiceDetails from "./pages/ServiceDetails";
 import Team from "./pages/Team";
 import DHAMultan from "./pages/DHAMultan";
 
-
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
 import "./components/Header.css"; // Header CSS
@@ -26,6 +25,17 @@ import "./components/Footer.css"; // Footer CSS
 import "./components/TrustedAdvisors.css"; // Trusted Advisors CSS
 import "./components/ScrollToTop.css"; // CSS for Scroll to Top Button
 import "./components/Team.css"; // CSS for Team
+
+// This component will handle scrolling to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -59,6 +69,7 @@ function App() {
     <Router>
       <div className="app-container">
         <Header />
+        <ScrollToTop /> {/* This will handle scrolling to top on route change */}
         <div className="routes-container">
           <Routes>
             <Route path="/" element={<Home />} />

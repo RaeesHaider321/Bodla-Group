@@ -2,14 +2,12 @@ import React from 'react';
 import PromotionalSlider from '../components/PromotionalSlider'
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import ContactForm from '../components/ContactForm';
+import PageTitle from '../components/PageTitle';
 const Contact = () => {
   return (
     <>
+      <PageTitle title="Feel free to " highlight="Get in Touch" caption="We’d Love to Hear from You!" />
       <section className='contact-us'>
-        <div className='text-center'>
-          <h1>Feel free to <span>Get in Touch</span><br /></h1>
-          <p>We’d Love to Hear from You!</p>
-        </div>
         <Container>
           <Card className='contact-card'>
             <Card.Body>

@@ -16,7 +16,7 @@ const socialLinks = [
 
 const SocialMediaLinks = () => {
   return (
-    <Container className="social text-center py-5 mb-4">
+    <Container className="social text-center py-4">
       <Row className="justify-content-center">
         {socialLinks.map((social, index) => (
           <a

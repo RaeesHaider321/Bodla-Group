@@ -1,17 +1,16 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
-const PageTitle = ({ title, highlight }) => {
+const PageTitle = ({ title, highlight, caption }) => {
   return (
-    <div className="page-title text-center mb-5">
+    <Container data-aos="fade-up" className="page-title text-center">
       <Row className="justify-content-center">
         <Col xs={12} md={7}>
-          <h2>
-            {title} <span className="text-blue-600">{highlight}</span>
-          </h2>
+          <h2> {title} <span className="text-blue-600">{highlight}</span></h2>
+          <p> {caption}</p>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 
