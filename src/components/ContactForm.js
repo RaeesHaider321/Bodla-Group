@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from 'react-bootstrap';
+import { Form, Alert } from 'react-bootstrap';
 import emailjs from "emailjs-com";
 import Icons from "../components/Icon";
 import BodlaButton from './Button';
@@ -18,18 +18,18 @@ const ContactForm = () => {
 
     const validate = () => {
         let newErrors = {};
-        if (!form.name.trim()) newErrors.name = "Name is required.";
+        if (!form.name.trim()) newErrors.name = "Name is required";
         if (!form.email.trim()) {
-            newErrors.email = "Email is required.";
+            newErrors.email = "Email is required";
         } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-            newErrors.email = "Email is invalid.";
+            newErrors.email = "Email is invalid";
         }
         if (!form.phone.trim()) {
-            newErrors.phone = "Phone number is required.";
+            newErrors.phone = "Phone number is required";
         } else if (!/^\d{10,15}$/.test(form.phone)) {
-            newErrors.phone = "Phone number is invalid.";
+            newErrors.phone = "Phone number is invalid (10-15 digits)";
         }
-        if (!form.message.trim()) newErrors.message = "Message is required.";
+        if (!form.message.trim()) newErrors.message = "Message is required";
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -43,6 +43,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSuccess("");
         
         if (!validate()) {
             setIsSubmitting(false);
@@ -50,15 +51,19 @@ const ContactForm = () => {
         }
 
         try {
-            await emailjs.send(
-                "service_qicvha8",     // Your EmailJS service ID
-                "template_ytc5b3r",    // Your EmailJS template ID
+            const response = await emailjs.send(
+                "service_qicvha8",     // Service ID
+                "template_ytc5b3r",    // Template ID
                 form,
-                "wP74glSPoCaKIhuZE"   // Your EmailJS public key
+                "wP74glSPoCaKIhuZE"    // User ID
             );
             
-            setSuccess("Message sent successfully!");
-            setForm({ name: "", email: "", phone: "", message: "" });
+            if (response.status === 200) {
+                setSuccess("Message sent successfully!");
+                setForm({ name: "", email: "", phone: "", message: "" });
+            } else {
+                throw new Error("Failed to send message");
+            }
         } catch (error) {
             console.error("EmailJS error:", error);
             setSuccess("Failed to send message. Please try again later.");
@@ -71,15 +76,15 @@ const ContactForm = () => {
         <div className="max-w-md mx-auto mt-10 p-6 contact-form">
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             {success && (
-                <p className={`mb-4 ${success.includes("successfully") ? "text-green-600" : "text-red-600"}`}>
+                <Alert variant={success.includes("successfully") ? "success" : "danger"}>
                     {success}
-                </p>
+                </Alert>
             )}
             <form onSubmit={handleSubmit} className="gy-4">
                 <Form.Group className="mb-4">
-                    <Form.Label className="block">Name</Form.Label>
+                    <Form.Label>Name</Form.Label>
                     <Form.Control 
-                        placeholder="User Name"
+                        placeholder="Your Name"
                         name="name"
                         type="text"
                         value={form.name}
@@ -90,43 +95,46 @@ const ContactForm = () => {
                         {errors.name}
                     </Form.Control.Feedback>
                 </Form.Group>
+                
                 <Form.Group className="mb-4">
-                    <Form.Label className="block">Email</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control
                         name="email"
                         type="email"
                         value={form.email}
                         onChange={handleChange}
-                        placeholder="name@example.com"
+                        placeholder="your@email.com"
                         isInvalid={!!errors.email}
                     />
                     <Form.Control.Feedback type="invalid">
                         {errors.email}
                     </Form.Control.Feedback>
                 </Form.Group>
+                
                 <Form.Group className="mb-4">
-                    <Form.Label className="block">Phone</Form.Label>
+                    <Form.Label>Phone</Form.Label>
                     <Form.Control
                         name="phone"
                         type="tel"
                         value={form.phone}
                         onChange={handleChange}
-                        placeholder="+92-000-0000000"
+                        placeholder="1234567890"
                         isInvalid={!!errors.phone}
                     />
                     <Form.Control.Feedback type="invalid">
                         {errors.phone}
                     </Form.Control.Feedback>
                 </Form.Group>
+                
                 <Form.Group className="mb-4">
-                    <Form.Label className="block">Message</Form.Label>
+                    <Form.Label>Message</Form.Label>
                     <Form.Control 
                         as="textarea" 
                         rows={4}
                         name="message"
                         value={form.message}
                         onChange={handleChange}
-                        placeholder="Write Message"
+                        placeholder="Your message here"
                         isInvalid={!!errors.message}
                     />
                     <Form.Control.Feedback type="invalid">
