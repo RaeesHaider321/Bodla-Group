@@ -3,6 +3,7 @@ import PromotionalSlider from '../components/PromotionalSlider'
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import ContactForm from '../components/ContactForm';
 import PageTitle from '../components/PageTitle';
+import Icon from "../components/Icon";
 const Contact = () => {
   return (
     <>
@@ -21,8 +22,13 @@ const Contact = () => {
                   <Row className='gy-4'>
                     <Col xs={12} md={12}>
                       <Card>
-                        <Card.Body><Card.Title>Multan Head Office</Card.Title>
-                          <p>Business Hub, Sector-k adjacent to DHA Main Head Office, DHA Multan</p></Card.Body>
+                        <Card.Body>
+                        <Icon name="location" />
+                        <div className='card-content'>
+                          <Card.Title>Multan Head Office</Card.Title>
+                          <p>Business Hub, Sector-k adjacent to DHA Main Head Office, DHA Multan</p>
+                          </div>
+                          </Card.Body>
                       </Card>
                     </Col>
                     <Col xs={12} md={12}>
@@ -30,16 +36,22 @@ const Contact = () => {
                         <Col xs={12} md={6}>
                           <Card>
                             <Card.Body>
+                            <Icon name="envelope" />
+                            <div className='card-content'>
                               <Card.Title>Email</Card.Title>
                               <p>info@bodlagroup.com</p>
+                              </div>
                             </Card.Body>
                           </Card>
                         </Col>
                         <Col xs={12} md={6}>
                           <Card>
                             <Card.Body>
+                            <Icon name="phone" />
+                            <div className='card-content'>
                               <Card.Title>Phone</Card.Title>
                               <p>061-1111-26352</p>
+                              </div>
                             </Card.Body>
                           </Card>
                         </Col>
