@@ -9,7 +9,14 @@ import PageTitle from '../components/PageTitle';
 // Project Images (import all projects' images here)
 import oneDestination from '../images/oneDestination.jpg';
 import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
+
 import businessHub from '../images/businessHub.jpg';
+// Business Hub Slides
+import businessHubslide1 from '../images/businessHub-slide1.jpg';
+import businessHubslide2 from '../images/businessHub-slide2.jpg';
+import businessHubslide3 from '../images/businessHub-slide3.jpg';
+import businessHubslide4 from '../images/businessHub-slide4.jpg';
+
 import golfViewRumanza from '../images/golfViewRumanza.jpg';
 import bHomes from '../images/bHomes-logo.png';
 import bHub from '../images/BHub-logo.png';
@@ -24,44 +31,7 @@ import floor4 from '../images/floor4.jpg';
 import sectorV from '../videos/sector-v.mp4';
 import ctaOneD from '../images/ctaOneD.png';
 
-import NearbyLocations from '../components/NearbyLocations';
-const nearbyLocations = [
-  {
-    id: 1,
-    name: "Central Park",
-    distance: 0.5,
-  },
-  {
-    id: 2,
-    name: "Downtown Mall",
-    distance: 1.2,
-  },
-  {
-    id: 3,
-    name: "City Museum",
-    distance: 2.1,
-  },
-  {
-    id: 4,
-    name: "Riverside Walk",
-    distance: 3.0,
-  },
-  {
-    id: 5,
-    name: "Main Square",
-    distance: 0.8,
-  },
-  {
-    id: 6,
-    name: "Science Center",
-    distance: 2.5,
-  },
-  {
-    id: 7,
-    name: "Botanical Garden",
-    distance: 1.8,
-  }
-];
+
 // Project Data Template
 const projectTemplate = {
   id: 0,
@@ -101,69 +71,41 @@ const projectDetails = {
   'business-hub': {
     ...projectTemplate,
     id: 1,
-    title: 'The First Multi-Purpose Mega Mall of Multan',
+    title: 'A Whole New Definition of Lifestyle',
     spantitle: 'Business Hub',
-    introTitle: 'The First Multi-Purpose Mega Mall of Multan',
+    introTitle: 'Experience the Future of Urban Living',
     logo: bHub,
     background: businessHub,
-    description: 'While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning...',
+    description: 'With Business Hub, reimagine the urban living with a dynamic multi-feature first grandiose mall of DHA Multan, residing adjacent to DHA Head Office, on 300ft wide Main Boulevard, ensuring its visibility and accessibility. Business Hub, a modernist 7-storey edifice stretches over an area of 18-kanal, integrating a perfect blend of expansive commercial outlets, marvelous offices and posh 1, 2, 3 – Bedroom Apartments precisely designed to keep pace with the evolving preferences of modern market. The mesmerizing views diligently fuses with the nexus of business opportunities, Central Business Square, creating a lifestyle beyond imagination.',
     amenities: [
-      {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'Mosque',
-      },
-      {
-        icon: 'cctv',
-        title: '24 Hour Security',
-      },
-      {
-        icon: 'powerBackup',
-        title: '24 Hours Power Backup',
-      },
-      {
-        icon: 'elevators',
-        title: 'High Speed Elevators',
-      },
-      {
-        icon: 'fireFighting',
-        title: 'Fire Fighting System',
-      },
-      {
-        icon: 'firstAid',
-        title: 'First Aid Facility',
-      },
-      {
-        icon: 'foodCourt',
-        title: 'Food Court',
-      },
-      {
-        icon: 'airConditioning',
-        title: 'Air Conditioned Common Areas',
-      },
+      { title: 'Mosque', icon:"mosque", },
+      { title: 'Food Court', icon: "foodCourt" },
+      { title: 'Kids Play Area', icon: "airConditioning" },
+      { title: 'High-speed Elevators & Escalators', icon: "elevators" },
+      { title: 'Central Fire Protection System', icon:"fireFighting" },
+      { title: 'Air Conditioned Corridors and Common Areas', icon: "airConditioning" },
+      { title: 'Ample Parking', icon:"elevators" },
+      { title: 'Double Entry', icon: "elevators" },
+      { title: 'Bridge connecting with DHA Main Office', icon: "elevators" },
+      { title: '24 Hour Security', icon: "cctv"  },
+      { title: 'First Aid', icon: "firstAid" },
+      { title: '24 Hours Power backup', icon: "powerBackup"},
     ],
     nearbyPlaces: [
-      {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'International Airport',
-      },
-      {
-        icon: 'mosque',
-        title: 'University',
-      },
-      {
-        icon: 'mosque',
-        title: 'Motorways',
-      },
-      {
-        icon: 'mosque',
-        title: 'Hospital',
-      },
-      {
-        icon: 'mosque',
-        title: 'Bypass Road',
-      },
+      {icon: 'mosque', title: 'Airport',},
+      {icon: 'mosque',  title: 'DHA Head Office',},
+      {icon: 'mosque',  title: 'Central Square',},
+      {icon: 'mosque',  title: 'Main Boulevard',},
+      {icon: 'mosque',  title: 'Health Care',},
+      {icon: 'mosque',  title: 'Cultural Centre',},
+      {icon: 'mosque',  title: 'Kashmir Park',},
+      {icon: 'mosque',  title: 'Sports Complex',},
+      {icon: 'mosque',  title: 'Basket Ball Court',},
+      {icon: 'mosque',  title: 'DHA Library',},
+      {icon: 'mosque',  title: '360 Zoo',},
+      {icon: 'mosque',  title: 'MPS road',},
     ],
-    images: [businessHub, oneDestination, bodlaHomes8Marla, golfViewRumanza],
+    images: [businessHubslide1, businessHubslide2, businessHubslide3, businessHubslide4],
     floorPlans: [floor1, floor1, floor1, floor1], // array of floor plan images
     location: 'DHA Multan, Pakistan',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.9287473577783!2d71.55361441037263!3d30.296090006500197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3924cbd1167128b5%3A0x79d6c7b73dd41cef!2sBusiness%20Hub%2C%20DHA%20Multan!5e0!3m2!1sen!2s!4v1744012574158!5m2!1sen!2s',
@@ -251,38 +193,15 @@ const projectDetails = {
     logo: oneD,
     background: oneDestination,
     amenities: [
-      {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'Mosque',
-      },
-      {
-        icon: 'cctv',
-        title: '24 Hour Security',
-      },
-      {
-        icon: 'powerBackup',
-        title: '24 Hours Power Backup',
-      },
-      {
-        icon: 'elevators',
-        title: 'High Speed Elevators',
-      },
-      {
-        icon: 'fireFighting',
-        title: 'Fire Fighting System',
-      },
-      {
-        icon: 'firstAid',
-        title: 'First Aid Facility',
-      },
-      {
-        icon: 'foodCourt',
-        title: 'Food Court',
-      },
-      {
-        icon: 'airConditioning',
-        title: 'Air Conditioned Common Areas',
-      },
+      { title: 'Gymnasium', icon: 'mosque', }, 
+      { title: 'Swimming Pool', icon: 'mosque', }, 
+      { title: 'Roof-Top Restaurant', icon: 'mosque', }, 
+      { title: 'Elevators', icon: "elevators" }, 
+      { title: 'Wide Corridors', icon: 'mosque', }, 
+      { title: 'Multiple Entrances', icon: 'mosque', }, 
+      { title: 'Ample Car Parking', icon: 'mosque', }, 
+      { title: '24/7 Power Backup', icon: "powerBackup"}, 
+      { title: '24/7 Security', icon: "cctv"},
     ],
     nearbyPlaces: [
       {
@@ -392,38 +311,16 @@ const projectDetails = {
     logo: gvr,
     background: golfViewRumanza,
     amenities: [
-      {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'Mosque',
-      },
-      {
-        icon: 'cctv',
-        title: '24 Hour Security',
-      },
-      {
-        icon: 'powerBackup',
-        title: '24 Hours Power Backup',
-      },
-      {
-        icon: 'elevators',
-        title: 'High Speed Elevators',
-      },
-      {
-        icon: 'fireFighting',
-        title: 'Fire Fighting System',
-      },
-      {
-        icon: 'firstAid',
-        title: 'First Aid Facility',
-      },
-      {
-        icon: 'foodCourt',
-        title: 'Food Court',
-      },
-      {
-        icon: 'airConditioning',
-        title: 'Air Conditioned Common Areas',
-      },
+      { name: 'Gym',icon: 'mosque', },
+      { name: 'Swimming pool',icon: 'mosque', }, 
+      { name: 'Kids play area', icon: 'mosque', }, 
+      { name: 'Landscaped gardens',icon: 'mosque', }, 
+      { name: 'Private lounges', icon: 'mosque', },
+      { name: 'Executive lift for penthouses', icon: 'elevators', }, 
+      { name: 'Cargo, passenger lifts', icon: 'elevators', }, 
+      { name: 'Garbage disposal',icon: 'mosque', },  
+      { name: 'Stunning views', icon: 'mosque', },
+      { name: 'Spacious parking',icon: 'mosque', },
     ],
     nearbyPlaces: [
       {
@@ -534,38 +431,30 @@ const projectDetails = {
     background: bodlaHomes8Marla,
     description: 'Bodla Homes brings you affordable yet luxurious housing solutions with modern designs and premium finishes...',
     amenities: [
-      {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'Mosque',
-      },
-      {
-        icon: 'cctv',
-        title: '24 Hour Security',
-      },
-      {
-        icon: 'powerBackup',
-        title: '24 Hours Power Backup',
-      },
-      {
-        icon: 'elevators',
-        title: 'High Speed Elevators',
-      },
-      {
-        icon: 'fireFighting',
-        title: 'Fire Fighting System',
-      },
-      {
-        icon: 'firstAid',
-        title: 'First Aid Facility',
-      },
-      {
-        icon: 'foodCourt',
-        title: 'Food Court',
-      },
-      {
-        icon: 'airConditioning',
-        title: 'Air Conditioned Common Areas',
-      },
+        // 	5.2-Marla Bodla Homes
+        //{ name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
+        { title: 'Drawing Room', icon: 'mosque',},
+        { title: 'Family Lounge + Dinning', icon: 'mosque',},
+        { title: 'Kitchen', icon: 'mosque',},
+        { title: 'Backyard Service Space', icon: 'mosque',},
+        { title: 'Beds + Attached Baths', icon: 'mosque',},
+        { title: 'FF Kitchenette and Terrace Roof Top BBQ Terrace', icon: 'mosque',},
+        { title: 'Roof Top Solar Panel Area', icon: 'mosque',},
+        { title: 'Spacious Car Parking', icon: 'mosque',},
+          // 	8-Marla Bodla Homes
+          // { title: 'Covered Area 2905 Sqft', icon: 'mosque',},
+          { title: 'Evaporative Air Cooler', icon: 'mosque',},
+          { title: 'Drawing Room', icon: 'mosque',},
+          { title: 'Family Lounge + Dinning', icon: 'mosque',},
+          // { title: 'Kitchen', icon: 'mosque',},
+          // { title: 'Backyard Service Space', icon: 'mosque',},
+          { title: 'Spacious Living Room', icon: 'mosque',},
+          { title: 'Store Room / Maid Room', icon: 'mosque',},
+          // { title: '5 Beds + Attached Baths', icon: 'mosque',},
+          // { title: 'FF Kitchenette andTerrace', icon: 'mosque',}, 
+          { title: 'Roof Top B BQ Terrace', icon: 'mosque',},
+          { title: 'Roof Top Solar Panel Area', icon: 'mosque',},
+          // { title: 'Spacious Car Parking (2 Cars)', icon: 'mosque',},
     ],
     nearbyPlaces: [
       {
@@ -684,7 +573,7 @@ const ProjectDetails = () => {
       <section className='project-detail'>
       <Container>
           <Row className='justify-content-center text-center'>
-            <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="100">
+            <Col xs={12} md={9} data-aos="fade-up" data-aos-delay="100">
               <h2>{project.title} <span>{project.spantitle}</span></h2>
             </Col>
           </Row>
@@ -706,7 +595,7 @@ const ProjectDetails = () => {
               <Row className="align-items-center">
                 <Col xs={12} md={7} data-aos="fade-right" data-aos-delay="400">
                   <h3 className="mb-4">{project.introTitle || project.title}</h3>
-                  <p className="lead">{project.description}</p>
+                  <p className="lead text-justify">{project.description}</p>
                   <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} link="/Contact" />
                 </Col>
                 <Col xs={12} md={5} className="text-md-end">
@@ -750,7 +639,8 @@ const ProjectDetails = () => {
                   <CardBody>
                     <Row className="d-flex align-items-center justify-content-center">
                       <Icons name={nearby.icon} />
-                      <p>{nearby.title}</p>
+                      <h6>{nearby.title}</h6>
+                      <p>{nearby.distance}</p>
                     </Row>
                   </CardBody>
                 </Card>

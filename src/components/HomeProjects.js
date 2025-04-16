@@ -88,7 +88,7 @@ const HomeProjects = () => {
                 link: '/bodla-homes', // Updated link
                 amenities: [
                     // 	5.2-Marla Bodla Homes
-                //    { name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
+                    //{ name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
                    { name: 'Drawing Room', icon: <Icons name="airConditioning" /> },
                    { name: 'Family Lounge + Dinning', icon: <Icons name="airConditioning" /> },
                    { name: 'Kitchen', icon: <Icons name="airConditioning" /> },
@@ -97,7 +97,7 @@ const HomeProjects = () => {
                    { name: 'FF Kitchenette and Terrace Roof Top BBQ Terrace', icon: <Icons name="airConditioning" /> },
                    { name: 'Roof Top Solar Panel Area', icon: <Icons name="airConditioning" /> },
                    { name: 'Spacious Car Parking', icon: <Icons name="airConditioning" /> },
-                // 	8-Marla Bodla Homes
+                    // 	8-Marla Bodla Homes
                     // { name: 'Covered Area 2905 Sqft', icon: <Icons name="airConditioning" /> },
                     { name: 'Evaporative Air Cooler', icon: <Icons name="airConditioning" /> },
                     { name: 'Drawing Room', icon: <Icons name="airConditioning" /> },
