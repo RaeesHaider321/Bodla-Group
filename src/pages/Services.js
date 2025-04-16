@@ -155,7 +155,7 @@ const Services = () => {
                   />
                   <Card.Body>
                     <Card.Title>{service.title}</Card.Title>
-                    <Card.Text className="text-muted">
+                    <Card.Text>
                       {service.description.substring(0, 100)}...
                     </Card.Text>
                   </Card.Body>
@@ -173,7 +173,7 @@ const Services = () => {
           {/* Additional Services Section */}
           <Row className="mt-5">
             <Col xs={12}>
-              <div className="bg-light p-4 rounded-3">
+              <div className="p-4 rounded-3">
                 <h4 className="mb-4">Why Choose Our Services?</h4>
                 <Row>
                   <Col xs={12} md={6} lg={3} className="mb-3">
@@ -181,7 +181,7 @@ const Services = () => {
                       <Icons name="shield" className="me-2 mt-1 text-primary" size={24} />
                       <div>
                         <h6>Trusted Expertise</h6>
-                        <p className="small text-muted">Years of experience in delivering quality services</p>
+                        <p className="small">Years of experience in delivering quality services</p>
                       </div>
                     </div>
                   </Col>
@@ -190,7 +190,7 @@ const Services = () => {
                       <Icons name="quality" className="me-2 mt-1 text-primary" size={24} />
                       <div>
                         <h6>Quality Assurance</h6>
-                        <p className="small text-muted">Rigorous quality checks at every stage</p>
+                        <p className="small">Rigorous quality checks at every stage</p>
                       </div>
                     </div>
                   </Col>
@@ -199,7 +199,7 @@ const Services = () => {
                       <Icons name="clock" className="me-2 mt-1 text-primary" size={24} />
                       <div>
                         <h6>Timely Delivery</h6>
-                        <p className="small text-muted">We respect deadlines and deliver on time</p>
+                        <p className="small">We respect deadlines and deliver on time</p>
                       </div>
                     </div>
                   </Col>
@@ -208,7 +208,7 @@ const Services = () => {
                       <Icons name="support" className="me-2 mt-1 text-primary" size={24} />
                       <div>
                         <h6>Customer Support</h6>
-                        <p className="small text-muted">Dedicated support throughout your project</p>
+                        <p className="small">Dedicated support throughout your project</p>
                       </div>
                     </div>
                   </Col>

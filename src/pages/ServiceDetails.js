@@ -231,7 +231,7 @@ const ServiceDetails = () => {
                   
                   <div className="mt-4">
                     <h5 className="mb-3">Get Started</h5>
-                    <p className="small text-muted mb-3">
+                    <p className="small mb-3">
                       Ready to benefit from our {service.title} service? Contact us today to discuss your requirements.
                     </p>
                     <div className="d-grid gap-2">
@@ -293,7 +293,7 @@ const ServiceDetails = () => {
                         />
                         <Card.Body>
                           <Card.Title>{relatedService.title}</Card.Title>
-                          <Card.Text className="text-muted">
+                          <Card.Text >
                             {relatedService.description.substring(0, 100)}...
                           </Card.Text>
                         </Card.Body>
@@ -315,7 +315,7 @@ const ServiceDetails = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-5 bg-light">
+      <section>
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={8}>
