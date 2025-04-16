@@ -4,10 +4,6 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
-import emailjs from 'emailjs-com';
-
-// Initialize EmailJS with your User ID
-emailjs.init("AJxzxOx0Oq5lZRgHa"); // Replace with your actual EmailJS user ID
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";

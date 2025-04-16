@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const PageTitle = ({ title, highlight, caption }) => {
   return (
-    <Container data-aos="fade-up" className="page-title text-center">
+    <Container data-aos="fade-up" className="page-title text-center mt-2">
       <Row className="justify-content-center">
         <Col xs={12} md={7}>
           <h2> {title} <span className="text-blue-600">{highlight}</span></h2>

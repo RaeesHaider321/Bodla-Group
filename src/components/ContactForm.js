@@ -1,157 +1,201 @@
-import React, { useState } from "react";
-import { Form, Alert } from 'react-bootstrap';
-import emailjs from "emailjs-com";
-import Icons from "../components/Icon";
-import BodlaButton from './Button';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const ContactForm = () => {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
     });
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
+    }
+  };
 
-    const [errors, setErrors] = useState({});
-    const [success, setSuccess] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
 
-    const validate = () => {
-        let newErrors = {};
-        if (!form.name.trim()) newErrors.name = "Name is required";
-        if (!form.email.trim()) {
-            newErrors.email = "Email is required";
-        } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-            newErrors.email = "Email is invalid";
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+      isValid = false;
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters';
+      isValid = false;
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    // Phone validation
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+      isValid = false;
+    } else if (!/^[0-9+\- ]+$/.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+      isValid = false;
+    } else if (formData.phone.replace(/[^0-9]/g, '').length < 10) {
+      newErrors.phone = 'Phone number must be at least 10 digits';
+      isValid = false;
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+      isValid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (validateForm()) {
+      setIsSubmitting(true);
+      setSubmitStatus(null);
+      
+      try {
+        // Using FormSubmit.co service to send the email
+        const response = await axios.post('https://formsubmit.co/ajax/raees.haider@bodlabuilders.com.pk', {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        }, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.data.success === "true") {
+          setSubmitStatus('success');
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
+          });
+        } else {
+          setSubmitStatus('error');
         }
-        if (!form.phone.trim()) {
-            newErrors.phone = "Phone number is required";
-        } else if (!/^\d{10,15}$/.test(form.phone)) {
-            newErrors.phone = "Phone number is invalid (10-15 digits)";
-        }
-        if (!form.message.trim()) newErrors.message = "Message is required";
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setSubmitStatus('error');
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
+  };
 
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-        setErrors({ ...errors, [e.target.name]: "" });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSuccess("");
-        
-        if (!validate()) {
-            setIsSubmitting(false);
-            return;
-        }
-
-        try {
-            const response = await emailjs.send(
-                "service_qicvha8",     // Service ID
-                "template_ytc5b3r",    // Template ID
-                form,
-                "wP74glSPoCaKIhuZE"    // User ID
-            );
-            
-            if (response.status === 200) {
-                setSuccess("Message sent successfully!");
-                setForm({ name: "", email: "", phone: "", message: "" });
-            } else {
-                throw new Error("Failed to send message");
-            }
-        } catch (error) {
-            console.error("EmailJS error:", error);
-            setSuccess("Failed to send message. Please try again later.");
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    return (
-        <div className="max-w-md mx-auto mt-10 p-6 contact-form">
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            {success && (
-                <Alert variant={success.includes("successfully") ? "success" : "danger"}>
-                    {success}
-                </Alert>
-            )}
-            <form onSubmit={handleSubmit} className="gy-4">
-                <Form.Group className="mb-4">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control 
-                        placeholder="Your Name"
-                        name="name"
-                        type="text"
-                        value={form.name}
-                        onChange={handleChange}
-                        isInvalid={!!errors.name}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        {errors.name}
-                    </Form.Control.Feedback>
-                </Form.Group>
-                
-                <Form.Group className="mb-4">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                        name="email"
-                        type="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="your@email.com"
-                        isInvalid={!!errors.email}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        {errors.email}
-                    </Form.Control.Feedback>
-                </Form.Group>
-                
-                <Form.Group className="mb-4">
-                    <Form.Label>Phone</Form.Label>
-                    <Form.Control
-                        name="phone"
-                        type="tel"
-                        value={form.phone}
-                        onChange={handleChange}
-                        placeholder="1234567890"
-                        isInvalid={!!errors.phone}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        {errors.phone}
-                    </Form.Control.Feedback>
-                </Form.Group>
-                
-                <Form.Group className="mb-4">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control 
-                        as="textarea" 
-                        rows={4}
-                        name="message"
-                        value={form.message}
-                        onChange={handleChange}
-                        placeholder="Your message here"
-                        isInvalid={!!errors.message}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        {errors.message}
-                    </Form.Control.Feedback>
-                </Form.Group>
-                
-                <BodlaButton
-                    text={isSubmitting ? "Sending..." : "Submit"}
-                    icon={<Icons name="rightArrow" />}
-                    variant="primary"
-                    type="submit"
-                    disabled={isSubmitting}
-                />
-            </form>
+  return (
+    <div className="contact-form-container">
+      <h2>Contact Us</h2>
+      {submitStatus === 'success' && (
+        <div className="alert alert-success">
+          Thank you for your message! We'll get back to you soon.
         </div>
-    );
+      )}
+      {submitStatus === 'error' && (
+        <div className="alert alert-error">
+          There was an error submitting your form. Please try again later.
+        </div>
+      )}
+      
+      <form onSubmit={handleSubmit} noValidate>
+        <div className="form-group">
+          <label htmlFor="name">Name*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className={errors.name ? 'error' : ''}
+          />
+          {errors.name && <span className="error-message">{errors.name}</span>}
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className={errors.email ? 'error' : ''}
+          />
+          {errors.email && <span className="error-message">{errors.email}</span>}
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="phone">Phone Number*</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className={errors.phone ? 'error' : ''}
+          />
+          {errors.phone && <span className="error-message">{errors.phone}</span>}
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="message">Message*</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            rows="5"
+            className={errors.message ? 'error' : ''}
+          ></textarea>
+          {errors.message && <span className="error-message">{errors.message}</span>}
+        </div>
+        
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Submit'}
+        </button>
+      </form>
+    </div>
+  );
 };
 
 export default ContactForm;
