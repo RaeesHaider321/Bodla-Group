@@ -103,6 +103,18 @@
     left: 0;
 }
 
+/* For tablets */
+@media (max-width: 1366px) {
+    .tabs {
+        position: relative;
+        background: var(--card-background);
+        padding: 15px;
+        padding-bottom: 10px;
+    }
+
+  }
+ 
+
 .tabs .container {
     display: flex;
     gap: 2%;

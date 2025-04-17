@@ -27,13 +27,14 @@ const HomeProjects = () => {
                 amenities: [
                     { name: 'Mosque', icon: <Icons name="mosque" />, },
                     { name: 'Food Court', icon: <Icons name="foodCourt" /> },
-                    { name: 'Kids Play Area', icon: <Icons name="airConditioning" /> },
-                    { name: 'High-speed Elevators & Escalators', icon: <Icons name="elevators" /> },
+                    { name: 'Kids Play Area', icon: <Icons name="kidsPlayArea" /> },
+                    { name: 'High-speed Elevators', icon: <Icons name="elevators" /> },
+                    { name: 'Escalators', icon: <Icons name="Escalator" /> },
                     { name: 'Central Fire Protection System', icon: <Icons name="fireFighting" /> },
                     { name: 'Air Conditioned Corridors and Common Areas', icon: <Icons name="airConditioning" /> },
-                    { name: 'Ample Parking', icon: <Icons name="elevators" /> },
-                    { name: 'Double Entry', icon: <Icons name="elevators" /> },
-                    { name: 'Bridge connecting with DHA Main Office', icon: <Icons name="elevators" /> },
+                    { name: 'Ample Parking', icon: <Icons name="parkingArea" /> },
+                    { name: 'Double Entry', icon: <Icons name="gate" /> },
+                    { name: 'Bridge connecting with DHA Main Office', icon: <Icons name="bridge" /> },
                     { name: '24 Hour Security', icon: <Icons name="cctv" /> },
                     { name: 'First Aid', icon: <Icons name="firstAid" /> },
                     { name: '24 Hours Power backup', icon: <Icons name="powerBackup" /> },
@@ -47,13 +48,14 @@ const HomeProjects = () => {
                 logo: oneD,
                 link: '/one-destination', // Updated link
                 amenities: [
-                    { name: 'Gymnasium', icon: <Icons name="airConditioning" /> }, 
-                    { name: 'Swimming Pool', icon: <Icons name="airConditioning" /> }, 
-                    { name: 'Roof-Top Restaurant', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Gymnasium', icon: <Icons name="gymnasium" /> }, 
+                    { name: 'Swimming Pool', icon: <Icons name="swimmingPool" /> }, 
+                    { name: 'Roof-Top Restaurant', icon: <Icons name="restaurant" /> }, 
                     { name: 'Elevators', icon: <Icons name="elevators" /> }, 
-                    { name: 'Wide Corridors', icon: <Icons name="airConditioning" /> }, 
-                    { name: 'Multiple Entrances', icon: <Icons name="airConditioning" /> }, 
-                    { name: 'Ample Car Parking', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Escalators', icon: <Icons name="Escalator" /> }, 
+                    { name: 'Wide Corridors', icon: <Icons name="wideCorridors" /> }, 
+                    { name: 'Multiple Entrances', icon: <Icons name="gate" /> }, 
+                    { name: 'Ample Car Parking', icon: <Icons name="parkingArea" /> }, 
                     { name: '24/7 Power Backup', icon: <Icons name="powerBackup" /> }, 
                     { name: '24/7 Security', icon: <Icons name="cctv" /> },
                 ],
@@ -66,16 +68,16 @@ const HomeProjects = () => {
                 logo: gvr,
                 link: '/golf-view-rumanza', // Updated link
                 amenities: [
-                    { name: 'Gym',icon: <Icons name="airConditioning" /> },
-                    { name: 'Swimming pool',icon: <Icons name="airConditioning" /> }, 
-                    { name: 'Kids play area', icon: <Icons name="airConditioning" /> }, 
+                    { name: 'Gym',icon: <Icons name="gym" /> },
+                    { name: 'Swimming pool',icon: <Icons name="swimmingPool" /> }, 
+                    { name: 'Kids play area', icon: <Icons name="kidsPlayArea" /> }, 
                     { name: 'Landscaped gardens',icon: <Icons name="airConditioning" /> }, 
                     { name: 'Private lounges', icon: <Icons name="airConditioning" /> },
                     { name: 'Executive lift for penthouses',icon: <Icons name="elevators" /> }, 
                     { name: 'Cargo, passenger lifts',icon: <Icons name="elevators" /> }, 
                     { name: 'Garbage disposal',icon: <Icons name="airConditioning" /> },  
                     { name: 'Stunning views', icon: <Icons name="airConditioning" /> },
-                    { name: 'Spacious parking',icon: <Icons name="airConditioning" /> },
+                    { name: 'Spacious parking',icon: <Icons name="parkingArea" /> },
 
                 ], // Amenities for Golf View Rumanza
             },
@@ -89,29 +91,22 @@ const HomeProjects = () => {
                 amenities: [
                     // 	5.2-Marla Bodla Homes
                     //{ name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
-                   { name: 'Drawing Room', icon: <Icons name="airConditioning" /> },
-                   { name: 'Family Lounge + Dinning', icon: <Icons name="airConditioning" /> },
-                   { name: 'Kitchen', icon: <Icons name="airConditioning" /> },
+                   { name: 'Drawing Room', icon: <Icons name="livingRoom" /> },
+                   { name: 'Family Lounge', icon: <Icons name="airConditioning" /> },
+                   { name: 'Dinning Area', icon: <Icons name="dining" /> },
+                   { name: 'Kitchen', icon: <Icons name="kitchen" /> },
                    { name: 'Backyard Service Space', icon: <Icons name="airConditioning" /> },
                    { name: 'Beds + Attached Baths', icon: <Icons name="airConditioning" /> },
-                   { name: 'FF Kitchenette and Terrace Roof Top BBQ Terrace', icon: <Icons name="airConditioning" /> },
-                   { name: 'Roof Top Solar Panel Area', icon: <Icons name="airConditioning" /> },
-                   { name: 'Spacious Car Parking', icon: <Icons name="airConditioning" /> },
+                   { name: 'FF Kitchenette', icon: <Icons name="kitchen" /> },
+                   { name: 'BBQ Terrace', icon: <Icons name="barbecue" /> },
+                   { name: 'Terrace', icon: <Icons name="terrace" /> },
+                   { name: 'Roof Top Solar Panel Area', icon: <Icons name="solarPanel" /> },
+                   { name: 'Spacious Car Parking', icon: <Icons name="garage" /> },
                     // 	8-Marla Bodla Homes
-                    // { name: 'Covered Area 2905 Sqft', icon: <Icons name="airConditioning" /> },
                     { name: 'Evaporative Air Cooler', icon: <Icons name="airConditioning" /> },
-                    { name: 'Drawing Room', icon: <Icons name="airConditioning" /> },
-                    { name: 'Family Lounge + Dinning', icon: <Icons name="airConditioning" /> },
-                    // { name: 'Kitchen', icon: <Icons name="airConditioning" /> },
-                    // { name: 'Backyard Service Space', icon: <Icons name="airConditioning" /> },
-                    { name: 'Spacious Living Room', icon: <Icons name="airConditioning" /> },
-                    { name: 'Store Room / Maid Room', icon: <Icons name="airConditioning" /> },
-                    // { name: '5 Beds + Attached Baths', icon: <Icons name="airConditioning" /> },
-                    // { name: 'FF Kitchenette andTerrace', icon: <Icons name="airConditioning" /> }, 
-                    { name: 'Roof Top B BQ Terrace', icon: <Icons name="airConditioning" /> },
-                    { name: 'Roof Top Solar Panel Area', icon: <Icons name="airConditioning" /> },
-                    // { name: 'Spacious Car Parking (2 Cars)', icon: <Icons name="airConditioning" /> },
-
+                    { name: 'Spacious Living Room', icon: <Icons name="livingRoom" /> },
+                    { name: 'Store Room', icon: <Icons name="storeRoom" /> },
+                    { name: 'Maid Room', icon: <Icons name="maid" /> },
                 ],// Amenities for Bodla Homes
             },
             backgroundImage: bodlaHomes8Marla, // Use the imported image
@@ -134,7 +129,7 @@ const HomeProjects = () => {
                                 <p>{tabs[activeTab].content.details}</p>
                             </div> */}
                             {/* Render Amenities with Icons */}
-                            <Row>
+                            <Row className='justify-content-center gy-4 mb-4'>
                                 {tabs[activeTab].content.amenities.map((amenity, index) => (
                                     <Col xs={12} sm={3} md={4} lg={2} key={index}>
                                         <span className="amenity-icon">{amenity.icon}</span>

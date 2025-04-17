@@ -80,19 +80,19 @@ const projectDetails = {
     amenities: [
       { title: 'Mosque', icon:"mosque", },
       { title: 'Food Court', icon: "foodCourt" },
-      { title: 'Kids Play Area', icon: "airConditioning" },
+      { title: 'Kids Play Area', icon: "kidsPlayArea" },
       { title: 'High-speed Elevators & Escalators', icon: "elevators" },
       { title: 'Central Fire Protection System', icon:"fireFighting" },
       { title: 'Air Conditioned Corridors and Common Areas', icon: "airConditioning" },
-      { title: 'Ample Parking', icon:"elevators" },
-      { title: 'Double Entry', icon: "elevators" },
+      { title: 'Ample Parking', icon:"parkingArea" },
+      { title: 'Double Entry', icon: "gate" },
       { title: 'Bridge connecting with DHA Main Office', icon: "elevators" },
       { title: '24 Hour Security', icon: "cctv"  },
       { title: 'First Aid', icon: "firstAid" },
       { title: '24 Hours Power backup', icon: "powerBackup"},
     ],
     nearbyPlaces: [
-      {icon: 'mosque', title: 'Airport',},
+      {icon: 'airPlane', title: 'Airport',},
       {icon: 'mosque',  title: 'DHA Head Office',},
       {icon: 'mosque',  title: 'Central Square',},
       {icon: 'mosque',  title: 'Main Boulevard',},
@@ -193,35 +193,35 @@ const projectDetails = {
     logo: oneD,
     background: oneDestination,
     amenities: [
-      { title: 'Gymnasium', icon: 'mosque', }, 
+      { title: 'Gymnasium', icon: 'gymnasium', }, 
       { title: 'Swimming Pool', icon: 'mosque', }, 
-      { title: 'Roof-Top Restaurant', icon: 'mosque', }, 
+      { title: 'Roof-Top Restaurant', icon: 'restaurant', }, 
       { title: 'Elevators', icon: "elevators" }, 
-      { title: 'Wide Corridors', icon: 'mosque', }, 
-      { title: 'Multiple Entrances', icon: 'mosque', }, 
+      { title: 'Wide Corridors', icon: 'wideCorridors', }, 
+      { title: 'Multiple Entrances', icon: 'gate', }, 
       { title: 'Ample Car Parking', icon: 'mosque', }, 
       { title: '24/7 Power Backup', icon: "powerBackup"}, 
       { title: '24/7 Security', icon: "cctv"},
     ],
     nearbyPlaces: [
       {
-        icon: 'mosque', // name of the icon from your Icons component
+        icon: 'airPlane', // name of the icon from your Icons component
         title: 'International Airport',
       },
       {
-        icon: 'mosque',
+        icon: 'university',
         title: 'University',
       },
       {
-        icon: 'mosque',
-        title: 'Motorways',
+        icon: 'motorway',
+        title: 'Motorway',
       },
       {
-        icon: 'mosque',
+        icon: 'hospital',
         title: 'Hospital',
       },
       {
-        icon: 'mosque',
+        icon: 'bypassRoad',
         title: 'Bypass Road',
       },
     ],
@@ -311,9 +311,9 @@ const projectDetails = {
     logo: gvr,
     background: golfViewRumanza,
     amenities: [
-      { name: 'Gym',icon: 'mosque', },
+      { name: 'Gym',icon: 'gym', },
       { name: 'Swimming pool',icon: 'mosque', }, 
-      { name: 'Kids play area', icon: 'mosque', }, 
+      { name: 'Kids play area', icon: 'kidsPlayArea', }, 
       { name: 'Landscaped gardens',icon: 'mosque', }, 
       { name: 'Private lounges', icon: 'mosque', },
       { name: 'Executive lift for penthouses', icon: 'elevators', }, 
@@ -324,23 +324,23 @@ const projectDetails = {
     ],
     nearbyPlaces: [
       {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'International Airport',
+        icon: 'airPlane', // name of the icon from your Icons component
+        title: 'Airport',
       },
       {
-        icon: 'mosque',
+        icon: 'university',
         title: 'University',
       },
       {
-        icon: 'mosque',
-        title: 'Motorways',
+        icon: 'motorway',
+        title: 'Motorway',
       },
       {
-        icon: 'mosque',
+        icon: 'hospital',
         title: 'Hospital',
       },
       {
-        icon: 'mosque',
+        icon: 'bypassRoad',
         title: 'Bypass Road',
       },
     ],
@@ -432,49 +432,43 @@ const projectDetails = {
     description: 'Bodla Homes brings you affordable yet luxurious housing solutions with modern designs and premium finishes...',
     amenities: [
         // 	5.2-Marla Bodla Homes
-        //{ name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
-        { title: 'Drawing Room', icon: 'mosque',},
-        { title: 'Family Lounge + Dinning', icon: 'mosque',},
-        { title: 'Kitchen', icon: 'mosque',},
+        { title: 'Drawing Room', icon: 'livingRoom',},
+        { title: 'Family Lounge', icon: 'dining',},
+        { title: 'Dinning Area', icon: 'dining',},
+        { title: 'Kitchen', icon: 'kitchen',},
         { title: 'Backyard Service Space', icon: 'mosque',},
         { title: 'Beds + Attached Baths', icon: 'mosque',},
-        { title: 'FF Kitchenette and Terrace Roof Top BBQ Terrace', icon: 'mosque',},
-        { title: 'Roof Top Solar Panel Area', icon: 'mosque',},
-        { title: 'Spacious Car Parking', icon: 'mosque',},
+        { title: 'FF Kitchenette', icon: 'kitchen',},
+        { title: 'Terrace', icon: 'terrace',},
+        { title: 'BBQ Terrace', icon: 'barbecue',},
+        { title: 'Roof Top Solar Panel Area', icon: 'solarPanel',},
+        { title: 'Spacious Car Parking', icon: 'garage',},
           // 	8-Marla Bodla Homes
-          // { title: 'Covered Area 2905 Sqft', icon: 'mosque',},
           { title: 'Evaporative Air Cooler', icon: 'mosque',},
-          { title: 'Drawing Room', icon: 'mosque',},
-          { title: 'Family Lounge + Dinning', icon: 'mosque',},
-          // { title: 'Kitchen', icon: 'mosque',},
-          // { title: 'Backyard Service Space', icon: 'mosque',},
-          { title: 'Spacious Living Room', icon: 'mosque',},
-          { title: 'Store Room / Maid Room', icon: 'mosque',},
-          // { title: '5 Beds + Attached Baths', icon: 'mosque',},
-          // { title: 'FF Kitchenette andTerrace', icon: 'mosque',}, 
-          { title: 'Roof Top B BQ Terrace', icon: 'mosque',},
-          { title: 'Roof Top Solar Panel Area', icon: 'mosque',},
-          // { title: 'Spacious Car Parking (2 Cars)', icon: 'mosque',},
+          { title: 'Drawing Room', icon: 'livingRoom',},
+          { title: 'Spacious Living Room', icon: 'livingRoom',},
+          { title: 'Store Room', icon: 'storeRoom',},
+          { title: 'Maid Room', icon: 'maid',},
     ],
     nearbyPlaces: [
       {
-        icon: 'mosque', // name of the icon from your Icons component
-        title: 'International Airport',
+        icon: 'airPlane', // name of the icon from your Icons component
+        title: 'Airport',
       },
       {
-        icon: 'mosque',
+        icon: 'university',
         title: 'University',
       },
       {
-        icon: 'mosque',
-        title: 'Motorways',
+        icon: 'motorway',
+        title: 'Motorway',
       },
       {
-        icon: 'mosque',
+        icon: 'hospital',
         title: 'Hospital',
       },
       {
-        icon: 'mosque',
+        icon: 'bypassRoad',
         title: 'Bypass Road',
       },
     ],
@@ -648,7 +642,30 @@ const ProjectDetails = () => {
             ))}
           </Row>
         </Container>
+{/* Amenities and Project Facts Section */}
+<Container className='text-center mt-5'>
+          <Row className="gy-4">
+            <Col xs={12} lg={12}>
+              <PageTitle title="Amenities and Features" data-aos="fade-up" data-aos-delay="100" />
+              <Row className='justify-content-center gy-4'>
+                {project.amenities.map((amenity, index) => (
+                  <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
+                    <Card className="h-100 amenity-card">
+                      <CardBody>
+                        <Row className="d-flex align-items-center justify-content-center">
+                          <Icons name={amenity.icon} />
+                          <p>{amenity.title}</p>
+                        </Row>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Col>
+          </Row>
+        </Container>
 
+        
         {/* Virtual Tour Section */}
         <div className='text-center mt-5'>
           <h2 className='mb-4' data-aos="fade-up" data-aos-delay="100">Virtual Tour</h2>
@@ -702,29 +719,6 @@ const ProjectDetails = () => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-            </Col>
-          </Row>
-        </Container>
-
-        {/* Amenities and Project Facts Section */}
-        <Container className='text-center mt-5'>
-          <Row className="gy-4">
-            <Col xs={12} lg={12}>
-              <PageTitle title="Amenities and Features" data-aos="fade-up" data-aos-delay="100" />
-              <Row className='justify-content-center gy-4'>
-                {project.amenities.map((amenity, index) => (
-                  <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
-                    <Card className="h-100 amenity-card">
-                      <CardBody>
-                        <Row className="d-flex align-items-center justify-content-center">
-                          <Icons name={amenity.icon} />
-                          <p>{amenity.title}</p>
-                        </Row>
-                      </CardBody>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
             </Col>
           </Row>
         </Container>
