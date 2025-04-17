@@ -3,7 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Icons from "../components/Icon"; 
 import BodlaButton from './Button';
 import CardComponent from "./CardComponent";
-import legacy from '../images/legacy.png'
+import legacy from '../images/RevisedElevation.jpg'
+import service from '../images/img148.jpg'
 
 const cardData = [
     {
@@ -13,7 +14,7 @@ const cardData = [
         // link: "/Legacy",
     },
     {
-        image: legacy,
+        image: service,
         title: "Our Services",
         description: "Acquisition, Construction, Marketing, and beyond - We build possibilities with end-to-end real estate solutions.",
         // link: "/Services",

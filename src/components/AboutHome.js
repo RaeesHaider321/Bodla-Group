@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import aboutehome from '../images/aboutehome.png'
+import aboutehome from '../images/oneDestination1.jpg'
 export default function AboutHome() {
     return (
         <section>

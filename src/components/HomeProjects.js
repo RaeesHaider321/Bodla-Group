@@ -92,7 +92,7 @@ const HomeProjects = () => {
                     // 	5.2-Marla Bodla Homes
                     //{ name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
                    { name: 'Drawing Room', icon: <Icons name="livingRoom" /> },
-                   { name: 'Family Lounge', icon: <Icons name="airConditioning" /> },
+                   { name: 'Family Lounge', icon: <Icons name="familyLange" /> },
                    { name: 'Dinning Area', icon: <Icons name="dining" /> },
                    { name: 'Kitchen', icon: <Icons name="kitchen" /> },
                    { name: 'Backyard Service Space', icon: <Icons name="airConditioning" /> },
@@ -131,7 +131,7 @@ const HomeProjects = () => {
                             {/* Render Amenities with Icons */}
                             <Row className='justify-content-center gy-4 mb-4'>
                                 {tabs[activeTab].content.amenities.map((amenity, index) => (
-                                    <Col xs={12} sm={3} md={4} lg={2} key={index}>
+                                    <Col xs={6} sm={3} md={4} lg={2} key={index}>
                                         <span className="amenity-icon">{amenity.icon}</span>
                                         <span className="amenity-name">{amenity.name}</span>
                                     </Col>

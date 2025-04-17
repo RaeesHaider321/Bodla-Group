@@ -433,7 +433,7 @@ const projectDetails = {
     amenities: [
         // 	5.2-Marla Bodla Homes
         { title: 'Drawing Room', icon: 'livingRoom',},
-        { title: 'Family Lounge', icon: 'dining',},
+        { title: 'Family Lounge', icon: 'familyLange',},
         { title: 'Dinning Area', icon: 'dining',},
         { title: 'Kitchen', icon: 'kitchen',},
         { title: 'Backyard Service Space', icon: 'mosque',},
@@ -623,25 +623,7 @@ const ProjectDetails = () => {
           </Card>
         </Container>
         {/* <NearbyLocations locations={nearbyLocations} /> */}
-        {/* Nearby Places Section */}
-        <Container className='text-center mt-5'>
-          <PageTitle title="Nearby Places" data-aos="fade-up" data-aos-delay="100" />
-          <Row className='justify-content-center gy-4'>
-            {project.nearbyPlaces.map((nearby, index) => (
-              <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
-                <Card className="h-100 amenity-card">
-                  <CardBody>
-                    <Row className="d-flex align-items-center justify-content-center">
-                      <Icons name={nearby.icon} />
-                      <h6>{nearby.title}</h6>
-                      <p>{nearby.distance}</p>
-                    </Row>
-                  </CardBody>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
+        
 {/* Amenities and Project Facts Section */}
 <Container className='text-center mt-5'>
           <Row className="gy-4">
@@ -665,7 +647,25 @@ const ProjectDetails = () => {
           </Row>
         </Container>
 
-        
+        {/* Nearby Places Section */}
+        <Container className='text-center mt-5'>
+          <PageTitle title="Nearby Places" data-aos="fade-up" data-aos-delay="100" />
+          <Row className='justify-content-center gy-4'>
+            {project.nearbyPlaces.map((nearby, index) => (
+              <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
+                <Card className="h-100 amenity-card">
+                  <CardBody>
+                    <Row className="d-flex align-items-center justify-content-center">
+                      <Icons name={nearby.icon} />
+                      <h6>{nearby.title}</h6>
+                      <p>{nearby.distance}</p>
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
         {/* Virtual Tour Section */}
         <div className='text-center mt-5'>
           <h2 className='mb-4' data-aos="fade-up" data-aos-delay="100">Virtual Tour</h2>
