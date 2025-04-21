@@ -61,6 +61,7 @@ const Projects = () => {
     {
       id: 1,
       imageSrc: oneDestination,
+      logo: oneD,
       altText: "Second slide",
       titlePart1: "One Destination",
       titlePart2: "Your Title Part 2",
@@ -69,6 +70,7 @@ const Projects = () => {
     {
       id: 2,
       imageSrc: bodlaHomes8Marla,
+      logo: bHomes,
       altText: "Second slide",
       titlePart1: "Bodla Homes",
       titlePart2: "Your Title Part 2",
@@ -77,6 +79,7 @@ const Projects = () => {
     {
       id: 3,
       imageSrc: businessHub,
+      logo: bHub,
       altText: "Third slide",
       titlePart1: "Business Hub",
       titlePart2: "Your Title Part 2",
@@ -85,6 +88,7 @@ const Projects = () => {
     {
       id: 4,
       imageSrc: golfViewRumanza,
+      logo: gvr,
       altText: "Fourth slide",
       titlePart1: "Golf View Rumanza",
       titlePart2: "Your Title Part 2",
@@ -94,6 +98,7 @@ const Projects = () => {
 
   return (
     <>
+    <div className='project-hero'>
       <Carousel fade indicators={true} controls={false} interval={3000} pause={true}>
         {carouselItems.map((item) => (
           <Carousel.Item key={item.id}>
@@ -106,11 +111,13 @@ const Projects = () => {
             <Carousel.Caption>
               {item.simpleLayout ? (
                 <>
+                  
                   <h3>{item.titlePart1}</h3>
                   <p>{item.description}</p>
                 </>
               ) : (
                 <Row className="justify-content-center align-items-center">
+                  <Image src={item.logo} alt={item.title} />
                   <h1 data-aos="fade-up" data-aos-delay="100">
                       {item.titlePart1} 
                     </h1>
@@ -120,7 +127,7 @@ const Projects = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-
+      </div>
       <section>
         <Container>
           <Row className='align-items-center mb-5'>

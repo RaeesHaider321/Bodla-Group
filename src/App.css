@@ -829,3 +829,7 @@ margin-bottom: 0;
   width: 150px;
   padding: 10px;
 }
+
+.project-hero .carousel-caption img{
+  width:180px
+}
