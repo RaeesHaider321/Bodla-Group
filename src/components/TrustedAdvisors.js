@@ -19,13 +19,13 @@ const Counter = () => {
             <section className="overlay">
             <Container>
                 <Row>
-                    <Col xs={12} md={5}>
+                    <Col xs={12} sm={12} md={5}>
                         <h2>your most <br/>trusted <span>real estate</span> advisors</h2>
                     </Col>
-                    <Col xs={12} md={7} ref={ref} className="countUp">
+                    <Col xs={12} sm={12} md={7} ref={ref} className="countUp">
                         <Row className="justify-content-center">
                             {stats.map((stat, index) => (
-                                <Col xs={3} sm={6} md={3} key={index} className="mb-4">
+                                <Col xs={6} sm={6} md={3} key={index} className="mb-4">
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
