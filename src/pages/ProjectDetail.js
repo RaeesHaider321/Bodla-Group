@@ -73,7 +73,6 @@ import OneDestination02 from '../images/floorMaps/OneDestination-03.jpg';
 import OneDestination03 from '../images/floorMaps/OneDestination-04.jpg';
 import OneDestination04 from '../images/floorMaps/OneDestination-05.jpg';
 
-import floor1 from '../images/floor1.jpg';
 import floor3 from '../images/floor3.jpg';
 import sectorV from '../videos/sector-v.mp4';
 import ctaOneD from '../images/ctaOneD.png';
@@ -183,66 +182,6 @@ const projectDetails = {
         annualPayments: '2 x 10%',
         onPossession: '10%'
       },
-      {
-        category: 'Commercial Outlet',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      },
-      {
-        category: 'Commercial Outlet',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      },
-      {
-        category: 'Spacious Office',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      },
-      {
-        category: 'Food Court Shops',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      },
-      {
-        category: 'Food Court Restaurants',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      },
-      {
-        category: '1-3 Bed Luxury Apartments',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      }
     ],
   },
   'one-destination': {

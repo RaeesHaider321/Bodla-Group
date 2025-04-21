@@ -159,12 +159,6 @@ const Services = () => {
                       {service.description.substring(0, 100)}...
                     </Card.Text>
                   </Card.Body>
-                  <Card.Footer className="bg-transparent border-0">
-                    <div className="d-flex align-items-center">
-                      <span className="me-2">Learn more</span>
-                      <Icons name="rightArrow" size={16} />
-                    </div>
-                  </Card.Footer>
                 </Card>
               </Col>
             ))}
