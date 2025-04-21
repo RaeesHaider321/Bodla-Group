@@ -801,3 +801,31 @@ margin-bottom: 0;
   background: var(--background);
   color: var(--white);
 }
+.flooMap{
+  border-radius: 21px;
+}
+.project-whythis ul li{
+  display: flex;
+  align-items: flex-start;
+}
+.project-whythis ul li span{
+  width: 20px;
+  fill: var(--white);
+  margin-right: 10px;
+}
+.project-approved{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-approved .approved{
+  position: absolute;
+  z-index: 1;
+  background: var(--background);
+  border-radius: 100%;
+  border: 2px solid var(--white);
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+}

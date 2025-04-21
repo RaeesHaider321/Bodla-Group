@@ -1,14 +1,34 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Row, Col, Image, Carousel, Card, CardBody, Table, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image, Carousel, Card, CardBody, Table,} from 'react-bootstrap';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
 import NotFound from '../pages/NotFound';
 import PageTitle from '../components/PageTitle';
 
 // Project Images (import all projects' images here)
-import oneDestination from '../images/oneDestination.jpg';
+
 import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
+import bodlaHomes8Marla1 from '../images/bodlaHomes8-1.jpg';
+import bodlaHomes8Marla2 from '../images/bodlaHomes8-2.jpg';
+import bodlaHomes8Marla3 from '../images/bodlaHomes8-3.jpg';
+import bodlaHomes8Marla4 from '../images/bodlaHomes8-4.jpg';
+// Floor Maps
+// Bodla Homes 8 Marla
+import bh8MarlaHouseGF from '../images/floorMaps/8-Marla-House-GF.jpg';
+import bh8MarlaHouseFF from '../images/floorMaps/8-Marla-House-FF.jpg';
+import bh8MarlaHouseMF from '../images/floorMaps/8-Marla-House-MF.jpg';
+
+// Bodla Homes 5.2 Marla
+import bh5MarlaHouseGF from '../images/floorMaps/5.2-Marla-House-GF.jpg';
+import bh5MarlaHouseFF from '../images/floorMaps/5.2-Marla-House-FF.jpg';
+import bh5MarlaHouseMF from '../images/floorMaps/5.2-Marla-House-MF.jpg';
+
+import bodlaHomes5Marla from '../images/bodlaHomes5.2Marla.jpg';
+import bodlaHomes5Marla1 from '../images/bodlaHomes5-1.jpg';
+import bodlaHomes5Marla2 from '../images/bodlaHomes5-2.jpg';
+import bodlaHomes5Marla3 from '../images/bodlaHomes5-3.jpg';
+import bodlaHomes5Marla4 from '../images/bodlaHomes5-4.jpg';
 
 import businessHub from '../images/businessHub.jpg';
 // Business Hub Slides
@@ -17,17 +37,44 @@ import businessHubslide2 from '../images/businessHub-slide2.jpg';
 import businessHubslide3 from '../images/businessHub-slide3.jpg';
 import businessHubslide4 from '../images/businessHub-slide4.jpg';
 
-import golfViewRumanza from '../images/golfViewRumanza.jpg';
+// Floor Maps
+import business1 from '../images/floorMaps/BusinessHub-01.jpg';
+import business2 from '../images/floorMaps/BusinessHub-02.jpg';
+import business3 from '../images/floorMaps/BusinessHub-03.jpg';
+import business4 from '../images/floorMaps/BusinessHub-04.jpg';
+import business5 from '../images/floorMaps/BusinessHub-05.jpg';
+import business6 from '../images/floorMaps/BusinessHub-06.jpg';
+import business7 from '../images/floorMaps/BusinessHub-07.jpg';
+import business8 from '../images/floorMaps/BusinessHub-08.jpg';
+import business9 from '../images/floorMaps/BusinessHub-09.jpg';
+
 import bHomes from '../images/bHomes-logo.png';
 import bHub from '../images/BHub-logo.png';
 import oneD from '../images/OneD-logo.png';
+import approved from '../images/approved.png';
 import gvr from '../images/gvr-logo.png';
 import dhaApproved from '../images/dhaApproved.png';
 import virtualtour from '../images/virtual-tour.jpg';
+
+// Project Sliders
+// One Destination
+import oneDestination from '../images/oneDestination.jpg';
+import oneDestination1 from '../images/oneDestination-1.jpg';
+import oneDestination2 from '../images/oneDestination-2.jpg';
+// Golf View Rumanza
+import golfViewRumanza from '../images/golfViewRumanza.jpg';
+import golfViewRumanza1 from '../images/golfViewRumanza-1.jpg';
+import golfViewRumanza2 from '../images/golfViewRumanza-2.jpg';
+// Floor Maps
+// One Destination
+import OneDestinationFG from '../images/floorMaps/OneDestination-01.jpg';
+import OneDestination01 from '../images/floorMaps/OneDestination-02.jpg';
+import OneDestination02 from '../images/floorMaps/OneDestination-03.jpg';
+import OneDestination03 from '../images/floorMaps/OneDestination-04.jpg';
+import OneDestination04 from '../images/floorMaps/OneDestination-05.jpg';
+
 import floor1 from '../images/floor1.jpg';
-import floor2 from '../images/floor2.jpg';
 import floor3 from '../images/floor3.jpg';
-import floor4 from '../images/floor4.jpg';
 import sectorV from '../videos/sector-v.mp4';
 import ctaOneD from '../images/ctaOneD.png';
 
@@ -39,9 +86,12 @@ const projectTemplate = {
   spantitle: 'Highlighted Title',
   introTitle: 'Introductory Title',
   logo: '', // project logo image
+  thumb: '', // project thumb image
   dhaApproved: dhaApproved,
+  approved: approved,
   background: '', // main background image
   description: 'Project description goes here...',
+  whyproject: [],
   amenities: [],
   images: [], // array of project images
   location: 'Project Location',
@@ -75,8 +125,19 @@ const projectDetails = {
     spantitle: 'Business Hub',
     introTitle: 'Experience the Future of Urban Living',
     logo: bHub,
+    thumb: businessHub,
     background: businessHub,
     description: 'With Business Hub, reimagine the urban living with a dynamic multi-feature first grandiose mall of DHA Multan, residing adjacent to DHA Head Office, on 300ft wide Main Boulevard, ensuring its visibility and accessibility. Business Hub, a modernist 7-storey edifice stretches over an area of 18-kanal, integrating a perfect blend of expansive commercial outlets, marvelous offices and posh 1, 2, 3 – Bedroom Apartments precisely designed to keep pace with the evolving preferences of modern market. The mesmerizing views diligently fuses with the nexus of business opportunities, Central Business Square, creating a lifestyle beyond imagination.',
+    whyproject:[
+      {title: 'DHA Approved. '},
+      {title: 'Prime & Populous Location. '},
+      {title: 'Commercial Gateway. '},
+      {title: 'Ground Floor Possession in 1-year.'},
+      {title: 'Modern Amenities.'},
+      {title: 'Surrounded by DHA & Askari Villas. '},
+      {title: 'Fast Growing Community.'},
+      {title: '2.78 Acres. '},
+    ],
     amenities: [
       { title: 'Mosque', icon:"mosque", },
       { title: 'Food Court', icon: "foodCourt" },
@@ -106,9 +167,9 @@ const projectDetails = {
       {icon: 'mosque',  title: 'MPS road',},
     ],
     images: [businessHubslide1, businessHubslide2, businessHubslide3, businessHubslide4],
-    floorPlans: [floor1, floor1, floor1, floor1], // array of floor plan images
+    floorPlans: [business1, business2, business3, business4, business5, business6, business7, business8, business9], // array of floor plan images
     location: 'DHA Multan, Pakistan',
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.9287473577783!2d71.55361441037263!3d30.296090006500197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3924cbd1167128b5%3A0x79d6c7b73dd41cef!2sBusiness%20Hub%2C%20DHA%20Multan!5e0!3m2!1sen!2s!4v1744012574158!5m2!1sen!2s',
+    mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=1kvDuTgr7w6rKrJI9Rap2FZART3zDYts&ehbc=2E312F&noprof=1',
     size: '5 Acres',
     status: 'Ongoing',
     pricingPlans: [
@@ -188,9 +249,21 @@ const projectDetails = {
     ...projectTemplate,
     id: 2,
     title: 'One Destination',
-    spantitle: 'One Destination',
-    introTitle: 'One Destination',
+    spantitle: 'Where businesses grow',
+    introTitle: 'Project Description',
+    description: 'In One Destination, experience the essence of contemporary retail haven at the most strategic location of DHA Multan, positioned in vicinity to Arena, Food Court, DHA Villas, Askari Villas, and DHA Commercial Arcade on 300ft-wide Main Boulevard, ensuring unmatched accessibility. One Destination goes beyond the ordinary, blending modern architectural brilliance with exquisite retreat. Our impeccable 4-storey project expands over an area of 2.78 acres, and is thoroughly designed to cover your multitude of choices.  One Destination features a fusion of Brand Outlets, A Digital Hub and Gold Souk. So, embrace your future with comfort at ONE DESTINATION.',
+    whyproject:[
+      {title: 'DHA Approved. '},
+      {title: 'Prime & Populous Location. '},
+      {title: 'Commercial Gateway. '},
+      {title: 'Ground Floor Possession in 1-year.'},
+      {title: 'Modern Amenities.'},
+      {title: 'Surrounded by DHA & Askari Villas. '},
+      {title: 'Fast Growing Community.'},
+      {title: '2.78 Acres. '},
+    ],
     logo: oneD,
+    thumb: oneDestination,
     background: oneDestination,
     amenities: [
       { title: 'Gymnasium', icon: 'gymnasium', }, 
@@ -227,80 +300,40 @@ const projectDetails = {
     ],
     pricingPlans: [
       {
-        category: 'Commercial Outlet',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
+        floor: 'Ground Floor',
+        mbFacing: '120,000 / per sq. ft.',
+        askariFacing: '110,000 / per sq. ft.',
+        centerShops: '110,000 / per sq. ft.',
       },
       {
-        category: 'Commercial Outlet',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
+        floor: 'First Floor',
+        mbFacing: '90,000 / per sq. ft.',
+        askariFacing: '80,000 / per sq. ft.',
+        centerShops: '70,000 / per sq. ft.',
       },
       {
-        category: 'Commercial Outlet',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
+        floor: 'Second Floor',
+        mbFacing: '85,000 / per sq. ft.',
+        askariFacing: '75,000 / per sq. ft.',
+        centerShops: '65,000 / per sq. ft.',
       },
       {
-        category: 'Spacious Office',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
+        floor: 'Third Floor',
+        mbFacing: '60,000 / per sq. ft.',
+        askariFacing: '60,000 / per sq. ft.',
+        centerShops: '60,000 / per sq. ft.',
       },
       {
-        category: 'Food Court Shops',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
+        floor: 'Fourth Floor',
+        mbFacing: '55,000 / per sq. ft.',
+        askariFacing: '55,000 / per sq. ft.',
+        centerShops: '55,000 / per sq. ft.',
       },
-      {
-        category: 'Food Court Restaurants',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      },
-      {
-        category: '1-3 Bed Luxury Apartments',
-        floor: 'GF',
-        ratePerSft: '45,000',
-        booking: '5%',
-        downPayment: '25%',
-        installmentPlan: '3 Years',
-        annualPayments: '2 x 10%',
-        onPossession: '10%'
-      }
     ],
-    images: [oneDestination, businessHub, golfViewRumanza, bodlaHomes8Marla],
-    floorPlans: [floor2, floor2, floor2, floor2], // array of floor plan images
+    images: [oneDestination, oneDestination1, oneDestination2],
+    floorPlans: [OneDestinationFG, OneDestination01, OneDestination02, OneDestination03,OneDestination04], // array of floor plan images
     location: 'DHA Multan, Pakistan',
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.0517764215074!2d71.50832761037252!3d30.292587606667322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3924cb007db59bfd%3A0x6314d83414defd9f!2sOne%20Destination!5e0!3m2!1sen!2s!4v1744365518177!5m2!1sen!2s',
+    mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=18m1tND92llOVYgM4gh6Voj5nnofl5Vc&ehbc=2E312F&noprof=1',
     size: '10 Acres',
     status: 'Completed'
   },
@@ -309,7 +342,18 @@ const projectDetails = {
     id: 3,
     title: 'Golf View Rumanza',
     logo: gvr,
+    thumb:golfViewRumanza,
     background: golfViewRumanza,
+    whyproject:[
+      {title: 'DHA Approved. '},
+      {title: 'Prime & Populous Location. '},
+      {title: 'Commercial Gateway. '},
+      {title: 'Ground Floor Possession in 1-year.'},
+      {title: 'Modern Amenities.'},
+      {title: 'Surrounded by DHA & Askari Villas. '},
+      {title: 'Fast Growing Community.'},
+      {title: '2.78 Acres. '},
+    ],
     amenities: [
       { name: 'Gym',icon: 'gym', },
       { name: 'Swimming pool',icon: 'mosque', }, 
@@ -416,10 +460,10 @@ const projectDetails = {
         onPossession: '10%'
       }
     ],
-    images: [golfViewRumanza, oneDestination, businessHub, bodlaHomes8Marla],
+    images: [golfViewRumanza, golfViewRumanza1, golfViewRumanza2],
     floorPlans: [floor3, floor3, floor3, floor3], // array of floor plan images
     location: 'DHA Multan, Pakistan',
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9093273726107!2d71.53041514290199!3d30.32509684042012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3924cb1fe0e87887%3A0x461b3cbc40c9938!2sRumanza%20Golf%20%26%20Country%20Club!5e0!3m2!1sen!2s!4v1744365762722!5m2!1sen!2s',
+    mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=1lOc0SjTIxoHIG82ZuZVZVM2QFchhH6Q&ehbc=2E312F&noprof=1',
     size: '15 Acres',
     status: 'Upcoming'
   },
@@ -428,8 +472,19 @@ const projectDetails = {
     id: 4,
     title: 'Bodla Homes',
     logo: bHomes,
+    thumb: bodlaHomes8Marla,
     background: bodlaHomes8Marla,
     description: 'Bodla Homes brings you affordable yet luxurious housing solutions with modern designs and premium finishes...',
+    whyproject:[
+      {title: 'DHA Approved. '},
+      {title: 'Prime & Populous Location. '},
+      {title: 'Commercial Gateway. '},
+      {title: 'Ground Floor Possession in 1-year.'},
+      {title: 'Modern Amenities.'},
+      {title: 'Surrounded by DHA & Askari Villas. '},
+      {title: 'Fast Growing Community.'},
+      {title: '2.78 Acres. '},
+    ],
     amenities: [
         // 	5.2-Marla Bodla Homes
         { title: 'Drawing Room', icon: 'livingRoom',},
@@ -544,10 +599,10 @@ const projectDetails = {
         onPossession: '10%'
       }
     ],
-    images: [bodlaHomes8Marla, golfViewRumanza, oneDestination, businessHub],
-    floorPlans: [floor4, floor4, floor4, floor4], // array of floor plan images
+    images: [bodlaHomes8Marla, bodlaHomes8Marla1, bodlaHomes8Marla2, bodlaHomes8Marla3, bodlaHomes8Marla4, bodlaHomes5Marla, bodlaHomes5Marla1, bodlaHomes5Marla2, bodlaHomes5Marla3, bodlaHomes5Marla4, ],
+    floorPlans: [bh8MarlaHouseGF, bh8MarlaHouseFF, bh8MarlaHouseMF, bh5MarlaHouseGF, bh5MarlaHouseFF, bh5MarlaHouseMF], // array of floor plan images
     location: 'DHA Multan, Pakistan',
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3445.544725969402!2d71.5803871103719!3d30.278550607337092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbodla%20homes%20dha%20multan!5e0!3m2!1sen!2s!4v1744365637919!5m2!1sen!2s',
+    mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=10f6JJXuqzggFLxcaf5xDGrrZ5ZOr538&ehbc=2E312F&noprof=1',
     size: '8 Marla Plots',
     status: 'Ongoing'
   }
@@ -623,7 +678,22 @@ const ProjectDetails = () => {
           </Card>
         </Container>
         {/* <NearbyLocations locations={nearbyLocations} /> */}
-        
+        <Container className='project-whythis py-4'data-aos="fade-up" data-aos-delay="100" >
+          <Row>
+          <Col xs={12} md={6}>
+            <h3>Why {project.title} </h3>
+            {project.whyproject.map((whythis, index) => (
+                <ul className='p-0'>
+                  <li key={index}><Icons name="check" /> {whythis.title}</li>
+                </ul>
+            ))}
+          </Col>
+          <Col xs={12} md={6} className='project-approved'>
+            <div className='approved'><Image src={project.approved} alt="DHA Approved"/></div>
+            <Image src={project.thumb} alt={project.title}/>
+          </Col>
+          </Row>
+        </Container>
 {/* Amenities and Project Facts Section */}
 <Container className='text-center mt-5'>
           <Row className="gy-4">
@@ -677,10 +747,10 @@ const ProjectDetails = () => {
         {/* Floor Plans Section */}
         <Container className='text-center mt-5'>
           <PageTitle title="Floor Plans" data-aos="fade-up" data-aos-delay="100" />
-          <Row className='gy-4'>
+          <Row className='justify-content-center gy-4'>
             {project.floorPlans.map((plan, index) => (
-              <Col xs={12} sm={6} md={6} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 100)}`} >
-                <Image src={plan} alt={`Floor Plan ${index + 1}`} />
+              <Col xs={12} sm={12} md={6} lg={4} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 100)}`} >
+                <Image className='flooMap' src={plan} alt={`Floor Plan ${index + 1}`} />
               </Col>
             ))}
           </Row>
@@ -712,7 +782,7 @@ const ProjectDetails = () => {
         <Container className='text-center mt-5'>
           <Row className='justify-content-center text-center mt-5'>
             <Col xs={12} lg={10}>
-              <PageTitle title="Project Video" data-aos="fade-up" data-aos-delay="100" />
+              {/* <PageTitle title="Delivering our promise" data-aos="fade-up" data-aos-delay="100" /> */}
               <div data-aos="fade-up" data-aos-delay="200">
                 <video width="100%" controls>
                   <source src={project.video} type="video/mp4" />
@@ -730,27 +800,19 @@ const ProjectDetails = () => {
               <Table responsive hover>
                 <thead>
                   <tr>
-                    <th>Category</th>
                     <th>Floor</th>
-                    <th>Rate/Sft</th>
-                    <th>Booking</th>
-                    <th>DP</th>
-                    <th>Instalment Plan</th>
-                    <th>Annual Payments</th>
-                    <th>On Possession</th>
+                    <th>MB Facing Shops</th>
+                    <th>Askari Facing Shops</th>
+                    <th>Center Shops</th>
                   </tr>
                 </thead>
                 <tbody>
                   {project.pricingPlans.map((plan, index) => (
                     <tr key={`pricing-${index}`}>
-                      <td>{plan.category}</td>
                       <td>{plan.floor}</td>
-                      <td>{plan.ratePerSft}</td>
-                      <td>{plan.booking}</td>
-                      <td>{plan.downPayment}</td>
-                      <td>{plan.installmentPlan}</td>
-                      <td>{plan.annualPayments}</td>
-                      <td>{plan.onPossession}</td>
+                      <td>{plan.mbFacing}</td>
+                      <td>{plan.askariFacing}</td>
+                      <td>{plan.centerShops}</td>
                     </tr>
                   ))}
                 </tbody>

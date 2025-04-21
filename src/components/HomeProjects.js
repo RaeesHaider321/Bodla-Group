@@ -145,9 +145,6 @@ const HomeProjects = () => {
                 {/* Tab Buttons */}
                 <div className="tabs">
                     <Container>
-                        <Row className='justify-content-center'>
-                            <Col></Col>
-                        </Row>
                         {tabs.map((tab, index) => (
                             <button
                                 key={index}
