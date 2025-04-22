@@ -359,8 +359,7 @@ a {
 }
 
 .aboutCarousel .carousel-caption {
-  justify-content: end;
-  align-items: end;
+  align-items: center;
 }
 
 .bodlaSince {
@@ -832,4 +831,16 @@ margin-bottom: 0;
 
 .project-hero .carousel-caption img{
   width:180px
+}
+.rumanza p{
+  text-align: justify;
+}
+.rumanza ul li{
+  display: flex;
+  align-items: flex-start;
+}
+.rumanza ul li span{
+  width: 20px;
+  fill: var(--white);
+  margin-right: 10px;
 }

@@ -33,15 +33,15 @@ import dhaVetHospital from '../images/DHAProjects/dha-Vet-Hospital.jpg'
 import dhaVillasCommercialCenter from '../images/DHAProjects/dha-Villas-Commercial.jpg'
 // Developing
 import dhaHeadOffice from '../images/DHAProjects/dhaHeadOffice.jpeg'
-import dhaBusinessHub from '../images/DHAProjects/dhaBusinessHub.jpeg'
-import dhaLowCostHousing from '../images/DHAProjects/dhaLowCostHousing.jpeg'
+import dhaBusinessHub from '../images/DHAProjects/dhaBusinessHub.jpg'
+import dhabodlaHomes from '../images/DHAProjects/dha-bodlaHomes.jpg'
 import dhaSereneTower from '../images/DHAProjects/dhaSereneTower.jpg'
 import dhaMangoMuseum from '../images/DHAProjects/dhaMangoMuseum.jpeg'
 import dhaEducationCity from '../images/DHAProjects/dhaEducationCity.jpg'
 import dhaMedicalCityAM99 from '../images/DHAProjects/dhaMedicalCityAM99.jpg'
 import dhaBoulevardHeights from '../images/DHAProjects/dhaBoulevardHeights.jpg'
 import dhaDowntownRumanza from '../images/DHAProjects/dhaDowntownRumanza.jpeg'
-import dhaGolfViewRumanza from '../images/DHAProjects/dhaGolfViewRumanza.jpeg'
+import dhaGolfViewRumanza from '../images/DHAProjects/dhaGolfViewRumanza.jpg'
 // dhaUpcomingProjects
 import dhaPark from '../images/DHAProjects/dhaPark.jpg';
 import dhaNishatSchoolsColleges from '../images/DHAProjects/dhaNishatSchoolsColleges.jpg';
@@ -49,7 +49,7 @@ import dhaMegaMall from '../images/DHAProjects/dhaMegaMall.jpg';
 import dhaFastUniversity from '../images/DHAProjects/dhaFastUniversity.jpg';
 import dhaHiltonDoubleTree from '../images/DHAProjects/dhaHiltonDoubleTree.jpg';
 import dhaBavylon from '../images/DHAProjects/dhaBavylon.jpg';
-import dhaTwinTowers from '../images/DHAProjects/dhaTwinTowers.jpg';
+import dhaOneDestination from '../images/DHAProjects/dhaOneDestination.jpg';
 import dhaMallOfCentralSquare from '../images/DHAProjects/dhaMallOfCentralSquare.jpg';
 import dhaCommunityClub from '../images/DHAProjects/dhaCommunityClub.jpg';
 import dhaPunjabGroupSchoolsColleges from '../images/DHAProjects/dhaPunjabGroupSchoolsColleges.jpg';
@@ -57,6 +57,9 @@ import dhaNadraRegionalOffice from '../images/DHAProjects/dhaNadraRegionalOffice
 import dha7CentralMultan from '../images/DHAProjects/dha7CentralMultan.jpg';
 import dha01Boulevard from '../images/DHAProjects/dha01Boulevard.jpg';
 import colaboration from '../images/CollaborationWithDHA.png'
+
+// Rumanza
+import Rumanza from '../components/Rumanza'
 
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
@@ -94,16 +97,17 @@ const DHAMultan = () => {
     { id: 30, title: "Road Infrastructure", imgSrc: dhaRoadInfrastructure }
   ];
   const dhaDevelopingProjects = [
-    { id: 1, title: "DHA Head Office", imgSrc: dhaHeadOffice },
-    { id: 2, title: "Business Hub", imgSrc: dhaBusinessHub },
-    { id: 3, title: "Low Cost Housing", imgSrc: dhaLowCostHousing },
-    { id: 4, title: "Serene Tower", imgSrc: dhaSereneTower },
-    { id: 5, title: "Mango Museum", imgSrc: dhaMangoMuseum },
-    { id: 6, title: "DHA Education City", imgSrc: dhaEducationCity },
-    { id: 7, title: "Medical/Health Care City - AM99", imgSrc: dhaMedicalCityAM99 },
-    { id: 8, title: "BOULEVARD HEIGHTS", imgSrc: dhaBoulevardHeights },
-    { id: 9, title: "Down Town Rumanza (Apartment and Commercial complex)", imgSrc: dhaDowntownRumanza },
-    { id: 10, title: "Golf View Rumanza (Apartment and Commercial complex)", imgSrc: dhaGolfViewRumanza }
+    { id: 1, title: "Business Hub", imgSrc: dhaBusinessHub },
+    { id: 2, title: "Bodla Homes", imgSrc: dhabodlaHomes },
+    { id: 3, title: "One Destination", imgSrc: dhaOneDestination },
+    { id: 4, title: "Golf View Rumanza", imgSrc: dhaGolfViewRumanza },
+    { id: 5, title: "DHA Head Office", imgSrc: dhaHeadOffice },
+    { id: 6, title: "Serene Tower", imgSrc: dhaSereneTower },
+    { id: 7, title: "Mango Museum", imgSrc: dhaMangoMuseum },
+    { id: 8, title: "DHA Education City", imgSrc: dhaEducationCity },
+    { id: 9, title: "Medical/Health Care City - AM99", imgSrc: dhaMedicalCityAM99 },
+    { id: 10, title: "BOULEVARD HEIGHTS", imgSrc: dhaBoulevardHeights },
+    { id: 11, title: "Down Town Rumanza", imgSrc: dhaDowntownRumanza },
   ];
   const dhaUpcomingProjects = [
     { id: 1, title: "Park", imgSrc: dhaPark },
@@ -112,13 +116,12 @@ const DHAMultan = () => {
     { id: 4, title: "Fast University", imgSrc: dhaFastUniversity },
     { id: 5, title: "Hilton Double Tree", imgSrc: dhaHiltonDoubleTree },
     { id: 6, title: "Bavylon", imgSrc: dhaBavylon },
-    { id: 7, title: "Twin Towers", imgSrc: dhaTwinTowers },
-    { id: 8, title: "Mall of Central Square", imgSrc: dhaMallOfCentralSquare },
-    { id: 9, title: "DHA Community Club", imgSrc: dhaCommunityClub },
-    { id: 10, title: "The Punjab Group of schools & colleges", imgSrc: dhaPunjabGroupSchoolsColleges },
-    { id: 11, title: "NADRA Regional Office", imgSrc: dhaNadraRegionalOffice },
-    { id: 12, title: "7 Central Multan", imgSrc: dha7CentralMultan },
-    { id: 13, title: "01 Boulevard", imgSrc: dha01Boulevard }
+    { id: 7, title: "Mall of Central Square", imgSrc: dhaMallOfCentralSquare },
+    { id: 8, title: "DHA Community Club", imgSrc: dhaCommunityClub },
+    { id: 9, title: "The Punjab Group of schools & colleges", imgSrc: dhaPunjabGroupSchoolsColleges },
+    { id: 10, title: "NADRA Regional Office", imgSrc: dhaNadraRegionalOffice },
+    { id: 11, title: "7 Central Multan", imgSrc: dha7CentralMultan },
+    { id: 12, title: "01 Boulevard", imgSrc: dha01Boulevard }
   ];
 
   return (
@@ -159,7 +162,7 @@ const DHAMultan = () => {
                       </div>
                       <Card.Body>
                         <div className='dha-logo'><Image src={dhalogo} alt="" /></div>
-                        <Card.Title>{card.title}</Card.Title>
+                        <h6>{card.title}</h6>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -181,7 +184,7 @@ const DHAMultan = () => {
                       </div>
                       <Card.Body>
                         <div className='dha-logo'><Image src={dhalogo} alt="" /></div>
-                        <Card.Title>{card.title}</Card.Title>
+                        <h6>{card.title}</h6>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -203,7 +206,7 @@ const DHAMultan = () => {
                       </div>
                       <Card.Body>
                         <div className='dha-logo'><Image src={dhalogo} alt="" /></div>
-                        <Card.Title>{card.title}</Card.Title>
+                        <h6>{card.title}</h6>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -211,25 +214,8 @@ const DHAMultan = () => {
               </Row>
             </Tab>
             <Tab eventKey="Rumanza" title="Rumanza">
-              <Row className='gy-4 justify-content-center'>
-                {dhaUpcomingProjects.map((card, index) => (
-                  <Col key={card.id} xs={6} md={3}>
-                    <Card
-                      className="h-100"
-                      data-aos="fade-up"
-                      data-aos-delay={index * 100}
-                      data-aos-duration="800"
-                    >
-                      <div className='card-thumb-img'>
-                        <Image src={card.imgSrc} alt={card.title} />
-                      </div>
-                      <Card.Body>
-                        <div className='dha-logo'><Image src={dhalogo} alt="" /></div>
-                        <Card.Title>{card.title}</Card.Title>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
+              <Row className='gy-4 justify-content-center p-4 rumanza'>
+                <Rumanza/>
               </Row>
             </Tab>
           </Tabs>

@@ -33,6 +33,7 @@ import BodlaBuildersPVT from '../images/footstepsBodlaBuildersPVT.png';
 import bRMCIC from '../images/footstepsBodlaRMCInvestmentConsortium.png';
 import Mayamar from '../images/footstepsMayamar.png';
 import Merkez from '../images/footstepsMerkez.png';
+import TimelineSection from '../components/TimelineSection';
 
 const creationsData = [
   { logo: bhub, title: 'Business Hub', year: '2020' },
@@ -43,10 +44,10 @@ const creationsData = [
 
 const expandedData = [
   { logo: BBENGG, title: 'Bodla Builders Engineers & Constructions' },
-  { logo: BBRD, title: 'Bodla Builders Realtors & Developers' },
   { logo: BodlaBuildersPVT, title: 'Bodla Builders Pvt. Limited' },
   { logo: Mayamar, title: 'Maymar Construction Supplies' },
   { logo: Merkez, title: 'Merkez Pvt. Limited Project Marketing' },
+  { logo: BBRD, title: 'Bodla Builders Realtors & Developers' },
   { logo: bRMCIC, title: 'Bodla RMC Investment Consortium' },
 ];
 
@@ -80,7 +81,7 @@ const About = () => {
 
   return (
     <>
-      <Carousel fade className='aboutCarousel' indicators={false} controls={false} interval={3000} pause={true}>
+      <Carousel fade className='aboutCarousel' indicators={true} controls={false} interval={30000} pause={true}>
         {carouselItems.map((item, index) => (
           <Carousel.Item key={index}>
             <Image 
@@ -89,7 +90,7 @@ const About = () => {
             />
             <Carousel.Caption>
               <Row className="justify-content-center">
-                <Col xs={11} md={6}>
+                <Col sm={11} md={8}>
                   <h2 data-aos="fade-up" data-aos-delay="300">{item.title}</h2>
                 </Col>
               </Row>
@@ -224,30 +225,9 @@ const About = () => {
         </Container>
       </section>
 
-      {/* <section className='py-5'>
-        <Container>
-          <Row className='justify-content-center cardImage'>
-            <Col xs={12} md={10}>
-              <Row className='align-items-center mb-5 g-4'>
-                <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="300">
-                  <Image src={cardImage} alt='Bodla Group project' className='img-fluid w-100' />
-                </Col>
-                <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="400">
-                  <p>While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.</p>
-                </Col>
-              </Row>
-              <Row className='align-items-center g-4'>
-                <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="300">
-                  <p>While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.</p>
-                </Col>
-                <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="400">
-                  <Image src={cardImage} alt='Bodla Group project' className='img-fluid w-100' />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
+      <section className='py-5'>
+      <TimelineSection/>
+      </section>
     </>
   );
 };

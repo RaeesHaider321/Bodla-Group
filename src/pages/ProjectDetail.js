@@ -90,6 +90,7 @@ const projectTemplate = {
   approved: approved,
   background: '', // main background image
   description: 'Project description goes here...',
+  secondDescription: '',
   whyproject: [],
   amenities: [],
   images: [], // array of project images
@@ -206,12 +207,12 @@ const projectDetails = {
     background: oneDestination,
     amenities: [
       { title: 'Gymnasium', icon: 'gymnasium', },
-      { title: 'Swimming Pool', icon: 'mosque', },
+      { title: 'Swimming Pool', icon: 'swimmingPool', },
       { title: 'Roof-Top Restaurant', icon: 'restaurant', },
       { title: 'Elevators', icon: "elevators" },
       { title: 'Wide Corridors', icon: 'wideCorridors', },
       { title: 'Multiple Entrances', icon: 'gate', },
-      { title: 'Ample Car Parking', icon: 'mosque', },
+      { title: 'Ample Car Parking', icon: 'parkingArea', },
       { title: '24/7 Power Backup', icon: "powerBackup" },
       { title: '24/7 Security', icon: "cctv" },
     ],
@@ -410,10 +411,13 @@ const projectDetails = {
     ...projectTemplate,
     id: 4,
     title: 'Bodla Homes',
+    spantitle: 'A Choice of Convenient Living',
+    introTitle: 'Project Description',
     logo: bHomes,
     thumb: bodlaHomes8Marla,
     background: bodlaHomes8Marla,
-    description: 'Bodla Homes brings you affordable yet luxurious housing solutions with modern designs and premium finishes...',
+    description: "Bodla Builders proudly presents Bodla Homes in Sector 'V' of DHA Multan, offering contemporary living in its 5.2-Marla and 8-Marla Villas. The 5.2 Marla villas (2220 sq.ft.) feature 4 bedrooms, spacious car parking, a rooftop BBQ, and solar panel space.The 8-Marla villas (2905 sq.ft.) are designed for luxury, featuring 5 bedrooms, 2-car parking, a backyard service area, a rooftop BBQ space, and solar panel provision.",
+    secondDescription:"Both villa categories are ideally located near Parks, a Masjid, Community Facilities, a 150ft wide road, Health & Education City, and Shah Shams Tabraiz Gate, offering complete luxury and convenience.",
     whyproject: [
       { title: 'DHA Approved. ' },
       { title: 'Prime & Populous Location. ' },
@@ -583,6 +587,7 @@ const ProjectDetails = () => {
                 <Col xs={12} md={7} data-aos="fade-right" data-aos-delay="400">
                   <h3 className="mb-4">{project.introTitle || project.title}</h3>
                   <p className="lead text-justify">{project.description}</p>
+                  <p className="lead text-justify">{project.secondDescription}</p>
                   <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} link="/Contact" />
                 </Col>
                 <Col xs={12} md={5} className="text-md-end">
@@ -730,10 +735,11 @@ const ProjectDetails = () => {
         </Container>
 
         <Container className='text-center mt-5'>
-          <PageTitle title="Payment Plans" data-aos="fade-up" data-aos-delay="100" />
+          {/* <PageTitle title="Payment Plans" data-aos="fade-up" data-aos-delay="100" /> */}
           <Row>
             <Col xs={12} data-aos="fade-up" data-aos-delay="200">
-              <Table responsive hover>
+            <Image src={project.pricing} alt=''/>
+              {/* <Table responsive hover>
                 <thead>
                   <tr>
                     <th>Floor</th>
@@ -752,7 +758,7 @@ const ProjectDetails = () => {
                     </tr>
                   ))}
                 </tbody>
-              </Table>
+              </Table> */}
             </Col>
           </Row>
         </Container>

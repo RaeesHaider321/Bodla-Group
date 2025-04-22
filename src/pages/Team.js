@@ -50,7 +50,7 @@ const directors = [
   {
     id: 1,
     name: "Huzaifa Ahmed",
-    designation: "Director Construction",
+    designation: "Director Projects",
     description: "This is the first director.",
     image: HuzaifaBodla
   },
@@ -71,14 +71,14 @@ const directors = [
   {
     id: 5,
     name: "Aftab Bodla",
-    designation: "Realtor",
+    designation: "Director BBRD",
     description: "This is the third director.",
     image: AftabBodla
   },
   {
     id: 6,
     name: "Hassan Bodla",
-    designation: "Realtor",
+    designation: "Director BBRD",
     description: "This is the third director.",
     image: Hassan
   },
