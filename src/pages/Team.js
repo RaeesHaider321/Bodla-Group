@@ -119,7 +119,7 @@ const Team = () => {
             </Col>
             <Col xs={12} md={6}>
               <Card.Body>
-                <h1 data-aos="fade-left">TAHIR IQBAL BODLA</h1>
+                <h1 data-aos="fade-left">LT. COL TAHIR IQBAL BODLA</h1>
                 <p className='designation' data-aos="fade-left" data-aos-delay="100">Chairman</p>
                 <h5 data-aos="fade-left" data-aos-delay="150">CHAIRMAN'S MESSAGE</h5>
                 <Card.Text data-aos="fade-up" data-aos-delay="200">

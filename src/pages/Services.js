@@ -16,51 +16,39 @@ const Services = () => {
   const services = [
     { 
       id: 1, 
-      title: 'Property Development', 
-      description: 'Comprehensive property development services from concept to completion. We handle land acquisition, planning, design, and construction.',
+      title: 'Land Acquisition', 
+      description: 'Precise identification and procurement of optimum location that ensures development potential and value appreciation.',
       image: service1,
-      highlights: [
-        'Land acquisition and feasibility studies',
-        'Architectural design and planning',
-        'Construction management',
-        'Quality assurance'
-      ]
-    },
+   },
     { 
       id: 2, 
-      title: 'Construction Services', 
-      description: 'High-quality construction services with a focus on durability, aesthetics, and timely delivery of projects.',
+      title: 'Development ', 
+      description: 'Comprehensive planning and execution of residential & commercial projects, forming progressive & future-focused structures. ',
       image: service2,
-      highlights: [
-        'Residential and commercial construction',
-        'Turnkey solutions',
-        'Skilled workforce',
-        'Modern construction techniques'
-      ]
-    },
+  },
     { 
       id: 3, 
-      title: 'Interior Design', 
-      description: 'Transform your spaces with our innovative interior design solutions that combine functionality with aesthetic appeal.',
+      title: 'Plots Trading', 
+      description: 'Facilitating transparent and efficient buying and selling of residential and commercial plots, catering to diverse investment needs.',
       image: service3,
-      highlights: [
-        'Space planning',
-        'Custom furniture design',
-        'Material selection',
-        'Lighting solutions'
-      ]
-    },
+   },
     { 
       id: 4, 
-      title: 'Property Management', 
-      description: 'Professional property management services to maintain and enhance the value of your real estate investments.',
+      title: 'Construction', 
+      description: 'Employing quality materials and skilled labor to build robust and aesthetically pleasing structures, adhering to timelines and standards.',
       image: service4,
-      highlights: [
-        'Tenant management',
-        'Maintenance coordination',
-        'Financial reporting',
-        'Legal compliance'
-      ]
+    },
+    { 
+      id: 5, 
+      title: 'Finishing Materials', 
+      description: 'Sourcing and supplying advanced, durable interior and exterior finishes that enhance thermal comfort for elegant and lasting spaces.',
+      image: service4,
+    },
+    { 
+      id: 6, 
+      title: 'Project Marketing', 
+      description: 'Implementing innovative strategies to showcase project features and benefits, reaching target audiences and driving sales effectively.',
+      image: service4,
     }
   ];
 
@@ -134,7 +122,7 @@ const Services = () => {
             </Col>
             <Col xs={12} md={3} className='text-end'>
               <div data-aos="fade-left" data-aos-delay="300">
-                <BodlaButton text="Contact Us" icon={<Icons name="rightArrow" />} variant="primary" link="/contact" />
+                <BodlaButton text="Quick Contact!" icon={<Icons name="rightArrow" />} variant="primary" link="/contact" />
               </div>
             </Col>
           </Row>
@@ -168,14 +156,14 @@ const Services = () => {
           <Row className="mt-5">
             <Col xs={12}>
               <div className="p-4 rounded-3">
-                <h4 className="mb-4">Why Choose Our Services?</h4>
+                <h4 className="mb-4">What sets Bodla Group apart?</h4>
                 <Row>
                   <Col xs={12} md={6} lg={3} className="mb-3">
                     <div className="d-flex align-items-start">
                       <Icons name="shield" className="me-2 mt-1 text-primary" size={24} />
                       <div>
-                        <h6>Trusted Expertise</h6>
-                        <p className="small">Years of experience in delivering quality services</p>
+                        <h6>Leading Legacy </h6>
+                        <p className="small">Rooted in over a decade of experience.</p>
                       </div>
                     </div>
                   </Col>
@@ -183,8 +171,8 @@ const Services = () => {
                     <div className="d-flex align-items-start">
                       <Icons name="quality" className="me-2 mt-1 text-primary" size={24} />
                       <div>
-                        <h6>Quality Assurance</h6>
-                        <p className="small">Rigorous quality checks at every stage</p>
+                        <h6>Uncompromised Quality</h6>
+                        <p className="small">Setting the bar of highest standard</p>
                       </div>
                     </div>
                   </Col>
@@ -192,8 +180,8 @@ const Services = () => {
                     <div className="d-flex align-items-start">
                       <Icons name="clock" className="me-2 mt-1 text-primary" size={24} />
                       <div>
-                        <h6>Timely Delivery</h6>
-                        <p className="small">We respect deadlines and deliver on time</p>
+                        <h6>Customer-centric Excellence </h6>
+                        <p className="small">Prioritizing your satisfaction at the heart of every project.</p>
                       </div>
                     </div>
                   </Col>
@@ -201,8 +189,8 @@ const Services = () => {
                     <div className="d-flex align-items-start">
                       <Icons name="support" className="me-2 mt-1 text-primary" size={24} />
                       <div>
-                        <h6>Customer Support</h6>
-                        <p className="small">Dedicated support throughout your project</p>
+                        <h6>Innovation Driven</h6>
+                        <p className="small">Redefining living with ideas ahead of their time.</p>
                       </div>
                     </div>
                   </Col>
