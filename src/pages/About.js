@@ -153,7 +153,7 @@ const About = () => {
                       <div className='logoImage mb-3'>
                         <Image src={bodlaLogo} alt='Bodla Builders logo' className='img-fluid' />
                       </div>
-                      <p>Through sheer perseverance and demonstrated excellence, the company went on ahead in the world of construction industry beginning with DHA Villas, Askari Villas and Road Development. Our pioneering spirit infrastructure development came forward with the launch of the Business Hub, DHA Multan's first mega mall, marking a turning point in our journey from construction excellence to shaping the city's development.</p>
+                      <h6>Through sheer perseverance and demonstrated excellence, the company went on ahead in the world of construction industry beginning with DHA Villas, Askari Villas and Road Development. Our pioneering spirit infrastructure development came forward with the launch of the Business Hub, DHA Multan's first mega mall, marking a turning point in our journey from construction excellence to shaping the city's development.</h6>
                     </Col>
                     <Col xs={12} md={6} className='projectGallery' data-aos="fade-left" data-aos-delay="400">
                       <Row className='g-3'>

@@ -73,10 +73,11 @@ const ProductSlider = () => {
                     </Col>
                 </Row>
             </Container>
+            <Container fluid>
             <Slider {...settings}>
                 {products.map((product, index) => (
                     <Link to={product.link} key={product.id} className="product-link"> 
-                        <Card className="product-item" data-aos="zoom-in" data-aos-delay={`${index * 150 + 200}`}>
+                        <Card className="product-item">
                             <Card.Img variant="top" src={product.image} alt={product.name} />
                             <Card.Body className='text-start'>
                                 <Card.Text>{product.name}</Card.Text>
@@ -85,6 +86,7 @@ const ProductSlider = () => {
                     </Link>
                 ))}
             </Slider>
+            </Container>
         </section>
     );
 };

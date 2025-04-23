@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
       <div data-aos="fade-up" data-aos-duration="3600">
-        {/* <PromotionalSlider /> */}
+        <PromotionalSlider />
       </div>
     </>
   );

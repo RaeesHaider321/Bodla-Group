@@ -12,7 +12,9 @@
     padding: 10px 20px !important;
     transition: color 0.3s ease;
   }
-  
+  .navbar a:hover{
+    text-decoration: none;
+  }
   .navbar a::after, .navbar li::after, .navbar .dropdown::after {
     content: '';
     position: absolute;
