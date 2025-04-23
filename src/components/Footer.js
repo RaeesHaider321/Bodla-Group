@@ -13,10 +13,10 @@ function Footer() {
           </div>
 
           <Row className="my-3 my-md-5">
-            <Col xs={12} sm={4} md={2} lg={2} className="logo mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="1200">
+            <Col xs={12} sm={4} md={1} lg={2} className="logo mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="1200">
               <Image src={logo} fluid />
             </Col>
-            <Col xs={12} sm={8} md={10} lg={10}>
+            <Col xs={12} sm={8} md={11} lg={10}>
               <Row xs={12} sm={12} md={12} lg={4}>
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1400">
                   <h5>Others</h5>

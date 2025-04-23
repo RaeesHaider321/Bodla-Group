@@ -111,14 +111,14 @@ const About = () => {
   ))}
 </Carousel> */}
 
-<div className='responsive-video'>
+<div className='bodlaKahani' data-aos="fade-up" data-aos-duration="1300">
 <iframe src="https://www.youtube.com/embed/EGFIxjzM8nc?si=RCnJe3rzDhGEuwtb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
       <section className='bodlaSince py-5'>
         <Container>
           <Row className='justify-content-center'>
-            <Col xs={12} md={9} data-aos="fade-up" data-aos-delay="200">
-              <h4>With humble beginnings in Multan, Bodla Group's long-standing journey commenced with a vision to be a driving force in the growth of Multan's Real Estate in 2014. Filled with passion and commitment to upscale the investment and construction domain, Bodla Group steadily established itself as a trusted name in Multan's Real Estate Industry.</h4>
+            <Col xs={12} md={12} data-aos="fade-up" data-aos-delay="100">
+              <h6>With humble beginnings in Multan, Bodla Group's long-standing journey commenced with a vision to be a driving force in the growth of Multan's Real Estate in 2014. Filled with passion and commitment to upscale the investment and construction domain, Bodla Group steadily established itself as a trusted name in Multan's Real Estate Industry.</h6>
             </Col>
           </Row>
         </Container>
@@ -127,7 +127,7 @@ const About = () => {
       <section className='py-5'>
         <Container>
           <Row className='justify-content-center'>
-            <Col xs={12} md={10}>
+            <Col xs={12} sm={12} md={10}>
               <Row className='justify-content-center align-items-center g-4'>
                 <Col xs={12} md={6} className='dhaBodla' data-aos="fade-right" data-aos-delay="300">
                   <Image src={dhaBodla} alt='Bodla Builders collaboration with DHA' className='img-fluid' />

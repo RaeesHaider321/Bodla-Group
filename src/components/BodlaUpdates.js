@@ -43,13 +43,13 @@ const updates = [
 function CarouselFadeExample() {
 
     return (
-        <Container data-aos="fade-up">
+        <Container className='mb-5' data-aos="fade-up">
             <Row className="justify-content-center text-center mb-4">
-            <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="200">
-            <h2>Bodla Group <span>Updates</span></h2>
-            <p>Be the first to know what Bodla Group is bringing your way. </p>
-            </Col>
-        </Row>
+                <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="200">
+                    <h2>Bodla Group <span>Updates</span></h2>
+                    <p>Be the first to know what Bodla Group is bringing your way. </p>
+                </Col>
+            </Row>
             <Carousel fade className='bodlaUpdates' indicators={false} controls={false} interval={3000} pause={true} >
                 {updates.map(update => (
                     <Carousel.Item key={update.id}>

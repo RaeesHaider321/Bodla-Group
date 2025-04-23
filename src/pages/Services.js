@@ -130,7 +130,7 @@ const Services = () => {
         <Container>
           <Row className='align-items-center mb-5'>
             <Col xs={12} md={9}>
-              <h3 data-aos="fade-right">Our Services<br /><span data-aos="fade-right" data-aos-delay="200">Comprehensive Solutions for Your Needs</span></h3>
+              <h3 data-aos="fade-right">Our Core Services <br /><span data-aos="fade-right" data-aos-delay="200">Precisely tailored around your needs</span></h3>
             </Col>
             <Col xs={12} md={3} className='text-end'>
               <div data-aos="fade-left" data-aos-delay="300">

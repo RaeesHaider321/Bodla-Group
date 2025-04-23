@@ -23,8 +23,7 @@ const cardData = [
 
 export default function HistoryTimeline() {
     return (
-        <section className='pt-0'>
-            <Container>
+            <Container className='mb-5'>
                 <Row className="justify-content align-items-center gy-3">
                     <Col xs={12} md={5} data-aos="fade-right">
                         <h2 className='mb-4'>Bodla Group as your one-stop shop, <span>overseeing every facet</span> of the real estate journey.</h2>
@@ -46,6 +45,5 @@ export default function HistoryTimeline() {
                     </Col>
                 </Row>
             </Container>
-        </section>
     )
 }

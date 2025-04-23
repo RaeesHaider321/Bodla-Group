@@ -107,7 +107,6 @@ const HomeProjects = () => {
     ];
 
     return (
-        <section>
             <div className="tabs-container" data-aos="fade-up">
                 {/* Tab Content */}
                 <div className="tabs-content" style={{ backgroundImage: `url(${tabs[activeTab].backgroundImage})` }}>
@@ -116,13 +115,7 @@ const HomeProjects = () => {
                             <Image src={tabs[activeTab].content.logo} fluid />
                         </div>
                         <div className="amenities">
-                            {/* <h2>{tabs[activeTab].content.title}</h2>
-                            <p>{tabs[activeTab].content.description}</p>
-                            <div className="additional-details">
-                                <p>{tabs[activeTab].content.details}</p>
-                            </div> */}
-                            {/* Render Amenities with Icons */}
-                            <Row className='justify-content-center gy-4 mb-4'>
+                             <Row className='justify-content-center gy-4 mb-4'>
                                 {tabs[activeTab].content.amenities.map((amenity, index) => (
                                     <Col xs={6} sm={3} md={4} lg={2} key={index}>
                                         <span className="amenity-icon">{amenity.icon}</span>
@@ -150,7 +143,7 @@ const HomeProjects = () => {
                     </Container>
                 </div>
             </div>
-        </section>
+        
     );
 };
 

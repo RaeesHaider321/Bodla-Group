@@ -183,7 +183,7 @@ const projectDetails = {
         onPossession: '10%'
       },
     ],
-    videoLink:"https://www.youtube.com/embed/x0y8NCCNdnU?si=_-s7geUYjUG2bxwc",
+    videoLink:"https://www.youtube.com/embed/Ndr0vVfjrQs?si=VLGx-Yqg3ZFimX-w",
   },
   'one-destination': {
     ...projectTemplate,

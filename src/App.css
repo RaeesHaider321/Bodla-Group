@@ -863,3 +863,17 @@ margin-bottom: 0;
   height: 100%;
   border: 0;
 }
+.bodlaKahani {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* 60% of screen height */
+  max-height: 100vh;
+}
+
+.bodlaKahani iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

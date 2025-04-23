@@ -1,3 +1,6 @@
 .bodlaUpdates .card .card-body{
     padding: 30px;
 }
+.bodlaUpdates .carousel-inner {
+    max-height: 100%;
+}
