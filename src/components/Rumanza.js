@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image, Button } from 'react-bootstrap';
 import Icons from "../components/Icon";
+import BodlaButton from './Button';
 import cardImage from '../images/card-image.jpg'
 const Rumanza = () => {
   // Array containing timeline data
@@ -35,18 +36,14 @@ const Rumanza = () => {
       id: 3,
       title: "Integrated Commercial & Residential Facilities",
       description: "Rumanza is more than just a golf course; it is a self-sustained community offering both premium residential plots and a thriving commercial area. With direct golf course views and easy access to retail outlets and commercial spaces, Rumanza promises an extravagant lifestyle with ample opportunities for businesses and residents alike.",
-      features: [
-        ''
-      ],
+      features: [],
       image: cardImage
     },
     {
       id: 4,
       title: "Alliance with Pearl Continental",
       description: "Rumanza has partnered with Pearl Continental to introduce ‘Rumanza by Pearl Continental’ a lavish five-star hotel that promises unmatched service and hospitality within the community. This collaboration elevates Rumanza’s status, offering residents and guests a refined living and leisure experience.",
-      features: [
-        ''
-      ],
+      features: [],
       image: cardImage
     },
     {
@@ -88,9 +85,7 @@ const Rumanza = () => {
       title: "A Life Beyond Golf",
       description: "Rumanza provides a rare opportunity to build bespoke residences with direct golf course frontage. These residences are nestled within serene, landscaped surroundings and seamlessly aligned with the overall master plan. ",
       seconddescription: "Scenic walkways and tastefully positioned kiosks invite residents and visitors to immerse themselves in nature — where vibrant peacocks and gentle ducks roam freely, and gourmet flavors meet the charm of regional cuisine in a truly elevated lifestyle experience.",
-      features: [
-        ''
-      ],
+      features: [],
       image: cardImage
     },
     
@@ -99,9 +94,11 @@ const Rumanza = () => {
 
   return (
     <>
-          <h2>About</h2>
+          <h2>About Rumanza</h2>
           <p>Rumanza, a harmonious retreat from the fast pace of modern life. A thoughtfully integrated community, it provides residents with a range of exclusive residential and commercial facilities, all set within one of the most prestigious developments in Pakistan. Featuring premium plots, a state-of-the-art 18-hole golf course, beautifully landscaped parks, and an array of commercial spaces, Rumanza is the epitome of an upscale lifestyle.</p>
           <p>In addition to its residential and commercial offerings, Rumanza has formed a prestigious alliance with <b><span>Pearl Continental</span></b>, introducing a luxurious 5-star hotel that enhances the community's hospitality offerings. Rumanza also features the <b><span>Golf View Rumanza (GVR)</span></b>, a premium residential and commercial project by <b><span>Bodla Group</span></b>, strategically positioned within DHA Multan. This project offers elite living options, including apartments and penthouses with views of Pakistan's first signature golf course, creating an exceptional investment opportunity.</p>
+          <Col xs={12} md={2}><BodlaButton text="Visit Website" icon={<Icons name="rightArrow" />} variant="primary" link='https://www.rumanza.golf/'  />
+          </Col>
           {rumanzaData.map((item, index) => (
             <Row key={item.id} className='align-items-center mb-5 g-4'>
               {/* For even indexes (0, 2, 4...), image on right */}

@@ -1,5 +1,5 @@
 import { Carousel, Row, Col } from 'react-bootstrap';
-import BookACallButton from './BookACallButton';
+import BodlaButton from './Button';
 import Icons from "../components/Icon"; 
 import oneDestination from '../images/oneDestination.jpg';
 import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
@@ -59,11 +59,7 @@ function NoTransitionExample() {
               <h1 data-aos="zoom-in">
                 {item.titlePart1} <span>{item.titlePart2}</span>
               </h1>
-              <BookACallButton 
-                text="Book a Call" 
-                icon={<Icons name="rightArrow" />} 
-                link="/Contact"
-              />
+              <BodlaButton text="Book A Call" icon={<Icons name="rightArrow" />} variant="primary" link='/Contact'  />
               </Col>
             </Row>
           </Carousel.Caption>

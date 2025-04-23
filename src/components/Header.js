@@ -1,12 +1,13 @@
-import { Container, Nav, Navbar, NavDropdown, Image} from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import logo from '../images/header-logo.png';
 import Icons from "../components/Icon"; 
 import BodlaButton from './Button';
 import { Link } from 'react-router-dom';
+import './Header.css'; // Create this file for the hover styles
 
 function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar"data-bs-theme="dark">
+    <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar" data-bs-theme="dark">
       <Container>
         <Link to="/" className='navbar-brand'>
           <img src={logo} alt="Bodla Builders" className="h-10" />
@@ -18,15 +19,22 @@ function Header() {
             <Link to="/About">About Us</Link>
             <Link to="/DHAMultan">DHA Multan</Link>
             <Link to="/Team">Team</Link>
-            <Link to="/Projects">Projects</Link>
+            
+            {/* Projects Dropdown with hover functionality */}
+            <NavDropdown 
+              title="Projects" 
+              id="projects-dropdown"
+              className="dropdown-hover"
+              renderMenuOnMount={true} // Ensures smooth hover transition
+            >
+              <NavDropdown.Item as={Link} to="/Projects/business-hub">Business Hub</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Projects/one-destination">One Destination</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Projects/bodla-homes">Bodla Homes</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Projects/golf-view-rumanza">Golf View Rumanza</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Projects">5 Active Projects</NavDropdown.Item>
+            </NavDropdown>
+            
             <Link to="/Services">Services</Link>
-            {/* <Nav.Link href="/Contact">Contact Us</Nav.Link>
-            <NavDropdown title="More" id="more" aria-label="More options">
-              <NavDropdown.Item href="/Gallery">Gallery</NavDropdown.Item>
-              <NavDropdown.Item href="/Blogs">Blogs</NavDropdown.Item>
-              <NavDropdown.Item href="/News">News</NavDropdown.Item>
-              <NavDropdown.Item href="/Careers">Careers</NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
           <Nav>
             <BodlaButton

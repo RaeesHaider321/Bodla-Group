@@ -20,10 +20,6 @@ const HomeProjects = () => {
             label: 'Business Hub',
             content: {
                 logo: bHub,
-                link: '/business-hub', // Updated link
-                // title: 'Welcome to Business Hub',
-                // description: 'This is the content for Business Hub. Here you can add more details.',
-                // details: 'Additional details for Business Hub.',
                 amenities: [
                     { name: 'Mosque', icon: <Icons name="mosque" />, },
                     { name: 'Food Court', icon: <Icons name="foodCourt" /> },
@@ -46,7 +42,6 @@ const HomeProjects = () => {
             label: 'One Destination',
             content: {
                 logo: oneD,
-                link: '/one-destination', // Updated link
                 amenities: [
                     { name: 'Gymnasium', icon: <Icons name="gymnasium" /> }, 
                     { name: 'Swimming Pool', icon: <Icons name="swimmingPool" /> }, 
@@ -66,7 +61,6 @@ const HomeProjects = () => {
             label: 'Golf View Rumanza',
             content: {
                 logo: gvr,
-                link: '/golf-view-rumanza', // Updated link
                 amenities: [
                     { name: 'Gym',icon: <Icons name="gym" /> },
                     { name: 'Swimming pool',icon: <Icons name="swimmingPool" /> }, 
@@ -87,7 +81,6 @@ const HomeProjects = () => {
             label: 'Bodla Homes',
             content: {
                 logo: bHomes,
-                link: '/bodla-homes', // Updated link
                 amenities: [
                     // 	5.2-Marla Bodla Homes
                     //{ name: 'Covered Area 2220 Sq.Ft', icon: <Icons name="airConditioning" /> },
@@ -138,7 +131,7 @@ const HomeProjects = () => {
                                 ))}
                             </Row>
                         </div>
-                        <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link={tabs[activeTab].content.link}  />
+                        <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link='/Contact'  />
                     </div>
                 </div>
 

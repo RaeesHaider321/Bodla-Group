@@ -13,7 +13,7 @@ export default function UnlockProperty() {
             <Col xs={12} md={6}>
               <h3>Join the REAL Estate Conversation.</h3>
               <p>By Sending this Form I conform that I’ve read and accepted the privacy policy.</p>
-              <BodlaButton text="Let’s Get Connected! " icon={<Icons name="rightArrow" />} variant="primary" link="/" />
+              <BodlaButton text="Let’s Get Connected! " icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
             </Col>
             <Col xs={12} md={6} className='unlock-blue-card'>
               <div className='logo'>

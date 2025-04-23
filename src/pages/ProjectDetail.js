@@ -74,7 +74,6 @@ import OneDestination03 from '../images/floorMaps/OneDestination-04.jpg';
 import OneDestination04 from '../images/floorMaps/OneDestination-05.jpg';
 
 import floor3 from '../images/floor3.jpg';
-import sectorV from '../videos/sector-v.mp4';
 import ctaOneD from '../images/ctaOneD.png';
 
 
@@ -98,7 +97,7 @@ const projectTemplate = {
   mapEmbedUrl: '', // Google Maps embed URL
   size: 'Project Size',
   status: 'Project Status',
-  video: sectorV, // default video
+  videoLink: '', // default video
   floorPlans: [], // array of floor plan images
   virtualTour: virtualtour,
   nearbyPlaces: [],
@@ -184,6 +183,7 @@ const projectDetails = {
         onPossession: '10%'
       },
     ],
+    videoLink:"https://www.youtube.com/embed/x0y8NCCNdnU?si=_-s7geUYjUG2bxwc",
   },
   'one-destination': {
     ...projectTemplate,
@@ -275,7 +275,8 @@ const projectDetails = {
     location: 'DHA Multan, Pakistan',
     mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=18m1tND92llOVYgM4gh6Voj5nnofl5Vc&ehbc=2E312F&noprof=1',
     size: '10 Acres',
-    status: 'Completed'
+    status: 'Completed',
+    videoLink:"https://www.youtube.com/embed/VmoJ9WGnJ6I?si=k4brEjwUVEooXCgK",
   },
   'golf-view-rumanza': {
     ...projectTemplate,
@@ -409,7 +410,8 @@ const projectDetails = {
     location: 'DHA Multan, Pakistan',
     mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=1lOc0SjTIxoHIG82ZuZVZVM2QFchhH6Q&ehbc=2E312F&noprof=1',
     size: '15 Acres',
-    status: 'Upcoming'
+    status: 'Upcoming',
+    videoLink:"https://www.youtube.com/embed/w5QEV7t8kuA?si=trZzHw-WGeOkTSsj",
   },
   'bodla-homes': {
     ...projectTemplate,
@@ -551,7 +553,8 @@ const projectDetails = {
     location: 'DHA Multan, Pakistan',
     mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=10f6JJXuqzggFLxcaf5xDGrrZ5ZOr538&ehbc=2E312F&noprof=1',
     size: '8 Marla Plots',
-    status: 'Ongoing'
+    status: 'Ongoing',
+    videoLink:"https://www.youtube.com/embed/agUm10fzXDQ?si=8rh8psHk6XPFNdL8",
   }
 };
 
@@ -727,12 +730,12 @@ const ProjectDetails = () => {
         <Container className='text-center mt-5'>
           <Row className='justify-content-center text-center mt-5'>
             <Col xs={12} lg={10}>
-              {/* <PageTitle title="Delivering our promise" data-aos="fade-up" data-aos-delay="100" /> */}
-              <div data-aos="fade-up" data-aos-delay="200">
-                <video width="100%" controls>
-                  <source src={project.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+            <div data-aos="fade-up" data-aos-delay="200" className="responsive-video">
+            <iframe src={project.videoLink} 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
               </div>
             </Col>
           </Row>

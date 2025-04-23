@@ -26,8 +26,10 @@
   }
   
   .navbar a.dropdown-toggle::after {
+    margin-left: 10px;
     position: static;
-  }
+    margin-top: 10px;
+}
   
   .navbar a.dropdown-toggle:hover::after {
     width: 0;
@@ -64,8 +66,6 @@
     color: var(--white);
   }
   
-  
-  
   .navbar a.navbar-brand{ 
     width: 180px;
     padding: 0 !important; ;
@@ -83,4 +83,27 @@
   .dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover{
     color: var(--white);
     background: var(--primary);
+  }
+
+
+  @media (min-width: 992px) {
+    .dropdown-hover:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* Remove the gap between dropdown and menu */
+    }
+    
+    .dropdown-hover .dropdown-menu {
+      /* Optional: Add animation for smoother appearance */
+      transition: all 0.3s ease;
+    }
+    
+    /* Optional: Add delay to prevent accidental triggers when moving cursor */
+    .dropdown-hover .dropdown-menu {
+      pointer-events: none;
+      transition: visibility 0s, opacity 0.3s ease;
+    }
+    
+    .dropdown-hover:hover .dropdown-menu {
+      pointer-events: auto;
+    }
   }
