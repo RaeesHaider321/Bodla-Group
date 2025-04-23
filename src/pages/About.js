@@ -78,27 +78,42 @@ const About = () => {
       description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
     }
   ];
+  
 
   return (
     <>
-      <Carousel fade className='aboutCarousel' indicators={true} controls={false} interval={30000} pause={true}>
-        {carouselItems.map((item, index) => (
-          <Carousel.Item key={index}>
-            <Image 
-              src={item.image} 
-              alt={item.alt}
-            />
-            <Carousel.Caption>
-              <Row className="justify-content-center">
-                <Col sm={11} md={8}>
-                  <h2 data-aos="fade-up" data-aos-delay="300">{item.title}</h2>
-                </Col>
-              </Row>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+      {/* <Carousel fade className='aboutCarousel' indicators={true} controls={false} interval={30000} pause={true}>
+  {carouselItems.map((item, index) => (
+    <Carousel.Item key={index}>
+      {item.video ? (
+        <div className="video-container">
+          <iframe
+            width="100%"
+            height="500"
+            src={item.video}
+            title={item.alt}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      ) : (
+        <Image src={item.image} alt={item.alt} fluid />
+      )}
+      <Carousel.Caption>
+        <Row className="justify-content-center">
+          <Col sm={11} md={8}>
+            <h2 data-aos="fade-up" data-aos-delay="300">{item.title}</h2>
+          </Col>
+        </Row>
+      </Carousel.Caption>
+    </Carousel.Item>
+  ))}
+</Carousel> */}
 
+<div className='responsive-video'>
+<iframe src="https://www.youtube.com/embed/EGFIxjzM8nc?si=RCnJe3rzDhGEuwtb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
       <section className='bodlaSince py-5'>
         <Container>
           <Row className='justify-content-center'>
