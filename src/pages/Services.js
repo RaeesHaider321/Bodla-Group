@@ -66,28 +66,42 @@ const Services = () => {
       imageSrc: service1,
       altText: "Property Development",
       titlePart1: "Our Services",
-      titlePart2: "Building Excellence",
+      titlePart2: "Strategic Acquisition",
     },
     {
       id: 2,
       imageSrc: service2,
       altText: "Construction Services",
       titlePart1: "Our Services",
-      titlePart2: "Quality Construction",
+      titlePart2: "Scalable Development",
     },
     {
       id: 3,
       imageSrc: service3,
       altText: "Interior Design",
       titlePart1: "Our Services",
-      titlePart2: "Creative Spaces",
+      titlePart2: "Smart Trading",
     },
     {
       id: 4,
       imageSrc: service4,
       altText: "Property Management",
       titlePart1: "Our Services",
-      titlePart2: "Professional Management",
+      titlePart2: "Sustainable Construction ",
+    },
+    {
+      id: 4,
+      imageSrc: service4,
+      altText: "Property Management",
+      titlePart1: "Our Services",
+      titlePart2: "Subtle Finishes",
+    },
+    {
+      id: 4,
+      imageSrc: service4,
+      altText: "Property Management",
+      titlePart1: "Our Services",
+      titlePart2: "Standout Savvy Marketing",
     }
   ];
 
