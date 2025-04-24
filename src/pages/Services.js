@@ -143,7 +143,7 @@ const Services = () => {
 
           <Row className='gy-4'>
             {services.map((service, index) => (
-              <Col xs={12} md={6} lg={3} key={service.id} data-aos="fade-up" data-aos-delay={index * 100}>
+              <Col xs={12} md={6} lg={4} key={service.id} data-aos="fade-up" data-aos-delay={index * 100}>
                 <Card 
                   className="h-100 shadow-sm border-0 service-card" 
                   onClick={() => handleServiceClick(service.title)}

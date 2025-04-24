@@ -21,7 +21,7 @@ const bosses = [
     name: "Sohaib Tariq Bodla",
     designation: "Chief Executive Officer",
     idescription: "‘We will grow Multan, and we will grow with DHA Multan. From the land to development, from building homes to tall buildings, we aim to be a part in every ounce of its development’",
-    description: "‘We will grow Multan, and we will grow with DHA Multan. From the land to development, from building homes to tall buildings, we aim to be a part in every ounce of its development’",
+    description: "Driven by passion for our land and commitment to sustainability, we’re proud to lead the way in DHA Multan’s growth, rising above challenges to ensure a smooth journey for all our stakeholders—from investors to the Multan community. With a team of experts and our distinctive culture, we are dedicated to pioneering transformative projects that will shape the future of Multan for generations ahead.",
     image: ceo,
     social: {
       facebook: "#",
@@ -35,7 +35,7 @@ const bosses = [
     name: "Junaid Tariq Bodla",
     designation: "Managing Director",
     idescription: "'We align our vision with the aspirations of our clients and investors and it is the actual synergy that drives our legacy of excellence'",
-    description: "Bodla Group's journey, from its inception as Bodla Builders to a trusted industry name defines our commitment to delivering excellence and upholding our values. Focused on DHA Multan, we have built a reputation for quality and innovation, driven by the unshakable trust of our clients and investors. This trust inspires us to redefine real estate standards and create impactful opportunities",
+    description: "Bodla Group's journey, from its inception as Bodla Builders to a trusted industry name defines our commitment to delivering excellence and upholding our values. Focused on DHA Multan, we have built a reputation for quality and innovation, driven by the unshakable trust of our clients and investors. This trust inspires us to redefine real estate standards and create impactful opportunities.",
     image: md,
     social: {
       facebook: "#",
@@ -49,57 +49,57 @@ const bosses = [
 const directors = [
   {
     id: 1,
-    name: "Huzaifa Ahmed",
-    designation: "Director Projects",
+    name: "Huzaifa Ahmed Bodla",
+    designation: "Project Director – One Destination",
     description: "This is the first director.",
     image: HuzaifaBodla
   },
   {
     id: 3,
     name: "Ali Ashraf Bodla",
-    designation: "Director Construction",
+    designation: "Director Construction – Bodla Group",
     description: "This is the third director.",
     image: AliAshrafBodla
   },
   {
     id: 4,
-    name: "Hanzala Ahmed",
-    designation: "Interior Works Controller",
+    name: "Hanzala Ahmed Bodla",
+    designation: "Director Procurement – Bodla Group",
     description: "This is the third director.",
     image: Hanzala
   },
   {
     id: 5,
     name: "Aftab Bodla",
-    designation: "Director BBRD",
+    designation: "Director Sales - BBRD",
     description: "This is the third director.",
     image: AftabBodla
   },
   {
     id: 6,
     name: "Hassan Bodla",
-    designation: "Director BBRD",
+    designation: "Director Sales – BBRD",
     description: "This is the third director.",
     image: Hassan
   },
   {
     id: 7,
     name: "Asim Sabeeh Bodla",
-    designation: "Director Admin",
+    designation: "Director Admin – Bodla Group",
     description: "This is the third director.",
     image: AsimSabeeh
   },
   {
     id: 8,
     name: "Awais Bodla",
-    designation: "Director IT",
+    designation: "Director IT – Bodla Group",
     description: "This is the third director.",
     image: AwaisBodla
   },
   {
     id: 9,
     name: "Waqar Zafar",
-    designation: "Land Acquisition Manager",
+    designation: "Director Land Acquisition – Bodla Group",
     description: "This is the third director.",
     image: WaqarBodla
   }
@@ -123,11 +123,11 @@ const Team = () => {
                 <p className='designation' data-aos="fade-left" data-aos-delay="100">Chairman</p>
                 <h5 data-aos="fade-left" data-aos-delay="150">CHAIRMAN'S MESSAGE</h5>
                 <Card.Text data-aos="fade-up" data-aos-delay="200">
-                <i>‘When we construct a building, it’s never just for today or tomorrow—we are building a legacy for at least 100 years. We thoughtfully design every element to ensure enduring comfort and convenience for generations to come.’</i>
+                <i> ‘When we construct a building, it’s never just for today or tomorrow—we are building a legacy for at least 100 years. We thoughtfully design every element to ensure enduring comfort and convenience for generations to come.’</i>
                 </Card.Text>
                 <Card.Text data-aos="fade-up" data-aos-delay="300">
-                Rooted in the belief ‘We grow as DHA grows,’ we aligned with DHA Multan, the most secure housing community, and our exceptional team of dealers, contractors & engineers. With future-focused designs, expert project management, and uncompromising quality, we deliver projects that are <b><span>Tangible, Sustainable, & Real,</span></b> always prioritizing the trust and investment of our valued customers.
-                </Card.Text>
+                Rooted in the belief ‘We grow as DHA grows,’ we aligned with DHA Multan, the most secure housing community, and our exceptional team of dealers, contractors & engineers. With future-focused designs, expert project management, and uncompromising quality, we deliver projects that are Tangible, Sustainable, & Real, always prioritizing the trust and investment of our valued customers.
+                 </Card.Text>
               </Card.Body>
             </Col>
           </Row>
