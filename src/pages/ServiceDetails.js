@@ -15,131 +15,258 @@ import serviceDetail3 from '../images/businessHub.jpg';
 
 // Sample service details data
 const serviceDetails = {
-  'property-development': {
+  'land-acquisition': {
     id: 1,
-    title: 'Property Development',
-    description: 'Our comprehensive property development services cover every aspect from land acquisition to project completion. We combine innovative design with practical solutions to create properties that stand the test of time.',
-    longDescription: 'At Bodla Group, we take pride in our end-to-end property development services that transform visions into reality. Our team of experts handles everything from initial feasibility studies and land acquisition to architectural design, planning permissions, and construction management. We work closely with clients to understand their needs and deliver developments that exceed expectations while maintaining strict quality standards and timelines.',
+    title: 'Land Acquisition',
+    caption: 'Precise Location Procurement    –     Investor Centric Approach     –     Growth Driven Potential',
+    description: "With a keen eye for potential growth, we navigate complex real estate landscapes to identify and secure prime land opportunities. Our approach ensures that each acquisition not only meets current market demands but also aligns smoothly with investors' long-term vision and strategic investment goals. By blending insight, experience, and foresight, we lay the foundation for developments that succeed well into the future.",
     image: service1,
     secondaryImages: [serviceDetail1, serviceDetail2, serviceDetail3],
     features: [
-      'Land acquisition and feasibility analysis',
-      'Architectural design and master planning',
-      'Project management and coordination',
-      'Regulatory compliance and approvals',
-      'Quality control and assurance',
-      'Handover and aftercare services'
+      'Location Intelligence',
+      'Investor Alignment.',
+      'Market Foresight',
+      'Legal Due Diligence',
+      'Negotiation Expertise',
+      'End-to-End Support',
     ],
     process: [
-      { title: 'Consultation', description: 'Understanding client requirements and project scope' },
-      { title: 'Feasibility Study', description: 'Market research and financial analysis' },
-      { title: 'Design Phase', description: 'Architectural and engineering designs' },
-      { title: 'Approvals', description: 'Securing necessary permits and approvals' },
-      { title: 'Construction', description: 'Quality construction with regular progress updates' },
-      { title: 'Handover', description: 'Final inspection and property delivery' }
+      { title: 'Market Research & Feasibility Analysis', description: 'Data-driven selection based on infrastructure plans, real estate demand, and investor trends.'},
+      { title: 'Investor Consultation', description: 'Investment alignment to meet your financial goals, capital expectations, and preferred zones.' },
+      { title: 'Location Scouting', description: 'Identifying land with strong resale potential, accessibility to key landmarks & future development prospects.' },
+      { title: 'Legal & Regulatory Checks', description: 'Background checks, ensuring clear titles, conflict-free ownership, and alignment with DHA bylaws. ' },
+      { title: 'Price Negotiation & Finalization', description: 'Negotiating the best possible rates, ensuring transparency and fair market value for both investors & sellers.' },
+      { title: 'Documentation & Transfer', description: 'Smooth documentation, secure agreements, and timely transfer processes - with DHA Multan and other authorities. ' },
+      { title: 'Project Alignment & Handover', description: 'Once acquired, the land is either prepared for development or held as a strategic asset depending on the investor’s objective.' }
     ],
     benefits: [
-      'End-to-end solution from a single provider',
-      'Expertise in local regulations and market conditions',
-      'Proven track record of successful developments',
-      'Transparent processes and regular communication',
-      'Commitment to sustainable development practices'
+     'Data-Backed Insights',
+     'Prime Location Access',
+     'Transparent Dealings',
+     'Faster Acquisition Timelines',
+     'Portfolio Diversification',
     ]
   },
-  'construction-services': {
+  'construction': {
     id: 2,
-    title: 'Construction Services',
-    description: 'High-quality construction services with a focus on durability, aesthetics, and timely project delivery. We build structures that last.',
-    longDescription: 'Our construction services division brings together skilled professionals, quality materials, and modern techniques to deliver exceptional results. Whether residential, commercial, or mixed-use projects, we approach each construction with meticulous planning and attention to detail. Our construction methodology emphasizes quality control at every stage, ensuring that the final product meets both our high standards and client expectations.',
+    title: 'Construction',
+    caption:'Detail-Driven    -   Skilled Craftsmanship    -     Reliable Delivery ',
+    description: 'Beyond extraordinary construction lies our steadfast commitment to quality. We integrate sustainable materials with cutting-edge technology to create infrastructures that are not only visually impressive but also structurally resilient. Every project we undertake is built to endure, reflecting our focus on longevity, safety, and sustainability. With precision and purpose, we craft spaces that stand the test of time and elevate modern living.',
+    cta:'Start our Construction!',
+    getStarted:'Yes! Let’s Get Started',
     image: service2,
     secondaryImages: [serviceDetail2, serviceDetail3, serviceDetail1],
     features: [
-      'Residential and commercial construction',
-      'Structural engineering solutions',
-      'Quality material procurement',
-      'Skilled workforce management',
-      'Safety compliance',
-      'Project timeline management'
+      "Advanced Construction Techniques",
+  "Sustainable Material Integration", 
+  "Precision Engineering",
+  "Aesthetic Detailing",
+  "Quality Control Systems",
+  "Skilled Workforce Deployment"
     ],
     process: [
-      { title: 'Site Preparation', description: 'Clearing and preparing the construction site' },
-      { title: 'Foundation Work', description: 'Laying strong and durable foundations' },
-      { title: 'Structural Framework', description: 'Building the structural skeleton' },
-      { title: 'Enclosure', description: 'Walls, roof, and weatherproofing' },
-      { title: 'Interior Work', description: 'Electrical, plumbing, and finishes' },
-      { title: 'Final Inspection', description: 'Quality checks and handover' }
+      {
+        title: "Strategic Planning",
+        description: "We define scope, timelines, and resources with a detailed roadmap tailored to project needs."
+      },
+      {
+        title: "Site Readiness",
+        description: "From land clearing to leveling, we ensure a strong foundation for seamless execution."
+      },
+      {
+        title: "Structural Development",
+        description: "Robust frameworks are built using precision engineering and high-grade materials."
+      },
+      {
+        title: "Climate-Responsive Construction",
+        description: "Incorporate insulation techniques and heat-resistant materials to ensure energy efficiency and climate resilience."
+      },
+      {
+        title: "Finishing & Detailing",
+        description: "High-quality finishes and design details elevate the visual appeal and market value."
+      },
+      {
+        title: "Final Inspection & Delivery",
+        description: "Every element is inspected for safety, durability, and standards before final client delivery."
+      }
     ],
     benefits: [
-      'Timely project completion',
-      'Transparent pricing',
-      'Regular progress reports',
-      'Quality materials from trusted suppliers',
-      'Comprehensive warranty'
+      "Long-Term Durability",
+  "Visual Appeal & Design Harmony",
+  "Structural Reliability", 
+  "Timely Project Completion",
+  "Enhanced Property Value"
     ]
   },
-  'interior-design': {
+  'development': {
     id: 3,
-    title: 'Interior Design',
-    description: 'Transform your spaces with our innovative interior design solutions that combine functionality with aesthetic appeal.',
-    longDescription: 'Our interior design services create spaces that are not just beautiful but also functional and reflective of your personality or brand identity. We work with a careful selection of materials, colors, textures, and lighting to craft interiors that inspire. From conceptualization to final installation, our team guides you through every decision, ensuring the end result is a space you\'ll love.',
+    title: 'Development',
+    caption:'Community-Driven Planning     -      Design-Led Execution    -     Integrated Urban Expansion',
+    description: 'We synergize our development strategies with community needs and market trends, utilizing cutting-edge technology to create optimized layouts. By integrating smart living solutions, we ensure that every project meets modern demands for convenience, efficiency, and sustainability. Our focus on innovative design and thoughtful planning results in developments that are not only functional but also enhance the quality of life for future residents.',
+    cta:'Let’s Begin with Development ',
+    getStarted:'Yes! Let’s Get Started',
     image: service3,
     secondaryImages: [serviceDetail3, serviceDetail1, serviceDetail2],
     features: [
-      'Residential and commercial interior design',
-      'Space planning and optimization',
-      'Custom furniture design',
-      'Material and finish selection',
-      'Lighting design',
-      'Project management'
+      'Community-Centric Planning',
+      'Innovative Design',
+      'Smart Living Integration',
+      'Sustainable Practices',
+      'Market-Driven Strategy',
+      'Efficient Space Utilization',
     ],
     process: [
-      { title: 'Initial Consultation', description: 'Understanding your style and needs' },
-      { title: 'Concept Development', description: 'Creating mood boards and concepts' },
-      { title: 'Design Development', description: 'Detailed drawings and specifications' },
-      { title: 'Material Selection', description: 'Choosing finishes, fixtures, and furnishings' },
-      { title: 'Implementation', description: 'Overseeing the execution of the design' },
-      { title: 'Final Styling', description: 'Adding the finishing touches' }
+      { title: 'Strategic Planning & Market Analysis', description: 'Conducting thorough research to align projects with market demands and future trends.' },
+      { title: 'Prime Site Selection & Acquisition', description: 'Identifying and securing high-potential sites for sustainable growth and investment.' },
+      { title: 'Architectural Design & Master Planning', description: 'Crafting innovative and functional designs that integrate smart technologies and community needs.' },
+      { title: 'Regulatory Compliance & Approvals', description: 'Ensuring all projects meet legal standards and receive necessary permits seamlessly.' },
+      { title: 'Precision Execution & Construction Management', description: 'Overseeing construction with a focus on quality, efficiency, and timely delivery.' },
+      { title: 'Project Handover & Ongoing Support', description: 'Ensuring smooth handovers and providing ongoing support for long-term client satisfaction.' }
     ],
     benefits: [
-      'Personalized design solutions',
-      'Access to premium materials and furnishings',
-      'Professional space planning',
-      'Cohesive design language throughout your space',
-      'Attention to detail in every element'
+      'Enhanced Livability',
+      'Future-Proof Projects',
+      'Increased Property Value',
+      'Community Growth',
+      'Sustainable Development',
     ]
   },
-  'property-management': {
+  'plots-trading': {
     id: 4,
-    title: 'Property Management',
-    description: 'Professional property management services to maintain and enhance the value of your real estate investments.',
-    longDescription: 'Our property management services take the hassle out of owning investment properties. We handle all aspects of property management, from tenant screening and lease administration to maintenance coordination and financial reporting. Our proactive approach ensures your property remains in excellent condition, tenants are satisfied, and your investment performs optimally.',
+    title: 'Plot Trading',
+    caption: 'Informed Decision-Making      -       Fast Value Exchange      -       Transparent Dealing',
+    description: 'With a strategic vision, we anticipate market shifts and proactively identify opportunities that align with future growth trends. By connecting investors with high-potential prospects, we ensure that each investment is perfectly positioned for exceptional returns. Our foresight and market insight shape the future landscape, helping investors make informed decisions that drive long-term success and solidify their position in evolving markets.',
+    cta:'Sell or Buy (Plot)',
+    getStarted:'Yes! Let’s Get Started',
     image: service4,
     secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
     features: [
-      'Tenant screening and placement',
-      'Lease administration',
-      'Rent collection',
-      'Maintenance coordination',
-      'Financial reporting',
-      'Legal compliance'
+      "Tailored Location Selection",
+  "Informed Investment Guidance",
+  "Hassle-Free Negotiation",
+  "Smooth Legal Compliance",
+  "Transparent Dealings",
+  "Personalized Portfolio Management"
     ],
     process: [
-      { title: 'Property Assessment', description: 'Evaluating the property condition' },
-      { title: 'Marketing', description: 'Advertising vacancies effectively' },
-      { title: 'Tenant Placement', description: 'Screening and selecting qualified tenants' },
-      { title: 'Lease Management', description: 'Handling all lease-related matters' },
-      { title: 'Maintenance', description: 'Coordinating repairs and upkeep' },
-      { title: 'Reporting', description: 'Providing regular financial statements' }
+      {
+        title: "Client Consultation",
+        description: "Understanding your investment goals, budget, and location preferences."
+      },
+      {
+        title: "Market Analysis",
+        description: "Identifying the most profitable and secure plot options through data-driven insights."
+      },
+      {
+        title: "Plot Shortlisting",
+        description: "Presenting you with handpicked plots that align with your needs and objectives."
+      },
+      {
+        title: "Due Diligence",
+        description: "Verifying all legal, ownership, and development aspects to ensure a secure deal."
+      },
+      {
+        title: "Negotiation & Agreement",
+        description: "Handling price negotiations and finalizing terms in your best interest."
+      },
+      {
+        title: "Deal Closure & Handover",
+        description: "Completing documentation and ensuring a smooth, transparent transfer of ownership."
+      }
     ],
     benefits: [
-      'Higher occupancy rates',
-      'Timely rent collection',
-      'Reduced maintenance costs',
-      'Professional handling of tenant issues',
-      'Regular property inspections',
-      'Detailed financial records'
+      "Maximized Customer Returns",
+  "Reduced Investment Risk",
+  "Expert Support Throughout",
+  "Time-Efficient Process",
+  "Trustworthy, Clear Transactions"
     ]
-  }
+  },
+  'finishing-materials': {
+    id: 4,
+    title: 'Finishing Materials   ',
+    caption: 'Aesthetically Inspired     -      Refined Material       -       Durability In-built',
+    description: 'By utilizing expert design insights and pre-cast technology, we adopt a pragmatic approach to finishing materials that enhances functionality, durability, aesthetics, and sustainability. With specialized solutions like thermal insulation, lightweight partitions, strong bonding agents, and perfect wall finishes, we ensure modern living spaces that exceed expectations—aligning with your lifestyle needs while contributing to long-lasting and environmentally conscious developments.',
+    cta:'Begin My Project’s finishing ',
+    getStarted:'Yes! Let’s Get Started',
+    image: service4,
+    secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
+    features: [
+      "Expert Design Insights",
+  "Pre-Cast Technology",
+  "Sustainable Practices",
+  "Thermal Efficiency",
+  "Quality Control",
+  "Aesthetic Excellence"
+    ],
+    process: [
+      {
+        title: "Personalized Consultations",
+        description: "Understanding client needs for functionality, aesthetics, and sustainability."
+      },
+      {
+        title: "Material Selection Excellence",
+        description: "Selecting high-quality, durable, and aesthetic materials for finishing."
+      },
+      {
+        title: "Design & Material Integration",
+        description: "Ensuring materials align with the overall design for visual harmony."
+      },
+      {
+        title: "Tailored Customization",
+        description: "Offering bespoke solutions to elevate aesthetics and suit client preferences."
+      },
+      {
+        title: "Expert Installation",
+        description: "Expert application of materials with precision and care."
+      },
+      {
+        title: "Quality Assurance Check",
+        description: "Final checks to ensure durability, functionality, and aesthetic appeal before delivery."
+      }
+    ],
+    benefits: [
+      "Enhanced Durability",
+  "Sustainable Living",
+  "Innovative Design",
+  "Timely Delivery",
+  "Aesthetic Appeal"
+    ]
+  },
+  'project-marketing': {
+    id: 4,
+    serviceTitle: 'Project Marketing ',
+    caption: 'Selling Stories      -         Making Brands Visible          -               Targeted Exposure ',
+    title: 'Property Management',
+    description: "We define your project's potential and positioning by incorporating high-impact marketing strategies. With a focus on creating a compelling narrative, we highlight the key features and brilliance of your project. Through creative campaigns, we ensure your project stands out in the market, driving attention and engagement. Our approach effectively showcases its value, attracting the right audience and stakeholders for sustainable growth.",
+    cta:'Let’s Market my Project',
+    getStarted:'Yes! Let’s Get Started',
+    image: service4,
+    secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
+    features: [
+      'Targeted Audience Engagement',
+      'Compelling Storytelling',
+      'Comprehensive Market Research',
+      'Brand Positioning',
+      'Creative Campaigns',
+      'Performance Tracking & Optimization',
+    ],
+    process: [
+      { title: 'Competitor’s Research Analysis', description: 'Conduct thorough research to understand market trends, target demographics, and competitor positioning.' },
+      { title: 'Strategic Planning', description: 'Develop a customized marketing strategy to align with project goals, audience preferences, and market demands. '},
+      { title: 'Brand Development & Positioning ', description: 'Create a strong brand identity and position your project to highlight its unique selling points and key features.' },
+      { title: 'Creative Content Creation', description: 'Our team designing compelling visuals, videos, and written content that tell a captivating story of the project.' },
+      { title: 'Multichannel Campaign Execution', description: 'Launch marketing campaigns across various platforms, from social media to traditional media, to maximize exposure.' },
+      { title: 'Performance Monitoring & Optimization', description: 'Track the effectiveness of campaigns and adjust strategies to improve engagement, conversions, and investor interest.' }
+    ],
+    benefits: [
+      'Maximized Market Reach',
+      'Increased Project Visibility',
+      'Enhanced Brand Perception',
+      'Boosted Investor Confidence',
+      'Efficient Lead Generation',
+    ]
+  },
 };
 
 const ServiceDetails = () => {
@@ -170,28 +297,28 @@ const ServiceDetails = () => {
         <Container style={{ position: 'relative', zIndex: 1 }}>
           <Row className="justify-content-center text-center">
             <Col xs={12} md={10} lg={8}>
-              <h1 className="display-4 mb-4">{service.title}</h1>
-              <p className="lead">{service.description}</p>
+              <h1 className="mb-4">{service.title}</h1>
+              <p className="lead">{service.caption}</p>
             </Col>
           </Row>
         </Container>
       </div>
 
       {/* Service Details Section */}
-      <section className="py-5">
+      <section className="py-5 service-detail">
         <Container>
           <Row className="g-4">
             <Col xs={12} lg={8}>
-              <h2 className="mb-4">About Our {service.title} Service</h2>
-              <p className="mb-4">{service.longDescription}</p>
+              <h2 className="mb-4">What we do in  {service.title}</h2>
+              <p className="mb-4">{service.description}</p>
               
-              <div className="mb-5">
-                <h3 className="mb-4">Key Features</h3>
+              <div className="mb-5 weDo">
+                <h3 className="mb-4">What do we use? </h3>
                 <Row>
                   {service.features.map((feature, index) => (
-                    <Col xs={12} md={6} key={index} className="mb-3">
+                    <Col xs={12} md={6} key={index} className="mb-1">
                       <div className="d-flex align-items-start">
-                        <Icons name="checkCircle" className="me-2 mt-1 text-primary" />
+                        <Icons name="check" className="me-2" />
                         <span>{feature}</span>
                       </div>
                     </Col>
@@ -200,12 +327,12 @@ const ServiceDetails = () => {
               </div>
 
               <div className="mb-5">
-                <h3 className="mb-4">Our Process</h3>
+                <h3 className="mb-4">How we do it?</h3>
                 <Accordion defaultActiveKey="0" flush>
                   {service.process.map((step, index) => (
                     <Accordion.Item eventKey={index.toString()} key={index}>
                       <Accordion.Header>
-                        <span className="me-2">{index + 1}.</span> {step.title}
+                        {/* <span className="me-2">{index + 1}.</span>  */}{step.title}
                       </Accordion.Header>
                       <Accordion.Body>
                         {step.description}
@@ -230,23 +357,12 @@ const ServiceDetails = () => {
                   </ListGroup>
                   
                   <div className="mt-4">
-                    <h5 className="mb-3">Get Started</h5>
+                    <h5 className="mb-3">Hmm! This sounds good</h5>
                     <p className="small mb-3">
                       Ready to benefit from our {service.title} service? Contact us today to discuss your requirements.
                     </p>
                     <div className="d-grid gap-2">
-                      <BodlaButton 
-                        text="Request Consultation" 
-                        icon={<Icons name="phone" />} 
-                        variant="primary" 
-                        link="/contact" 
-                      />
-                      <BodlaButton 
-                        text="Download Brochure" 
-                        icon={<Icons name="download" />} 
-                        variant="outline-primary" 
-                        link="#" 
-                      />
+                      <Col className='text-center'><BodlaButton text={service.cta} icon={<Icons name="phone" />} variant="primary" link="/contact"/></Col>
                     </div>
                   </div>
                 </Card.Body>
@@ -257,7 +373,7 @@ const ServiceDetails = () => {
           {/* Gallery Section */}
           <Row className="mt-5">
             <Col xs={12}>
-              <h3 className="mb-4">Project Gallery</h3>
+              <h3 className="mb-4">Our Portfolio of Eminence</h3>
               <Row className="g-3">
                 {service.secondaryImages.map((image, index) => (
                   <Col xs={12} md={6} lg={4} key={index}>
@@ -277,7 +393,7 @@ const ServiceDetails = () => {
           {/* Related Services */}
           <Row className="mt-5">
             <Col xs={12}>
-              <h3 className="mb-4">Related Services</h3>
+              <h3 className="mb-4">Want to know what else we do?</h3>
               <Row className="g-3">
                 {Object.values(serviceDetails)
                   .filter(s => s.id !== service.id)
@@ -319,16 +435,11 @@ const ServiceDetails = () => {
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={8}>
-              <h3>Ready to get started with our {service.title} service?</h3>
+              <h3>Shall we begin with your {service.title} now?</h3>
               <p className="mb-md-0">Contact us today to discuss your project requirements.</p>
             </Col>
             <Col xs={12} md={4} className="text-md-end">
-              <BodlaButton 
-                text="Contact Us Now" 
-                icon={<Icons name="rightArrow" />} 
-                variant="primary" 
-                link="/contact" 
-              />
+              <BodlaButton text={service.getStarted} icon={<Icons name="rightArrow" />} variant="primary"  link="/contact" />
             </Col>
           </Row>
         </Container>

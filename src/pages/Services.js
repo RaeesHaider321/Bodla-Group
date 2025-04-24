@@ -22,7 +22,7 @@ const Services = () => {
    },
     { 
       id: 2, 
-      title: 'Development ', 
+      title: 'Development', 
       description: 'Comprehensive planning and execution of residential & commercial projects, forming progressive & future-focused structures. ',
       image: service2,
   },

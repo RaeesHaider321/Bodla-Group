@@ -777,29 +777,12 @@ margin-bottom: 0;
   background-color: #f2dede;
   color: #a94442;
 }
-.list-group-item{
+.list-group-item {
   background: var(--background);
   color: var(--white);
-}
-.accordion{
-  background: var(--background);
-}
-.accordion-button:not(.collapsed) {
-  color: var(--white);
-  background-color: var(--primary);
-  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-}
-.accordion-button{
-  color: var(--white);
-  background-color: var(--card-background);
-  font-weight: bold;
-  font-size: 1.25rem;
+  border-color: var(--card-background);
 }
 
-.accordion-body{
-  background: var(--background);
-  color: var(--white);
-}
 .flooMap{
   border-radius: 21px;
 }
@@ -876,4 +859,34 @@ margin-bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+/* service-detail */
+.service-detail .weDo span svg{
+  width: 18px;
+  fill: var(--white);
+}
+
+/* accordion */
+.accordion{
+  border-radius: 15px;
+  overflow: hidden;
+}
+.accordion-item{
+  border-bottom:1px solid var(--background);
+ }
+.accordion-button:not(.collapsed) {
+  color: var(--white);
+  background-color: var(--primary);
+}
+.accordion-button{
+  color: var(--white);
+  background: var(--card-background);
+  font-weight: bold;
+}
+
+.accordion-body {
+  background: #015784;
+  color: var(--white);
 }
