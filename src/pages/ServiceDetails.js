@@ -76,17 +76,18 @@ const serviceDetails = {
     title: 'Construction Supplies',
     caption:'Aesthetically Inspired     -      Refined Material       -       Durability In-built',
     description: 'By utilizing expert design insights and pre-cast technology, we adopt a pragmatic approach to finishing materials that enhances functionality, durability, aesthetics, and sustainability. With specialized solutions such as CLC Rooftop Treatments, CLC Partition Blocks, High-performance Tile Adhesives, and Premium Wall Putty, we ensure modern living spaces that exceed expectations—aligning with your lifestyle needs while contributing to long-lasting and environmentally conscious developments.',
-    cta:'Start our Construction!',
+    cta:'Begin My Project’s Finishing ',
     getStarted:'Yes! Let’s Get Started',
     image: service2,
     secondaryImages: [serviceDetail2, serviceDetail3, serviceDetail1],
     features: [
-      "Advanced Construction Techniques",
-  "Sustainable Material Integration", 
-  "Precision Engineering",
-  "Aesthetic Detailing",
-  "Quality Control Systems",
-  "Skilled Workforce Deployment"
+      "Expert Design Insights",
+"Pre-Cast Technology",
+"Sustainable Practices",
+"Thermal Efficiency ",
+"Quality Control",
+"Aesthetic Excellence",
+
     ],
     process: [
       {
@@ -165,12 +166,12 @@ const serviceDetails = {
     image: service4,
     secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
     features: [
-  "Expert Design Insights" ,
-  "Pre-Cast Technology" ,
-  "Sustainable Practices" ,
-  "Thermal Efficiency" ,
-  "Quality Control" ,
-  "Aesthetic Excellence" 
+      "Tailored Location Selection",
+  "Informed Investment Guidance",
+  "Hassle-Free Negotiation",
+  "Smooth Legal Compliance",
+  "Transparent Dealings",
+  "Personalized Portfolio Management"
     ],
     process: [
       {
