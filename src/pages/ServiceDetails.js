@@ -13,6 +13,8 @@ import serviceDetail1 from '../images/businessHub.jpg';
 import serviceDetail2 from '../images/businessHub.jpg';
 import serviceDetail3 from '../images/businessHub.jpg';
 
+
+
 // Sample service details data
 const serviceDetails = {
   'land-acquisition': {
@@ -307,6 +309,7 @@ const ServiceDetails = () => {
       {/* Service Details Section */}
       <section className="py-5 service-detail">
         <Container>
+        
           <Row className="g-4">
             <Col xs={12} lg={8}>
               <h2 className="mb-4">What we do in  {service.title}</h2>

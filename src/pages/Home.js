@@ -9,6 +9,7 @@ import UtilitiesList from '../components/UtilitiesList';
 import HomeProjects from '../components/HomeProjects';
 import BodlaUpdates from '../components/BodlaUpdates';
 import PromotionalSlider from '../components/PromotionalSlider';
+import Testimonial from '../components/Testimonial';
 
 const Home = () => {
   return (
@@ -51,6 +52,9 @@ const Home = () => {
 
       <div data-aos="fade-up" data-aos-duration="3600">
         <PromotionalSlider />
+      </div>
+      <div data-aos="fade-up" data-aos-duration="3900">
+        <Testimonial/>
       </div>
     </>
   );

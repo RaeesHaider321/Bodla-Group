@@ -16,7 +16,7 @@ export default function HomeServices() {
   return (
     <Container>
       <h2 className='text-start text-md-end'>Our Signature <span>Offerings</span></h2>
-      <Row className="gy-3">
+      <Row className="gy-3 mb-5">
         {services.map((service, index) => (
           <Col xs={12} md={4} key={service.id} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
             <CardComponent

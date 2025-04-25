@@ -890,3 +890,28 @@ margin-bottom: 0;
   background: #015784;
   color: var(--white);
 }
+
+.setsApart .card-body{
+  display: flex;
+}
+
+.setsApart span svg{
+  width: 30px;
+  fill: var(--white);
+}
+
+.rumanza img{
+  border-radius: 15px;
+}
+
+.testimonials{
+  border-radius: 15px;
+  padding: 10px;
+  background: var(--primary);
+}
+.testimonials iframe{
+  border-radius: 7px;
+}
+.testimonials .carousel-indicators {
+  margin-left: 15%;
+}

@@ -138,7 +138,7 @@ const DHAMultan = () => {
                 <h6>We Work Together to Serve You.</h6>
               </Col>
               <Col xs={12} md={3} className='text-end'>
-              <BodlaButton text="Show Your Work!" icon={<Icons name="rightArrow" />} variant="primary" link="/" />
+              <BodlaButton text="Show Your Work!" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
               </Col>
             </Row>
           </Container></section>

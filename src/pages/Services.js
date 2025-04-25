@@ -4,6 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
 
+import landAcquisition from '../images/landAcquisition.jpg';
+import construction from '../images/construction.jpg';
+import landTrading from '../images/landTrading.jpg';
+import marketing from '../images/marketing.jpg';
+import constructionMaterial from '../images/constructionMaterial.jpg';
+import scaleConstruction from '../images/scaleConstruction.jpg';
 import service1 from '../images/businessHub.jpg';
 import service2 from '../images/businessHub.jpg';
 import service3 from '../images/businessHub.jpg';
@@ -14,39 +20,45 @@ const Services = () => {
 
   // Sample services data
   const services = [
-    { 
-      id: 1, 
-      title: 'Land Acquisition', 
+    {
+      id: 1,
+      icon: "landProvider",
+      title: 'Land Acquisition',
       description: 'Precise identification and procurement of optimum location that ensures development potential and value appreciation.',
       image: service1,
-   },
-    { 
-      id: 2, 
-      title: 'Development', 
+    },
+    {
+      id: 2,
+      icon: "developers",
+      title: 'Development',
       description: 'Comprehensive planning and execution of residential & commercial projects, forming progressive & future-focused structures. ',
       image: service2,
-  },
-    { 
-      id: 3, 
-      title: 'Plots Trading', 
+    },
+    {
+      id: 3,
+      icon: "plotTrading",
+      title: 'Plots Trading',
       description: 'Facilitating transparent and efficient buying and selling of residential and commercial plots, catering to diverse investment needs.',
       image: service3,
-   },
-    { 
-      id: 4, 
-      title: 'Construction', 
+    },
+    {
+      id: 4,
+      icon: "constructors",
+      title: 'Construction',
       description: 'Employing quality materials and skilled labor to build robust and aesthetically pleasing structures, adhering to timelines and standards.',
       image: service4,
     },
-    { 
-      id: 5, 
-      title: 'Finishing Materials', 
+    {
+      id: 5,
+      icon: "constructionMaterials",
+      title: 'Finishing Materials',
       description: 'Sourcing and supplying advanced, durable interior and exterior finishes that enhance thermal comfort for elegant and lasting spaces.',
       image: service4,
     },
-    { 
-      id: 6, 
-      title: 'Project Marketing', 
+    {
+      id: 6,
+      icon: "propertyMarketing",
+      title: 'Project Marketing',
       description: 'Implementing innovative strategies to showcase project features and benefits, reaching target audiences and driving sales effectively.',
       image: service4,
     }
@@ -63,48 +75,70 @@ const Services = () => {
   const carouselItems = [
     {
       id: 1,
-      imageSrc: service1,
-      altText: "Property Development",
-      titlePart1: "Our Services",
-      titlePart2: "Strategic Acquisition",
+      imageSrc: landAcquisition,
+      altText: "land Acquisition",
+      title: "Strategic Acquisition",
+      // caption: "Strategic Acquisition",
     },
     {
       id: 2,
-      imageSrc: service2,
+      imageSrc: construction,
       altText: "Construction Services",
-      titlePart1: "Our Services",
-      titlePart2: "Scalable Development",
+      title: "Scalable Development",
+      // caption: "Scalable Development",
     },
     {
       id: 3,
-      imageSrc: service3,
+      imageSrc: landTrading,
       altText: "Interior Design",
-      titlePart1: "Our Services",
-      titlePart2: "Smart Trading",
+      title: "Smart Trading",
+      // caption: "Smart Trading",
     },
     {
       id: 4,
-      imageSrc: service4,
+      imageSrc: scaleConstruction,
       altText: "Property Management",
-      titlePart1: "Our Services",
-      titlePart2: "Sustainable Construction ",
+      title: "Sustainable Construction",
+      // caption: "Sustainable Construction ",
     },
     {
       id: 4,
-      imageSrc: service4,
+      imageSrc: constructionMaterial,
       altText: "Property Management",
-      titlePart1: "Our Services",
-      titlePart2: "Subtle Finishes",
+      title: "Subtle Finishes",
+      // caption: "Subtle Finishes",
     },
     {
       id: 4,
-      imageSrc: service4,
+      imageSrc: marketing,
       altText: "Property Management",
-      titlePart1: "Our Services",
-      titlePart2: "Standout Savvy Marketing",
+      title: "Standout Savvy Marketing",
+      // caption: "Standout Savvy Marketing",
     }
   ];
 
+  const setsApart = [
+    {
+      icon: "shield",
+      title: "Leading Legacy",
+      description: "Rooted in over a decade of experience."
+    },
+    {
+      icon: "quality",
+      title: "Uncompromised Quality",
+      description: "Setting the bar of highest standard"
+    },
+    {
+      icon: "clock",
+      title: "Customer-centric Excellence",
+      description: "Prioritizing your satisfaction at the heart of every project."
+    },
+    {
+      icon: "support",
+      title: "Innovation Driven",
+      description: "Redefining living with ideas ahead of their time."
+    }
+  ];
   return (
     <>
       <Carousel fade indicators={true} controls={false} interval={3000} pause={true}>
@@ -119,16 +153,15 @@ const Services = () => {
             <Carousel.Caption>
               <Row className="justify-content-center align-items-center">
                 <h1 data-aos="fade-up" data-aos-delay="100">
-                  {item.titlePart1} <br />
-                  <span className="fs-3">{item.titlePart2}</span>
+                  {item.title} <br />
+                  <span className="fs-3">{item.caption}</span>
                 </h1>
               </Row>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
-
-      <section className="py-5">
+       <section className="py-5">
         <Container>
           <Row className='align-items-center mb-5'>
             <Col xs={12} md={9}>
@@ -144,21 +177,16 @@ const Services = () => {
           <Row className='gy-4'>
             {services.map((service, index) => (
               <Col xs={12} md={6} lg={4} key={service.id} data-aos="fade-up" data-aos-delay={index * 100}>
-                <Card 
-                  className="h-100 shadow-sm border-0 service-card" 
+                <Card
+                  className="h-100 shadow-sm border-0 service-card"
                   onClick={() => handleServiceClick(service.title)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <Card.Img 
-                    variant="top" 
-                    src={service.image} 
-                    alt={service.title}
-                    style={{ height: '200px', objectFit: 'cover' }}
-                  />
                   <Card.Body>
+                    <div className='service-icon mb-4'><Icons name={service.icon} /></div>
                     <Card.Title>{service.title}</Card.Title>
                     <Card.Text>
-                      {service.description.substring(0, 100)}...
+                      {service.description.substring(0, 150)}...
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -168,48 +196,26 @@ const Services = () => {
 
           {/* Additional Services Section */}
           <Row className="mt-5">
+
             <Col xs={12}>
-              <div className="p-4 rounded-3">
-                <h4 className="mb-4">What sets Bodla Group apart?</h4>
-                <Row>
-                  <Col xs={12} md={6} lg={3} className="mb-3">
-                    <div className="d-flex align-items-start">
-                      <Icons name="shield" className="me-2 mt-1 text-primary" size={24} />
-                      <div>
-                        <h6>Leading Legacy </h6>
-                        <p className="small">Rooted in over a decade of experience.</p>
-                      </div>
-                    </div>
+              <h4 className="mb-4">What sets Bodla Group apart?</h4>
+              <Row className="setsApart">
+                {setsApart.map((part, index) => (
+                  <Col key={index} xs={12} md={6} lg={3} className="mb-3 d-flex">
+                    <Card className="w-100 d-flex flex-column">
+                      <Card.Body className="d-flex align-items-start">
+                        <div className="me-3">
+                          <Icons name={part.icon} />
+                        </div>
+                        <div className="content">
+                          <h6>{part.title}</h6>
+                          <p className="small mb-0">{part.description}</p>
+                        </div>
+                      </Card.Body>
+                    </Card>
                   </Col>
-                  <Col xs={12} md={6} lg={3} className="mb-3">
-                    <div className="d-flex align-items-start">
-                      <Icons name="quality" className="me-2 mt-1 text-primary" size={24} />
-                      <div>
-                        <h6>Uncompromised Quality</h6>
-                        <p className="small">Setting the bar of highest standard</p>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col xs={12} md={6} lg={3} className="mb-3">
-                    <div className="d-flex align-items-start">
-                      <Icons name="clock" className="me-2 mt-1 text-primary" size={24} />
-                      <div>
-                        <h6>Customer-centric Excellence </h6>
-                        <p className="small">Prioritizing your satisfaction at the heart of every project.</p>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col xs={12} md={6} lg={3} className="mb-3">
-                    <div className="d-flex align-items-start">
-                      <Icons name="support" className="me-2 mt-1 text-primary" size={24} />
-                      <div>
-                        <h6>Innovation Driven</h6>
-                        <p className="small">Redefining living with ideas ahead of their time.</p>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
+                ))}
+              </Row>
             </Col>
           </Row>
         </Container>
