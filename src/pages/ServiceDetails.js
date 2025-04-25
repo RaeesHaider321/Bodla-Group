@@ -21,6 +21,7 @@ const serviceDetails = {
     id: 1,
     title: 'Land Acquisition',
     caption: 'Precise Location Procurement    –     Investor Centric Approach     –     Growth Driven Potential',
+    cta:'Begin Acquisition Plan',
     description: "With a keen eye for potential growth, we navigate complex real estate landscapes to identify and secure prime land opportunities. Our approach ensures that each acquisition not only meets current market demands but also aligns smoothly with investors' long-term vision and strategic investment goals. By blending insight, experience, and foresight, we lay the foundation for developments that succeed well into the future.",
     image: service1,
     secondaryImages: [serviceDetail1, serviceDetail2, serviceDetail3],
@@ -33,13 +34,34 @@ const serviceDetails = {
       'End-to-End Support',
     ],
     process: [
-      { title: 'Market Research & Feasibility Analysis', description: 'Data-driven selection based on infrastructure plans, real estate demand, and investor trends.'},
-      { title: 'Investor Consultation', description: 'Investment alignment to meet your financial goals, capital expectations, and preferred zones.' },
-      { title: 'Location Scouting', description: 'Identifying land with strong resale potential, accessibility to key landmarks & future development prospects.' },
-      { title: 'Legal & Regulatory Checks', description: 'Background checks, ensuring clear titles, conflict-free ownership, and alignment with DHA bylaws. ' },
-      { title: 'Price Negotiation & Finalization', description: 'Negotiating the best possible rates, ensuring transparency and fair market value for both investors & sellers.' },
-      { title: 'Documentation & Transfer', description: 'Smooth documentation, secure agreements, and timely transfer processes - with DHA Multan and other authorities. ' },
-      { title: 'Project Alignment & Handover', description: 'Once acquired, the land is either prepared for development or held as a strategic asset depending on the investor’s objective.' }
+      {
+        title: "Market Research & Feasibility Analysis",
+        description: "Data-driven selection based on infrastructure plans, real estate demand, and investor trends."
+      },
+      {
+        title: "Investor Consultation",
+        description: "Investment alignment to meet your financial goals, capital expectations, and preferred zones."
+      },
+      {
+        title: "Location Scouting",
+        description: "Identifying land with strong resale potential, accessibility to key landmarks & future development prospects."
+      },
+      {
+        title: "Legal & Regulatory Checks",
+        description: "Background checks, ensuring clear titles, conflict-free ownership, and alignment with DHA bylaws."
+      },
+      {
+        title: "Price Negotiation & Finalization",
+        description: "Negotiating the best possible rates, ensuring transparency and fair market value for both investors & sellers."
+      },
+      {
+        title: "Documentation & Transfer",
+        description: "Smooth documentation, secure agreements, and timely transfer processes - with DHA Multan and other authorities."
+      },
+      {
+        title: "Project Alignment & Handover",
+        description: "Once acquired, the land is either prepared for development or held as a strategic asset depending on the investor's objective."
+      }  
     ],
     benefits: [
      'Data-Backed Insights',
@@ -51,9 +73,9 @@ const serviceDetails = {
   },
   'construction': {
     id: 2,
-    title: 'Construction',
-    caption:'Detail-Driven    -   Skilled Craftsmanship    -     Reliable Delivery ',
-    description: 'Beyond extraordinary construction lies our steadfast commitment to quality. We integrate sustainable materials with cutting-edge technology to create infrastructures that are not only visually impressive but also structurally resilient. Every project we undertake is built to endure, reflecting our focus on longevity, safety, and sustainability. With precision and purpose, we craft spaces that stand the test of time and elevate modern living.',
+    title: 'Construction Supplies',
+    caption:'Aesthetically Inspired     -      Refined Material       -       Durability In-built',
+    description: 'By utilizing expert design insights and pre-cast technology, we adopt a pragmatic approach to finishing materials that enhances functionality, durability, aesthetics, and sustainability. With specialized solutions such as CLC Rooftop Treatments, CLC Partition Blocks, High-performance Tile Adhesives, and Premium Wall Putty, we ensure modern living spaces that exceed expectations—aligning with your lifestyle needs while contributing to long-lasting and environmentally conscious developments.',
     cta:'Start our Construction!',
     getStarted:'Yes! Let’s Get Started',
     image: service2,
@@ -68,36 +90,36 @@ const serviceDetails = {
     ],
     process: [
       {
-        title: "Strategic Planning",
-        description: "We define scope, timelines, and resources with a detailed roadmap tailored to project needs."
+        title: "Personalized Consultations",
+        description: "Understanding client needs for functionality, aesthetics, and sustainability."
       },
       {
-        title: "Site Readiness",
-        description: "From land clearing to leveling, we ensure a strong foundation for seamless execution."
+        title: "Material Selection Excellence",
+        description: "Selecting high-quality, durable, and aesthetic materials for finishing."
       },
       {
-        title: "Structural Development",
-        description: "Robust frameworks are built using precision engineering and high-grade materials."
+        title: "Design & Material Integration",
+        description: "Ensuring materials align with the overall design for visual harmony."
       },
       {
-        title: "Climate-Responsive Construction",
-        description: "Incorporate insulation techniques and heat-resistant materials to ensure energy efficiency and climate resilience."
+        title: "Tailored Customization",
+        description: "Offering bespoke solutions to elevate aesthetics and suit client preferences."
       },
       {
-        title: "Finishing & Detailing",
-        description: "High-quality finishes and design details elevate the visual appeal and market value."
+        title: "Expert Installation",
+        description: "Expert application of materials with precision and care."
       },
       {
-        title: "Final Inspection & Delivery",
-        description: "Every element is inspected for safety, durability, and standards before final client delivery."
+        title: "Quality Assurance Check",
+        description: "Final checks to ensure durability, functionality, and aesthetic appeal before delivery."
       }
     ],
     benefits: [
-      "Long-Term Durability",
-  "Visual Appeal & Design Harmony",
-  "Structural Reliability", 
-  "Timely Project Completion",
-  "Enhanced Property Value"
+      "Enhanced Durability",
+  "Sustainable Living",
+  "Innovative Design",
+  "Timely Delivery",
+  "Aesthetic Appeal"
     ]
   },
   'development': {
@@ -143,12 +165,12 @@ const serviceDetails = {
     image: service4,
     secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
     features: [
-      "Tailored Location Selection",
-  "Informed Investment Guidance",
-  "Hassle-Free Negotiation",
-  "Smooth Legal Compliance",
-  "Transparent Dealings",
-  "Personalized Portfolio Management"
+  "Expert Design Insights" ,
+  "Pre-Cast Technology" ,
+  "Sustainable Practices" ,
+  "Thermal Efficiency" ,
+  "Quality Control" ,
+  "Aesthetic Excellence" 
     ],
     process: [
       {
