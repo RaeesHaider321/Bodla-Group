@@ -9,7 +9,7 @@ export default function AboutHome() {
                     <Col xs={12} md={6} data-aos="fade-right">
                         <Image src={aboutehome} alt='' />
                     </Col>
-                    <Col xs={12} md={6} className='content' data-aos="fade-left">
+                    <Col xs={12} md={6} className='content' >
                         <h2>Each façade unfolds the boundless story of Bodla Group. </h2>
                     </Col>
                 </Row>

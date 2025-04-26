@@ -572,13 +572,13 @@ const ProjectDetails = () => {
       <section className='project-detail'>
         <Container>
           <Row className='justify-content-center text-center'>
-            <Col xs={12} md={9} data-aos="fade-up" data-aos-delay="100">
+            <Col xs={12} md={9} >
               <h2>{project.title} <span>{project.spantitle}</span></h2>
             </Col>
           </Row>
 
           {/* Image Carousel */}
-          <Carousel className='mt-3' fade indicators={false} controls={false} interval={3000} pause={true} data-aos="fade-up" data-aos-delay="200">
+          <Carousel className='mt-3' fade indicators={false} controls={false} interval={3000} pause={true} >
             {project.images.map((image, index) => (
               <Carousel.Item key={index}>
                 <Image src={image} alt={`${project.title} - ${index + 1}`} className="d-block w-100" style={{ maxHeight: '600px', objectFit: 'cover' }} />
@@ -588,10 +588,10 @@ const ProjectDetails = () => {
         </Container>
         {/* Project Intro */}
         <Container className='project-intro'>
-          <Card data-aos="fade-up" data-aos-delay="300">
+          <Card data-aos="fade-up" >
             <CardBody>
-              <Row className="align-items-center">
-                <Col xs={12} md={7} data-aos="fade-right" data-aos-delay="400">
+              <Row className="align-items-center g-3">
+                <Col xs={12} md={7}>
                   <h3 className="mb-4">{project.introTitle || project.title}</h3>
                   <p className="lead text-justify">{project.description}</p>
                   <p className="lead text-justify">{project.secondDescription}</p>
@@ -599,17 +599,17 @@ const ProjectDetails = () => {
                 </Col>
                 <Col xs={12} md={5} className="text-md-end">
                   <Row className='gy-4'>
-                    <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="500">
+                    <Col xs={12} md={6}>
                       <div className='project-dhaApproved'>
                         <Image src={project.dhaApproved} alt="DHA Approved" />
                       </div>
                     </Col>
-                    <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="600">
+                    <Col xs={12} md={6}>
                       <div className='project-logo'>
                         <Image src={project.logo} alt={`${project.title} Logo`} />
                       </div>
                     </Col>
-                    <Col xs={12} md={12} className='map' data-aos="fade-left" data-aos-delay="700">
+                    <Col xs={12} md={12} className='map'>
                       <iframe
                         src={project.mapEmbedUrl}
                         width="100%"
@@ -628,7 +628,7 @@ const ProjectDetails = () => {
           </Card>
         </Container>
         {/* <NearbyLocations locations={nearbyLocations} /> */}
-        <Container className='project-whythis py-4' data-aos="fade-up" data-aos-delay="100" >
+        <Container className='project-whythis py-4'>
           <Row>
             <Col xs={12} md={6}>
               <h3>Why {project.title} </h3>
@@ -648,10 +648,10 @@ const ProjectDetails = () => {
         <Container className='text-center mt-5'>
           <Row className="gy-4">
             <Col xs={12} lg={12}>
-              <PageTitle title="Amenities and Features" data-aos="fade-up" data-aos-delay="100" />
+              <PageTitle title="Amenities and Features" />
               <Row className='justify-content-center gy-4'>
                 {project.amenities.map((amenity, index) => (
-                  <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
+                  <Col xs={6} md={2} key={index} >
                     <Card className="h-100 amenity-card">
                       <CardBody>
                         <Row className="d-flex align-items-center justify-content-center">
@@ -668,10 +668,10 @@ const ProjectDetails = () => {
         </Container>
         {/* Nearby Places Section */}
         <Container className='text-center mt-5'>
-          <PageTitle title="Nearby Places" data-aos="fade-up" data-aos-delay="100" />
+          <PageTitle title="Nearby Places" />
           <Row className='justify-content-center gy-4'>
             {project.nearbyPlaces.map((nearby, index) => (
-              <Col xs={3} md={2} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 50)}`}>
+              <Col xs={6} md={2} key={index} >
                 <Card className="h-100 amenity-card">
                   <CardBody>
                     <Row className="d-flex align-items-center justify-content-center">
@@ -687,26 +687,26 @@ const ProjectDetails = () => {
         </Container>
         {/* Virtual Tour Section */}
         <div className='text-center mt-5'>
-          <h2 className='mb-4' data-aos="fade-up" data-aos-delay="100">Virtual Tour</h2>
-          <div className='virtualtour mt-4' data-aos="fade-up" data-aos-delay="200">
+          <h2 className='mb-4' >Virtual Tour</h2>
+          <div className='virtualtour mt-4'>
             <Image src={project.virtualTour} alt='Virtual Tour' fluid />
           </div>
         </div>
         {/* Floor Plans Section */}
         <Container className='text-center mt-5'>
-          <PageTitle title="Floor Plans" data-aos="fade-up" data-aos-delay="100" />
+          <PageTitle title="Floor Plans" />
           <Row className='justify-content-center gy-4'>
             {project.floorPlans.map((plan, index) => (
-              <Col xs={12} sm={12} md={6} lg={4} key={index} data-aos="fade-up" data-aos-delay={`${150 + (index * 100)}`} >
+              <Col xs={12} sm={12} md={6} lg={4} key={index} >
                 <Image className='flooMap' src={plan} alt={`Floor Plan ${index + 1}`} />
               </Col>
             ))}
           </Row>
         </Container>
         <Container className='mt-5'>
-          <div className='projects-cta' data-aos="fade-up">
+          <div className='projects-cta'>
             <Row className='align-items-center'>
-              <Col xs={12} lg={6} className='content' data-aos="fade-right" data-aos-delay="100">
+              <Col xs={12} lg={6} className='content'>
                 <h2>Start Your Business Today!</h2>
                 <h5>Secure Your Ideal Shop in Just a Few Clicks</h5>
                 <p>Find the perfect space for your business and take the first step toward success. Limited shops available—book yours now!</p>
@@ -715,12 +715,10 @@ const ProjectDetails = () => {
                     text="Book a Call"
                     icon={<Icons name="rightArrow" />}
                     link="/Contact"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
                   />
                 </div>
               </Col>
-              <Col xs={12} lg={6} className='amblum' data-aos="fade-left" data-aos-delay="200">
+              <Col xs={12} lg={6} className='amblum' >
                 <Image src={ctaOneD} alt='' />
               </Col>
             </Row>
@@ -730,7 +728,7 @@ const ProjectDetails = () => {
         <Container className='text-center mt-5'>
           <Row className='justify-content-center text-center mt-5'>
             <Col xs={12} lg={10}>
-            <div data-aos="fade-up" data-aos-delay="200" className="responsive-video">
+            <div className="responsive-video">
             <iframe src={project.videoLink} 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -744,7 +742,7 @@ const ProjectDetails = () => {
         <Container className='text-center mt-5'>
           {/* <PageTitle title="Payment Plans" data-aos="fade-up" data-aos-delay="100" /> */}
           <Row>
-            <Col xs={12} data-aos="fade-up" data-aos-delay="200">
+            <Col xs={12} >
             <Image src={project.pricing} alt=''/>
               {/* <Table responsive hover>
                 <thead>

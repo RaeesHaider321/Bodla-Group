@@ -11,7 +11,6 @@ export default function Testimonial() {
         </Col>
         <Col xs={6} md={5}>
           <h1>Hear from Our <span>Satisfied</span> Clients</h1>
-          <button>Testimonial</button>
         </Col>
       </Row>
     </Container>

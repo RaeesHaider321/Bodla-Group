@@ -13,14 +13,14 @@ import Icons from "../components/Icon";
 
 // Custom Next Arrow Component
 const NextArrow = ({ onClick }) => (
-    <div className="arrow next" onClick={onClick} data-aos="fade-left" data-aos-delay="300">
+    <div className="arrow next" onClick={onClick}>
         <Icons name="rightArrow" />
     </div>
 );
 
 // Custom Previous Arrow Component
 const PrevArrow = ({ onClick }) => (
-    <div className="arrow prev" onClick={onClick} data-aos="fade-right" data-aos-delay="300">
+    <div className="arrow prev" onClick={onClick}>
         <Icons name="leftArrow" />
     </div>
 );
@@ -67,7 +67,7 @@ const ProductSlider = () => {
         <section data-aos="fade-up">
             <Container>
                 <Row>
-                    <Col data-aos="fade-up" data-aos-delay="200">
+                    <Col>
                         <h2>Current <br/><span>Promotions</span></h2>
                         <p>Grab our premium offers first!</p>
                     </Col>

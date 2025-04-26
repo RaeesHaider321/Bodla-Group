@@ -132,10 +132,10 @@ const Projects = () => {
         <Container>
           <Row className='align-items-center mb-5'>
             <Col xs={12} md={9}>
-              <h3 data-aos="fade-right">Projects<br /><span data-aos="fade-right" data-aos-delay="200">Our Portfolio of Eminent Projects</span></h3>
+              <h3 data-aos="fade-right">Projects<br /><span>Our Portfolio of Eminent Projects</span></h3>
             </Col>
             <Col xs={12} md={3} className='text-end'>
-              <div data-aos="fade-left" data-aos-delay="300">
+              <div data-aos="fade-left">
                 <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/" />
               </div>
             </Col>
@@ -143,20 +143,20 @@ const Projects = () => {
 
           <Row className='projects gy-4'>
             {projects.map((project, index) => (
-              <Col xs={12} md={12} key={project.id} data-aos="fade-up" data-aos-delay={index * 100}>
+              <Col xs={12} md={12} key={project.id}>
                 <div onClick={() => handleProjectClick(project.title)} style={{ cursor: 'pointer' }}>
                   <Row className='gy-4'>
                     {index % 2 === 0 ? (
                       <>
                         <Col xs={12} md={4} className="order-md-1">
-                          <div className="project-thumb" data-aos="zoom-in" data-aos-delay={index * 100 + 100}>
+                          <div className="project-thumb" >
                             <div className='image-container' style={{ backgroundImage: `url(${project.background})` }}>
                               <Image src={project.logo} alt={project.title} />
                             </div>
                           </div>
                         </Col>
                         <Col xs={12} md={8} className="order-md-2">
-                          <div className="project-description h-100" data-aos="fade-left" data-aos-delay={index * 100 + 200}>
+                          <div className="project-description h-100">
                             <div className='content'>
                               <h4>{project.title}</h4>
                               <p>{project.description}</p>
@@ -168,7 +168,7 @@ const Projects = () => {
                     ) : (
                       <>
                         <Col xs={12} md={8} className="order-md-1">
-                          <div className="project-description h-100" data-aos="fade-right" data-aos-delay={index * 100 + 200}>
+                          <div className="project-description h-100">
                             <div className='content'>
                               <h4>{project.title}</h4>
                               <p>{project.description}</p>
@@ -176,7 +176,7 @@ const Projects = () => {
                           </div>
                         </Col>
                         <Col xs={12} md={4} className="order-md-2">
-                          <div className="project-thumb" data-aos="zoom-in" data-aos-delay={index * 100 + 100}>
+                          <div className="project-thumb">
                             <div className='image-container' style={{ backgroundImage: `url(${project.background})` }}>
                               <Image src={project.logo} alt={project.title} />
                             </div>

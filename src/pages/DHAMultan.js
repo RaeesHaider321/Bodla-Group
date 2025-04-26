@@ -150,7 +150,7 @@ const DHAMultan = () => {
             <Tab eventKey="Developed" title="Developed Projects">
               <Row className='gy-4 justify-content-center'>
                 {dhaDevelopedProjects.map((card, index) => (
-                  <Col key={card.id} xs={6} md={3}>
+                  <Col key={card.id} xs={12} sm={6} md={3}>
                     <Card
                       className="h-100"
                       data-aos="fade-up"
@@ -172,7 +172,7 @@ const DHAMultan = () => {
             <Tab eventKey="Developing" title="Developing Projects">
               <Row className='gy-4 justify-content-center'>
                 {dhaDevelopingProjects.map((card, index) => (
-                  <Col key={card.id} xs={6} md={3}>
+                  <Col key={card.id} xs={12} sm={6} md={3}>
                     <Card
                       className="h-100"
                       data-aos="fade-up"
@@ -194,7 +194,7 @@ const DHAMultan = () => {
             <Tab eventKey="Upcoming" title="Upcoming Projects">
               <Row className='gy-4 justify-content-center'>
                 {dhaUpcomingProjects.map((card, index) => (
-                  <Col key={card.id} xs={6} md={3}>
+                  <Col key={card.id} xs={12} sm={6} md={3}>
                     <Card
                       className="h-100"
                       data-aos="fade-up"

@@ -48,13 +48,13 @@ function Header() {
             <Nav.Link as={Link} to="/Services" className="px-lg-3">Services</Nav.Link>
           </Nav>
           
-          <Nav className="ms-lg-3"> {/* Added margin for larger screens */}
+          <Nav className="ms-lg-3"> 
             <BodlaButton
               text="Contact Us"
               icon={<Icons name="rightArrow" />}
               variant="primary"
               link="/Contact"
-              className="my-2 my-lg-0" // Vertical margin for mobile
+              className="my-2 my-lg-0" 
             />
           </Nav>
         </Navbar.Collapse>

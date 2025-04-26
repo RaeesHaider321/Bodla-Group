@@ -59,10 +59,10 @@ const TimelineSection = () => {
               {/* For odd indexes (1, 3, 5...), image on left */}
               {index % 2 === 0 ? (
                 <>
-                  <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="300">
-                    <Image src={item.image} alt='Bodla Group project' className='img-fluid w-100' />
+                  <Col xs={12} md={6}>
+                    <Image src={item.image} alt='Bodla Group project'/>
                   </Col>
-                  <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="400">
+                  <Col xs={12} md={6} >
                     <p>{item.year}</p>
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
@@ -70,13 +70,13 @@ const TimelineSection = () => {
                 </>
               ) : (
                 <>
-                  <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="300">
+                  <Col xs={12} md={6} >
                     <p>{item.year}</p>
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                   </Col>
-                  <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="400">
-                    <Image src={item.image} alt='Bodla Group project' className='img-fluid w-100' />
+                  <Col xs={12} md={6}>
+                    <Image src={item.image} alt='Bodla Group project'/>
                   </Col>
                 </>
               )}

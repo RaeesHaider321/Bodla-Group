@@ -78,42 +78,13 @@ const About = () => {
       description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
     }
   ];
-  
+
 
   return (
     <>
-      {/* <Carousel fade className='aboutCarousel' indicators={true} controls={false} interval={30000} pause={true}>
-  {carouselItems.map((item, index) => (
-    <Carousel.Item key={index}>
-      {item.video ? (
-        <div className="video-container">
-          <iframe
-            width="100%"
-            height="500"
-            src={item.video}
-            title={item.alt}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      ) : (
-        <Image src={item.image} alt={item.alt} fluid />
-      )}
-      <Carousel.Caption>
-        <Row className="justify-content-center">
-          <Col sm={11} md={8}>
-            <h2 data-aos="fade-up" data-aos-delay="300">{item.title}</h2>
-          </Col>
-        </Row>
-      </Carousel.Caption>
-    </Carousel.Item>
-  ))}
-</Carousel> */}
-
-<div className='bodlaKahani' data-aos="fade-up" data-aos-duration="1300">
-<iframe src="https://www.youtube.com/embed/EGFIxjzM8nc?si=RCnJe3rzDhGEuwtb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+      <div className='bodlaKahani' data-aos="fade-up" data-aos-duration="1300">
+        <iframe src="https://www.youtube.com/embed/EGFIxjzM8nc?si=RCnJe3rzDhGEuwtb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
       <section className='bodlaSince py-5'>
         <Container>
           <Row className='justify-content-center'>
@@ -123,18 +94,17 @@ const About = () => {
           </Row>
         </Container>
       </section>
-
-      <section className='py-5'>
+      <section>
         <Container>
           <Row className='justify-content-center'>
             <Col xs={12} sm={12} md={10}>
               <Row className='justify-content-center align-items-center g-4'>
                 <Col xs={12} md={6} className='dhaBodla' data-aos="fade-right" data-aos-delay="300">
-                  <Image src={dhaBodla} alt='Bodla Builders collaboration with DHA' className='img-fluid' />
+                <Image src={dhaBodla} alt='Bodla Builders collaboration with DHA' className='img-fluid' />
                 </Col>
-                <Col xs={12} md={6} data-aos="fade-left" data-aos-delay="400">
-                  <h2>Collaboration with <span>DHA Multan</span></h2>
-                  <p className="text-justify">While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.</p>
+                <Col xs={12} md={6} data-aos="fade-right">
+                <h2>Collaboration with <span>DHA Multan</span></h2>
+                <p className="text-justify">While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.</p>
                 </Col>
               </Row>
             </Col>
@@ -142,11 +112,11 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='py-5'>
+      <section>
         <Container>
           <Row>
             <Col>
-              <Card className='p-4' data-aos="fade-up" data-aos-delay="300">
+              <Card className='bodlaExcellence' data-aos="fade-up" data-aos-delay="300">
                 <Card.Body>
                   <Row className='align-items-center g-4'>
                     <Col xs={12} md={6} data-aos="fade-right" data-aos-delay="400">
@@ -155,18 +125,18 @@ const About = () => {
                       </div>
                       <h6>Through sheer perseverance and demonstrated excellence, the company went on ahead in the world of construction industry beginning with DHA Villas, Askari Villas and Road Development. Our pioneering spirit infrastructure development came forward with the launch of the Business Hub, DHA Multan's first mega mall, marking a turning point in our journey from construction excellence to shaping the city's development.</h6>
                     </Col>
-                    <Col xs={12} md={6} className='projectGallery' data-aos="fade-left" data-aos-delay="400">
+                    <Col xs={12} md={6} className='projectGallery' >
                       <Row className='g-3'>
-                        <Col xs={12} md={6} className='oneD'>
-                          <Image src={oneD} alt='One Destination project' className='img-fluid w-100' />
+                       <Col xs={12} md={6} className='oneD'>
+                          <Image src={oneD} alt='One Destination project' />
                         </Col>
-                        <Col xs={12} md={6}>
+                         <Col xs={12} md={6}>
                           <Image className='mb-3 w-100' src={bHomes} alt='Bodla Homes project' />
                           <Image src={oneDestin} alt='One Destination project' className='w-100' />
                         </Col>
                       </Row>
                     </Col>
-                  </Row>
+                  </Row> 
                 </Card.Body>
               </Card>
             </Col>
@@ -174,7 +144,7 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='py-5'>
+      <section>
         <Container>
           <PageTitle title="Journey Through Our Creations, Where Every Detail" highlight="Matters" data-aos="fade-up" />
           <Row className='justify-content-center creationsJourney mt-4'>
@@ -201,7 +171,7 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='reit py-5'>
+      <section className='reit'>
         <Container className='text-center'>
           <h3 data-aos="flip-up" data-aos-delay="300">REIT</h3>
         </Container>
@@ -228,11 +198,11 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='deepSensitivity py-5'>
+      <section className='deepSensitivity'>
         <Container>
           <Row>
             <Col>
-              <Card body className='p-5 text-center' data-aos="zoom-in" data-aos-delay="300">
+              <Card body className='text-center' data-aos="zoom-in" data-aos-delay="300">
                 <h2>With our deep sensitivity and passion for what is possible in <span>Multan's Real Estate Industry</span>, we ensure that every project, every land, and every investment yields lasting value</h2>
               </Card>
             </Col>
@@ -240,8 +210,8 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='py-5'>
-      <TimelineSection/>
+      <section>
+        <TimelineSection />
       </section>
     </>
   );
