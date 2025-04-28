@@ -112,7 +112,7 @@ const Team = () => {
       <PageTitle title="Meet your trusted team of " highlight="Passionate Professionals" />
     <section className='team'>
       <Container>
-        <Card className='chairman-card' data-aos="fade-up" data-aos-delay="100">
+        <Card className='chairman-card' data-aos="fade-up">
           <Row className='justify-content-center align-items-center'>
             <Col xs={12} md={6}>
               <Card.Img src={chairman} />
@@ -120,12 +120,12 @@ const Team = () => {
             <Col xs={12} md={6}>
               <Card.Body>
                 <h1 data-aos="fade-left">LT. COL TAHIR IQBAL BODLA</h1>
-                <p className='designation' data-aos="fade-left" data-aos-delay="100">Chairman</p>
+                <p className='designation' data-aos="fade-left">Chairman</p>
                 <h5 data-aos="fade-left" data-aos-delay="150">CHAIRMAN'S MESSAGE</h5>
-                <Card.Text data-aos="fade-up" data-aos-delay="200">
+                <Card.Text data-aos="fade-up" >
                 <i> ‘When we construct a building, it’s never just for today or tomorrow—we are building a legacy for at least 100 years. We thoughtfully design every element to ensure enduring comfort and convenience for generations to come.’</i>
                 </Card.Text>
-                <Card.Text data-aos="fade-up" data-aos-delay="300">
+                <Card.Text data-aos="fade-up">
                 Rooted in the belief ‘We grow as DHA grows,’ we aligned with DHA Multan, the most secure housing community, and our exceptional team of dealers, contractors & engineers. With future-focused designs, expert project management, and uncompromising quality, we deliver projects that are Tangible, Sustainable, & Real, always prioritizing the trust and investment of our valued customers.
                  </Card.Text>
               </Card.Body>
@@ -136,7 +136,7 @@ const Team = () => {
           <Row>
             {bosses.map((boss, index) => (
               <Col key={boss.id} xs={12} md={6} className='mb-4'>
-                <div data-aos="fade-up" data-aos-delay={index * 100}>
+                <div data-aos="fade-up">
                   <Card>
                     <Card.Img variant="top" src={boss.image} data-aos="zoom-in" />
                     <Card.Body>
@@ -145,14 +145,13 @@ const Team = () => {
                           <Card.Title>{boss.name}</Card.Title>
                           <Card.Text className='designation'>{boss.designation}</Card.Text>
                         </Col>
-                        <Col className='mb-2 d-flex justify-content-end'>
+                        {/* <Col className='mb-2 d-flex justify-content-end'>
                           <div className="d-flex team-social social">
                             <a className='social-icon text-dark mx-1' href={boss.social.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
                             <a className='social-icon text-dark mx-1' href={boss.social.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                            {/* <a className='social-icon text-dark mx-1' href={boss.social.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a> */}
                             <a className='social-icon text-dark mx-1' href={boss.social.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                           </div>
-                        </Col>
+                        </Col> */}
                       </Row>
                       <Card.Text><i>{boss.idescription}</i></Card.Text>
                       <Card.Text>{boss.description}</Card.Text>
@@ -167,9 +166,9 @@ const Team = () => {
         <Row className='justify-content-center'>
           {directors.map((director, index) => (
             <Col key={director.id} xs={12} md={4} className='mb-4'>
-              <div data-aos="fade-up" data-aos-delay={(index % 3) * 100}>
+              <div data-aos="fade-up">
                 <Card>
-                  <Card.Img variant="top" src={director.image} data-aos="zoom-in" />
+                  <Card.Img variant="top" src={director.image} />
                   <Card.Body className='text-center'>
                     <Card.Title>{director.name}</Card.Title>
                     <Card.Text className='designation'>{director.designation}</Card.Text>

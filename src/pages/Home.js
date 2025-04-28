@@ -10,7 +10,6 @@ import HomeProjects from '../components/HomeProjects';
 import BodlaUpdates from '../components/BodlaUpdates';
 import PromotionalSlider from '../components/PromotionalSlider';
 import Testimonial from '../components/Testimonial';
-import { Container, Row } from 'react-bootstrap';
 
 const Home = () => {
   return (
@@ -39,12 +38,15 @@ const Home = () => {
       <div data-aos="fade-up" data-aos-duration="3000">
         <UtilitiesList />
       </div>
-    
+      <div data-aos="fade-up" data-aos-duration="3300">
+        <BodlaUpdates />
+      </div>
+
       <div data-aos="fade-up" data-aos-duration="3600">
         <PromotionalSlider />
       </div>
       <div data-aos="fade-up" data-aos-duration="3900">
-        <Testimonial/>
+        <Testimonial />
       </div>
     </>
   );
