@@ -1060,3 +1060,8 @@ a {
   fill: var(--white);
   margin-right: 10px;
 }
+
+.policy li{
+  list-style-type: disc;
+  list-style: disc !important;
+}
