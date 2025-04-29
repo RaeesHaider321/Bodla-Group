@@ -62,6 +62,8 @@ import virtualtour from '../images/virtual-tour.jpg';
 import oneDestination from '../images/oneDestination.jpg';
 import oneDestination1 from '../images/oneDestination-1.jpg';
 import oneDestination2 from '../images/oneDestination-2.jpg';
+
+
 // Golf View Rumanza
 import golfViewRumanza from '../images/golfViewRumanza.jpg';
 import golfViewRumanza1 from '../images/golfViewRumanza-1.jpg';
@@ -79,6 +81,12 @@ import ctaOneD from '../images/ctaOneD.png';
 import ctaBHomes from '../images/ctaBHomes.png';
 import ctaGVR from '../images/ctaGVR.png';
 import ctaBHub from '../images/ctaBHub.png';
+
+// Virtual Tour
+import virtualTourBHub from '../virtualTour/virtualTourBHub.jpg';
+import virtualTourBHome from '../virtualTour/virtualTourBHome.jpg';
+import virtualTour1D from '../images/oneDestination-2.jpg';
+import virtualTourGVR from '../virtualTour/virtualTourGVR.jpg';
 
 
 // Project Data Template
@@ -104,7 +112,7 @@ const projectTemplate = {
   status: 'Project Status',
   videoLink: '', // default video
   floorPlans: [], // array of floor plan images
-  virtualTour: virtualtour,
+  virtualTour: '',
   nearbyPlaces: [],
   pricingPlans: [
     {
@@ -194,6 +202,7 @@ const projectDetails = {
       },
     ],
     videoLink: "https://www.youtube.com/embed/Ndr0vVfjrQs?si=VLGx-Yqg3ZFimX-w",
+    virtualTour:virtualTourBHub,
   },
   'one-destination': {
     ...projectTemplate,
@@ -283,6 +292,7 @@ const projectDetails = {
     size: '10 Acres',
     status: 'Completed',
     videoLink: "https://www.youtube.com/embed/Rz9MYwIQ_7c?si=PcdEq3beGri3f8C8",
+    virtualTour:virtualTour1D,
   },
   'golf-view-rumanza': {
     ...projectTemplate,
@@ -404,6 +414,7 @@ const projectDetails = {
     size: '15 Acres',
     status: 'Upcoming',
     videoLink: "https://www.youtube.com/embed/w5QEV7t8kuA?si=trZzHw-WGeOkTSsj",
+    virtualTour:virtualTourGVR,
   },
   'bodla-homes': {
     ...projectTemplate,
@@ -548,6 +559,7 @@ const projectDetails = {
     size: '8 Marla Plots',
     status: 'Ongoing',
     videoLink: "https://www.youtube.com/embed/agUm10fzXDQ?si=8rh8psHk6XPFNdL8",
+    virtualTour:virtualTourBHome,
   }
 };
 
