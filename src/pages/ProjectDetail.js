@@ -55,7 +55,6 @@ import oneD from '../images/OneD-logo.png';
 import approved from '../images/approved.png';
 import gvr from '../images/gvr-logo.png';
 import dhaApproved from '../images/dhaApproved.png';
-import virtualtour from '../images/virtual-tour.jpg';
 
 // Project Sliders
 // One Destination

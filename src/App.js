@@ -28,6 +28,7 @@ import "./components/Footer.css"; // Footer CSS
 import "./components/TrustedAdvisors.css"; // Trusted Advisors CSS
 import "./components/ScrollToTop.css"; // CSS for Scroll to Top Button
 import "./components/Team.css"; // CSS for Team
+import "./components/Reit.css"; // CSS for Reit
 
 // This component will handle scrolling to top on route change
 function ScrollToTop() {
@@ -69,7 +70,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router style={{ cursor: 'url(/logo-cursor.png) 0 0, auto' }}>
       <div className="app-container">
         <Header />
         <ScrollToTop /> {/* This will handle scrolling to top on route change */}

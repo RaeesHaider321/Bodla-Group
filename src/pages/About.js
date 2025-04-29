@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Image, Row, Col, Card } from 'react-bootstrap';
-import Carousel from 'react-bootstrap/Carousel';
 import PageTitle from '../components/PageTitle';
+import Reit from '../components/Reit';
 
 // Image imports (grouped by category for better organization)
 // Carousel images
@@ -172,9 +172,7 @@ const About = () => {
       </section>
 
       <section className='reit'>
-        <Container className='text-center'>
-          <h3 data-aos="flip-up" data-aos-delay="300">REIT</h3>
-        </Container>
+        <Reit/>
       </section>
 
       <section className='py-5'>

@@ -17,8 +17,8 @@ export default function UtilitiesList() {
       <Container >
         <Row className="justify-content-center text-center mb-4">
           <Col xs={12} md={8} data-aos="fade-up" data-aos-delay="200">
-            <h2>Explore More on <br /><span>Bodla Group</span></h2>
-            <p>Duis vel eros non libero blandit iaculis. Suspendisse potenti. Maecenas eu lorem et sapien accumsan pretium. Donec dolor mauris</p>
+            <h2>Explore More on <span>Bodla Group</span></h2>
+            <p>Plan smarter with Bodla Group—estimate construction costs, find the perfect plot, convert land measurements effortlessly, and discover your ideal property, all in one place.</p>
           </Col>
         </Row>
 
