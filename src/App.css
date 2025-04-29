@@ -957,3 +957,11 @@ padding: 2%;
 display: flex;
 gap: 10px;
 }
+
+footer .privacyPolicy {
+  background: linear-gradient(90deg, #E0B667, #DEBA5D, #FEEC96, #E7C270, #DEB45B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}

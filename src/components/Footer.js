@@ -1,8 +1,10 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import SocialMedia from './SocialMedia';
 import UnlockProperty from './UnlockProperty';
 import logo from '../images/footer-logo.png';
 import Icon from "../components/Icon";
+
 function Footer() {
   return (
     <footer className="text-white">
@@ -21,48 +23,49 @@ function Footer() {
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1400">
                   <h5>Others</h5>
                   <ul className="list-unstyled">
-                    <li><a href="/AreaUnitConvertor">Area Unit Convertor</a></li>
-                    <li><a href="/ConstructionCostCalculator">Construction Cost Calculator</a></li>
-                    <li><a href="/MediaCentre">Media Centre</a></li>
-                    <li><a href="/Careers">Careers</a></li>
+                    <li><Link to="/AreaUnitConvertor">Area Unit Convertor</Link></li>
+                    <li><Link to="/ConstructionCostCalculator">Construction Cost Calculator</Link></li>
+                    <li><Link to="/MediaCentre">Media Centre</Link></li>
+                    <li><Link to="/Careers">Careers</Link></li>
                   </ul>
                 </Col>
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1600">
                   <h5>Quick Links</h5>
                   <ul className="list-unstyled">
-                    <li><a href="/About">About Us</a></li>
-                    <li><a href="/Projects">Projects</a></li>
-                    <li><a href="/Team">Our Team</a></li>
-                    <li><a href="/Contact">Contact</a></li>
+                    <li><Link to="/About">About Us</Link></li>
+                    <li><Link to="/Projects">Projects</Link></li>
+                    <li><Link to="/Team">Our Team</Link></li>
+                    <li><Link to="/Contact">Contact</Link></li>
+                    <li><Link to="/Terms">Terms & Conditions</Link></li>
                   </ul>
                 </Col>
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1800">
                   <h5>Services</h5>
                   <ul className="list-unstyled">
-                    <li><a href="/constructors">Constructors</a></li>
-                    <li><a href="/land-providers">Land Providers</a></li>
-                    <li><a href="/developers">Developers</a></li>
-                    <li><a href="/plot-traders">Plot Traders</a></li>
-                    <li><a href="/marketers">Marketers</a></li>
+                    <li><Link to="/constructors">Constructors</Link></li>
+                    <li><Link to="/land-providers">Land Providers</Link></li>
+                    <li><Link to="/developers">Developers</Link></li>
+                    <li><Link to="/plot-traders">Plot Traders</Link></li>
+                    <li><Link to="/marketers">Marketers</Link></li>
                   </ul>
                 </Col>
                 <Col md={12} className="mb-4" data-aos="fade-up" data-aos-duration="2000">
                   <h5>Contact</h5>
                   <ul className="list-unstyled">
                     <li>
-                    <Icon name="phone" />
+                      <Icon name="phone" />
                       061-1111-26352
                     </li>
                     <li>
-                    <Icon name="envelope" />
+                      <Icon name="envelope" />
                       info@bodlagroup.com
                     </li>
                     <li>
-                    <Icon name="support" />
-                    support@bodlagroup.com
+                      <Icon name="support" />
+                      support@bodlagroup.com
                     </li>
                     <li>
-                    <Icon name="location" />
+                      <Icon name="location" />
                       Business Hub, Central Square, Sector K Phase I DHA Multan
                     </li>
                   </ul>
@@ -78,7 +81,7 @@ function Footer() {
           </Row>
 
           <p className="text-center mb-0 pb-3">
-            &copy; {new Date().getFullYear()} Bodla Builders. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Bodla Builders. All Rights Reserved. <Link className="privacyPolicy" to="/PrivacyPolicy">Privacy Policy</Link>
           </p>
         </Container>
       </div>

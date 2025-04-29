@@ -18,6 +18,8 @@ import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import Team from "./pages/Team";
 import DHAMultan from "./pages/DHAMultan";
+import Terms from "./pages/Terms";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
@@ -82,6 +84,8 @@ function App() {
             <Route path="/Services/:serviceSlug" element={<ServiceDetails />} />
             <Route path="/DHAMultan" element={<DHAMultan />} />
             <Route path="/Team" element={<Team />} />
+            <Route path="/Terms" element={<Terms />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
