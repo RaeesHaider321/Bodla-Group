@@ -7,8 +7,8 @@ import quality from '../images/6.webp';
 export default function Reit() {
   return (
     <Container>
-      <Row xs={12} sm={12} md={3}>
-        <Col className="sing-box-main" data-aos="fade-up">
+      <Row className='gy-3'>
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
             <div className="signature-thumb">
               <Image 
@@ -29,7 +29,7 @@ export default function Reit() {
           </div>
         </Col>
 
-        <Col className="sing-box-main" data-aos="fade-up">
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
             <div className="signature-thumb">
               <Image 
@@ -50,7 +50,7 @@ export default function Reit() {
           </div>
         </Col>
 
-        <Col className="sing-box-main" data-aos="fade-up">
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
             <div className="signature-thumb">
               <Image 
