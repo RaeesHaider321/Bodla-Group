@@ -650,7 +650,9 @@ margin-bottom: 0;
 .projects .project-description p{
   text-align: justify;
 }
-
+.projects .project-description .content img{
+  max-width: 80px;
+}
 /* project-detail */
 .project-detail .project-intro .card {
   border-radius: 0;

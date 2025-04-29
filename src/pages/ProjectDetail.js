@@ -76,6 +76,9 @@ import OneDestination04 from '../images/floorMaps/OneDestination-05.jpg';
 
 import floor3 from '../images/floor3.jpg';
 import ctaOneD from '../images/ctaOneD.png';
+import ctaBHomes from '../images/ctaBHomes.png';
+import ctaGVR from '../images/ctaGVR.png';
+import ctaBHub from '../images/ctaBHub.png';
 
 
 // Project Data Template
@@ -86,6 +89,7 @@ const projectTemplate = {
   introTitle: 'Introductory Title',
   logo: '', // project logo image
   thumb: '', // project thumb image
+  ctaThumb: '', // project thumb image
   dhaApproved: dhaApproved,
   approved: approved,
   background: '', // main background image
@@ -126,6 +130,7 @@ const projectDetails = {
     introTitle: 'Experience the Future of Urban Living',
     logo: bHub,
     thumb: businessHub,
+    ctaThumb: ctaBHub,
     background: businessHub,
     description: 'With Business Hub, reimagine the urban living with a dynamic multi-feature first grandiose mall of DHA Multan, residing adjacent to DHA Head Office, on 300ft wide Main Boulevard, ensuring its visibility and accessibility. Business Hub, a modernist 7-storey edifice stretches over an area of 18-kanal, integrating a perfect blend of expansive commercial outlets, marvelous offices and posh 1, 2, 3 – Bedroom Apartments precisely designed to keep pace with the evolving preferences of modern market. The mesmerizing views diligently fuses with the nexus of business opportunities, Central Business Square, creating a lifestyle beyond imagination.',
     whyproject: [
@@ -209,6 +214,7 @@ const projectDetails = {
     ],
     logo: oneD,
     thumb: oneDestination,
+    ctaThumb: ctaOneD,
     background: oneDestination,
     amenities: [
       { title: 'Gymnasium', icon: 'gymnasium', },
@@ -276,7 +282,7 @@ const projectDetails = {
     mapEmbedUrl: 'https://www.google.com/maps/d/u/2/embed?mid=18m1tND92llOVYgM4gh6Voj5nnofl5Vc&ehbc=2E312F&noprof=1',
     size: '10 Acres',
     status: 'Completed',
-    videoLink: "https://www.youtube.com/embed/VmoJ9WGnJ6I?si=k4brEjwUVEooXCgK",
+    videoLink: "https://www.youtube.com/embed/Rz9MYwIQ_7c?si=PcdEq3beGri3f8C8",
   },
   'golf-view-rumanza': {
     ...projectTemplate,
@@ -288,6 +294,7 @@ const projectDetails = {
     secondDescription: 'With a mix of luxurious residential apartments and penthouses designed for an elite lifestyle, as well as commercial spaces that provide a prime location for businesses, Golf View Rumanza offers a unique opportunity for both residents and retailers to grow forward in a vibrant, upscale community.',
     logo: gvr,
     thumb: golfViewRumanza,
+    ctaThumb: ctaGVR,
     background: golfViewRumanza,
     whyproject: [
       { title: 'DHA Approved. ' },
@@ -406,6 +413,7 @@ const projectDetails = {
     introTitle: 'Project Description',
     logo: bHomes,
     thumb: bodlaHomes8Marla,
+    ctaThumb: ctaBHomes,
     background: bodlaHomes8Marla,
     description: "Bodla Builders proudly presents Bodla Homes in Sector 'V' of DHA Multan, offering contemporary living in its 5.2-Marla and 8-Marla Villas. The 5.2 Marla villas (2220 sq.ft.) feature 4 bedrooms, spacious car parking, a rooftop BBQ, and solar panel space.The 8-Marla villas (2905 sq.ft.) are designed for luxury, featuring 5 bedrooms, 2-car parking, a backyard service area, a rooftop BBQ space, and solar panel provision.",
     secondDescription: "Both villa categories are ideally located near Parks, a Masjid, Community Facilities, a 150ft wide road, Health & Education City, and Shah Shams Tabraiz Gate, offering complete luxury and convenience.",
@@ -613,7 +621,7 @@ const ProjectDetails = () => {
           </Card>
         </Container>
         {/* <NearbyLocations locations={nearbyLocations} /> */}
-        <Container className='project-whythis py-4'>
+        <Container className='project-whythis py-4'data-aos="fade-up">
           <Row>
             <Col xs={12} md={6}>
               <h3>Why {project.title} </h3>
@@ -630,13 +638,13 @@ const ProjectDetails = () => {
           </Row>
         </Container>
         {/* Amenities and Project Facts Section */}
-        <Container className='text-center mt-5'>
+        <Container className='text-center mt-5'data-aos="fade-up">
           <Row className="gy-4">
             <Col xs={12} lg={12}>
               <PageTitle title="Amenities and Features" />
               <Row className='justify-content-center gy-4'>
                 {project.amenities.map((amenity, index) => (
-                  <Col xs={6} md={2} key={index} >
+                  <Col xs={6} md={2} key={index} data-aos="fade-up">
                     <Card className="h-100 amenity-card">
                       <CardBody>
                         <Row className="d-flex align-items-center justify-content-center">
@@ -652,11 +660,11 @@ const ProjectDetails = () => {
           </Row>
         </Container>
         {/* Nearby Places Section */}
-        <Container className='text-center mt-5'>
+        <Container className='text-center mt-5'data-aos="fade-up">
           <PageTitle title="Nearby Places" />
           <Row className='justify-content-center gy-4'>
             {project.nearbyPlaces.map((nearby, index) => (
-              <Col xs={6} md={2} key={index} >
+              <Col xs={6} md={2} key={index} data-aos="fade-up" >
                 <Card className="h-100 amenity-card">
                   <CardBody>
                     <Row className="d-flex align-items-center justify-content-center">
@@ -680,7 +688,7 @@ const ProjectDetails = () => {
               autoRotate={true}
               autoRotateSpeed={0.3}
             />
-            <div className='cta'>
+            <div className='cta' data-aos="fade-up">
               <Container>
                 <Row className='text-start align-items-center justify-content-center g-2'>
                   <Col xs={12} md={8}>
@@ -701,7 +709,7 @@ const ProjectDetails = () => {
           <PageTitle title="Floor Plans" />
           <Row className='justify-content-center gy-4'>
             {project.floorPlans.map((plan, index) => (
-              <Col xs={12} sm={12} md={6} lg={4} key={index} >
+              <Col xs={12} sm={12} md={6} lg={4} key={index} data-aos="fade-up">
                 <Image className='flooMap' src={plan} alt={`Floor Plan ${index + 1}`} />
               </Col>
             ))}
@@ -723,7 +731,7 @@ const ProjectDetails = () => {
                 </div>
               </Col>
               <Col xs={12} lg={6} className='amblum' >
-                <Image src={ctaOneD} alt='' />
+                <Image src={project.ctaThumb} alt='' />
               </Col>
             </Row>
           </div>

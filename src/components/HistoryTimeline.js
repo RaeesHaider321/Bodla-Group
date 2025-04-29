@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Icons from "../components/Icon"; 
 import BodlaButton from './Button';
 import CardComponent from "./CardComponent";
-import legacy from '../images/homeLegacy.png'
+import legacy from '../images/homeLegacy.jpg'
 import service from '../images/homeServices.png'
 
 const cardData = [

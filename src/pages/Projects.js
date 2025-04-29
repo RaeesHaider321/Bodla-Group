@@ -149,15 +149,16 @@ const Projects = () => {
                     {index % 2 === 0 ? (
                       <>
                         <Col xs={12} md={4} className="order-md-1">
-                          <div className="project-thumb" >
-                            <div className='image-container' style={{ backgroundImage: `url(${project.background})` }}>
-                              <Image src={project.logo} alt={project.title} />
+                          <div className="project-thumb h-100" >
+                            <div className='image-container h-100' style={{ backgroundImage: `url(${project.background})` }}>
+                              
                             </div>
                           </div>
                         </Col>
                         <Col xs={12} md={8} className="order-md-2">
                           <div className="project-description h-100">
                             <div className='content'>
+                              <Image src={project.logo} alt={project.title} />
                               <h4>{project.title}</h4>
                               <p>{project.description}</p>
                               <p>{project.secondDescription}</p>
@@ -170,15 +171,16 @@ const Projects = () => {
                         <Col xs={12} md={8} className="order-md-1">
                           <div className="project-description h-100">
                             <div className='content'>
+                              <Image src={project.logo} alt={project.title} />
                               <h4>{project.title}</h4>
                               <p>{project.description}</p>
                             </div>
                           </div>
                         </Col>
                         <Col xs={12} md={4} className="order-md-2">
-                          <div className="project-thumb">
-                            <div className='image-container' style={{ backgroundImage: `url(${project.background})` }}>
-                              <Image src={project.logo} alt={project.title} />
+                          <div className="project-thumb h-100">
+                            <div className='image-container ' style={{ backgroundImage: `url(${project.background})` }}>
+                              {/* <Image src={project.logo} alt={project.title} /> */}
                             </div>
                           </div>
                         </Col>

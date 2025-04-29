@@ -63,8 +63,6 @@ function Header() {
               icon={<Icons name="rightArrow" />}
               variant="primary"
               link="/Contact"
-              className="my-2 my-lg-0"
-              onClick={closeNavbar}
             />
           </Nav>
         </Navbar.Collapse>
