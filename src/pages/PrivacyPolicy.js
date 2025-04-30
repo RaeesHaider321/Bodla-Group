@@ -3,7 +3,7 @@ import { Container, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const PrivacyPolicy = () => {
     useEffect(() => {
-        document.title = "Privacy Policy - Bodla Builders";
+        document.title = "Privacy Policy - Bodla Group";
     }, []);
     const personalInformation = [
         {
@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
         },
         {
             title: "Financial and Transactional Information",
-            description: "Information related to your financial dealings with us. This may include your payment details (such as credit/debit card numbers or bank account information), billing address, transaction history, and records of purchases or services (e.g., property bookings, payments, or investments) that you make through Bodla Builders."
+            description: "Information related to your financial dealings with us. This may include your payment details (such as credit/debit card numbers or bank account information), billing address, transaction history, and records of purchases or services (e.g., property bookings, payments, or investments) that you make through Bodla Group."
         },
         {
             title: "Location Data",
@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
         },
         {
             title: "Personalization",
-            description: "To personalize and tailor your experience with Bodla Builders. We may use your data (such as past behaviour, location, or preferences) to show you content, recommendations, properties, or advertisements that are more relevant to you. Personalization can include customizing what you see on our app/website home screen, suggesting services you might be interested in, or remembering your preferences (like language or location settings)."
+            description: "To personalize and tailor your experience with Bodla Group. We may use your data (such as past behaviour, location, or preferences) to show you content, recommendations, properties, or advertisements that are more relevant to you. Personalization can include customizing what you see on our app/website home screen, suggesting services you might be interested in, or remembering your preferences (like language or location settings)."
         },
         {
             title: "Communication",
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
     const dataSharingParties = [
         {
             title: "Within Our Corporate Group",
-            description: "We may share your information with other companies that are part of the Bodla Group (for example, our parent company, subsidiaries, affiliates, and other related entities). Employees and internal teams of Bodla Builders will have access to your information on a need-to-know basis, so they can perform their jobs and help deliver or improve our Services. All personnel are required to handle information in a manner consistent with this Privacy Policy."
+            description: "We may share your information with other companies that are part of the Bodla Group (for example, our parent company, subsidiaries, affiliates, and other related entities). Employees and internal teams of Bodla Group will have access to your information on a need-to-know basis, so they can perform their jobs and help deliver or improve our Services. All personnel are required to handle information in a manner consistent with this Privacy Policy."
         },
         {
             title: "Service Providers and Vendors",
@@ -112,11 +112,11 @@ const PrivacyPolicy = () => {
         },
         {
             title: "Business Transfers (Mergers or Acquisitions)",
-            description: "If Bodla Builders is involved in a merger, acquisition, financing due diligence, reorganization, bankruptcy, receivership, sale of company assets, or transition of service to another provider, your information may be transferred as part of such a transaction. In the event of such a corporate change, we will ensure that the successor entity is bound by terms substantially consistent with this Privacy Policy in how they handle your personal data. We will notify you (for example, via a notice on our website or within the app) of any change in ownership or uses of your personal data as a result of a business transition."
+            description: "If Bodla Group is involved in a merger, acquisition, financing due diligence, reorganization, bankruptcy, receivership, sale of company assets, or transition of service to another provider, your information may be transferred as part of such a transaction. In the event of such a corporate change, we will ensure that the successor entity is bound by terms substantially consistent with this Privacy Policy in how they handle your personal data. We will notify you (for example, via a notice on our website or within the app) of any change in ownership or uses of your personal data as a result of a business transition."
         },
         {
             title: "With Your Consent or At Your Direction",
-            description: "Apart from the cases listed above, we will share your personal information with others outside of Bodla Builders only with your consent or at your direction. For instance, if you explicitly agree that we can share your information with a third-party for a particular purpose, or if you use our Services to intentionally interact with or direct us to share information with a third-party platform (such as sharing content to a social network or using an API integration), then we will share information in those instances."
+            description: "Apart from the cases listed above, we will share your personal information with others outside of Bodla Group only with your consent or at your direction. For instance, if you explicitly agree that we can share your information with a third-party for a particular purpose, or if you use our Services to intentionally interact with or direct us to share information with a third-party platform (such as sharing content to a social network or using an API integration), then we will share information in those instances."
         }
     ];
     return (
@@ -125,14 +125,14 @@ const PrivacyPolicy = () => {
                 <article className="policy-section">
                     <h2>Introduction</h2>
                     <p>
-                        Bodla Builders ("Bodla Builders", "we", "our", or "us") is committed to protecting your privacy.
+                        Bodla Group ("Bodla Group", "we", "our", or "us") is committed to protecting your privacy.
                         This Privacy Policy describes how we collect, use, share, and safeguard your personal information
                         when you use our mobile applications (on iOS and Android) and our website (collectively, the "Services").
                         By accessing or using our Services, you agree to the collection and use of your information as described
                         in this Privacy Policy. If you do not agree with our practices, please do not use the Services.
                     </p>
                     <p>
-                        This Privacy Policy applies to all users of Bodla Builders' Services and covers all information collected
+                        This Privacy Policy applies to all users of Bodla Group' Services and covers all information collected
                         through your interaction with our mobile apps and website. It does not apply to any third-party services
                         or websites that may be linked from our Services (see Third-Party Links and Services below). We may update
                         this policy from time to time and will post any changes on this page. We encourage you to review this
@@ -165,7 +165,7 @@ const PrivacyPolicy = () => {
                 <article className="policy-section">
                     <h2>How We Use Your Information</h2>
                     <p>
-                        Bodla Builders uses the collected information to operate, maintain, and improve our Services, as well as to
+                        Bodla Group uses the collected information to operate, maintain, and improve our Services, as well as to
                         support our business functions. We process personal data for a variety of business and operational purposes,
                         including:
                     </p>
@@ -182,7 +182,7 @@ const PrivacyPolicy = () => {
                     <h2>Data Sharing and Disclosure</h2>
                     <p>
                         We understand the importance of keeping your personal information private, and we only share your data in certain
-                        circumstances. Bodla Builders may share or disclose the information we collect from you with third parties as needed
+                        circumstances. Bodla Group may share or disclose the information we collect from you with third parties as needed
                         to run our business, provide our Services, and comply with legal requirements. Such sharing may include:
                     </p>
                     <ul className='policy mb-3'>
@@ -202,7 +202,7 @@ const PrivacyPolicy = () => {
                 <article className="policy-section">
                     <h2>International Data Transfers</h2>
                     <p>
-                        Bodla Builders is based in Pakistan, but the data we collect may be processed, stored, and transferred internationally.
+                        Bodla Group is based in Pakistan, but the data we collect may be processed, stored, and transferred internationally.
                         In order to operate our business and provide the Services, your personal information might be transferred to – and
                         maintained on – servers or databases located outside of your state, province, or country, including in countries that
                         may have different data protection standards than those that apply in your home jurisdiction.
@@ -211,7 +211,7 @@ const PrivacyPolicy = () => {
                         In particular, we and our service providers may process information in multiple countries (for example, if we use a
                         cloud hosting provider with servers globally or engage an international partner). By using our Services and providing
                         your information, you understand and consent that your data may be transferred to and stored in other countries. In
-                        all such cases, Bodla Builders will take appropriate measures to ensure your personal data remains protected. We
+                        all such cases, Bodla Group will take appropriate measures to ensure your personal data remains protected. We
                         implement reasonable safeguards designed to protect your privacy when information is transferred across borders. These
                         may include contractual clauses with our service providers to ensure they uphold privacy protections, as well as
                         adherence to the principles outlined in this Privacy Policy regardless of where the data is processed.
@@ -232,7 +232,7 @@ const PrivacyPolicy = () => {
                         analytics, legal compliance, or to protect or defend our rights.
                     </p>
                     <p>
-                        Bodla Builders may retain certain data for extended periods or indefinitely, at our discretion, subject to our
+                        Bodla Group may retain certain data for extended periods or indefinitely, at our discretion, subject to our
                         operational needs and applicable laws. For example, we might keep transaction records to comply with financial
                         regulations or preserve some information in backups or archives for fraud prevention or historical analysis. Even if
                         you cease to use our Services or deactivate your account, we may continue to store your information in an anonymized
@@ -250,7 +250,7 @@ const PrivacyPolicy = () => {
                 <article className="policy-section">
                     <h2>Data Security</h2>
                     <p>
-                        We take the security of your personal information seriously. Bodla Builders implements appropriate technical and
+                        We take the security of your personal information seriously. Bodla Group implements appropriate technical and
                         organizational security measures to protect your data against unauthorized access, alteration, disclosure, or
                         destruction. These measures include, for example, the use of encryption protocols to protect data transmission,
                         firewalls and intrusion detection systems to safeguard our network, and access controls to restrict access to
@@ -274,7 +274,7 @@ const PrivacyPolicy = () => {
                 <article className="policy-section">
                     <h2>Children's Privacy</h2>
                     <p>
-                        Our Services are not intended for individuals under the age of 18. Bodla Builders does not knowingly solicit or
+                        Our Services are not intended for individuals under the age of 18. Bodla Group does not knowingly solicit or
                         collect personal information from children under 18 years old. If you are under 18, please do not use our mobile
                         applications or website, and do not provide us with any personal information. We encourage parents and guardians
                         to be aware of and supervise their children's online activities for their safety.
@@ -282,7 +282,7 @@ const PrivacyPolicy = () => {
                     <p>
                         If we become aware that we have inadvertently collected personal data from a child under 18, we will promptly take
                         steps to delete such information from our records. If you are a parent or guardian and believe that a minor under
-                        your care has provided personal information to Bodla Builders without your consent, please contact us immediately
+                        your care has provided personal information to Bodla Group without your consent, please contact us immediately
                         (using the contact information below). We will work to remove the child's information and terminate any account
                         that the child has created, if applicable.
                     </p>
@@ -297,7 +297,7 @@ const PrivacyPolicy = () => {
                         from you (such as an embedded map service or an analytics provider).
                     </p>
                     <p>
-                        Please note that this Privacy Policy applies only to Bodla Builders' collection, use, and disclosure of information,
+                        Please note that this Privacy Policy applies only to Bodla Group' collection, use, and disclosure of information,
                         and does not extend to third parties or their websites. If you click on a third-party link or use a third-party
                         service through our platform, any personal data you provide is governed by that third party's privacy policy, not
                         ours. We do not control and are not responsible for the privacy practices of third parties. We recommend that you
@@ -309,7 +309,7 @@ const PrivacyPolicy = () => {
                 <article className="policy-section">
                     <h2>Changes to this Privacy Policy</h2>
                     <p>
-                        Bodla Builders may update or modify this Privacy Policy from time to time to reflect changes in our practices,
+                        Bodla Group may update or modify this Privacy Policy from time to time to reflect changes in our practices,
                         technologies, legal requirements, or for other operational reasons. When we make changes, we will post the updated
                         Privacy Policy on this page and update the "Last Updated" date at the top. Changes to the policy will become
                         effective immediately upon being posted, unless stated otherwise.
@@ -333,7 +333,7 @@ const PrivacyPolicy = () => {
                         to contact us. We value your feedback and will address your inquiries as promptly as possible.
                     </p>
                     <p>
-                        You can reach Bodla Builders through the following contact details:
+                        You can reach Bodla Group through the following contact details:
                     </p>
                     <article className="mb-4">
                        <address>
