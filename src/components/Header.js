@@ -18,7 +18,7 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar" data-bs-theme="dark">
       <Container fluid="xxl">
-        <Link to="/" className='navbar-brand' onClick={closeNavbar}>
+        <Link to="/" className='navbar-brand'>
           <img 
             src={logo} 
             alt="Bodla Builders" 
