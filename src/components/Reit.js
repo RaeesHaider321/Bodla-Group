@@ -3,11 +3,14 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import enegineering from '../images/4.webp';
 import material from '../images/5.webp';
 import quality from '../images/6.webp';
+import PageTitle from './PageTitle';
 
 export default function Reit() {
   return (
     <Container>
-      <h1>REIT <span>Section</span> Title</h1>
+      <div className='text-center'>
+        <PageTitle title='' highlight='' caption=''/>
+      </div>
       <Row className='gy-3'>
         <Col xs={12} sm={12} md={4} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
