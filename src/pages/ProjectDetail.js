@@ -7,6 +7,8 @@ import NotFound from '../pages/NotFound';
 import PageTitle from '../components/PageTitle';
 
 import PanoramicViewer from '../components/PanoramicViewer';
+import { Helmet } from 'react-helmet';
+
 // Project Images (import all projects' images here)
 
 import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
@@ -569,9 +571,68 @@ const ProjectDetails = () => {
   if (!project) {
     return <Container><NotFound /></Container>;
   }
-
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "HousingDevelopment",
+    "name": project.title,
+    "description": project.description,
+    "url": window.location.href,
+    "image": project.images[0],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "DHA Multan",
+      "addressRegion": "Punjab",
+      "postalCode": "60000",
+      "addressCountry": "PK"
+    },
+    "developer": {
+      "@type": "Organization",
+      "name": "Bodla Group"
+    },
+    "numberOfUnits": project.pricingPlans.length,
+    "hasMap": project.mapEmbedUrl
+  };
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": `${project.title} Project Video`,
+    "description": `Video tour of ${project.title} by Bodla Group`,
+    "thumbnailUrl": project.images[0],
+    "uploadDate": "2024-05-01", // Update with actual date
+    "contentUrl": project.videoLink
+  };
+  
+  // Add to your Helmet component:
+  <script type="application/ld+json">
+    {JSON.stringify(videoSchema)}
+  </script>
   return (
     <>
+    <Helmet>
+        <title>{`${project.title} | Bodla Group - ${project.spantitle}`}</title>
+        <meta name="description" content={project.description} />
+        <meta name="keywords" content={`Bodla Group, DHA Multan, ${project.title}, ${project.keywords?.join(', ') || ''}`} />
+        <link rel="canonical" href={window.location.href} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={`${project.title} | Bodla Group`} />
+        <meta property="og:description" content={project.description} />
+        <meta property="og:image" content={project.images[0]} />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content={`${project.title} | Bodla Group`} />
+        <meta property="twitter:description" content={project.description} />
+        <meta property="twitter:image" content={project.images[0]} />
+
+        {/* Schema.org markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(projectSchema)}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className='project-detail'>
         <Container>
@@ -585,7 +646,7 @@ const ProjectDetails = () => {
           <Carousel className='mt-3' fade indicators={false} controls={false} interval={3000} pause={true} >
             {project.images.map((image, index) => (
               <Carousel.Item key={index}>
-                <Image src={image} alt={`${project.title} - ${index + 1}`} className="d-block w-100" style={{ maxHeight: '600px', objectFit: 'cover' }} />
+                <Image src={image} alt={`${project.title} - ${index + 1}`} loading="lazy" className="d-block w-100" style={{ maxHeight: '600px', objectFit: 'cover' }} />
               </Carousel.Item>
             ))}
           </Carousel>

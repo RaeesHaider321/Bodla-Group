@@ -13,7 +13,7 @@ const socialLinks = [
   { name: "YouTube", url: "https://www.youtube.com/@BodlaBuilders", icon: <FaYoutube size={30} /> },
   { name: "WhatsApp", url: "https://wa.me/+923041231234", icon: <FaWhatsapp size={30} /> }, // Add number if needed
 ];
-
+ 
 const SocialMediaLinks = () => {
   return (
     <Container className="social text-center py-4">
