@@ -7,6 +7,7 @@ import quality from '../images/6.webp';
 export default function Reit() {
   return (
     <Container>
+      <h1>REIT <span>Section</span> Title</h1>
       <Row className='gy-3'>
         <Col xs={12} sm={12} md={4} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">

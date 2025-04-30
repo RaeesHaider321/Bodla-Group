@@ -171,9 +171,6 @@ const About = () => {
         </Container>
       </section>
 
-      <section className='reit'>
-        <Reit/>
-      </section>
 
       <section className='py-5'>
         <Container className='text-center'>
@@ -210,6 +207,10 @@ const About = () => {
 
       <section>
         <TimelineSection />
+      </section>
+      
+      <section className='reit'>
+        <Reit/>
       </section>
     </>
   );
