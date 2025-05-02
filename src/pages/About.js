@@ -89,7 +89,7 @@ const About = () => {
         <Container>
           <Row className='justify-content-center'>
             <Col xs={12} md={12} data-aos="fade-up" data-aos-delay="100">
-              <h6>With humble beginnings in Multan, Bodla Group's long-standing journey commenced with a vision to be a driving force in the growth of Multan's Real Estate in 2014. Filled with passion and commitment to upscale the investment and construction domain, Bodla Group steadily established itself as a trusted name in Multan's Real Estate Industry.</h6>
+              <h2>The Story of Excellence and Prestige <span>Began in 2014</span></h2>
             </Col>
           </Row>
         </Container>
@@ -112,7 +112,7 @@ const About = () => {
         </Container>
       </section>
 
-      <section>
+      <section className='d-none'>
         <Container>
           <Row>
             <Col>
@@ -148,7 +148,7 @@ const About = () => {
         <Container>
           <PageTitle title="Journey Through Our Creations, Where Every Detail" highlight="Matters" data-aos="fade-up" />
           <Row className='justify-content-center creationsJourney mt-4'>
-            <Col xs={12}>
+            <Col xs={12} data-aos="fade-up" data-aos-delay="300">
               <Row className='g-4'>
                 {creationsData.map((item, index) => (
                   <Col xs={12} md={6} lg={3} key={index}

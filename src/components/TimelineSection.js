@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import cardImage from '../images/card-image.jpg'
 import sohaibBodla from '../images/team/sohaibTariqBodla-CEO.jpg'
@@ -7,8 +7,19 @@ import ExpandingourHorizons from '../images/ExpandingourHorizons.jpg'
 import businessHub from '../images/businessHub.jpg'
 import golfViewRumanza from '../images/golfViewRumanza.jpg'
 import oneDestination from '../images/oneDestination.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TimelineSection = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false
+    });
+  }, []);
+
   // Array containing timeline data
   const timelineData = [
     {
@@ -36,7 +47,7 @@ const TimelineSection = () => {
       id: 4,
       year: "2020-2021",
       title: "Soaring to new heights",
-      description: "Marking a bold leap in regional development, the visionary Peer Shoaib Tariq Bodla sought to revolutionize Multan's Commercial & Residential landscape with the groundbreaking project, ‘Business Hub’. The project's Memorandum of Understanding in 2020, followed by its groundbreaking in 2021, marked a pivotal moment in the company's trajectory as a new era of urban development. Simultaneously, Bodla Builders extended their reach to Islamabad, establishing a sub-office and initiating the 5.2 Marla residential project, further diversifying their portfolio beyond the commercial sphere.",
+      description: "Marking a bold leap in regional development, the visionary Peer Shoaib Tariq Bodla sought to revolutionize Multan's Commercial & Residential landscape with the groundbreaking project, 'Business Hub'. The project's Memorandum of Understanding in 2020, followed by its groundbreaking in 2021, marked a pivotal moment in the company's trajectory as a new era of urban development. Simultaneously, Bodla Builders extended their reach to Islamabad, establishing a sub-office and initiating the 5.2 Marla residential project, further diversifying their portfolio beyond the commercial sphere.",
       image: businessHub
     },
     {
@@ -50,33 +61,48 @@ const TimelineSection = () => {
       id: 6,
       year: "2024",
       title: "Leading with Legacy",
-      description: "Bodla Group continued its upward momentum in 2024 with the launch of One Destination, reaffirming its expertise in large-scale, visionary development. The year also brought industry-wide recognition as the Group’s Managing Director was elected President of the DHAMRA Association. Expanding its footprint beyond traditional real estate, Bodla Group now actively operates across construction, development, consultancy, marketing, and construction supply—establishing itself as a comprehensive and influential force in shaping the future of Pakistan’s built environment.",
+      description: "Bodla Group continued its upward momentum in 2024 with the launch of One Destination, reaffirming its expertise in large-scale, visionary development. The year also brought industry-wide recognition as the Group's Managing Director was elected President of the DHAMRA Association. Expanding its footprint beyond traditional real estate, Bodla Group now actively operates across construction, development, consultancy, marketing, and construction supply—establishing itself as a comprehensive and influential force in shaping the future of Pakistan's built environment.",
       image: oneDestination
     },
-    // Add more timeline items as needed
   ];
 
   return (
     <Container>
       <Row className='justify-content-center cardImage text-justify'>
-      <Col className='text-end' xs={12} md={12}><h1>The <span>Journey</span></h1></Col> 
-      <Col xs={12} md={12}>
-  {timelineData.map((item, index) => (
-    <Row key={item.id} className='align-items-center mb-5 g-4'>
-      {/* For all indexes, image first on mobile (order-md-0 order-1) */}
-      {/* For even indexes, image on right in desktop */}
-      {/* For odd indexes, image on left in desktop */}
-      <Col xs={12} md={6} className={index % 2 === 1 ? "order-md-1 order-0" : "order-md-0 order-0"}>
-        <Image src={item.image} alt='Bodla Group project'/>
-      </Col>
-      <Col xs={12} md={6} className={index % 2 === 1 ? "order-md-0 order-1" : "order-md-1 order-1"}>
-        <p className='year'>{item.year}</p>
-        <h3>{item.title}</h3>
-        <p>{item.description}</p>
-      </Col>
-    </Row>
-  ))}
-</Col>
+        <Col className='text-end' xs={12} md={12} data-aos="fade-down" data-aos-delay="100">
+          <h1>The <span>Journey</span></h1>
+        </Col> 
+        <Col xs={12} md={12}>
+          {timelineData.map((item, index) => (
+            <Row key={item.id} className='align-items-center mb-5 g-4'>
+              {/* Image column */}
+              <Col 
+                xs={12} 
+                md={6} 
+                className={index % 2 === 1 ? "order-md-1 order-0" : "order-md-0 order-0"}  
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={200 + (index * 100)}
+                data-aos-offset="200"
+              >
+                <Image src={item.image} alt='Bodla Group project' fluid className='rounded shadow'/>
+              </Col>
+              
+              {/* Text content column */}
+              <Col 
+                xs={12} 
+                md={6} 
+                className={index % 2 === 1 ? "order-md-0 order-1" : "order-md-1 order-1"} 
+                data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+                data-aos-delay={200 + (index * 100)}
+                data-aos-offset="200"
+              >
+                <p className='year' data-aos="fade-up" data-aos-delay={300 + (index * 100)}>{item.year}</p>
+                <h3 data-aos="fade-up" data-aos-delay={350 + (index * 100)}>{item.title}</h3>
+                <p data-aos="fade-up" data-aos-delay={400 + (index * 100)}>{item.description}</p>
+              </Col>
+            </Row>
+          ))}
+        </Col>
       </Row>
     </Container>
   );
