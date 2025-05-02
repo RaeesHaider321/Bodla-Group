@@ -59,37 +59,24 @@ const TimelineSection = () => {
   return (
     <Container>
       <Row className='justify-content-center cardImage text-justify'>
-        <Col xs={12} md={12}>
-          {timelineData.map((item, index) => (
-            <Row key={item.id} className='align-items-center mb-5 g-4'>
-              {/* For even indexes (0, 2, 4...), image on right */}
-              {/* For odd indexes (1, 3, 5...), image on left */}
-              {index % 2 === 0 ? (
-                <>
-                  <Col xs={12} md={6}>
-                    <Image src={item.image} alt='Bodla Group project'/>
-                  </Col>
-                  <Col xs={12} md={6} >
-                    <p>{item.year}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </Col>
-                </>
-              ) : (
-                <>
-                  <Col xs={12} md={6} >
-                    <p>{item.year}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </Col>
-                  <Col xs={12} md={6}>
-                    <Image src={item.image} alt='Bodla Group project'/>
-                  </Col>
-                </>
-              )}
-            </Row>
-          ))}
-        </Col>
+      <Col className='text-end' xs={12} md={12}><h1>The <span>Journey</span></h1></Col> 
+      <Col xs={12} md={12}>
+  {timelineData.map((item, index) => (
+    <Row key={item.id} className='align-items-center mb-5 g-4'>
+      {/* For all indexes, image first on mobile (order-md-0 order-1) */}
+      {/* For even indexes, image on right in desktop */}
+      {/* For odd indexes, image on left in desktop */}
+      <Col xs={12} md={6} className={index % 2 === 1 ? "order-md-1 order-0" : "order-md-0 order-0"}>
+        <Image src={item.image} alt='Bodla Group project'/>
+      </Col>
+      <Col xs={12} md={6} className={index % 2 === 1 ? "order-md-0 order-1" : "order-md-1 order-1"}>
+        <p className='year'>{item.year}</p>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </Col>
+    </Row>
+  ))}
+</Col>
       </Row>
     </Container>
   );

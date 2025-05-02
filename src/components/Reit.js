@@ -12,7 +12,7 @@ export default function Reit() {
         <PageTitle title='' highlight='' caption=''/>
       </div>
       <Row className='gy-3'>
-        <Col xs={12} sm={12} md={4} className="sing-box-main" data-aos="fade-up">
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
             <div className="signature-thumb">
               <Image 
@@ -33,7 +33,7 @@ export default function Reit() {
           </div>
         </Col>
 
-        <Col xs={12} sm={12} md={4} className="sing-box-main" data-aos="fade-up">
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
             <div className="signature-thumb">
               <Image 
@@ -54,7 +54,27 @@ export default function Reit() {
           </div>
         </Col>
 
-        <Col xs={12} sm={12} md={4} className="sing-box-main" data-aos="fade-up">
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
+          <div className="singature-box radius">
+            <div className="signature-thumb">
+              <Image 
+                fluid 
+                className="img-100 radium" 
+                src={quality} 
+                alt="Quality Control" 
+              />
+            </div>
+            <div className="sign-content-sec">
+              <div className="sign-title">
+                <h4 className="italic sign-title">Quality Control</h4>
+              </div>
+              <div className="signature-box-content">
+                <p>'Quality' surpasses everything and anything for us at Sobha, to the extent that we have an autonomous quality control cell reporting directly the Group Chairman.</p>
+              </div>
+            </div>
+          </div>
+        </Col>
+        <Col xs={12} sm={12} md={3} className="sing-box-main" data-aos="fade-up">
           <div className="singature-box radius">
             <div className="signature-thumb">
               <Image 

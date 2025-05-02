@@ -83,7 +83,7 @@ const About = () => {
   return (
     <>
       <div className='bodlaKahani' data-aos="fade-up" data-aos-duration="1300">
-        <iframe src="https://www.youtube.com/embed/EGFIxjzM8nc?si=RCnJe3rzDhGEuwtb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/EGFIxjzM8nc?autoplay=1&mute=1&loop=1&playlist=EGFIxjzM8nc" title="Bodla Kahani" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <section className='bodlaSince py-5'>
         <Container>
@@ -176,8 +176,8 @@ const About = () => {
         <Container className='text-center'>
           <Row className='justify-content-center mb-5'>
             <Col xs={12} md={9} data-aos="fade-up" data-aos-delay="200">
-              <h2>Bodla Group expanded <br />its <span>entrepreneurial</span> footsteps</h2>
-              <p>To capitalise its business strengths...</p>
+              <h2>Our Companies </h2>
+              <p>The Entrepreneurial Footsteps of Bodla Group</p>
             </Col>
           </Row>
           <Row className='expanded g-4'>
@@ -198,7 +198,7 @@ const About = () => {
           <Row>
             <Col>
               <Card body className='text-center' data-aos="zoom-in" data-aos-delay="300">
-                <h2>With our deep sensitivity and passion for what is possible in <span>Multan's Real Estate Industry</span>, we ensure that every project, every land, and every investment yields lasting value</h2>
+                <h2>Bodla Group: Reimagining the Idea of <span>Urban Living</span></h2>
               </Card>
             </Col>
           </Row>
@@ -209,9 +209,9 @@ const About = () => {
         <TimelineSection />
       </section>
       
-      <section className='reit'>
+      {/* <section className='reit'>
         <Reit/>
-      </section>
+      </section> */}
     </>
   );
 };
