@@ -4,12 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
 
-import service1 from '../images/businessHub.jpg';
-import service2 from '../images/businessHub.jpg';
-import service3 from '../images/businessHub.jpg';
-import service4 from '../images/businessHub.jpg';
-
-
 import landAcquisition from '../images/landAcquisition.jpg';
 import landTrading from '../images/landPlotTrading.avif';
 import construction from '../images/construction.jpg';
@@ -27,42 +21,36 @@ const Services = () => {
       icon: "landProvider",
       title: 'Land Acquisition',
       description: 'Precise identification and procurement of optimum location that ensures development potential and value appreciation.',
-      image: service1,
     },
     {
       id: 2,
       icon: "developers",
       title: 'Development',
       description: 'Comprehensive planning and execution of residential & commercial projects, forming progressive & future-focused structures. ',
-      image: service2,
     },
     {
       id: 3,
       icon: "plotTrading",
       title: 'Plots Trading',
       description: 'Facilitating transparent and efficient buying and selling of residential and commercial plots, catering to diverse investment needs.',
-      image: service3,
     },
     {
       id: 4,
       icon: "constructors",
       title: 'Construction',
       description: 'Employing quality materials and skilled labor to build robust and aesthetically pleasing structures, adhering to timelines and standards.',
-      image: service4,
     },
     {
       id: 5,
       icon: "constructionMaterials",
       title: 'Finishing Materials',
       description: 'Sourcing and supplying advanced, durable interior and exterior finishes that enhance thermal comfort for elegant and lasting spaces.',
-      image: service4,
     },
     {
       id: 6,
       icon: "propertyMarketing",
       title: 'Project Marketing',
       description: 'Implementing innovative strategies to showcase project features and benefits, reaching target audiences and driving sales effectively.',
-      image: service4,
     }
   ];
 
