@@ -115,7 +115,7 @@ const HomeProjects = () => {
                             <Image src={tabs[activeTab].content.logo} fluid />
                         </div>
                         <div className="amenities">
-                             <Row className='justify-content-center gy-4 mb-4'>
+                             <Row className='justify-content-center gy-3'>
                                 {tabs[activeTab].content.amenities.map((amenity, index) => (
                                     <Col xs={6} sm={3} md={4} lg={2} key={index}>
                                         <span className="amenity-icon">{amenity.icon}</span>

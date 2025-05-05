@@ -16,7 +16,7 @@ function Footer() {
 
           <Row className="my-3 my-md-5">
             <Col xs={12} sm={4} md={1} lg={2} className="logo mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="1200">
-              <Image src={logo} fluid />
+            <Link to="/"><Image src={logo} fluid /></Link>
             </Col>
             <Col xs={12} sm={8} md={11} lg={10}>
               <Row xs={12} sm={12} md={12} lg={4}>
@@ -42,11 +42,11 @@ function Footer() {
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1800">
                   <h5>Services</h5>
                   <ul className="list-unstyled">
-                    <li><Link to="/constructors">Constructors</Link></li>
-                    <li><Link to="/land-providers">Land Providers</Link></li>
-                    <li><Link to="/developers">Developers</Link></li>
-                    <li><Link to="/plot-traders">Plot Traders</Link></li>
-                    <li><Link to="/marketers">Marketers</Link></li>
+                    <li><Link to="/services/construction">Constructors</Link></li>
+                    <li><Link to="/services/land-acquisition">Land Providers</Link></li>
+                    <li><Link to="/services/development">Development</Link></li>
+                    <li><Link to="/services/plots-trading">Plot Traders</Link></li>
+                    <li><Link to="/services/project-marketing">Marketers</Link></li>
                   </ul>
                 </Col>
                 <Col md={12} className="mb-4" data-aos="fade-up" data-aos-duration="2000">
@@ -81,7 +81,7 @@ function Footer() {
           </Row>
 
           <p className="text-center mb-0 pb-3">
-            &copy; {new Date().getFullYear()} Bodla Builders. All Rights Reserved. <Link className="privacyPolicy" to="/PrivacyPolicy">Privacy Policy</Link>
+            &copy; {new Date().getFullYear()} Bodla Group. All Rights Reserved. <Link className="privacyPolicy" to="/PrivacyPolicy">Privacy Policy</Link>
           </p>
         </Container>
       </div>

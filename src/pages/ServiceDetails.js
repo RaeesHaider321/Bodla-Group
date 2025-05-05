@@ -13,6 +13,12 @@ import serviceDetail1 from '../images/businessHub.jpg';
 import serviceDetail2 from '../images/businessHub.jpg';
 import serviceDetail3 from '../images/businessHub.jpg';
 
+import landAcquisition from '../images/landAcquisition.jpg';
+import landTrading from '../images/landPlotTrading.avif';
+import construction from '../images/construction.jpg';
+import development from '../images/construction.jpg';
+import constructionMaterial from '../images/constructionMaterial.jpg';
+import marketing from '../images/marketing.jpg';
 
 
 // Sample service details data
@@ -22,8 +28,9 @@ const serviceDetails = {
     title: 'Land Acquisition',
     caption: 'Precise Location Procurement    –     Investor Centric Approach     –     Growth Driven Potential',
     cta:'Begin Acquisition Plan',
+    getStarted:'Yes! Let’s Get Started',
     description: "With a keen eye for potential growth, we navigate complex real estate landscapes to identify and secure prime land opportunities. Our approach ensures that each acquisition not only meets current market demands but also aligns smoothly with investors' long-term vision and strategic investment goals. By blending insight, experience, and foresight, we lay the foundation for developments that succeed well into the future.",
-    image: service1,
+    image: landAcquisition,
     secondaryImages: [serviceDetail1, serviceDetail2, serviceDetail3],
     features: [
       'Location Intelligence',
@@ -78,7 +85,7 @@ const serviceDetails = {
     description: 'By utilizing expert design insights and pre-cast technology, we adopt a pragmatic approach to finishing materials that enhances functionality, durability, aesthetics, and sustainability. With specialized solutions such as CLC Rooftop Treatments, CLC Partition Blocks, High-performance Tile Adhesives, and Premium Wall Putty, we ensure modern living spaces that exceed expectations—aligning with your lifestyle needs while contributing to long-lasting and environmentally conscious developments.',
     cta:'Begin My Project’s Finishing ',
     getStarted:'Yes! Let’s Get Started',
-    image: service2,
+    image: construction,
     secondaryImages: [serviceDetail2, serviceDetail3, serviceDetail1],
     features: [
       "Expert Design Insights",
@@ -130,7 +137,7 @@ const serviceDetails = {
     description: 'We synergize our development strategies with community needs and market trends, utilizing cutting-edge technology to create optimized layouts. By integrating smart living solutions, we ensure that every project meets modern demands for convenience, efficiency, and sustainability. Our focus on innovative design and thoughtful planning results in developments that are not only functional but also enhance the quality of life for future residents.',
     cta:'Let’s Begin with Development ',
     getStarted:'Yes! Let’s Get Started',
-    image: service3,
+    image: development,
     secondaryImages: [serviceDetail3, serviceDetail1, serviceDetail2],
     features: [
       'Community-Centric Planning',
@@ -163,7 +170,7 @@ const serviceDetails = {
     description: 'With a strategic vision, we anticipate market shifts and proactively identify opportunities that align with future growth trends. By connecting investors with high-potential prospects, we ensure that each investment is perfectly positioned for exceptional returns. Our foresight and market insight shape the future landscape, helping investors make informed decisions that drive long-term success and solidify their position in evolving markets.',
     cta:'Sell or Buy (Plot)',
     getStarted:'Yes! Let’s Get Started',
-    image: service4,
+    image: landTrading,
     secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
     features: [
       "Tailored Location Selection",
@@ -214,7 +221,7 @@ const serviceDetails = {
     description: 'By utilizing expert design insights and pre-cast technology, we adopt a pragmatic approach to finishing materials that enhances functionality, durability, aesthetics, and sustainability. With specialized solutions like thermal insulation, lightweight partitions, strong bonding agents, and perfect wall finishes, we ensure modern living spaces that exceed expectations—aligning with your lifestyle needs while contributing to long-lasting and environmentally conscious developments.',
     cta:'Begin My Project’s finishing ',
     getStarted:'Yes! Let’s Get Started',
-    image: service4,
+    image: constructionMaterial,
     secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
     features: [
       "Expert Design Insights",
@@ -266,7 +273,7 @@ const serviceDetails = {
     description: "We define your project's potential and positioning by incorporating high-impact marketing strategies. With a focus on creating a compelling narrative, we highlight the key features and brilliance of your project. Through creative campaigns, we ensure your project stands out in the market, driving attention and engagement. Our approach effectively showcases its value, attracting the right audience and stakeholders for sustainable growth.",
     cta:'Let’s Market my Project',
     getStarted:'Yes! Let’s Get Started',
-    image: service4,
+    image: marketing,
     secondaryImages: [serviceDetail1, serviceDetail3, serviceDetail2],
     features: [
       'Targeted Audience Engagement',
@@ -299,9 +306,8 @@ const ServiceDetails = () => {
   const service = serviceDetails[serviceSlug];
 
   if (!service) {
-    return <Container><NotFound/></Container>;
+    return <Container><NotFound /></Container>;
   }
-
   return (
     <>
       {/* Hero Section */}
@@ -397,7 +403,7 @@ const ServiceDetails = () => {
           </Row>
 
           {/* Gallery Section */}
-          <Row className="mt-5">
+          {/* <Row className="mt-5">
             <Col xs={12}>
               <h3 className="mb-4">Our Portfolio of Eminence</h3>
               <Row className="g-3">
@@ -414,10 +420,10 @@ const ServiceDetails = () => {
                 ))}
               </Row>
             </Col>
-          </Row>
+          </Row> */}
 
           {/* Related Services */}
-          <Row className="mt-5">
+          {/* <Row className="mt-5">
             <Col xs={12}>
               <h3 className="mb-4">Want to know what else we do?</h3>
               <Row className="g-3">
@@ -431,7 +437,7 @@ const ServiceDetails = () => {
                           variant="top" 
                           src={relatedService.image} 
                           alt={relatedService.title}
-                          style={{ height: '180px', objectFit: 'cover' }}
+                          style={{ objectFit: 'cover' }}
                         />
                         <Card.Body>
                           <Card.Title>{relatedService.title}</Card.Title>
@@ -439,20 +445,12 @@ const ServiceDetails = () => {
                             {relatedService.description.substring(0, 100)}...
                           </Card.Text>
                         </Card.Body>
-                        <Card.Footer className="bg-transparent border-0">
-                          <BodlaButton 
-                            text="Learn More" 
-                            variant="outline-primary" 
-                            size="sm" 
-                            link={`/services/${relatedService.title.toLowerCase().replace(/\s+/g, '-')}`} 
-                          />
-                        </Card.Footer>
                       </Card>
                     </Col>
                   ))}
               </Row>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </section>
 

@@ -144,13 +144,13 @@ const projectDetails = {
     description: 'With Business Hub, reimagine the urban living with a dynamic multi-feature first grandiose mall of DHA Multan, residing adjacent to DHA Head Office, on 300ft wide Main Boulevard, ensuring its visibility and accessibility. Business Hub, a modernist 7-storey edifice stretches over an area of 18-kanal, integrating a perfect blend of expansive commercial outlets, marvelous offices and posh 1, 2, 3 – Bedroom Apartments precisely designed to keep pace with the evolving preferences of modern market. The mesmerizing views diligently fuses with the nexus of business opportunities, Central Business Square, creating a lifestyle beyond imagination.',
     whyproject: [
       { title: 'DHA Approved.' },
-      { title: 'First Multi-purpose Mega Mall.'},
-      { title: 'Offering Contemporary Living.'},
-      { title: 'Resided on 300ft Wide Main Boulevard.'},
-      { title: 'Phase-1 Completed.'},
-      { title: 'Possession-able Shops on Ground Floor & Lower Ground Floor.'},
-      { title: 'Connected with DHA Head Office through a bridge.'},
-      { title: '18-Kanal 7-Storey Building.'},
+      { title: 'First Multi-purpose Mega Mall.' },
+      { title: 'Offering Contemporary Living.' },
+      { title: 'Resided on 300ft Wide Main Boulevard.' },
+      { title: 'Phase-1 Completed.' },
+      { title: 'Possession-able Shops on Ground Floor & Lower Ground Floor.' },
+      { title: 'Connected with DHA Head Office through a bridge.' },
+      { title: '18-Kanal 7-Storey Building.' },
     ],
     amenities: [
       { title: 'Mosque', icon: "mosque", },
@@ -167,22 +167,22 @@ const projectDetails = {
       { title: '24 Hours Power backup', icon: "powerBackup" },
     ],
     nearbyPlaces: [
-{ icon: 'dhaHeadOffice', title: 'DHA Head Office',},
-{ icon: 'businessSquare', title: 'Central Business Square',}, 
-{ icon: 'mainBoulevard', title: 'Facing 300ft MB',}, 
-{ icon: 'healthCare', title: 'In front of Health Care',}, 
-{ icon: 'mosque', title: 'Grand Jamia Masjid',}, 
-{ icon: 'culturalCentre', title: 'Cultural Centre',},
-{ icon: 'sportsComplex', title: 'Indoor Sports Complex',},
-{ icon: 'parks', title: 'Parks',}, 
-{ icon: 'kashmirPark', title: 'Kashmir Park',},
-{ icon: 'sportsComplex', title: 'Sports Complex',},
-{ icon: 'road', title: 'DHA Club',},
-// { icon: 'basketball', title: 'Basket Ball Court',},
-{ icon: 'library', title: 'DHA Library',},
-// { icon: 'zoo360', title: '360 Zoo',},
-{ icon: 'road', title: 'MPS road access',},
-{ icon: 'gate', title: 'All gates access',},
+      { icon: 'dhaHeadOffice', title: 'DHA Head Office', },
+      { icon: 'businessSquare', title: 'Central Business Square', },
+      { icon: 'mainBoulevard', title: 'Facing 300ft MB', },
+      { icon: 'healthCare', title: 'In front of Health Care', },
+      { icon: 'mosque', title: 'Grand Jamia Masjid', },
+      { icon: 'culturalCentre', title: 'Cultural Centre', },
+      { icon: 'sportsComplex', title: 'Indoor Sports Complex', },
+      { icon: 'parks', title: 'Parks', },
+      { icon: 'kashmirPark', title: 'Kashmir Park', },
+      { icon: 'sportsComplex', title: 'Sports Complex', },
+      { icon: 'road', title: 'DHA Club', },
+      // { icon: 'basketball', title: 'Basket Ball Court',},
+      { icon: 'library', title: 'DHA Library', },
+      // { icon: 'zoo360', title: '360 Zoo',},
+      { icon: 'road', title: 'MPS road access', },
+      { icon: 'gate', title: 'All gates access', },
     ],
     images: [businessHubslide1, businessHubslide2, businessHubslide3, businessHubslide4],
     floorPlans: [business1, business2, business3, business4, business5, business6, business7, business8, business9], // array of floor plan images
@@ -203,7 +203,7 @@ const projectDetails = {
       },
     ],
     videoLink: "https://www.youtube.com/embed/Ndr0vVfjrQs?si=VLGx-Yqg3ZFimX-w",
-    virtualTour:virtualTourBHub,
+    virtualTour: virtualTourBHub,
   },
   'one-destination': {
     ...projectTemplate,
@@ -239,20 +239,20 @@ const projectDetails = {
     ],
     nearbyPlaces: [
       { title: "Shah Yousaf Gardez Gate (Bosan Road Main Gate)", icon: "dhaGate" },
-  { title: "DHA Arena", icon: "arena" },
-  { title: "DHA Food Court", icon: "foodCourt" },
-  { title: "DHA Shopping Arcade", icon: "cart" },
-  { title: "DHA Villas", icon: "villa" },
-  { title: "Askari Villas", icon: "villa" },
-  { title: "Defence Orchard Events Complex", icon: "eventsComplex" },
-  { title: "Health Care", icon: "healthCare" },
-  { title: "Villas Sports Complex", icon: "sportsComplex" },
-  { title: "360 Zoo", icon: "zoo360" },
-  { title: "Facing 300ft MB", icon: "mainBoulevard" },
-  { title: "Bilal Mosque", icon: "mosque" },
-  { title: "Parks", icon: "parks" },
-  { title: "Schools", icon: "school" },
-  { title: "DHA Degree College", icon: "university" },
+      { title: "DHA Arena", icon: "arena" },
+      { title: "DHA Food Court", icon: "foodCourt" },
+      { title: "DHA Shopping Arcade", icon: "cart" },
+      { title: "DHA Villas", icon: "villa" },
+      { title: "Askari Villas", icon: "villa" },
+      { title: "Defence Orchard Events Complex", icon: "eventsComplex" },
+      { title: "Health Care", icon: "healthCare" },
+      { title: "Villas Sports Complex", icon: "sportsComplex" },
+      { title: "360 Zoo", icon: "zoo360" },
+      { title: "Facing 300ft MB", icon: "mainBoulevard" },
+      { title: "Bilal Mosque", icon: "mosque" },
+      { title: "Parks", icon: "parks" },
+      { title: "Schools", icon: "school" },
+      { title: "DHA Degree College", icon: "university" },
     ],
     pricingPlans: [
       {
@@ -293,7 +293,7 @@ const projectDetails = {
     size: '10 Acres',
     status: 'Completed',
     videoLink: "https://www.youtube.com/embed/Rz9MYwIQ_7c?si=PcdEq3beGri3f8C8",
-    virtualTour:virtualTour1D,
+    virtualTour: virtualTour1D,
   },
   'golf-view-rumanza': {
     ...projectTemplate,
@@ -330,10 +330,10 @@ const projectDetails = {
       { title: '24/7 Security', icon: "cctv" },
     ],
     nearbyPlaces: [
-  { title: "Rumanza Commercial", icon: "commercial" },
-  { title: "Facing Rumanza Golf Course", icon: "golfCourse" },
-  { title: "Rumanza by Pearl Continental", icon: "hotel" },
-  { title: "Lahore-Multan Motorway", icon: "motorway" },
+      { title: "Rumanza Commercial", icon: "commercial" },
+      { title: "Facing Rumanza Golf Course", icon: "golfCourse" },
+      { title: "Rumanza by Pearl Continental", icon: "hotel" },
+      { title: "Lahore-Multan Motorway", icon: "motorway" },
 
     ],
     pricingPlans: [
@@ -415,7 +415,7 @@ const projectDetails = {
     size: '15 Acres',
     status: 'Upcoming',
     videoLink: "https://www.youtube.com/embed/w5QEV7t8kuA?si=trZzHw-WGeOkTSsj",
-    virtualTour:virtualTourGVR,
+    virtualTour: virtualTourGVR,
   },
   'bodla-homes': {
     ...projectTemplate,
@@ -430,56 +430,41 @@ const projectDetails = {
     description: "Bodla Builders proudly presents Bodla Homes in Sector 'V' of DHA Multan, offering contemporary living in its 5.2-Marla and 8-Marla Villas. The 5.2 Marla villas (2220 sq.ft.) feature 4 bedrooms, spacious car parking, a rooftop BBQ, and solar panel space.The 8-Marla villas (2905 sq.ft.) are designed for luxury, featuring 5 bedrooms, 2-car parking, a backyard service area, a rooftop BBQ space, and solar panel provision.",
     secondDescription: "Both villa categories are ideally located near Parks, a Masjid, Community Facilities, a 150ft wide road, Health & Education City, and Shah Shams Tabraiz Gate, offering complete luxury and convenience.",
     whyproject: [
-      { title: 'DHA Approved. ' },
-      { title: 'Prime & Populous Location. ' },
-      { title: 'Commercial Gateway. ' },
-      { title: 'Ground Floor Possession in 1-year.' },
-      { title: 'Modern Amenities.' },
-      { title: 'Surrounded by DHA & Askari Villas. ' },
-      { title: 'Fast Growing Community.' },
-      { title: '2.78 Acres. ' },
+      { title: 'DHA Approved.' },
+      { title: 'Resided in 8-Marla Category of V-sector.' },
+      { title: 'Exclusive Mumty Advantage in 5.2 Marla Home.' },
+      { title: 'Beyond Standard Size (2220 Sqft).' },
+      { title: 'Extravagantly Spacious Home (2905 Sqft).' },
+      { title: '4 & 5 Luxury Bedrooms with attached baths.' },
+      { title: 'In front of Commercial Complex, Park and Mosque.' },
+      { title: 'Resided in front of Commercial Complex, Park and Mosque.' },
+      { title: 'Capacious 2-Car Parking Space.' },
+      { title: 'Breathtaking Terrace View.' },
+      { title: 'In vicinity to 150ft wide road. ' },
+      { title: 'Close to Sports Complex & Health & Medical Complex.' },
+      { title: 'In Developing Sector-V of DHA Multan.' },
     ],
     amenities: [
-      // 	5.2-Marla Bodla Homes
-      { title: 'Drawing Room', icon: 'livingRoom', },
-      { title: 'Family Lounge', icon: 'familyLange', },
-      { title: 'Dinning Area', icon: 'dining', },
-      { title: 'Kitchen', icon: 'kitchen', },
-      { title: 'Backyard Service Space', icon: 'mosque', },
-      { title: 'Beds + Attached Baths', icon: 'mosque', },
-      { title: 'FF Kitchenette', icon: 'kitchen', },
-      { title: 'Terrace', icon: 'terrace', },
-      { title: 'BBQ Terrace', icon: 'barbecue', },
-      { title: 'Roof Top Solar Panel Area', icon: 'solarPanel', },
-      { title: 'Spacious Car Parking', icon: 'garage', },
-      // 	8-Marla Bodla Homes
-      { title: 'Evaporative Air Cooler', icon: 'mosque', },
-      { title: 'Drawing Room', icon: 'livingRoom', },
-      { title: 'Spacious Living Room', icon: 'livingRoom', },
-      { title: 'Store Room', icon: 'storeRoom', },
-      { title: 'Maid Room', icon: 'maid', },
+      { icon: 'coverArea', title: 'Covered Area: 2220 – 2905 Sq.Ft.' },
+      { icon: 'bed', title: 'Bedrooms: 4–5 Beds with Attached Baths' },
+      { icon: 'drawingRoom', title: 'Drawing Room' },
+      { icon: 'dining', title: 'Family Lounge + Dining Area' },
+      { icon: 'kitchen', title: 'Kitchen + FF Kitchenette' },
+      { icon: 'livingRoom', title: 'Spacious Living Room' },
+      { icon: 'storeRoom', title: 'Store Room' },
+      { icon: 'maid', title: 'Maid Room' },
+      { icon: 'dining', title: 'Backyard Service Space' },
+      { icon: 'barbecue', title: 'Roof Top BBQ Terrace' },
+      { icon: 'solarPanel', title: 'Roof Top Solar Panel Area' },
+      { icon: 'snowflake', title: 'Evaporative Air Cooler (available in larger unit)' },
+      { icon: 'garage', title: 'Spacious Car Parking (1–2 Cars)' },
     ],
     nearbyPlaces: [
-      {
-        icon: 'airPlane', // name of the icon from your Icons component
-        title: 'Airport',
-      },
-      {
-        icon: 'university',
-        title: 'University',
-      },
-      {
-        icon: 'motorway',
-        title: 'Motorway',
-      },
-      {
-        icon: 'hospital',
-        title: 'Hospital',
-      },
-      {
-        icon: 'bypassRoad',
-        title: 'Bypass Road',
-      },
+      { icon: 'sportsComplex', title: 'Sports Complex' },
+      { icon: 'hospital', title: 'Health & Education City' },
+      { icon: 'kashmirPark', title: 'Kashmir Park' },
+      { icon: 'gate', title: 'Shah Shams Tabrez Gate (Matital Gate)' },
+      { icon: 'mosque', title: 'Islamic Chowk' },
     ],
     pricingPlans: [
       {
@@ -560,7 +545,7 @@ const projectDetails = {
     size: '8 Marla Plots',
     status: 'Ongoing',
     videoLink: "https://www.youtube.com/embed/agUm10fzXDQ?si=8rh8psHk6XPFNdL8",
-    virtualTour:virtualTourBHome,
+    virtualTour: virtualTourBHome,
   }
 };
 
@@ -601,14 +586,14 @@ const ProjectDetails = () => {
     "uploadDate": "2024-05-01", // Update with actual date
     "contentUrl": project.videoLink
   };
-  
+
   // Add to your Helmet component:
   <script type="application/ld+json">
     {JSON.stringify(videoSchema)}
   </script>
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>{`${project.title} | Bodla Group - ${project.spantitle}`}</title>
         <meta name="description" content={project.description} />
         <meta name="keywords" content={`Bodla Group, DHA Multan, ${project.title}, ${project.keywords?.join(', ') || ''}`} />
@@ -693,7 +678,7 @@ const ProjectDetails = () => {
           </Card>
         </Container>
         {/* <NearbyLocations locations={nearbyLocations} /> */}
-        <Container className='project-whythis py-4'data-aos="fade-up">
+        <Container className='project-whythis py-4' data-aos="fade-up">
           <Row>
             <Col xs={12} md={6}>
               <h3>Why {project.title} </h3>
@@ -710,7 +695,7 @@ const ProjectDetails = () => {
           </Row>
         </Container>
         {/* Amenities and Project Facts Section */}
-        <Container className='text-center mt-5'data-aos="fade-up">
+        <Container className='text-center mt-5' data-aos="fade-up">
           <Row className="gy-4">
             <Col xs={12} lg={12}>
               <PageTitle title="Amenities and Features" />
@@ -732,7 +717,7 @@ const ProjectDetails = () => {
           </Row>
         </Container>
         {/* Nearby Places Section */}
-        <Container className='text-center mt-5'data-aos="fade-up">
+        <Container className='text-center mt-5' data-aos="fade-up">
           <PageTitle title="Nearby Places" />
           <Row className='justify-content-center gy-4'>
             {project.nearbyPlaces.map((nearby, index) => (

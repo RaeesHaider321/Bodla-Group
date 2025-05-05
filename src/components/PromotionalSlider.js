@@ -9,6 +9,15 @@ import promotion1 from '../images/promotion-1.jpg';
 import promotion2 from '../images/promotion-2.jpg';
 import promotion3 from '../images/promotion-3.jpg';
 import promotion4 from '../images/promotion-4.jpg';
+
+import promotion1dPlan from '../images/promotion-1dPlan.webp';
+import promotion1d2 from '../images/promotion-1d2.webp';
+import promotion8marla2 from '../images/promotion-8marla2.webp';
+import promotion8marla1 from '../images/promotion-8marla1.webp';
+
+
+
+
 import Icons from "../components/Icon";
 
 // Custom Next Arrow Component
@@ -53,10 +62,10 @@ const ProductSlider = () => {
     };
 
     const products = [
-        { id: 1, name: 'Get your own Commercial Shop: Rs. 88,000/- per Month Installment.', image: promotion1, link: '/product/1' },
-        { id: 2, name: 'Get a Property from your Salary Cheque.', image: promotion2, link: '/product/2' },
-        { id: 3, name: 'Plots in Rumanza with just 5% Down-payment.', image: promotion3, link: '/product/3' },
-        { id: 4, name: 'Affordable, stylish home with spacious rooms and excellent surroundings.', image: promotion4, link: '/product/4' },
+        { id: 1, name: 'Get your own Commercial Shop: Rs. 88,000/- per Month Installment.', image: promotion1dPlan, link: '/product/1' },
+        { id: 2, name: 'Get a Property from your Salary Cheque.', image: promotion1d2, link: '/product/2' },
+        { id: 3, name: 'Plots in Rumanza with just 5% Down-payment.', image: promotion8marla2, link: '/product/3' },
+        { id: 4, name: 'Affordable, stylish home with spacious rooms and excellent surroundings.', image: promotion8marla1, link: '/product/4' },
         { id: 5, name: 'Move-in-ready home with modern fittings and a great location.', image: promotion3, link: '/product/5' },
         { id: 6, name: 'Exclusive property offering security, luxury, and world-class amenities.', image: promotion3, link: '/product/6' },
         { id: 7, name: 'Perfect family home with parks, schools, and friendly surroundings.', image: promotion3, link: '/product/7' },
@@ -76,8 +85,8 @@ const ProductSlider = () => {
             <Container fluid>
             <Slider {...settings}>
                 {products.map((product, index) => (
-                    <Link to={product.link} key={product.id} className="product-link"> 
-                        <Card className="product-item">
+                    <Link key={product.id} className="product-link"> 
+                        <Card className="product-item h-100">
                             <Card.Img variant="top" src={product.image} alt={product.name} />
                             <Card.Body className='text-start'>
                                 <Card.Text>{product.name}</Card.Text>
