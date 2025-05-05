@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const CardComponent = ({ image, title, description, serviceIcon, link }) => {
   return (
-    
     <div className="card-container h-100">
       <Link to={link} style={{ textDecoration: 'none' }}>
         <Card className="h-100">
