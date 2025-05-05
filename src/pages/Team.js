@@ -20,7 +20,7 @@ const bosses = [
     id: 1,
     name: "Sohaib Tariq Bodla",
     designation: "Chief Executive Officer",
-    idescription: "‘We will grow Multan, and we will grow with DHA Multan. From the land to development, from building homes to tall buildings, we aim to be a part in every ounce of its development’",
+    idescription: "Together with DHA Multan, we grow. From land to landmarks, from homes to high-rises — we're committed to shaping every step of Multan’s progress.",
     description: "Driven by passion for our land and commitment to sustainability, we’re proud to lead the way in DHA Multan’s growth, rising above challenges to ensure a smooth journey for all our stakeholders—from investors to the Multan community. With a team of experts and our distinctive culture, we are dedicated to pioneering transformative projects that will shape the future of Multan for generations ahead.",
     image: ceo,
     social: {
