@@ -4,16 +4,18 @@ import { useNavigate } from 'react-router-dom';
 import Icons from "../components/Icon";
 import BodlaButton from '../components/Button';
 
-import landAcquisition from '../images/landAcquisition.jpg';
-import construction from '../images/construction.jpg';
-import landTrading from '../images/landTrading.jpg';
-import marketing from '../images/marketing.jpg';
-import constructionMaterial from '../images/constructionMaterial.jpg';
-import scaleConstruction from '../images/scaleConstruction.jpg';
 import service1 from '../images/businessHub.jpg';
 import service2 from '../images/businessHub.jpg';
 import service3 from '../images/businessHub.jpg';
 import service4 from '../images/businessHub.jpg';
+
+
+import landAcquisition from '../images/landAcquisition.jpg';
+import landTrading from '../images/landPlotTrading.avif';
+import construction from '../images/construction.jpg';
+import development from '../images/construction.jpg';
+import constructionMaterial from '../images/constructionMaterial.jpg';
+import marketing from '../images/marketing.jpg';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -76,44 +78,44 @@ const Services = () => {
     {
       id: 1,
       imageSrc: landAcquisition,
-      altText: "land Acquisition",
-      title: "Strategic Acquisition",
-      // caption: "Strategic Acquisition",
+      altText: "Land Acquisition",
+      title: "Land Acquisition",
+      // caption: "Precise Location Procurement – Investor Centric Approach – Growth Driven Potential",
     },
     {
       id: 2,
-      imageSrc: construction,
-      altText: "Construction Services",
-      title: "Scalable Development",
-      // caption: "Scalable Development",
+      imageSrc: development,
+      altText: "Development",
+      title: "Development",
+      // caption: "Aesthetically Inspired - Refined Material - Durability In-built",
     },
     {
       id: 3,
       imageSrc: landTrading,
-      altText: "Interior Design",
-      title: "Smart Trading",
+      altText: "Plots Trading",
+      title: "Plots Trading",
       // caption: "Smart Trading",
     },
     {
       id: 4,
-      imageSrc: scaleConstruction,
-      altText: "Property Management",
-      title: "Sustainable Construction",
+      imageSrc: construction,
+      altText: "Construction",
+      title: "Construction Supplies",
       // caption: "Sustainable Construction ",
     },
     {
-      id: 4,
+      id: 5,
       imageSrc: constructionMaterial,
-      altText: "Property Management",
-      title: "Subtle Finishes",
+      altText: "Finishing Materialst",
+      title: "Finishing Materials",
       // caption: "Subtle Finishes",
     },
     {
-      id: 4,
+      id: 6,
       imageSrc: marketing,
-      altText: "Property Management",
-      title: "Standout Savvy Marketing",
-      // caption: "Standout Savvy Marketing",
+      altText: "Project Marketing",
+      title: "Project Marketing",
+      // caption: "Selling Stories - Making Brands Visible - Targeted Exposure",
     }
   ];
 

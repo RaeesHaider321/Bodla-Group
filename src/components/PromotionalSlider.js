@@ -62,14 +62,14 @@ const ProductSlider = () => {
     };
 
     const products = [
-        { id: 1, name: 'Get your own Commercial Shop: Rs. 88,000/- per Month Installment.', image: promotion1dPlan, link: '/product/1' },
-        { id: 2, name: 'Get a Property from your Salary Cheque.', image: promotion1d2, link: '/product/2' },
-        { id: 3, name: 'Plots in Rumanza with just 5% Down-payment.', image: promotion8marla2, link: '/product/3' },
-        { id: 4, name: 'Affordable, stylish home with spacious rooms and excellent surroundings.', image: promotion8marla1, link: '/product/4' },
-        { id: 5, name: 'Move-in-ready home with modern fittings and a great location.', image: promotion3, link: '/product/5' },
-        { id: 6, name: 'Exclusive property offering security, luxury, and world-class amenities.', image: promotion3, link: '/product/6' },
-        { id: 7, name: 'Perfect family home with parks, schools, and friendly surroundings.', image: promotion3, link: '/product/7' },
-        { id: 8, name: 'Elegant home combining comfort, style, and a peaceful environment.', image: promotion3, link: '/product/8' },
+        { id: 1, name: 'Instalment plan of your own choice.', image: promotion1dPlan, link: '/product/1' },
+        { id: 2, name: 'Invest Smart with your Salary Cheque.', image: promotion1d2, link: '/product/2' },
+        { id: 3, name: 'Unparalleled Living Experience.', image: promotion8marla2, link: '/product/3' },
+        { id: 4, name: 'The Payment Plan of your choice.', image: promotion8marla1, link: '/product/4' },
+        // { id: 5, name: 'Move-in-ready home with modern fittings and a great location.', image: promotion3, link: '/product/5' },
+        // { id: 6, name: 'Exclusive property offering security, luxury, and world-class amenities.', image: promotion3, link: '/product/6' },
+        // { id: 7, name: 'Perfect family home with parks, schools, and friendly surroundings.', image: promotion3, link: '/product/7' },
+        // { id: 8, name: 'Elegant home combining comfort, style, and a peaceful environment.', image: promotion3, link: '/product/8' },
     ];
 
     return (

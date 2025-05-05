@@ -258,7 +258,9 @@ a {
   color: var(--white);
   transition: background 0.4s ease-in-out;
 }
-
+.card .card-body p{
+  font-weight: normal;
+}
 .card:hover {
   background: var(--secondary-gradient);
 }
