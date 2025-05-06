@@ -88,6 +88,27 @@
   }
 
 
+
+
+  /*  */
+  
+  .navbar a.active{
+    font-weight: bold;
+  }
+  .navbar a.active::after {
+    width: 40%;
+    background-color: var(--white);
+  }
+  
+  .navbar a.active:visited {
+    color: var(--white);
+  }
+  
+  .navbar a:visited::after, .navbar a.active:visited::after {
+    background-color: var(--white);
+  }
+  /*  */
+
   @media (min-width: 992px) {
     .dropdown-hover:hover .dropdown-menu {
       display: block;
@@ -109,3 +130,6 @@
       pointer-events: auto;
     }
   }
+
+
+  
