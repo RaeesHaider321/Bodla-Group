@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,6 +20,7 @@ import DHAMultan from "./pages/DHAMultan";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
+
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
 import "./components/Header.css"; // Header CSS
@@ -29,6 +29,8 @@ import "./components/TrustedAdvisors.css"; // Trusted Advisors CSS
 import "./components/ScrollToTop.css"; // CSS for Scroll to Top Button
 import "./components/Team.css"; // CSS for Team
 import "./components/Reit.css"; // CSS for Reit
+
+import RedirectHandler from "./components/RedirectHandler";
 
 // This component will handle scrolling to top on route change
 function ScrollToTop() {
@@ -75,6 +77,7 @@ function App() {
         <Header />
         <ScrollToTop /> {/* This will handle scrolling to top on route change */}
         <div className="routes-container">
+         <RedirectHandler/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
