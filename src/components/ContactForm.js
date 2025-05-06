@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Form} from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import BodlaButton from './Button';
 import Icons from "../components/Icon";
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,7 +29,6 @@ const ContactForm = () => {
       [name]: value
     });
     
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -41,7 +41,6 @@ const ContactForm = () => {
     let isValid = true;
     const newErrors = { ...errors };
 
-    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
       isValid = false;
@@ -50,7 +49,6 @@ const ContactForm = () => {
       isValid = false;
     }
 
-    // Email validation
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
       isValid = false;
@@ -59,7 +57,6 @@ const ContactForm = () => {
       isValid = false;
     }
 
-    // Phone validation
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
       isValid = false;
@@ -71,7 +68,6 @@ const ContactForm = () => {
       isValid = false;
     }
 
-    // Message validation
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
       isValid = false;
@@ -92,18 +88,28 @@ const ContactForm = () => {
       setSubmitStatus(null);
       
       try {
-        // Using FormSubmit.co service to send the email
-        const response = await axios.post('https://formsubmit.co/ajax/support@bodlagroup.com', {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message
-        }, {
+        // Solution 1: Using FormSubmit.co with enhanced configuration
+        const response = await axios({
+          method: 'post',
+          url: 'https://formsubmit.co/ajax/support@bodlagroup.com',
+          data: {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+            _subject: 'New Contact Form Submission',
+            _template: 'box',
+            _captcha: 'false' // Disable captcha if not needed
+          },
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
-          }
+          },
+          timeout: 15000 // Increased timeout
         });
+
+        // Alternative Solution 2: Using your own API endpoint
+        // const response = await axios.post('/api/contact', formData);
 
         if (response.data.success === "true") {
           setSubmitStatus('success');
@@ -115,9 +121,15 @@ const ContactForm = () => {
           });
         } else {
           setSubmitStatus('error');
+          console.error('FormSubmit.co returned false:', response.data);
         }
       } catch (error) {
-        console.error('Error submitting form:', error);
+        console.error('Full error details:', {
+          message: error.message,
+          response: error.response?.data,
+          request: error.request,
+          config: error.config
+        });
         setSubmitStatus('error');
       } finally {
         setIsSubmitting(false);
@@ -135,69 +147,79 @@ const ContactForm = () => {
       )}
       {submitStatus === 'error' && (
         <div className="alert alert-error">
-          There was an error submitting your form. Please try again later.
+          There was an error submitting your form. Please try again later or contact us directly.
         </div>
       )}
       
       <form onSubmit={handleSubmit} noValidate>
-      <Form.Group className="mb-3">
+        <Form.Group className="mb-3">
           <Form.Label htmlFor="name">Name*</Form.Label>
-          <Form.Control placeholder="Full name"
+          <Form.Control 
+            placeholder="Full name"
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={errors.name ? 'error' : ''}
+            className={errors.name ? 'is-invalid' : ''}
+            required
           />
-          {errors.name && <span className="error-message text-sm">{errors.name}</span>}
+          {errors.name && <div className="invalid-feedback d-block">{errors.name}</div>}
         </Form.Group>
         
         <Form.Group className="mb-3">
           <Form.Label htmlFor="email">Email*</Form.Label>
-          <Form.Control placeholder="Your email address"
+          <Form.Control 
+            placeholder="Your email address"
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={errors.email ? 'error' : ''}
+            className={errors.email ? 'is-invalid' : ''}
+            required
           />
-          {errors.email && <span className="error-message text-sm">{errors.email}</span>}
+          {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
         </Form.Group>
         
         <Form.Group className="mb-3">
           <Form.Label htmlFor="phone">Phone Number*</Form.Label>
-          <Form.Control placeholder="Drop your digits here"
+          <Form.Control 
+            placeholder="Drop your digits here"
             type="tel"
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className={errors.phone ? 'error' : ''}
+            className={errors.phone ? 'is-invalid' : ''}
+            required
           />
-          {errors.phone && <span className="error-message text-sm">{errors.phone}</span>}
+          {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
         </Form.Group>
         
         <Form.Group className="mb-3">
           <Form.Label htmlFor="message">Message*</Form.Label>
-          <Form.Control as="textarea" rows={4} placeholder="Tell us what’s on your mind…"
+          <Form.Control 
+            as="textarea" 
+            rows={4} 
+            placeholder="Tell us what's on your mind..."
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className={errors.message ? 'error' : ''}
+            className={errors.message ? 'is-invalid' : ''}
+            required
           />
-          {errors.message && <span className="error-message text-sm">{errors.message}</span>}
+          {errors.message && <div className="invalid-feedback d-block">{errors.message}</div>}
         </Form.Group>
         
         <BodlaButton
-            disabled={isSubmitting}
-            text={isSubmitting ? 'Sending...' : 'Submit'}
-            icon={<Icons name="rightArrow" />}
-            variant="primary"
-            type="submit"
-          />
+          disabled={isSubmitting}
+          text={isSubmitting ? 'Sending...' : 'Submit'}
+          icon={<Icons name="rightArrow" />}
+          variant="primary"
+          type="submit"
+        />
       </form>
     </div>
   );

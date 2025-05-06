@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import cardImage from '../images/card-image.jpg'
 import sohaibBodla from '../images/team/sohaibTariqBodla-CEO.jpg'
 import relationship from '../images/update-1.jpg'
 import ExpandingourHorizons from '../images/ExpandingourHorizons.jpg'

@@ -5,10 +5,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import './ProductSlider.css';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import promotion1 from '../images/promotion-1.jpg';
-import promotion2 from '../images/promotion-2.jpg';
-import promotion3 from '../images/promotion-3.jpg';
-import promotion4 from '../images/promotion-4.jpg';
 
 import promotion1dPlan from '../images/promotion-1dPlan.webp';
 import promotion1d2 from '../images/promotion-1d2.webp';

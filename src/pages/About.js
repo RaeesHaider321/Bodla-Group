@@ -3,19 +3,11 @@ import { Container, Image, Row, Col, Card } from 'react-bootstrap';
 import PageTitle from '../components/PageTitle';
 import Reit from '../components/Reit';
 
-// Image imports (grouped by category for better organization)
-// Carousel images
-import multan from '../images/multan.jpg';
-import oneDestination from '../images/oneDestination.png';
-import bodlaHomes from '../images/oneDestination.png';
-import businessHub from '../images/oneDestination.png';
-
 // Collaboration images
 import dhaBodla from '../images/CollaborationWithDHA.png';
 import bodlaLogo from '../images/footer-logo.png';
 
 // Project gallery images
-import cardImage from '../images/card-image.jpg';
 import oneD from '../images/oneD.jpg';
 import bHomes from '../images/bHomes.jpg';
 import oneDestin from '../images/oneDestin.jpg';
@@ -52,34 +44,6 @@ const expandedData = [
 ];
 
 const About = () => {
-  const carouselItems = [
-    {
-      image: multan,
-      alt: "Multan heritage",
-      title: "Rooted in Multan's heritage, Bodla's hard work and time collaborated to build lasting value",
-      description: "Nulla vitae elit libero, a pharetra augue mollis interdum."
-    },
-    {
-      image: oneDestination,
-      alt: "One Destination",
-      title: "One Destination – The Ultimate Business & Lifestyle Hub in DHA Multan.",
-      description: "Nulla vitae elit libero, a pharetra augue mollis interdum."
-    },
-    {
-      image: bodlaHomes,
-      alt: "Bodla Homes",
-      title: "Where Deals Flow and Businesses Grow - Bodla Business Hub, DHA's Power Address",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      image: businessHub,
-      alt: "Business Hub",
-      title: "Where Deals Flow and Businesses Grow - Bodla Business Hub, DHA's Power Address",
-      description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
-    }
-  ];
-
-
   return (
     <>
       <div className='bodlaKahani' data-aos="fade-up" data-aos-duration="1300">
