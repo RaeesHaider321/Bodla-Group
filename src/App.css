@@ -1115,6 +1115,16 @@ a {
 .areaUnitConverter .result h2:last-child, .areaUnitConverter .result p:last-child{
   margin-bottom: 0;
 }
-.popularConversions{
-
+.areaUnitConverter .btn-group .btn-outline-secondary{
+  background: rgb(255, 255, 255, .1);
+  border-color: rgb(255, 255, 255, .2);
+  color: var(--white);
+}
+.areaUnitConverter .btn-group .btn-secondary{
+  background: var(--primary);
+  border-color: rgb(255, 255, 255, .2);
+  color: var(--white);
+}
+.areaUnitConverter .form-select option{
+  background: var(--background);
 }

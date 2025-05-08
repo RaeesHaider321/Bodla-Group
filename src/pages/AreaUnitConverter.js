@@ -249,19 +249,19 @@ const AreaUnitConverter = () => {
                         <Form.Label>Select Marla Size:</Form.Label>
                         <ButtonGroup className="w-100">
                           <Button
-                            variant={activeMarla === 'marla225' ? 'primary' : 'outline-primary'}
+                            variant={activeMarla === 'marla225' ? 'secondary' : 'outline-secondary'}
                             onClick={() => handleMarlaSelect('marla225')}
                           >
                             225 sq.ft.
                           </Button>
                           <Button
-                            variant={activeMarla === 'marla250' ? 'primary' : 'outline-primary'}
+                            variant={activeMarla === 'marla250' ? 'secondary' : 'outline-secondary'}
                             onClick={() => handleMarlaSelect('marla250')}
                           >
                             250 sq.ft.
                           </Button>
                           <Button
-                            variant={activeMarla === 'marla272' ? 'primary' : 'outline-primary'}
+                            variant={activeMarla === 'marla272' ? 'secondary' : 'outline-secondary'}
                             onClick={() => handleMarlaSelect('marla272')}
                           >
                             272 sq.ft.
