@@ -19,6 +19,7 @@ import Team from "./pages/Team";
 import DHAMultan from "./pages/DHAMultan";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AreaUnitConverter from "./pages/AreaUnitConverter";
 
 
 import NotFound from "./pages/NotFound";
@@ -91,6 +92,7 @@ function App() {
             <Route path="/Terms" element={<Terms />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
           </Routes>
         </div>
         <Footer />

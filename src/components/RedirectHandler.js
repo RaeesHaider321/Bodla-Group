@@ -1,3 +1,4 @@
+// src/components/RedirectHandler.js
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -16,7 +17,6 @@ const RedirectHandler = () => {
       '/bhub':'/Projects/business-hub',
       '/rumanza':'/Projects/golf-view-rumanza',
       '/dha':'/DHAMultan',
-      'https://www.zameen.com/':'https://www.bodlagroup.com/',
     };
 
     if (redirects[path]) {

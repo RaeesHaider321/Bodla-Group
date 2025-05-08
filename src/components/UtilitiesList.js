@@ -4,7 +4,7 @@ import UtilitiesCard from "../components/UtilitiesCard";
 import Icons from "../components/Icon";
 
 const utilities = [
-  { id: 1, icon: <Icons name="mathematics" />, title: "Area Unit Converter", link: "/Services" },
+  { id: 1, icon: <Icons name="mathematics" />, title: "Area Unit Converter", link: "/AreaUnitConverter" },
   { id: 2, icon: <Icons name="excavator" />, title: "Construction Cost Calculator", link: "/Services" },
   { id: 3, icon: <Icons name="unitPriceCalculator" />, title: "Unit Price Calculator", link: "/Services" },
   { id: 4, icon: <Icons name="plotPriceCalculator" />, title: "Plot Price Calculator", link: "/Services" },

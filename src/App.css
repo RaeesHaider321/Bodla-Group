@@ -638,14 +638,15 @@ a {
   padding: 30px;
 }
 
-.contact-form .form-control {
+.contact-form .form-control, .form-control, .form-control:focus, .form-select  {
   background: rgb(255, 255, 255, .1);
   border-color: rgb(255, 255, 255, .2);
   color: var(--white);
 }
 
 .contact-form .form-control::placeholder,
-.contact-form .form-control::placeholder {
+.form-control::placeholder,
+.form-select::placeholder {
   color: var(--white);
   /* Change to your desired color */
   opacity: .7;
@@ -1075,4 +1076,45 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.areaUnitConverter .card{
+  background: var(--contact-card-gradient);
+  border-radius: 21px;
+  padding: 5%;
+}
+.areaUnitConverter .card:hover{
+  background: var(--contact-card-gradient);
+}
+.areaUnitConverter .card-body{
+  padding: 5%;
+  border-radius: 12px;
+  background: var(--background);
+}
+.areaUnitConverter .swap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.areaUnitConverter .swap,
+.areaUnitConverter .result{
+  background: rgb(255, 255, 255, .1);
+    border-color: rgb(255, 255, 255, .2);
+    color: var(--white);
+}
+.areaUnitConverter .result{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  border-radius: var(--bs-border-radius);
+}
+.areaUnitConverter .result h2:last-child, .areaUnitConverter .result p:last-child{
+  margin-bottom: 0;
+}
+.popularConversions{
+
 }

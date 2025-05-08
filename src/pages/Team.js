@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import NewsSubscription from '../components/NewsSubscription';
 import chairman from '../images/team/TahirIqbalBodla-Chairman.jpg';
 import ceo from '../images/team/sohaibTariqBodla-CEO.jpg';

@@ -80,7 +80,6 @@ const Home = () => {
       <div data-aos="fade-up" data-aos-duration="3300">
         <BodlaUpdates />
       </div>
-
       <div data-aos="fade-up" data-aos-duration="3600">
         <PromotionalSlider />
       </div>
