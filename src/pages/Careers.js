@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Col, Row, Card, Badge, Modal, Form, Button } from 'react-bootstrap';
+import { Container, Col, Row, Card, Badge, Modal, Form, Button, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Careers.css';
@@ -12,17 +12,18 @@ const CareersPage = () => {
     email: '',
     phone: '',
     message: '',
-    resume: null
+    resume: null,
   });
   const [departments, setDepartments] = useState([]);
   const [locations, setLocations] = useState([]);
   const [filters, setFilters] = useState({
     department: '',
-    location: ''
+    location: '',
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const mockJobs = [
@@ -37,14 +38,14 @@ const CareersPage = () => {
           'Develop new user-facing features using React.js',
           'Build reusable components and front-end libraries',
           'Translate designs and wireframes into high-quality code',
-          'Optimize components for maximum performance'
+          'Optimize components for maximum performance',
         ],
         requirements: [
           '3+ years of experience with React.js',
           'Strong proficiency in JavaScript, including ES6+',
           'Experience with Redux or similar state management',
-          'Familiarity with RESTful APIs'
-        ]
+          'Familiarity with RESTful APIs',
+        ],
       },
       {
         id: 2,
@@ -57,14 +58,14 @@ const CareersPage = () => {
           'Create user-centered designs',
           'Develop UI mockups and prototypes',
           'Identify and troubleshoot UX problems',
-          'Collaborate with product managers and engineers'
+          'Collaborate with product managers and engineers',
         ],
         requirements: [
           'Proven work experience as a UI/UX Designer',
           'Portfolio of design projects',
           'Knowledge of Figma or Adobe XD',
-          'Team spirit and strong communication skills'
-        ]
+          'Team spirit and strong communication skills',
+        ],
       },
       {
         id: 3,
@@ -77,52 +78,67 @@ const CareersPage = () => {
           'Develop and maintain server-side applications',
           'Implement security and data protection',
           'Integrate data storage solutions',
-          'Optimize applications for maximum speed and scalability'
+          'Optimize applications for maximum speed and scalability',
         ],
         requirements: [
           'Strong proficiency with Node.js and Express',
           'Experience with databases (SQL and NoSQL)',
           'Understanding of fundamental design principles',
-          'Proficient understanding of code versioning tools (Git)'
-        ]
-      }
+          'Proficient understanding of code versioning tools (Git)',
+        ],
+      },
     ];
 
     setJobs(mockJobs);
-
     const uniqueDepts = [...new Set(mockJobs.map(job => job.department))];
     const uniqueLocs = [...new Set(mockJobs.map(job => job.location))];
-
     setDepartments(uniqueDepts);
     setLocations(uniqueLocs);
   }, []);
 
-  const filteredJobs = jobs.filter(job => {
-    return (
-      (filters.department === '' || job.department === filters.department) &&
-      (filters.location === '' || job.location === filters.location)
-    );
-  });
+  const filteredJobs = jobs.filter(job => (
+    (filters.department === '' || job.department === filters.department) &&
+    (filters.location === '' || job.location === filters.location)
+  ));
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleFileChange = (e) => {
-    setFormData(prev => ({
-      ...prev,
-      resume: e.target.files[0]
-    }));
+    const file = e.target.files[0];
+    if (file) {
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      if (!allowedTypes.includes(file.type)) {
+        setErrorMessage('Please upload a PDF, DOC, or DOCX file.');
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        setErrorMessage('File size exceeds 5MB limit.');
+        return;
+      }
+      setErrorMessage('');
+      setFormData(prev => ({
+        ...prev,
+        resume: file,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (errorMessage) {
+      alert(errorMessage);
+      return;
+    }
+
     setSubmitting(true);
     setSubmitSuccess(false);
+    setErrorMessage('');
 
     const formPayload = new FormData();
     formPayload.append('jobTitle', selectedJob.title);
@@ -130,38 +146,58 @@ const CareersPage = () => {
     formPayload.append('email', formData.email);
     formPayload.append('phone', formData.phone || 'Not provided');
     formPayload.append('message', formData.message || 'Not provided');
+    formPayload.append('_subject', `Job Application: ${selectedJob.title}`);
+    formPayload.append('_cc', 'raees.haider@bodlabuilders.com.pk'); // CC to career@bodlagroup.com
     if (formData.resume) {
       formPayload.append('resume', formData.resume);
     }
 
     try {
-      // Using Formspree endpoint - replace with your Formspree form ID
-      await axios.post(
-        'https://formspree.io/f/your-form-id-here',
+      const response = await axios.post(
+        'https://formsubmit.co/ajax/career@bodlagroup.com',
         formPayload,
         {
           headers: {
-            'Accept': 'application/json'
-          }
+            'Accept': 'application/json',
+            'Content-Type': 'multipart/form-data',
+          },
         }
       );
 
-      setSubmitSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        resume: null
-      });
-      setTimeout(() => {
-        setSelectedJob(null);
-        setShowModal(false);
-        setSubmitSuccess(false);
-      }, 3000);
+      if (response.data.success) {
+        setSubmitSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          resume: null,
+        });
+        setTimeout(() => {
+          setSelectedJob(null);
+          setShowModal(false);
+          setSubmitSuccess(false);
+        }, 3000);
+      } else {
+        throw new Error(response.data.message || 'Submission failed');
+      }
     } catch (error) {
-      console.error('Error submitting application:', error);
-      alert(`Failed to submit application. Please try again or contact us directly at career@bodlagroup.com`);
+      console.error('Error submitting application:', error.response || error.message);
+      let errorMsg = 'Failed to submit application. Please try again or contact us at career@bodlagroup.com.';
+      if (error.response) {
+        if (error.response.status === 404) {
+          errorMsg = 'Form not found. Please ensure the Formsubmit endpoint is activated for support@bodlagroup.com.';
+        } else if (error.response.status === 400) {
+          errorMsg = 'Invalid submission data. Please check your inputs and try again.';
+        } else if (error.response.status === 413) {
+          errorMsg = 'File size too large. Please upload a file smaller than 5MB.';
+        } else if (error.response.data && error.response.data.message) {
+          errorMsg = error.response.data.message;
+        }
+      } else if (error.message.includes('Network Error')) {
+        errorMsg = 'Network error. Please check your internet connection and try again.';
+      }
+      setErrorMessage(errorMsg);
     } finally {
       setSubmitting(false);
     }
@@ -171,34 +207,34 @@ const CareersPage = () => {
     setSelectedJob(job);
     setShowModal(true);
     setSubmitSuccess(false);
+    setErrorMessage('');
   };
 
   const benefits = [
     {
-      icon: "💼",
-      title: "Career Growth",
-      description: "We invest in your development with training programs and mentorship."
+      icon: '💼',
+      title: 'Career Growth',
+      description: 'We invest in your development with training programs and mentorship.',
     },
     {
-      icon: "🏡",
-      title: "Flexible Work",
-      description: "Remote options and flexible hours to support work-life balance."
+      icon: '🏡',
+      title: 'Flexible Work',
+      description: 'Remote options and flexible hours to support work-life balance.',
     },
     {
-      icon: "💪",
-      title: "Health & Wellness",
-      description: "Comprehensive health, dental, and vision insurance plans."
+      icon: '💪',
+      title: 'Health & Wellness',
+      description: 'Comprehensive health, dental, and vision insurance plans.',
     },
     {
-      icon: "🎉",
-      title: "Team Culture",
-      description: "Regular team events and a collaborative, inclusive environment."
-    }
+      icon: '🎉',
+      title: 'Team Culture',
+      description: 'Regular team events and a collaborative, inclusive environment.',
+    },
   ];
 
   return (
     <Container fluid className="careers-page px-0">
-      {/* Hero Section */}
       <section className="careers-hero py-5 text-center text-white">
         <Container>
           <h1 className="display-4 fw-bold">Build Your Career With Us</h1>
@@ -207,20 +243,18 @@ const CareersPage = () => {
         </Container>
       </section>
 
-      {/* Job Openings Section */}
       <section className="job-openings-section py-5">
         <Container>
           <h2 className="text-center mb-4">Current Job Openings</h2>
           <p className="text-center text-muted mb-5">We're always looking for talented individuals to join our team</p>
-          
-          {/* Filters */}
+
           <Row className="mb-4">
             <Col md={6} className="mb-3 mb-md-0">
               <Form.Group>
                 <Form.Label>Department:</Form.Label>
-                <Form.Select 
+                <Form.Select
                   value={filters.department}
-                  onChange={(e) => setFilters({...filters, department: e.target.value})}
+                  onChange={(e) => setFilters({ ...filters, department: e.target.value })}
                 >
                   <option value="">All Departments</option>
                   {departments.map(dept => (
@@ -229,13 +263,13 @@ const CareersPage = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            
+
             <Col md={6}>
               <Form.Group>
                 <Form.Label>Location:</Form.Label>
                 <Form.Select
                   value={filters.location}
-                  onChange={(e) => setFilters({...filters, location: e.target.value})}
+                  onChange={(e) => setFilters({ ...filters, location: e.target.value })}
                 >
                   <option value="">All Locations</option>
                   {locations.map(loc => (
@@ -245,8 +279,7 @@ const CareersPage = () => {
               </Form.Group>
             </Col>
           </Row>
-          
-          {/* Jobs List */}
+
           <Row xs={1} md={2} lg={3} className="g-4">
             {filteredJobs.length > 0 ? (
               filteredJobs.map(job => (
@@ -260,7 +293,7 @@ const CareersPage = () => {
                         <Badge bg="success">{job.type}</Badge>
                       </div>
                       <Card.Text>{job.description}</Card.Text>
-                      <Button 
+                      <Button
                         variant="primary"
                         onClick={() => handleJobSelect(job)}
                       >
@@ -285,8 +318,7 @@ const CareersPage = () => {
         </Container>
       </section>
 
-      {/* Benefits Section */}
-      <section className="benefits-section py-5 bg-light">
+      <section className="benefits-section ">
         <Container>
           <h2 className="text-center mb-5">Why Join Our Team?</h2>
           <Row xs={1} md={2} lg={4} className="g-4">
@@ -305,7 +337,6 @@ const CareersPage = () => {
         </Container>
       </section>
 
-      {/* Application Modal */}
       <Modal show={showModal} onHide={() => !submitting && setShowModal(false)} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title>Apply for {selectedJob?.title}</Modal.Title>
@@ -314,7 +345,7 @@ const CareersPage = () => {
           {selectedJob && (
             <>
               <p className="text-muted">{selectedJob.department} • {selectedJob.location}</p>
-              
+
               <div className="mb-4">
                 <h5>Responsibilities</h5>
                 <ul>
@@ -322,7 +353,7 @@ const CareersPage = () => {
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                
+
                 <h5 className="mt-4">Requirements</h5>
                 <ul>
                   {selectedJob.requirements.map((item, index) => (
@@ -341,6 +372,12 @@ const CareersPage = () => {
                 </div>
               ) : (
                 <Form onSubmit={handleSubmit}>
+                  {errorMessage && (
+                    <div className="alert alert-danger" role="alert">
+                      {errorMessage}
+                    </div>
+                  )}
+
                   <Form.Group className="mb-3">
                     <Form.Label>Full Name*</Form.Label>
                     <Form.Control
@@ -407,9 +444,10 @@ const CareersPage = () => {
                   <Button
                     variant="primary"
                     type="submit"
-                    disabled={submitting}
-                    className="w-100"
+                    disabled={submitting || !!errorMessage}
+                    className="w-100 d-flex align-items-center justify-content-center gap-2"
                   >
+                    {submitting && <Spinner animation="border" size="sm" />}
                     {submitting ? 'Submitting...' : 'Submit Application'}
                   </Button>
                 </Form>
