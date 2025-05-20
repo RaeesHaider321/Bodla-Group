@@ -20,11 +20,12 @@ import DHAMultan from "./pages/DHAMultan";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AreaUnitConverter from "./pages/AreaUnitConverter";
-
+import DHAMaps from "./pages/DhaMaps";
+import Careers from './pages/Careers';
 
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
-import "./components/Header.css"; // Header CSS
+// import "./components/Header.css"; // Header CSS
 import "./components/Footer.css"; // Footer CSS
 import "./components/TrustedAdvisors.css"; // Trusted Advisors CSS
 import "./components/ScrollToTop.css"; // CSS for Scroll to Top Button
@@ -93,6 +94,8 @@ function App() {
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
+            <Route path="/dhaMaps" element={<DHAMaps />} />
+            <Route path="/Careers" element={<Careers />} />
           </Routes>
         </div>
         <Footer />

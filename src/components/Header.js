@@ -3,7 +3,7 @@ import logo from '../images/header-logo.png';
 import Icons from "../components/Icon"; 
 import BodlaButton from './Button';
 import { NavLink } from 'react-router-dom'; // Changed from Link to NavLink
-import './Header.css';
+import '../styles/Header.css';
 
 function Header() {
   const closeNavbar = () => {
