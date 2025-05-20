@@ -43,6 +43,7 @@
   background: white;
 }
 
+
 /* Jobs List */
 
 .job-meta {
@@ -124,7 +125,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1040;
 }
 
 .modal-overlay {
@@ -140,12 +141,12 @@
   position: relative;
   background: var(--card-background);
   border-radius: 8px;
-  max-width: 800px;
-  width: 90%;
+  max-width: 1024px;
+  width: 100%;
   max-height: 85vh;
   overflow-y: auto;
   padding: 30px;
-  z-index: 1050;
+  z-index: 1040;
 }
 
 .close-modal {
@@ -191,22 +192,8 @@
 .form-group {
   margin-bottom: 20px;
 }
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: inherit;
+.form-text{
+  color: var(--white);
 }
 
 .form-group textarea {
@@ -220,6 +207,7 @@
 .file-hint {
   font-size: 0.8rem;
   margin-top: 5px;
+  color: white;
 }
 
 .submit-application {
@@ -289,4 +277,15 @@
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+
+.modal-body ul {
+  list-style: disc;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+.modal-body ul li {
+  list-style: disc;
+  list-style-type: disc;
 }

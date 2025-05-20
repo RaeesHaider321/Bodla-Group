@@ -3,6 +3,8 @@ import { Container, Col, Row, Card, Badge, Modal, Form, Button, Spinner } from '
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Careers.css';
+import BodlaButton from '../components/Button';
+import Icons from "../components/Icon";
 
 const CareersPage = () => {
   const [jobs, setJobs] = useState([]);
@@ -24,6 +26,7 @@ const CareersPage = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [formErrors, setFormErrors] = useState({});
 
   useEffect(() => {
     const mockJobs = [
@@ -101,12 +104,26 @@ const CareersPage = () => {
     (filters.location === '' || job.location === filters.location)
   ));
 
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name.trim()) errors.name = 'Full Name is required';
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Email is invalid';
+    }
+    if (!formData.resume) errors.resume = 'Resume is required';
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value,
     }));
+    setFormErrors(prev => ({ ...prev, [name]: '' }));
   };
 
   const handleFileChange = (e) => {
@@ -122,6 +139,7 @@ const CareersPage = () => {
         return;
       }
       setErrorMessage('');
+      setFormErrors(prev => ({ ...prev, resume: '' }));
       setFormData(prev => ({
         ...prev,
         resume: file,
@@ -131,8 +149,8 @@ const CareersPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (errorMessage) {
-      alert(errorMessage);
+    if (!validateForm()) {
+      setErrorMessage('Please correct the errors in the form.');
       return;
     }
 
@@ -147,7 +165,7 @@ const CareersPage = () => {
     formPayload.append('phone', formData.phone || 'Not provided');
     formPayload.append('message', formData.message || 'Not provided');
     formPayload.append('_subject', `Job Application: ${selectedJob.title}`);
-    formPayload.append('_cc', 'raees.haider@bodlabuilders.com.pk'); // CC to career@bodlagroup.com
+    formPayload.append('_cc', 'raees.haider@bodlabuilders.com.pk');
     if (formData.resume) {
       formPayload.append('resume', formData.resume);
     }
@@ -173,6 +191,7 @@ const CareersPage = () => {
           message: '',
           resume: null,
         });
+        setFormErrors({});
         setTimeout(() => {
           setSelectedJob(null);
           setShowModal(false);
@@ -208,6 +227,21 @@ const CareersPage = () => {
     setShowModal(true);
     setSubmitSuccess(false);
     setErrorMessage('');
+    setFormErrors({});
+  };
+
+  const handleModalClose = () => {
+    if (!submitting) {
+      setShowModal(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        resume: null,
+      });
+      setFormErrors({});
+    }
   };
 
   const benefits = [
@@ -239,14 +273,13 @@ const CareersPage = () => {
         <Container>
           <h1 className="display-4 fw-bold">Build Your Career With Us</h1>
           <p className="lead">Join our team of talented professionals and work on exciting projects that make a difference.</p>
-          <Link to="/about" className="btn btn-primary btn-lg mt-3">Learn About Our Culture</Link>
         </Container>
       </section>
 
       <section className="job-openings-section py-5">
         <Container>
           <h2 className="text-center mb-4">Current Job Openings</h2>
-          <p className="text-center text-muted mb-5">We're always looking for talented individuals to join our team</p>
+          <p className="text-center mb-5">We're always looking for talented individuals to join our team</p>
 
           <Row className="mb-4">
             <Col md={6} className="mb-3 mb-md-0">
@@ -293,12 +326,12 @@ const CareersPage = () => {
                         <Badge bg="success">{job.type}</Badge>
                       </div>
                       <Card.Text>{job.description}</Card.Text>
-                      <Button
+                      <BodlaButton
+                        text="View Details & Apply"
+                        icon={<Icons name="rightArrow" />}
                         variant="primary"
                         onClick={() => handleJobSelect(job)}
-                      >
-                        View Details & Apply
-                      </Button>
+                      />
                     </Card.Body>
                   </Card>
                 </Col>
@@ -318,7 +351,7 @@ const CareersPage = () => {
         </Container>
       </section>
 
-      <section className="benefits-section ">
+      <section className="benefits-section py-5">
         <Container>
           <h2 className="text-center mb-5">Why Join Our Team?</h2>
           <Row xs={1} md={2} lg={4} className="g-4">
@@ -337,14 +370,21 @@ const CareersPage = () => {
         </Container>
       </section>
 
-      <Modal show={showModal} onHide={() => !submitting && setShowModal(false)} size="lg" centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Apply for {selectedJob?.title}</Modal.Title>
+      <Modal
+        show={showModal}
+        onHide={handleModalClose}
+        size="lg"
+        centered
+        aria-labelledby="job-application-modal"
+        backdrop={submitting ? 'static' : true}
+      >
+        <Modal.Header closeButton={!submitting}>
+          <Modal.Title id="job-application-modal">Apply for {selectedJob?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {selectedJob && (
             <>
-              <p className="text-muted">{selectedJob.department} • {selectedJob.location}</p>
+              <p>{selectedJob.department} • {selectedJob.location}</p>
 
               <div className="mb-4">
                 <h5>Responsibilities</h5>
@@ -366,19 +406,19 @@ const CareersPage = () => {
                 <div className="text-center py-4">
                   <div className="text-success display-4 mb-3">✓</div>
                   <h3>Application Submitted Successfully!</h3>
-                  <p className="text-muted">
+                  <p>
                     Thank you for applying to {selectedJob.title}. We'll review your application and get back to you soon.
                   </p>
                 </div>
               ) : (
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={handleSubmit} noValidate>
                   {errorMessage && (
                     <div className="alert alert-danger" role="alert">
                       {errorMessage}
                     </div>
                   )}
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-3" controlId="formName">
                     <Form.Label>Full Name*</Form.Label>
                     <Form.Control
                       type="text"
@@ -387,10 +427,18 @@ const CareersPage = () => {
                       onChange={handleInputChange}
                       required
                       disabled={submitting}
+                      isInvalid={!!formErrors.name}
+                      aria-describedby="nameHelp"
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {formErrors.name}
+                    </Form.Control.Feedback>
+                    <Form.Text id="nameHelp">
+                      Enter your full name as it appears on your resume.
+                    </Form.Text>
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Email*</Form.Label>
                     <Form.Control
                       type="email"
@@ -399,10 +447,18 @@ const CareersPage = () => {
                       onChange={handleInputChange}
                       required
                       disabled={submitting}
+                      isInvalid={!!formErrors.email}
+                      aria-describedby="emailHelp"
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {formErrors.email}
+                    </Form.Control.Feedback>
+                    <Form.Text id="emailHelp">
+                      We'll use this email to contact you.
+                    </Form.Text>
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-3" controlId="formPhone">
                     <Form.Label>Phone Number</Form.Label>
                     <Form.Control
                       type="tel"
@@ -410,10 +466,14 @@ const CareersPage = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       disabled={submitting}
+                      aria-describedby="phoneHelp"
                     />
+                    <Form.Text id="phoneHelp">
+                      Optional: Provide a contact number.
+                    </Form.Text>
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-3" controlId="formMessage">
                     <Form.Label>Cover Letter (Optional)</Form.Label>
                     <Form.Control
                       as="textarea"
@@ -423,10 +483,14 @@ const CareersPage = () => {
                       rows={4}
                       placeholder="Tell us why you'd be a great fit for this role..."
                       disabled={submitting}
+                      aria-describedby="messageHelp"
                     />
+                    <Form.Text id="messageHelp">
+                      Share additional information about your qualifications.
+                    </Form.Text>
                   </Form.Group>
 
-                  <Form.Group className="mb-4">
+                  <Form.Group className="mb-4" controlId="formResume">
                     <Form.Label>Resume/CV*</Form.Label>
                     <Form.Control
                       type="file"
@@ -435,26 +499,39 @@ const CareersPage = () => {
                       accept=".pdf,.doc,.docx"
                       required
                       disabled={submitting}
+                      isInvalid={!!formErrors.resume}
+                      aria-describedby="resumeHelp"
                     />
-                    <Form.Text className="text-muted">
+                    <Form.Control.Feedback type="invalid">
+                      {formErrors.resume}
+                    </Form.Control.Feedback>
+                    <Form.Text id="resumeHelp">
                       PDF, DOC, or DOCX (Max 5MB)
                     </Form.Text>
                   </Form.Group>
-
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    disabled={submitting || !!errorMessage}
-                    className="w-100 d-flex align-items-center justify-content-center gap-2"
-                  >
-                    {submitting && <Spinner animation="border" size="sm" />}
-                    {submitting ? 'Submitting...' : 'Submit Application'}
-                  </Button>
                 </Form>
               )}
             </>
           )}
         </Modal.Body>
+        {!submitSuccess && (
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={handleModalClose}
+              disabled={submitting}
+            >
+              Cancel
+            </Button>
+            <BodlaButton
+              text={submitting ? 'Submitting...' : 'Submit Application'}
+              icon={submitting ? <Spinner animation="border" size="sm" /> : <Icons name="rightArrow" />}
+              variant="primary"
+              onClick={handleSubmit}
+              disabled={submitting || !!errorMessage}
+            />
+          </Modal.Footer>
+        )}
       </Modal>
     </Container>
   );
