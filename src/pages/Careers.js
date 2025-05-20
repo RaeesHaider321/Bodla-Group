@@ -377,6 +377,7 @@ const CareersPage = () => {
         centered
         aria-labelledby="job-application-modal"
         backdrop={submitting ? 'static' : true}
+        className="custom-scroll-modal"
       >
         <Modal.Header closeButton={!submitting}>
           <Modal.Title id="job-application-modal">Apply for {selectedJob?.title}</Modal.Title>
