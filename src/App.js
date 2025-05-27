@@ -22,6 +22,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AreaUnitConverter from "./pages/AreaUnitConverter";
 import DHAMaps from "./pages/DhaMaps";
 import Careers from './pages/Careers';
+import MediaCenter from './pages/MediaCenter';
 
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
@@ -96,6 +97,7 @@ function App() {
             <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
             <Route path="/dhaMaps" element={<DHAMaps />} />
             <Route path="/Careers" element={<Careers />} />
+            <Route path="/MediaCenter" element={<MediaCenter />} />
           </Routes>
         </div>
         <Footer />

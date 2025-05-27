@@ -144,6 +144,11 @@ const CareersPage = () => {
         ...prev,
         resume: file,
       }));
+      console.log('Selected file:', {
+        name: file.name,
+        type: file.type,
+        size: file.size,
+      });
     }
   };
 
@@ -167,12 +172,20 @@ const CareersPage = () => {
     formPayload.append('_subject', `Job Application: ${selectedJob.title}`);
     formPayload.append('_cc', 'raees.haider@bodlabuilders.com.pk');
     if (formData.resume) {
-      formPayload.append('resume', formData.resume);
+      const uniqueFileName = `${Date.now()}_${formData.resume.name}`;
+      const uniqueFile = new File([formData.resume], uniqueFileName, { type: formData.resume.type });
+      formPayload.append('resume', uniqueFile);
+      console.log('Appended resume with unique name:', uniqueFileName);
+      for (let [key, value] of formPayload.entries()) {
+        console.log(`${key}:`, value instanceof File ? value.name : value);
+      }
+    } else {
+      console.warn('No resume file found in formData');
     }
 
     try {
       const response = await axios.post(
-        'https://formsubmit.co/ajax/career@bodlagroup.com',
+        'https://formsubmit.co/ajax/career@bodlagroup.com', // For testing, try 'https://formsubmit.co/career@bodlagroup.com' if AJAX endpoint fails
         formPayload,
         {
           headers: {
@@ -183,6 +196,7 @@ const CareersPage = () => {
       );
 
       if (response.data.success) {
+        console.log('Form submission response:', response.data);
         setSubmitSuccess(true);
         setFormData({
           name: '',
@@ -202,10 +216,10 @@ const CareersPage = () => {
       }
     } catch (error) {
       console.error('Error submitting application:', error.response || error.message);
-      let errorMsg = 'Failed to submit application. Please try again or contact us at career@bodlagroup.com.';
+      let errorMsg = 'Failed to submit application. Please try again or email your resume directly to career@bodlagroup.com.';
       if (error.response) {
         if (error.response.status === 404) {
-          errorMsg = 'Form not found. Please ensure the Formsubmit endpoint is activated for support@bodlagroup.com.';
+          errorMsg = 'Form not found. Please ensure the Formsubmit endpoint is activated for career@bodlagroup.com.';
         } else if (error.response.status === 400) {
           errorMsg = 'Invalid submission data. Please check your inputs and try again.';
         } else if (error.response.status === 413) {
