@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Col, Row, Card, Badge, Modal, Form, Button, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Careers.css';
 import BodlaButton from '../components/Button';
