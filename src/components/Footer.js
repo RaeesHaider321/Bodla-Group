@@ -25,7 +25,7 @@ function Footer() {
                   <ul className="list-unstyled">
                     <li><Link to="/AreaUnitConvertor">Area Unit Convertor</Link></li>
                     <li><Link to="/ConstructionCostCalculator">Construction Cost Calculator</Link></li>
-                    <li><Link to="/MediaCentre">Media Centre</Link></li>
+                    <li><Link to="/MediaCenter">Media Center</Link></li>
                     <li><Link to="/Careers">Careers</Link></li>
                   </ul>
                 </Col>

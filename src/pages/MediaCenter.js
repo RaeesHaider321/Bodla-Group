@@ -11,13 +11,14 @@ import Event6 from '../images/mediaCenter/Event6.jpg';
 
 const MediaCenter = () => {
   const [key, setKey] = useState('images');
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedMedia, setSelectedMedia] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [galleryView, setGalleryView] = useState(false);
   const [currentGallery, setCurrentGallery] = useState([]);
   const [currentGalleryTitle, setCurrentGalleryTitle] = useState('');
+  const [isVideo, setIsVideo] = useState(false);
 
-  // YouTube video data with proper thumbnails
+  // Media data with YouTube videos
   const mediaData = {
     images: [
       {
@@ -48,15 +49,45 @@ const MediaCenter = () => {
     videos: [
       {
         id: 1,
-        title: 'Company Overview',
-        youtubeId: 'dQw4w9WgXcQ', // YouTube video ID
-        thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg`
+        title: 'Luxury Living at Bodla Homes: Explore Our 4-Bedroom Villas in DHA Multan!',
+        videoLink: "https://www.youtube.com/embed/agUm10fzXDQ?si=8rh8psHk6XPFNdL8",
+        thumbnail: `https://img.youtube.com/vi/agUm10fzXDQ/hqdefault.jpg`,
+        alt: 'Company Overview Video'
       },
       {
         id: 2,
-        title: 'Product Demo',
-        youtubeId: '9bZkp7q19f0', // YouTube video ID
-        thumbnail: `https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg`
+        title: 'A Night of Champions – Honoring Spirit, Sportsmanship & Success | Bodla Group',
+        videoLink: "https://www.youtube.com/embed/zOaQpoPiaH4?si=7yLNg3q0aAtKfB99",
+        thumbnail: `https://img.youtube.com/vi/zOaQpoPiaH4/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 3,
+        title: 'Bodla Group – The Only Developer with 5 Projects in DHA Multan',
+        videoLink: "https://www.youtube.com/embed/TNa_ME_l4C4?si=jJt1aGZ2jw34Ck1w",
+        thumbnail: `https://img.youtube.com/vi/TNa_ME_l4C4/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 4,
+        title: 'Launch of Sector V Community Park | Sector V DHA Multan',
+        videoLink: "https://www.youtube.com/embed/jpC-AeDddeg?si=77elJc2UyCIV_Tdb",
+        thumbnail: `https://img.youtube.com/vi/jpC-AeDddeg/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 5,
+        title: 'DHA Multan First Invitational Tournament Qualifier Round Highlights',
+        videoLink: "https://www.youtube.com/embed/kCRyEUgKatc?si=VAcKUo8hWb8uOX5j",
+        thumbnail: `https://img.youtube.com/vi/kCRyEUgKatc/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 6,
+        title: 'Where Will Your Business Grow Next? One Destination – DHA Multan',
+        videoLink: "https://www.youtube.com/embed/t4UNA7RqoR8?si=ZF29Xo1kzOmZdHRA",
+        thumbnail: `https://img.youtube.com/vi/t4UNA7RqoR8/hqdefault.jpg`,
+        alt: 'Product Demo Video'
       }
     ]
   };
@@ -65,16 +96,24 @@ const MediaCenter = () => {
     setCurrentGallery(gallery.items);
     setCurrentGalleryTitle(gallery.title);
     setGalleryView(true);
+    setIsVideo(false);
+  };
+
+  const handleVideoClick = (video) => {
+    setSelectedMedia(video);
+    setIsVideo(true);
+    setShowModal(true);
   };
 
   const handleGalleryImageClick = (image) => {
-    setSelectedImage(image);
+    setSelectedMedia(image);
+    setIsVideo(false);
     setShowModal(true);
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    setSelectedImage(null);
+    setSelectedMedia(null);
   };
 
   const handleBackToGallery = () => {
@@ -106,11 +145,11 @@ const MediaCenter = () => {
 
         <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
           <Modal.Header closeButton>
-            <Modal.Title>{selectedImage?.alt}</Modal.Title>
+            <Modal.Title>{selectedMedia?.alt}</Modal.Title>
           </Modal.Header>
           <Modal.Body className="text-center">
-            {selectedImage && (
-              <Image src={selectedImage.img} alt={selectedImage.alt} fluid />
+            {selectedMedia && !isVideo && (
+              <Image src={selectedMedia.img} alt={selectedMedia.alt} fluid />
             )}
           </Modal.Body>
         </Modal>
@@ -119,9 +158,9 @@ const MediaCenter = () => {
   }
 
   return (
-    <Container className="mt-4">
+    <section>
+    <Container>
       <h1 className="mb-4">Media Center</h1>
-      
       <Tabs
         id="media-tabs"
         activeKey={key}
@@ -144,27 +183,19 @@ const MediaCenter = () => {
           </Row>
         </Tab>
         <Tab eventKey="videos" title="Videos">
-          <Row xs={1} md={3} className="g-4 mt-3">
+          <Row xs={1} md={2} lg={3} className="g-4 mt-3">
             {mediaData.videos.map((video) => (
               <Col key={video.id}>
-                <Card className="h-100">
-                  {/* <Card.Img 
+                <Card className="h-100" onClick={() => handleVideoClick(video)} style={{ cursor: 'pointer' }}>
+                  <Card.Img 
                     variant="top" 
                     src={video.thumbnail} 
-                    alt={video.title}
+                    alt={video.alt}
                     style={{ height: '200px', objectFit: 'cover' }}
-                  /> */}
+                  />
                   <Card.Body>
-                    
-                    <div className="ratio ratio-16x9 mt-2">
-                      <iframe 
-                        src={`https://www.youtube.com/embed/${video.youtubeId}`} 
-                        title={video.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowFullScreen
-                      ></iframe>
-                    </div>
                     <Card.Title>{video.title}</Card.Title>
+                    <Card.Text>Click to play video</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -172,7 +203,29 @@ const MediaCenter = () => {
           </Row>
         </Tab>
       </Tabs>
+
+      {/* Video Modal */}
+      <Modal show={showModal && isVideo} onHide={handleCloseModal} size="xl" centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedMedia?.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          {selectedMedia && isVideo && (
+            <div className="ratio ratio-16x9">
+              <iframe 
+                src={selectedMedia.videoLink}
+                title={selectedMedia.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen>
+              </iframe>
+            </div>
+          )}
+        </Modal.Body>
+      </Modal>
     </Container>
+    </section>
   );
 };
 

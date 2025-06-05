@@ -118,6 +118,7 @@ const PrivacyPolicy = () => {
             title: "With Your Consent or At Your Direction",
             description: "Apart from the cases listed above, we will share your personal information with others outside of Bodla Group only with your consent or at your direction. For instance, if you explicitly agree that we can share your information with a third-party for a particular purpose, or if you use our Services to intentionally interact with or direct us to share information with a third-party platform (such as sharing content to a social network or using an API integration), then we will share information in those instances."
         }
+        
     ];
     return (
         <Container className="privacy-policy-container pt-3">
@@ -303,6 +304,12 @@ const PrivacyPolicy = () => {
                         ours. We do not control and are not responsible for the privacy practices of third parties. We recommend that you
                         review the privacy policies of any external sites or services you interact with to understand how they collect and
                         use your information.
+                    </p>
+                </article>
+                <article className="policy-section">
+                    <h2>Data Deletion Request</h2>
+                    <p>
+                       If you would like us to delete your personal information, please contact us at <Link to="mailto:info@bodlagroup.com">info@bodlagroup.com</Link>. While we will make every effort to fulfill your request, please note that in certain situations, we may be obligated to retain some of your data to comply with legal, regulatory, or compliance requirements.
                     </p>
                 </article>
 
