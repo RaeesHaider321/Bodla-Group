@@ -1133,3 +1133,9 @@ a {
 .btn{
  border-radius: 30px;
 }
+.modal-footer .btn.btn-primary{
+  padding: 5px 15px;
+}
+.mediaCenter .tab-content .card .card-title{
+font-size: 1.2rem;
+}
