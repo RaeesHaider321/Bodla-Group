@@ -180,8 +180,8 @@ const MediaCenter = () => {
         id: 5,
         title: 'Ground Breaking of Business Hub',
         items: [
-          { id: 1, img: BHub1, alt: 'Ground Breaking of Business Hub' },
           { id: 1, img: BHub2, alt: 'Ground Breaking of Business Hub' },
+          { id: 2, img: BHub1, alt: 'Ground Breaking of Business Hub' },
         ]
       },
       {
@@ -206,13 +206,13 @@ const MediaCenter = () => {
         id: 7,
         title: 'Sector-V park',
         items: [
-          { id: 1, img: SectorVPark1, alt: 'Sector V Park' },
+          { id: 1, img: SectorVPark7, alt: 'Sector V Park' },
           { id: 2, img: SectorVPark2, alt: 'Sector V Park' },
           { id: 3, img: SectorVPark3, alt: 'Sector V Park' },
           { id: 4, img: SectorVPark4, alt: 'Sector V Park' },
           { id: 5, img: SectorVPark5, alt: 'Sector V Park' },
           { id: 6, img: SectorVPark6, alt: 'Sector V Park' },
-          { id: 7, img: SectorVPark7, alt: 'Sector V Park' },
+          { id: 7, img: SectorVPark1, alt: 'Sector V Park' },
           { id: 8, img: SectorVPark8, alt: 'Sector V Park' },
           { id: 9, img: SectorVPark9, alt: 'Sector V Park' },
         ]
@@ -253,8 +253,8 @@ const MediaCenter = () => {
         id: 9,
         title: 'Zaitoon',
         items: [
-          { id: 1, img: Zaitoon1, alt: 'Zaitoon Event' },
-          { id: 2, img: Zaitoon2, alt: 'Zaitoon Event' },
+          { id: 1, img: Zaitoon2, alt: 'Zaitoon Event' },
+          { id: 2, img: Zaitoon1, alt: 'Zaitoon Event' },
           { id: 3, img: Zaitoon3, alt: 'Zaitoon Event' },
           { id: 4, img: Zaitoon4, alt: 'Zaitoon Event' },
         ]
@@ -270,34 +270,70 @@ const MediaCenter = () => {
       },
       {
         id: 2,
+        title: 'Is It the Right Time to Buy or Sell Property?',
+        videoLink: "https://www.youtube.com/embed/gSqsaoEyFCo?si=3D-NTgOBjHA7ZanI",
+        thumbnail: `https://img.youtube.com/vi/gSqsaoEyFCo/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 3,
         title: 'A Night of Champions – Honoring Spirit, Sportsmanship & Success | Bodla Group',
         videoLink: "https://www.youtube.com/embed/zOaQpoPiaH4?si=7yLNg3q0aAtKfB99",
         thumbnail: `https://img.youtube.com/vi/zOaQpoPiaH4/hqdefault.jpg`,
         alt: 'Product Demo Video'
       },
       {
-        id: 3,
+        id: 4,
+        title: 'Exploring the Technical Brilliance of One Destination',
+        videoLink: "https://www.youtube.com/embed/xCVbNWK-RQU?si=B_phsflaKFOOjzlc",
+        thumbnail: `https://img.youtube.com/vi/xCVbNWK-RQU/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 5,
+        title: 'DHA Multan Ka Pahla Sarafa Bazar',
+        videoLink: "https://www.youtube.com/embed/VmoJ9WGnJ6I?si=9Af-DjFw64az8ioP",
+        thumbnail: `https://img.youtube.com/vi/VmoJ9WGnJ6I/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 6,
+        title: 'One Destination DHA Multan | First Destination of DHA Multan',
+        videoLink: "https://www.youtube.com/embed/m8ct7V_UP2M?si=bxyQY4DX4Kh1fQ1H",
+        thumbnail: `https://img.youtube.com/vi/m8ct7V_UP2M/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      {
+        id: 7,
+        title: 'Are you ready for the surprises ahead?',
+        videoLink: "https://www.youtube.com/embed/PgAQ-UPfiaI?si=_JvoWP1xbllIn3sA",
+        thumbnail: `https://img.youtube.com/vi/PgAQ-UPfiaI/hqdefault.jpg`,
+        alt: 'Product Demo Video'
+      },
+      
+      {
+        id: 8,
         title: 'Bodla Group – The Only Developer with 5 Projects in DHA Multan',
         videoLink: "https://www.youtube.com/embed/TNa_ME_l4C4?si=jJt1aGZ2jw34Ck1w",
         thumbnail: `https://img.youtube.com/vi/TNa_ME_l4C4/hqdefault.jpg`,
         alt: 'Product Demo Video'
       },
       {
-        id: 4,
+        id: 9,
         title: 'Launch of Sector V Community Park | Sector V DHA Multan',
         videoLink: "https://www.youtube.com/embed/jpC-AeDddeg?si=77elJc2UyCIV_Tdb",
         thumbnail: `https://img.youtube.com/vi/jpC-AeDddeg/hqdefault.jpg`,
         alt: 'Product Demo Video'
       },
       {
-        id: 5,
+        id: 10,
         title: 'DHA Multan First Invitational Tournament Qualifier Round Highlights',
         videoLink: "https://www.youtube.com/embed/kCRyEUgKatc?si=VAcKUo8hWb8uOX5j",
         thumbnail: `https://img.youtube.com/vi/kCRyEUgKatc/hqdefault.jpg`,
         alt: 'Product Demo Video'
       },
       {
-        id: 6,
+        id: 11,
         title: 'Where Will Your Business Grow Next? One Destination – DHA Multan',
         videoLink: "https://www.youtube.com/embed/t4UNA7RqoR8?si=ZF29Xo1kzOmZdHRA",
         thumbnail: `https://img.youtube.com/vi/t4UNA7RqoR8/hqdefault.jpg`,
@@ -446,7 +482,7 @@ const MediaCenter = () => {
                     />
                     <Card.Body>
                       <Card.Title>{video.title}</Card.Title>
-                      <Card.Text>Click to play video</Card.Text>
+                      {/* <Card.Text>Click to play video</Card.Text> */}
                     </Card.Body>
                   </Card>
                 </Col>

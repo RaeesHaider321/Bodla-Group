@@ -1139,3 +1139,8 @@ a {
 .mediaCenter .tab-content .card .card-title{
 font-size: 1.2rem;
 }
+.modal.show .modal-dialog {
+    transform: none;
+    display: flex;
+    justify-content: center;
+}
