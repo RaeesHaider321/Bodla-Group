@@ -29,66 +29,26 @@ const CareersPage = () => {
 
   useEffect(() => {
     const mockJobs = [
-      {
-        id: 1,
-        title: 'Frontend Developer (React)',
-        department: 'Engineering',
-        location: 'Remote',
-        type: 'Full-time',
-        description: 'We are looking for an experienced React developer to join our growing team.',
-        responsibilities: [
-          'Develop new user-facing features using React.js',
-          'Build reusable components and front-end libraries',
-          'Translate designs and wireframes into high-quality code',
-          'Optimize components for maximum performance',
-        ],
-        requirements: [
-          '3+ years of experience with React.js',
-          'Strong proficiency in JavaScript, including ES6+',
-          'Experience with Redux or similar state management',
-          'Familiarity with RESTful APIs',
-        ],
-      },
-      {
-        id: 2,
-        title: 'UX/UI Designer',
-        department: 'Design',
-        location: 'New York, NY',
-        type: 'Full-time',
-        description: 'Create amazing user experiences for our products.',
-        responsibilities: [
-          'Create user-centered designs',
-          'Develop UI mockups and prototypes',
-          'Identify and troubleshoot UX problems',
-          'Collaborate with product managers and engineers',
-        ],
-        requirements: [
-          'Proven work experience as a UI/UX Designer',
-          'Portfolio of design projects',
-          'Knowledge of Figma or Adobe XD',
-          'Team spirit and strong communication skills',
-        ],
-      },
-      {
-        id: 3,
-        title: 'Backend Engineer (Node.js)',
-        department: 'Engineering',
-        location: 'San Francisco, CA',
-        type: 'Full-time',
-        description: 'Build and maintain our server infrastructure.',
-        responsibilities: [
-          'Develop and maintain server-side applications',
-          'Implement security and data protection',
-          'Integrate data storage solutions',
-          'Optimize applications for maximum speed and scalability',
-        ],
-        requirements: [
-          'Strong proficiency with Node.js and Express',
-          'Experience with databases (SQL and NoSQL)',
-          'Understanding of fundamental design principles',
-          'Proficient understanding of code versioning tools (Git)',
-        ],
-      },
+      // {
+      //   id: 1,
+      //   title: 'Frontend Developer (React)',
+      //   department: 'Engineering',
+      //   location: 'Remote',
+      //   type: 'Full-time',
+      //   description: 'We are looking for an experienced React developer to join our growing team.',
+      //   responsibilities: [
+      //     'Develop new user-facing features using React.js',
+      //     'Build reusable components and front-end libraries',
+      //     'Translate designs and wireframes into high-quality code',
+      //     'Optimize components for maximum performance',
+      //   ],
+      //   requirements: [
+      //     '3+ years of experience with React.js',
+      //     'Strong proficiency in JavaScript, including ES6+',
+      //     'Experience with Redux or similar state management',
+      //     'Familiarity with RESTful APIs',
+      //   ],
+      // }
     ];
 
     setJobs(mockJobs);
@@ -327,40 +287,45 @@ const CareersPage = () => {
           </Row>
 
           <Row xs={1} md={2} lg={3} className="g-4">
-            {filteredJobs.length > 0 ? (
-              filteredJobs.map(job => (
-                <Col key={job.id}>
-                  <Card className="h-100">
-                    <Card.Body>
-                      <Card.Title>{job.title}</Card.Title>
-                      <div className="d-flex flex-wrap gap-2 mb-3">
-                        <Badge bg="primary">{job.department}</Badge>
-                        <Badge bg="secondary">{job.location}</Badge>
-                        <Badge bg="success">{job.type}</Badge>
-                      </div>
-                      <Card.Text>{job.description}</Card.Text>
-                      <BodlaButton
-                        text="View Details & Apply"
-                        icon={<Icons name="rightArrow" />}
-                        variant="primary"
-                        onClick={() => handleJobSelect(job)}
-                      />
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))
-            ) : (
-              <Col className="text-center py-5">
-                <p className="lead">No job openings match your filters. Please try different criteria.</p>
-                <Button
-                  variant="outline-primary"
-                  onClick={() => setFilters({ department: '', location: '' })}
-                >
-                  Reset Filters
-                </Button>
-              </Col>
-            )}
-          </Row>
+  {jobs.length === 0 ? (
+    <Col className="text-center py-5" lg={12}>
+      <h4>We currently don't have any open positions. Please check back later!</h4>
+      <p>You can also follow us on social media to stay updated about new opportunities.</p>
+    </Col>
+  ) : filteredJobs.length > 0 ? (
+    filteredJobs.map(job => (
+      <Col key={job.id}>
+        <Card className="h-100">
+          <Card.Body>
+            <Card.Title>{job.title}</Card.Title>
+            <div className="d-flex flex-wrap gap-2 mb-3">
+              <Badge bg="primary">{job.department}</Badge>
+              <Badge bg="secondary">{job.location}</Badge>
+              <Badge bg="success">{job.type}</Badge>
+            </div>
+            <Card.Text>{job.description}</Card.Text>
+            <BodlaButton
+              text="View Details & Apply"
+              icon={<Icons name="rightArrow" />}
+              variant="primary"
+              onClick={() => handleJobSelect(job)}
+            />
+          </Card.Body>
+        </Card>
+      </Col>
+    ))
+  ) : (
+    <Col className="text-center py-5">
+      <p className="lead">No job openings match your filters. Please try different criteria.</p>
+      <Button
+        variant="outline-primary"
+        onClick={() => setFilters({ department: '', location: '' })}
+      >
+        Reset Filters
+      </Button>
+    </Col>
+  )}
+</Row>
         </Container>
       </section>
 

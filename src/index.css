@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.popup-content {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.popup-content button[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.popup-content button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.success-message {
+  text-align: center;
+  padding: 20px;
+}
