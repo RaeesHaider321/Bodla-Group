@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+/* Popup styles */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -72,4 +77,19 @@ code {
 .success-message {
   text-align: center;
   padding: 20px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.popup-content button[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
