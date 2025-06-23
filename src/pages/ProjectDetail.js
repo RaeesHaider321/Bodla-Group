@@ -204,6 +204,7 @@ const projectDetails = {
     ],
     videoLink: "https://www.youtube.com/embed/Ndr0vVfjrQs?si=VLGx-Yqg3ZFimX-w",
     virtualTour: virtualTourBHub,
+    virtualTourTitle: "Explore the visual details from every perspective",
   },
   'one-destination': {
     ...projectTemplate,
@@ -228,9 +229,9 @@ const projectDetails = {
     ctaThumb: ctaOneD,
     background: oneDestination,
     amenities: [
-      { title: 'Gold Souk', icon: 'gymnasium', },
-      { title: 'Digital Zone', icon: 'gymnasium', },
-      { title: 'Double heightened Outlets', icon: 'gymnasium', },
+      { title: 'Gold Souk', icon: 'GoldSouk', },
+      { title: 'Digital Zone', icon: 'DigitalZone', },
+      { title: 'Double heightened Outlets', icon: 'doubleHeight', },
       { title: 'Gymnasium', icon: 'gymnasium', },
       { title: 'Swimming Pool', icon: 'swimmingPool', },
       { title: 'Roof-Top Restaurant', icon: 'restaurant', },
@@ -254,7 +255,7 @@ const projectDetails = {
       { title: "360 Zoo", icon: "zoo360" },
       { title: "Bilal Mosque", icon: "mosque" },
       { title: "SICAS Schools", icon: "school" },
-      { title: "Premium Homes", icon: "school" },
+      { title: "Premium Homes", icon: "PremiumHomes" },
       { title: "Shah Yousaf Gardez Gate (Bosan Road Main Gate)", icon: "dhaGate" },
       { title: "Parks", icon: "parks" },
       { title: "DHA Degree College", icon: "university" },
@@ -299,6 +300,7 @@ const projectDetails = {
     status: 'Completed',
     videoLink: "https://www.youtube.com/embed/Rz9MYwIQ_7c?si=PcdEq3beGri3f8C8",
     virtualTour: virtualTour1D,
+    virtualTourTitle: "Visualize your commercial space from 3D lens",
   },
   'golf-view-rumanza': {
     ...projectTemplate,
@@ -421,6 +423,7 @@ const projectDetails = {
     status: 'Upcoming',
     videoLink: "https://www.youtube.com/embed/w5QEV7t8kuA?si=trZzHw-WGeOkTSsj",
     virtualTour: virtualTourGVR,
+    virtualTourTitle: "Visualize the Sophistication of Life at Rumanza",
   },
   'bodla-homes': {
     ...projectTemplate,
@@ -557,7 +560,7 @@ const projectDetails = {
     status: 'Ongoing',
     videoLink: "https://www.youtube.com/embed/agUm10fzXDQ?si=8rh8psHk6XPFNdL8",
     virtualTour: virtualTourBHome,
-  }
+    virtualTourTitle: "Step inside your home and discover it's details from every corner"  }
 };
 
 const ProjectDetails = () => {
@@ -748,7 +751,7 @@ const ProjectDetails = () => {
         </Container>
         {/* Virtual Tour Section */}
         <div className='text-center mt-5'>
-          <h2 className='mb-4' >Explore the visual details from every perspective</h2>
+          <h2 className='mb-4'>{project.virtualTourTitle}</h2>
           <p>Drag to look around or let the auto-rotation guide you.</p>
           <div className='virtualtour mt-4'>
             <PanoramicViewer
