@@ -28,10 +28,10 @@ import Merkez from '../images/footstepsMerkez.png';
 import TimelineSection from '../components/TimelineSection';
 
 const creationsData = [
-  { logo: bhub, title: 'Business Hub', year: '2020' },
-  { logo: oneDes, title: 'One Destination', year: '2021' },
+  { logo: bhub, title: 'Business Hub', year: '2021' },
+  { logo: oneDes, title: 'One Destination', year: '2024' },
   { logo: gvr, title: 'Golf View Rumanza', year: '2022' },
-  { logo: bhomes, title: 'Bodla Homes', year: '2023' }
+  { logo: bhomes, title: 'Bodla Homes', year: '2021 & 2023' }
 ];
 
 const expandedData = [
@@ -67,8 +67,8 @@ const About = () => {
                 <Image src={dhaBodla} alt='Bodla Builders collaboration with DHA' className='img-fluid' />
                 </Col>
                 <Col xs={12} md={6} data-aos="fade-right">
-                <h2>Collaboration with <span>DHA Multan</span></h2>
-                <p className="text-justify">While redefining the living standards, the Bodla Group has consistently strived to push boundaries and successfully collaborated with DHA Multan right from the beginning. From our groundbreaking projects of 10-Marla cash files to the provision of over 800 acres of land to DHA Multan, Bodla Group stood as a testament of its spirit through every step of the way.</p>
+                <h2>In Strong Alliance with  <span>DHA Multan Passage</span></h2>
+                <p className="text-justify">Bodla Group has significantly contributed to DHA Multan's growth by identifying the opportunity early on and stepping in as a dedicated construction partner for DHA Villas and Askari Villas. Beyond residential units, Bodla Group also developed the surrounding road infrastructure, ensuring hassle-free connectivity and adding long-term value to the area. Demonstrating a forward-thinking approach, the group pioneered the suggestion and sale of affordable Affidavit Files, addressing rising demand and enhancing property accessibility. With over 800 acres developed and a record volume of property transactions, Bodla Group has earned industry recognition and solidified its position as a trusted leader in DHA Multan's development. Today, with five iconic projects in DHA Multan, the Group stands with a strong and strategic footing in the region’s real estate landscape.</p>
                 </Col>
               </Row>
             </Col>
@@ -110,7 +110,7 @@ const About = () => {
 
       <section>
         <Container>
-          <PageTitle title="Journey Through Our Creations, Where Every Detail" highlight="Matters" data-aos="fade-up" />
+          <PageTitle title="Our portfolio of eminent projects that" highlight="redefines excellence" data-aos="fade-up" />
           <Row className='justify-content-center creationsJourney mt-4'>
             <Col xs={12} data-aos="fade-up" data-aos-delay="300">
               <Row className='g-4'>
@@ -140,7 +140,7 @@ const About = () => {
         <Container className='text-center'>
           <Row className='justify-content-center mb-5'>
             <Col xs={12} md={9} data-aos="fade-up" data-aos-delay="200">
-              <h2>Our Companies </h2>
+              <h2>Our Group of Companies </h2>
               <p>The Entrepreneurial Footsteps of Bodla Group</p>
             </Col>
           </Row>

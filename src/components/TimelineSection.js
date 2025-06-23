@@ -67,11 +67,11 @@ const TimelineSection = () => {
 
   return (
     <Container>
-      <Row className='justify-content-center cardImage text-justify'>
-        <Col className='text-end' xs={12} md={12} data-aos="fade-down" data-aos-delay="100">
-          <h1>The <span>Journey</span></h1>
-        </Col> 
-        <Col xs={12} md={12}>
+      <Row className='justify-content-center cardImage'>
+        {/* <Col className='text-end' xs={12} md={12} data-aos="fade-down" data-aos-delay="100">
+          <h1>Our <span>Journey</span> through a decade as Only Trusted Developer</h1>
+        </Col>  */}
+        <Col xs={12} md={12} className='mt-3'>
           {timelineData.map((item, index) => (
             <Row key={item.id} className='align-items-center mb-5 g-4'>
               {/* Image column */}
@@ -95,9 +95,10 @@ const TimelineSection = () => {
                 data-aos-delay={200 + (index * 100)}
                 data-aos-offset="200"
               >
-                <p className='year' data-aos="fade-up" data-aos-delay={300 + (index * 100)}>{item.year}</p>
-                <h3 data-aos="fade-up" data-aos-delay={350 + (index * 100)}>{item.title}</h3>
-                <p data-aos="fade-up" data-aos-delay={400 + (index * 100)}>{item.description}</p>
+                <h1 className='mb-5'>Our <span>Journey</span> through a decade as Only Trusted Developer</h1>
+                <p className='year text-justify' data-aos="fade-up" data-aos-delay={300 + (index * 100)}>{item.year}</p>
+                <h3 className='text-justify' data-aos="fade-up" data-aos-delay={350 + (index * 100)}>{item.title}</h3>
+                <p className='text-justify' data-aos="fade-up" data-aos-delay={400 + (index * 100)}>{item.description}</p>
               </Col>
             </Row>
           ))}

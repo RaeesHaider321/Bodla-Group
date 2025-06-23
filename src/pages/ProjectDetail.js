@@ -136,7 +136,7 @@ const projectDetails = {
     id: 1,
     title: 'A Whole New Definition of Lifestyle',
     spantitle: 'Business Hub',
-    introTitle: 'Experience the Future of Urban Living',
+    introTitle: 'Business Hub: Experience the Future of Urban Living',
     logo: bHub,
     thumb: businessHub,
     ctaThumb: ctaBHub,
@@ -215,43 +215,48 @@ const projectDetails = {
     whyproject: [
       { title: 'DHA Approved. ' },
       { title: 'Prime & Populous Location. ' },
+      { title: 'Active Construction ' },
       { title: 'Commercial Gateway. ' },
       { title: 'Ground Floor Possession in 1-year.' },
       { title: 'Modern Amenities.' },
-      { title: 'Surrounded by DHA & Askari Villas. ' },
+      { title: 'Surrounded by Premium Homes, DHA & Askari Villas. ' },
       { title: 'Fast Growing Community.' },
-      { title: '2.78 Acres. ' },
+      { title: 'Spanning over 2.78 Acres. ' },
     ],
     logo: oneD,
     thumb: oneDestination,
     ctaThumb: ctaOneD,
     background: oneDestination,
     amenities: [
+      { title: 'Gold Souk', icon: 'gymnasium', },
+      { title: 'Digital Zone', icon: 'gymnasium', },
+      { title: 'Double heightened Outlets', icon: 'gymnasium', },
       { title: 'Gymnasium', icon: 'gymnasium', },
       { title: 'Swimming Pool', icon: 'swimmingPool', },
       { title: 'Roof-Top Restaurant', icon: 'restaurant', },
       { title: 'Elevators', icon: "elevators" },
       { title: 'Wide Corridors', icon: 'wideCorridors', },
       { title: 'Multiple Entrances', icon: 'gate', },
-      { title: 'Ample Car Parking', icon: 'parkingArea', },
+      { title: 'Basement & Surface Parking', icon: 'parkingArea', },
       { title: '24/7 Power Backup', icon: "powerBackup" },
       { title: '24/7 Security', icon: "cctv" },
     ],
     nearbyPlaces: [
-      { title: "Shah Yousaf Gardez Gate (Bosan Road Main Gate)", icon: "dhaGate" },
       { title: "DHA Arena", icon: "arena" },
       { title: "DHA Food Court", icon: "foodCourt" },
       { title: "DHA Shopping Arcade", icon: "cart" },
       { title: "DHA Villas", icon: "villa" },
       { title: "Askari Villas", icon: "villa" },
+      { title: "DHA Arcade Health Care", icon: "healthCare" },
+      { title: "Facing 300ft MB", icon: "mainBoulevard" },
       { title: "Defence Orchard Events Complex", icon: "eventsComplex" },
-      { title: "Health Care", icon: "healthCare" },
       { title: "Villas Sports Complex", icon: "sportsComplex" },
       { title: "360 Zoo", icon: "zoo360" },
-      { title: "Facing 300ft MB", icon: "mainBoulevard" },
       { title: "Bilal Mosque", icon: "mosque" },
+      { title: "SICAS Schools", icon: "school" },
+      { title: "Premium Homes", icon: "school" },
+      { title: "Shah Yousaf Gardez Gate (Bosan Road Main Gate)", icon: "dhaGate" },
       { title: "Parks", icon: "parks" },
-      { title: "Schools", icon: "school" },
       { title: "DHA Degree College", icon: "university" },
     ],
     pricingPlans: [
@@ -299,7 +304,7 @@ const projectDetails = {
     ...projectTemplate,
     id: 3,
     title: 'Golf View Rumanza',
-    spantitle: 'A Whole New Definition of Lifestyle.',
+    spantitle: 'Experience Prestigious living beside the Rumanza Golf Course.',
     introTitle: 'Project Description',
     description: 'Golf View Rumanza - DHA Multan is a premier apartment and commercial complex offering breathtaking views of Pakistan’s first Championship Signature 18-hole golf course, ‘Rumanza.’ Situated in one of the country’s most prestigious communities, this project spans 7.5 kanal and rises across 12 storeys.',
     secondDescription: 'With a mix of luxurious residential apartments and penthouses designed for an elite lifestyle, as well as commercial spaces that provide a prime location for businesses, Golf View Rumanza offers a unique opportunity for both residents and retailers to grow forward in a vibrant, upscale community.',
@@ -432,7 +437,10 @@ const projectDetails = {
     whyproject: [
       { title: 'DHA Approved.' },
       { title: 'Resided in 8-Marla Category of V-sector.' },
-      { title: 'Exclusive Mumty Advantage in 5.2 Marla Home.' },
+      { title: 'Exclusive Mumty Advantage.' },
+      { title: '5.2 Marla – 4 Bedrooms (2220 Sqft)..' },
+      { title: '8-Marla - Extravagantly Spacious Home (2905 Sqft).' },
+      { title: 'In front of Commercial Complex, Park and Mosque.' },
       { title: 'Beyond Standard Size (2220 Sqft).' },
       { title: 'Extravagantly Spacious Home (2905 Sqft).' },
       { title: '4 & 5 Luxury Bedrooms with attached baths.' },
@@ -463,8 +471,11 @@ const projectDetails = {
       { icon: 'sportsComplex', title: 'Sports Complex' },
       { icon: 'hospital', title: 'Health & Education City' },
       { icon: 'kashmirPark', title: 'Kashmir Park' },
-      { icon: 'gate', title: 'Shah Shams Tabrez Gate (Matital Gate)' },
+      { icon: 'gate', title: 'Matital Gate' },
       { icon: 'mosque', title: 'Islamic Chowk' },
+      { icon: 'mainBoulevard', title: '300 ft Main Boulevard' },
+      { icon: 'parks', title: 'Parks' },
+      { icon: 'mosque', title: 'Mosque' },
     ],
     pricingPlans: [
       {
@@ -737,7 +748,7 @@ const ProjectDetails = () => {
         </Container>
         {/* Virtual Tour Section */}
         <div className='text-center mt-5'>
-          <h2 className='mb-4' >Smart Tour</h2>
+          <h2 className='mb-4' >Explore the visual details from every perspective</h2>
           <p>Drag to look around or let the auto-rotation guide you.</p>
           <div className='virtualtour mt-4'>
             <PanoramicViewer

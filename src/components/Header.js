@@ -75,7 +75,7 @@ function Header() {
               <NavDropdown.Item as={NavLink} to="/Projects/one-destination" onClick={closeNavbar} activeClassName="active">One Destination</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/Projects/bodla-homes" onClick={closeNavbar} activeClassName="active">Bodla Homes</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/Projects/golf-view-rumanza" onClick={closeNavbar} activeClassName="active">Golf View Rumanza</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to="/Projects" onClick={closeNavbar} activeClassName="active">5 Active Projects</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/Projects" onClick={closeNavbar} activeClassName="active">Projects</NavDropdown.Item>
             </NavDropdown>
             
             <Nav.Link 

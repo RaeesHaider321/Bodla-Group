@@ -29,7 +29,7 @@ const HomeProjects = () => {
                     { name: 'Central Fire Protection System', icon: <Icons name="fireFighting" /> },
                     { name: 'Air Conditioned Corridors and Common Areas', icon: <Icons name="airConditioning" /> },
                     { name: 'Ample Parking', icon: <Icons name="parkingArea" /> },
-                    { name: 'Double Entry', icon: <Icons name="gate" /> },
+                    { name: '4 main entrances', icon: <Icons name="gate" /> },
                     { name: 'Bridge connecting with DHA Main Office', icon: <Icons name="bridge" /> },
                     { name: '24 Hour Security', icon: <Icons name="cctv" /> },
                     { name: 'First Aid', icon: <Icons name="firstAid" /> },
@@ -43,14 +43,17 @@ const HomeProjects = () => {
             content: {
                 logo: oneD,
                 amenities: [
-                    { name: 'Gymnasium', icon: <Icons name="gymnasium" /> }, 
-                    { name: 'Swimming Pool', icon: <Icons name="swimmingPool" /> }, 
+                    { name: 'Gold Souk', icon: <Icons name="gymnasium" /> }, 
+                    { name: 'Digital Zone', icon: <Icons name="gymnasium" /> }, 
+                    { name: 'Multiple Entrances', icon: <Icons name="gate" /> }, 
+                    { name: 'Double-heightened Outlets', icon: <Icons name="gymnasium" /> }, 
                     { name: 'Roof-Top Restaurant', icon: <Icons name="restaurant" /> }, 
+                    { name: 'Connectivity Main Boulevard', icon: <Icons name="gymnasium" /> }, 
+                    { name: 'Swimming Pool', icon: <Icons name="swimmingPool" /> }, 
                     { name: 'Elevators', icon: <Icons name="elevators" /> }, 
                     { name: 'Escalators', icon: <Icons name="Escalator" /> }, 
                     { name: 'Wide Corridors', icon: <Icons name="wideCorridors" /> }, 
-                    { name: 'Multiple Entrances', icon: <Icons name="gate" /> }, 
-                    { name: 'Ample Car Parking', icon: <Icons name="parkingArea" /> }, 
+                    { name: 'Basement & Surface Parking', icon: <Icons name="parkingArea" /> }, 
                     { name: '24/7 Power Backup', icon: <Icons name="powerBackup" /> }, 
                     { name: '24/7 Security', icon: <Icons name="cctv" /> },
                 ],
@@ -62,7 +65,7 @@ const HomeProjects = () => {
             content: {
                 logo: gvr,
                 amenities: [
-                    { name: 'Gym',icon: <Icons name="gym" /> },
+                    { name: 'Gymnasium',icon: <Icons name="gym" /> },
                     { name: 'Swimming pool',icon: <Icons name="swimmingPool" /> }, 
                     { name: 'Kids play area', icon: <Icons name="kidsPlayArea" /> }, 
                     { name: 'Landscaped gardens',icon: <Icons name="airConditioning" /> }, 
@@ -124,7 +127,7 @@ const HomeProjects = () => {
                                 ))}
                             </Row>
                         </div>
-                        <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link='/Contact'  />
+                        <BodlaButton text="Tell me More!" icon={<Icons name="rightArrow" />} variant="primary" link='/Contact'  />
                     </div>
                 </div>
 

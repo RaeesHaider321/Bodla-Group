@@ -136,7 +136,7 @@ const Projects = () => {
             </Col>
             <Col xs={12} md={3} className='text-end'>
               <div data-aos="fade-left">
-                <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/" />
+                <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
               </div>
             </Col>
           </Row>
