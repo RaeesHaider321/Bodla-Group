@@ -20,6 +20,7 @@ import DHAMultan from "./pages/DHAMultan";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AreaUnitConverter from "./pages/AreaUnitConverter";
+import ConstructionCostCalculator from "./pages/ConstructionCostCalculator";
 import DHAMaps from "./pages/DhaMaps";
 import Careers from './pages/Careers';
 import MediaCenter from './pages/MediaCenter';
@@ -95,6 +96,7 @@ function App() {
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
+            <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
             <Route path="/dhaMaps" element={<DHAMaps />} />
             <Route path="/Careers" element={<Careers />} />
             <Route path="/MediaCenter" element={<MediaCenter />} />

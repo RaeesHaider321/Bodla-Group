@@ -23,7 +23,7 @@ function Footer() {
                 <Col className="mb-4" data-aos="fade-up" data-aos-duration="1400">
                   <h5>Others</h5>
                   <ul className="list-unstyled">
-                    <li><Link to="/AreaUnitConvertor">Area Unit Convertor</Link></li>
+                    <li><Link to="/AreaUnitConverter">Area Unit Convertor</Link></li>
                     <li><Link to="/ConstructionCostCalculator">Construction Cost Calculator</Link></li>
                     <li><Link to="/MediaCenter">Media Center</Link></li>
                     <li><Link to="/Careers">Careers</Link></li>

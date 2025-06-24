@@ -116,7 +116,7 @@ const PhoneNumberPopup = () => {
         
         {submitStatus !== 'success' ? (
           <>
-            <h4>Welcome to Bodla Group</h4>
+            <h5>Welcome to Bodla Group</h5>
             <p>Please provide your details to continue:</p>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
