@@ -21,6 +21,7 @@ import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AreaUnitConverter from "./pages/AreaUnitConverter";
 import ConstructionCostCalculator from "./pages/ConstructionCostCalculator";
+import PlotPriceCalculator from "./pages/PlotPriceCalculator";
 import DHAMaps from "./pages/DhaMaps";
 import Careers from './pages/Careers';
 import MediaCenter from './pages/MediaCenter';
@@ -97,6 +98,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
             <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
+            <Route path="/PlotPriceCalculator" element={<PlotPriceCalculator />} />
             <Route path="/dhaMaps" element={<DHAMaps />} />
             <Route path="/Careers" element={<Careers />} />
             <Route path="/MediaCenter" element={<MediaCenter />} />
