@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap';
+
 const ImageGallery = () => {
   const [images] = useState([
     {
@@ -7,7 +8,6 @@ const ImageGallery = () => {
       title: 'Sample Image',
       alt: 'Description'
     },
-    // Add more images here
     {
       id: '1GiaJ29Qi8LPfWUzb7mPWYTurfzR_oDQ8',
       title: 'Second Image',
@@ -22,25 +22,71 @@ const ImageGallery = () => {
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1); // 1 = 100%
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
   const handleClose = () => {
     setShowModal(false);
     setSelectedImage(null);
+    setZoomLevel(1); // Reset zoom when closing
+    setPosition({ x: 0, y: 0 }); // Reset position
   };
 
   const handleShow = (image) => {
     setSelectedImage(image);
     setShowModal(true);
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
   };
 
-  // Multiple URL formats to try as fallbacks
+  const zoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + 0.25, 3)); // Limit max zoom to 300%
+  };
+
+  const zoomOut = () => {
+    setZoomLevel(prev => Math.max(prev - 0.25, 0.5)); // Limit min zoom to 50%
+  };
+
+  const resetZoom = () => {
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  // Handle mouse down for dragging
+  const handleMouseDown = (e) => {
+    if (zoomLevel > 1) {
+      setIsDragging(true);
+      setDragStart({
+        x: e.clientX - position.x,
+        y: e.clientY - position.y
+      });
+    }
+  };
+
+  // Handle mouse move for dragging
+  const handleMouseMove = (e) => {
+    if (isDragging) {
+      setPosition({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      });
+    }
+  };
+
+  // Handle mouse up to stop dragging
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
   const getImageUrl = (id) => {
     const formats = [
-      `https://drive.google.com/uc?export=view&id=${id}&t=${Date.now()}`, // Current timestamp
-      `https://docs.google.com/uc?id=${id}`, // Alternative endpoint
-      `https://lh3.googleusercontent.com/d/${id}=s0`, // Google user content
+      `https://drive.google.com/uc?export=view&id=${id}&t=${Date.now()}`,
+      `https://docs.google.com/uc?id=${id}`,
+      `https://lh3.googleusercontent.com/d/${id}=s0`,
     ];
-    return formats[0]; // Try first format, others can be fallbacks
+    return formats[0];
   };
 
   return (
@@ -56,7 +102,6 @@ const ImageGallery = () => {
                 src={getImageUrl(image.id)}
                 alt={image.alt}
                 onError={(e) => {
-                  // Try fallback URLs if first fails
                   const formats = [
                     `https://docs.google.com/uc?id=${image.id}`,
                     `https://lh3.googleusercontent.com/d/${image.id}=s0`,
@@ -79,38 +124,74 @@ const ImageGallery = () => {
         ))}
       </Row>
 
-      {/* Modal for enlarged image view */}
-      <Modal show={showModal} onHide={handleClose} size="lg" centered>
+      {/* Modal for enlarged image view with zoom controls */}
+      <Modal show={showModal} onHide={handleClose} size="xl" centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedImage?.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="text-center">
+        <Modal.Body 
+          className="text-center overflow-hidden" 
+          style={{ 
+            height: '70vh',
+            cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default'
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+        >
           {selectedImage && (
-            <img 
-              src={getImageUrl(selectedImage.id)}
-              alt={selectedImage.alt}
-              style={{ maxWidth: '100%', maxHeight: '70vh' }}
-              onError={(e) => {
-                const formats = [
-                  `https://docs.google.com/uc?id=${selectedImage.id}`,
-                  `https://lh3.googleusercontent.com/d/${selectedImage.id}=s0`,
-                ];
-                
-                for (let i = 0; i < formats.length; i++) {
-                  const img = new Image();
-                  img.src = formats[i];
-                  img.onload = () => {
-                    e.target.src = formats[i];
-                  };
-                }
+            <div 
+              style={{ 
+                transform: `translate(${position.x}px, ${position.y}px) scale(${zoomLevel})`,
+                transition: isDragging ? 'none' : 'transform 0.2s ease',
+                transformOrigin: 'center center',
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
               }}
-            />
+            >
+              <img 
+                src={getImageUrl(selectedImage.id)}
+                alt={selectedImage.alt}
+                style={{ 
+                  maxWidth: '100%', 
+                  maxHeight: '100%',
+                  objectFit: 'contain'
+                }}
+                onError={(e) => {
+                  const formats = [
+                    `https://docs.google.com/uc?id=${selectedImage.id}`,
+                    `https://lh3.googleusercontent.com/d/${selectedImage.id}=s0`,
+                  ];
+                  
+                  for (let i = 0; i < formats.length; i++) {
+                    const img = new Image();
+                    img.src = formats[i];
+                    img.onload = () => {
+                      e.target.src = formats[i];
+                    };
+                  }
+                }}
+              />
+            </div>
           )}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Footer className="d-flex justify-content-end">
+            <Button variant="outline-secondary" onClick={zoomOut} disabled={zoomLevel <= 0.5}>
+              <i className="bi bi-zoom-out"></i> Zoom Out
+            </Button>
+            <Button variant="outline-secondary" onClick={resetZoom} disabled={zoomLevel === 1} className="mx-2">
+              <i className="bi bi-fullscreen-exit"></i> Reset
+            </Button>
+            <Button variant="outline-secondary" onClick={zoomIn} disabled={zoomLevel >= 3}>
+              <i className="bi bi-zoom-in"></i> Zoom In
+            </Button>
+           {/* <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
     </Container>
