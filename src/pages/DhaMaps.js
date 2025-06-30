@@ -3,22 +3,36 @@ import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap';
 
 const ImageGallery = () => {
   const [images] = useState([
-    {
-      id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW',
-      title: 'Sample Image',
-      alt: 'Description'
-    },
-    {
-      id: '1GiaJ29Qi8LPfWUzb7mPWYTurfzR_oDQ8',
-      title: 'Second Image',
-      alt: 'Another description'
-    },
-    {
-      id: '1TtgHriJuANPdL_JvM9g8cqzuD72S4N0n',
-      title: 'Third Image',
-      alt: 'More description'
-    },
-  ]);
+  { id: '1TtgHriJuANPdL_JvM9g8cqzuD72S4N0n', title: 'Central Business Square', alt: 'Central Business Square' },
+  { id: '1Hen-bjgHSoR4raoAgJt3NpCjANUTVM2f', title: 'Rumanza', alt: 'Rumanza DHA Multan' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector A', alt: 'Sector A description' },
+  { id: '1GiaJ29Qi8LPfWUzb7mPWYTurfzR_oDQ8', title: 'Sector B1', alt: 'Sector B description' },
+  // { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector C', alt: 'Sector C description' },
+  { id: '1TWw2vcHAoLatuW6TYN1R1RibZqKIxjFk', title: 'Sector D', alt: 'Sector D description' },
+  { id: '1xKodWXzUeg38LJaXNSyRvWv4awhCahh8', title: 'Sector E', alt: 'Sector E description' },
+  { id: '1okvkvhAw-3oi6JEXCgMzEl4wdPS3sMM5', title: 'Sector E1, E2', alt: 'Sector E1, E2 description' },
+  { id: '1h60YYQUnvtlm0s62wO3Ktk6BZEDNT7Hw', title: 'Sector F', alt: 'Sector F description' },
+  { id: '1kRmLX_vMR8eGDHq1ya3viMPHR9NDVocD', title: 'Sector G', alt: 'Sector G description' },
+  { id: '1FGru6TyzqZn0IY_AaeJG5M59rJPNRs8w', title: 'Sector H', alt: 'Sector H description' },
+  { id: '1N-zrqpKUGMoJlFoc-dzmuSycaoc-Cxid', title: 'Sector I', alt: 'Sector I description' },
+  // { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector J', alt: 'Sector J description' },
+  { id: '1mDjtq0heBEGzYVStqeOrNw39RZ6ReOKz', title: 'Sector K', alt: 'Sector K description' },
+  { id: '1uGpiHWcXrpNvtYOcQnxoBA1zlfIKweyR', title: 'Sector L', alt: 'Sector L description' },
+  { id: '1JD8ca5HMiJvGpfkYG8k9_hj3U0jJBC6z', title: 'Sector M', alt: 'Sector M description' },
+  { id: '1Qh8BYk387T8jtGbVRjxZOrQZz_japxpV', title: 'Sector N', alt: 'Sector N description' },
+  { id: '1NM8vsPUiPHgxorGPmGMFrsRLcoSL-KIm', title: 'Sector O', alt: 'Sector O description' },
+  { id: '1bqjB-7iHTmS9JxFcJyj4mKoybH37efkM', title: 'Sector P', alt: 'Sector P description' },
+  { id: '1ck0zP84R6gt1Cr_gyhI9iTKyoYdiEUG6', title: 'Sector Q', alt: 'Sector Q description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector R', alt: 'Sector R description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector S', alt: 'Sector S description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector T', alt: 'Sector T description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector U', alt: 'Sector U description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector V', alt: 'Sector V description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector W', alt: 'Sector W description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector X', alt: 'Sector X description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector Y', alt: 'Sector Y description' },
+  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector Z', alt: 'Sector Z description' }
+]);
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -91,7 +105,7 @@ const ImageGallery = () => {
 
   return (
     <Container className="my-5">
-      <h1 className="text-center mb-4">Google Drive Image Gallery</h1>
+      <h1 className="text-center mb-4">DHA Multan <span>Maps</span></h1>
       
       <Row xs={1} sm={2} md={3} lg={4} className="g-4">
         {images.map((image) => (
