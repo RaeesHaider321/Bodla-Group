@@ -3,36 +3,34 @@ import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap';
 
 const ImageGallery = () => {
   const [images] = useState([
-  { id: '1TtgHriJuANPdL_JvM9g8cqzuD72S4N0n', title: 'Central Business Square', alt: 'Central Business Square' },
-  { id: '1Hen-bjgHSoR4raoAgJt3NpCjANUTVM2f', title: 'Rumanza', alt: 'Rumanza DHA Multan' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector A', alt: 'Sector A description' },
-  { id: '1GiaJ29Qi8LPfWUzb7mPWYTurfzR_oDQ8', title: 'Sector B1', alt: 'Sector B description' },
-  // { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector C', alt: 'Sector C description' },
-  { id: '1TWw2vcHAoLatuW6TYN1R1RibZqKIxjFk', title: 'Sector D', alt: 'Sector D description' },
-  { id: '1xKodWXzUeg38LJaXNSyRvWv4awhCahh8', title: 'Sector E', alt: 'Sector E description' },
-  { id: '1okvkvhAw-3oi6JEXCgMzEl4wdPS3sMM5', title: 'Sector E1, E2', alt: 'Sector E1, E2 description' },
-  { id: '1h60YYQUnvtlm0s62wO3Ktk6BZEDNT7Hw', title: 'Sector F', alt: 'Sector F description' },
-  { id: '1kRmLX_vMR8eGDHq1ya3viMPHR9NDVocD', title: 'Sector G', alt: 'Sector G description' },
-  { id: '1FGru6TyzqZn0IY_AaeJG5M59rJPNRs8w', title: 'Sector H', alt: 'Sector H description' },
-  { id: '1N-zrqpKUGMoJlFoc-dzmuSycaoc-Cxid', title: 'Sector I', alt: 'Sector I description' },
-  // { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector J', alt: 'Sector J description' },
-  { id: '1mDjtq0heBEGzYVStqeOrNw39RZ6ReOKz', title: 'Sector K', alt: 'Sector K description' },
-  { id: '1uGpiHWcXrpNvtYOcQnxoBA1zlfIKweyR', title: 'Sector L', alt: 'Sector L description' },
-  { id: '1JD8ca5HMiJvGpfkYG8k9_hj3U0jJBC6z', title: 'Sector M', alt: 'Sector M description' },
-  { id: '1Qh8BYk387T8jtGbVRjxZOrQZz_japxpV', title: 'Sector N', alt: 'Sector N description' },
-  { id: '1NM8vsPUiPHgxorGPmGMFrsRLcoSL-KIm', title: 'Sector O', alt: 'Sector O description' },
-  { id: '1bqjB-7iHTmS9JxFcJyj4mKoybH37efkM', title: 'Sector P', alt: 'Sector P description' },
-  { id: '1ck0zP84R6gt1Cr_gyhI9iTKyoYdiEUG6', title: 'Sector Q', alt: 'Sector Q description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector R', alt: 'Sector R description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector S', alt: 'Sector S description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector T', alt: 'Sector T description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector U', alt: 'Sector U description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector V', alt: 'Sector V description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector W', alt: 'Sector W description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector X', alt: 'Sector X description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector Y', alt: 'Sector Y description' },
-  { id: '1tTz9rt8L8Mbj3mmXIRa94NHwinEfwLSW', title: 'Sector Z', alt: 'Sector Z description' }
-]);
+    { id: '1pmnV7kZGRQ5R9qt-Ou28Oo0U0yg-e1R3', title: 'Central Business Square', alt: 'Central Business Square' },
+    { id: '1EDyUxFSFe8YgIpfdYvtLJa7Mp1lZltLa', title: 'Rumanza', alt: 'Rumanza DHA Multan' },
+    { id: '1blPpHK3G-GIotSk_hSvmsbkrYfvAgX8-', title: 'Sector A', alt: 'Sector A description' },
+    { id: '1BUCrED9ualOVvLqRjXM2dlXNF8_pb2q-', title: 'Sector B1', alt: 'Sector B 1 description' },
+    { id: '1MzplZ2p-eG6vaX64EXQ3A8W-YclsqqLv', title: 'Sector D', alt: 'Sector D description' },
+    { id: '1acO8OPZFaoJPpTU8eu4oOH4Z4Y3dXwjU', title: 'Sector E', alt: 'Sector E description' },
+    { id: '1IPeD5pz3faD29hy58-3IecpFdbnV3ocT', title: 'Sector E1, E2', alt: 'Sector E1, E2 description' },
+    { id: '16lpv1PKQff2HPcdp0bmiDytT9vxG7bnP', title: 'Sector F', alt: 'Sector F description' },
+    { id: '1Nkudi5WE7tawgXH05RAIXsiBtvVSxeXX', title: 'Sector G', alt: 'Sector G description' },
+    { id: '1JInu1-zHE_otXxhB0bRT-knO6zzMCdt9', title: 'Sector H', alt: 'Sector H description' },
+    { id: '1TQxXcIwtz2-uIXrEU_wqnOUu7Ls1kNzP', title: 'Sector I', alt: 'Sector I description' },
+    { id: '1SeYjH7SYf2OcmLq5Q5Mipxut0vhf6rpX', title: 'Sector K', alt: 'Sector K description' },
+    { id: '1IskJTl2g3DS1GuCXAaf2HCqr9qASudNe', title: 'Sector L', alt: 'Sector L description' },
+    { id: '1a5PW6qIcGCipkwjfjDmQ2kdHULD2QQS8', title: 'Sector M', alt: 'Sector M description' },
+    { id: '1iLxyhB4jD6elgEaDXK5uXSPScaPiUKld', title: 'Sector N', alt: 'Sector N description' },
+    { id: '1_uW_IgL39jUq8ruNaiYQCxA6Yz-jwlEP', title: 'Sector O', alt: 'Sector O description' },
+    { id: '1po30_IBEwe6CIwfk0DtGhE1yGpz9D0hb', title: 'Sector P', alt: 'Sector P description' },
+    { id: '1uKRxUMSaZTDE-ripvjDPBEbs2TTMJCvC', title: 'Sector Q', alt: 'Sector Q description' },
+    { id: '1r9CqjAe2m4itY0RRozzg49CY7rNFmvz1', title: 'Sector R', alt: 'Sector R description' },
+    { id: '1hVPJmPvpaD11vYtgKeFNPeRfpTIlI17i', title: 'Sector S', alt: 'Sector S description' },
+    { id: '1EYvwN1gbpVo9Ns4n-d_H6eYiIvV1ySUh', title: 'Sector T', alt: 'Sector T description' },
+    { id: '1JjUem-AJcQfnXlaoPKz1j2JeDby2i4VX', title: 'Sector U', alt: 'Sector U description' },
+    { id: '1anW61nd1EHzzXNq41BPjrY6DZkIrzYhr', title: 'Sector V', alt: 'Sector V description' },
+    { id: '14oAl7Qegu3dOu3cCPUmxIyNkkLya6D4d', title: 'Sector W 1', alt: 'Sector W description' },
+    { id: '18sbDIxijbdKOGiCY9_1VRWPotdoXX94m', title: 'Sector W 2', alt: 'Sector W description' },
+    { id: '1LMvHaoarsFkW5O5Zel0ust7OtiuGt1lb', title: 'Sector X', alt: 'Sector X description' },
+    { id: '1IprHhBKPeWT5KR5ZY5C9TVOL3TsNpb1u', title: 'Sector Y', alt: 'Sector Y description' }
+  ]);
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -55,12 +53,12 @@ const ImageGallery = () => {
     setPosition({ x: 0, y: 0 });
   };
 
-  const zoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.25, 3)); // Limit max zoom to 300%
+   const zoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + 0.5, 10)); // Max zoom 1000% (10x)
   };
 
   const zoomOut = () => {
-    setZoomLevel(prev => Math.max(prev - 0.25, 0.5)); // Limit min zoom to 50%
+    setZoomLevel(prev => Math.max(prev - 0.5, 0.1)); // Min zoom 10% (0.1x)
   };
 
   const resetZoom = () => {
@@ -68,7 +66,6 @@ const ImageGallery = () => {
     setPosition({ x: 0, y: 0 });
   };
 
-  // Handle mouse down for dragging
   const handleMouseDown = (e) => {
     if (zoomLevel > 1) {
       setIsDragging(true);
@@ -79,7 +76,6 @@ const ImageGallery = () => {
     }
   };
 
-  // Handle mouse move for dragging
   const handleMouseMove = (e) => {
     if (isDragging) {
       setPosition({
@@ -89,18 +85,12 @@ const ImageGallery = () => {
     }
   };
 
-  // Handle mouse up to stop dragging
   const handleMouseUp = () => {
     setIsDragging(false);
   };
 
   const getImageUrl = (id) => {
-    const formats = [
-      `https://drive.google.com/uc?export=view&id=${id}&t=${Date.now()}`,
-      `https://docs.google.com/uc?id=${id}`,
-      `https://lh3.googleusercontent.com/d/${id}=s0`,
-    ];
-    return formats[0];
+    return `https://drive.google.com/uc?export=view&id=${id}&t=${Date.now()}`;
   };
 
   return (
@@ -138,7 +128,6 @@ const ImageGallery = () => {
         ))}
       </Row>
 
-      {/* Modal for enlarged image view with zoom controls */}
       <Modal show={showModal} onHide={handleClose} size="xl" centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedImage?.title}</Modal.Title>
@@ -193,19 +182,21 @@ const ImageGallery = () => {
             </div>
           )}
         </Modal.Body>
-        <Modal.Footer className="d-flex justify-content-end">
-            <Button variant="outline-secondary" onClick={zoomOut} disabled={zoomLevel <= 0.5}>
+        <Modal.Footer className="d-flex justify-content-between align-items-center">
+          <div className="text-muted">
+            Zoom: {Math.round(zoomLevel * 100)}%
+          </div>
+          <div>
+            <Button variant="outline-secondary" onClick={zoomOut} disabled={zoomLevel <= 0.1}>
               <i className="bi bi-zoom-out"></i> Zoom Out
             </Button>
             <Button variant="outline-secondary" onClick={resetZoom} disabled={zoomLevel === 1} className="mx-2">
               <i className="bi bi-fullscreen-exit"></i> Reset
             </Button>
-            <Button variant="outline-secondary" onClick={zoomIn} disabled={zoomLevel >= 3}>
+            <Button variant="outline-secondary" onClick={zoomIn} disabled={zoomLevel >= 10}>
               <i className="bi bi-zoom-in"></i> Zoom In
             </Button>
-           {/* <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button> */}
+          </div>
         </Modal.Footer>
       </Modal>
     </Container>

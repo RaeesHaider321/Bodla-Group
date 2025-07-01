@@ -97,8 +97,8 @@ function App() {
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
-            <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
-            <Route path="/PlotPriceCalculator" element={<PlotPriceCalculator />} />
+            {/* <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
+            <Route path="/PlotPriceCalculator" element={<PlotPriceCalculator />} /> */}
             <Route path="/dhaMaps" element={<DHAMaps />} />
             <Route path="/Careers" element={<Careers />} />
             <Route path="/MediaCenter" element={<MediaCenter />} />
