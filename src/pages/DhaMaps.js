@@ -96,7 +96,7 @@ const ImageGallery = () => {
   return (
     <Container className="my-5">
       <h1 className="text-center mb-4">DHA Multan <span>Maps</span></h1>
-      
+      {/* <img src="https://res.cloudinary.com/doywbsnqq/image/upload/v1751367115/SECTOR_A_wmpe38.png"/> */}
       <Row xs={1} sm={2} md={3} lg={4} className="g-4">
         {images.map((image) => (
           <Col key={image.id}>
