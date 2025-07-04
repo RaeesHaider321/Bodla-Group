@@ -1,0 +1,53 @@
+.sticky-top{
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 100px); /* Viewport height minus offset */
+  overflow-y: auto; /* Enable scrolling if content is long */
+  z-index: 10;
+}
+.tableOfContent:hover{
+    background: var(--card-background);
+}
+.tableOfContent .heading{
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.tableOfContent ul{
+    margin: 0;
+    padding: 0;
+}
+.tableOfContent ul li{
+    border-left: 1px solid white;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.tableOfContent ul li a{
+    color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 120px; /* adjust to match sticky header height */
+}
+
+.tableOfContent ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tableOfContent ul li {
+  margin-bottom: 8px;
+}
+
+.tableOfContent ul li a.toc-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.tableOfContent ul li a.toc-link:hover {
+  text-decoration: underline;
+}

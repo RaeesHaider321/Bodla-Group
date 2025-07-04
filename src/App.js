@@ -26,6 +26,7 @@ import DHAMaps from "./pages/DhaMaps";
 import Careers from './pages/Careers';
 import MediaCenter from './pages/MediaCenter';
 
+
 import NotFound from "./pages/NotFound";
 import "./App.css"; // Global CSS
 // import "./components/Header.css"; // Header CSS
@@ -36,6 +37,11 @@ import "./components/Team.css"; // CSS for Team
 import "./components/Reit.css"; // CSS for Reit
 
 import RedirectHandler from "./components/RedirectHandler";
+
+import BlogList from "./components/BlogList";
+import BlogDetail from "./components/BlogDetail";
+
+
 
 // This component will handle scrolling to top on route change
 function ScrollToTop() {
@@ -82,7 +88,7 @@ function App() {
         <Header />
         <ScrollToTop /> {/* This will handle scrolling to top on route change */}
         <div className="routes-container">
-         <RedirectHandler/>
+          <RedirectHandler />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
@@ -102,6 +108,12 @@ function App() {
             <Route path="/dhaMaps" element={<DHAMaps />} />
             <Route path="/Careers" element={<Careers />} />
             <Route path="/MediaCenter" element={<MediaCenter />} />
+
+
+
+            <Route path="/blogs" element={<BlogList />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+
           </Routes>
         </div>
         <Footer />
