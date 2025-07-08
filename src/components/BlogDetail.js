@@ -30,7 +30,6 @@ const BlogDetail = () => {
               <small>By {blog.author} on {blog.date}</small>
             </p>
 
-
             {blog.contentSections?.map((section, index) => (
               <div id={section.id} key={index} className="scroll-section mb-4">
                 <h4>{section.title}</h4>
@@ -38,26 +37,7 @@ const BlogDetail = () => {
               </div>
             ))}
 
-            {blog.tableData && blog.tableData.length > 0 && (
-              <>
-                <Table striped bordered hover responsive>
-                  <thead>
-                    <tr>
-                      <th>Keyword</th>
-                      <th>Count</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {blog.tableData.map((row, index) => (
-                      <tr key={index}>
-                        <td>{row.keyword}</td>
-                        <td>{row.count}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              </>
-            )}
+            
             {blog.faq && blog.faq.length > 0 && (
               <>
                 <h4 className="mt-5">Frequently Asked Questions (FAQs)</h4>
@@ -82,9 +62,10 @@ const BlogDetail = () => {
                     <ul>
                       {blog.listItems.map((item, index) => (
                         <li key={index}>
-                          <a href={`#${item.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`} className="toc-link">
+                          {/* <a href={`#${item.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`} className="toc-link">
                             {item}
-                          </a>
+                          </a> */}
+                          <a href={`#${blog.contentSections[index].id}`} className="toc-link">{item}</a>
                         </li>
                       ))}
                     </ul>

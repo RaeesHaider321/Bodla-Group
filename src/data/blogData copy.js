@@ -5,7 +5,7 @@ export const blogPosts = [
     id: 1,
     title: "The Future of Real Estate in Pakistan",
     excerpt: "Explore how Pakistan's real estate sector is evolving in 2025...",
-    author: "Ayesha Saleem",
+    author: "Raees Haider",
     date: "2025-07-04",
     image: blog1,
     listItems: [

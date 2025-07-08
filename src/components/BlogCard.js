@@ -1,26 +1,27 @@
-import { Link, useNavigate } from "react-router-dom";
-import {Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const BlogCard = ({ blog }) => {
- const navigate = useNavigate();
+  const navigate = useNavigate();
+  
   return (
-    <div className="blog-card">
+    <div 
+      className="blog-card clickable-card" 
+      onClick={() => navigate(`/blog/${blog.id}`)}
+      style={{ cursor: 'pointer' }}
+    >
       <Card>
         <Card.Img variant="top" src={blog.image} alt={blog.title} />
         <Card.Body>
           <Card.Title>{blog.title}</Card.Title>
           <Card.Text>{blog.excerpt}</Card.Text>
           <small>By {blog.author} on {blog.date}</small>
-          {/* <Link to={`/blog/${blog.id}`}>Read More</Link> */}
           <div className="mt-3">
-            <Button variant="primary" onClick={() => navigate(`/blog/${blog.id}`)}>
-              Read More →
-            </Button>
+            <span className="text-primary">Read More →</span>
           </div>
         </Card.Body>
       </Card>
     </div>
-
   );
 };
 
