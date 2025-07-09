@@ -26,7 +26,7 @@ const Contact = () => {
                           <Icon name="location" />
                           <div className='card-content'>
                             <Card.Title>Bodla Group Head Office</Card.Title>
-                            <p>Business Hub, Sector-k adjacent to DHA Main Head Office, DHA Multan</p>
+                            <p>Business Hub, Sector-K adjacent to DHA Multan Main Office, Multan</p>
                           </div>
                         </Card.Body>
                       </Card>
