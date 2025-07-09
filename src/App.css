@@ -614,7 +614,13 @@ a {
   display: flex;
   gap: 15px;
 }
-
+.contact-card .card .call-toll h6{
+ margin-right: 10px;
+}
+.contact-card .card .call-toll a{
+ color: var(--white);
+ font-weight: normal;
+}
 .contact-card .card .card-body span {
   width: 50px;
   height: 50px;

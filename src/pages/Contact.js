@@ -23,42 +23,58 @@ const Contact = () => {
                     <Col xs={12} md={12}>
                       <Card>
                         <Card.Body>
-                        <Icon name="location" />
-                        <div className='card-content'>
-                          <Card.Title>Multan Head Office</Card.Title>
-                          <p>Business Hub, Sector-k adjacent to DHA Main Head Office, DHA Multan</p>
+                          <Icon name="location" />
+                          <div className='card-content'>
+                            <Card.Title>Bodla Group Head Office</Card.Title>
+                            <p>Business Hub, Sector-k adjacent to DHA Main Head Office, DHA Multan</p>
                           </div>
-                          </Card.Body>
+                        </Card.Body>
                       </Card>
                     </Col>
                     <Col xs={12} md={12}>
-                      <Row className='gy-4'>
-                        <Col xs={12} md={6}>
-                          <Card>
-                            <Card.Body>
-                            <Icon name="envelope" />
-                            <div className='card-content'>
-                              <Card.Title>Email</Card.Title>
-                              <p>info@bodlagroup.com</p>
-                              </div>
-                            </Card.Body>
-                          </Card>
+                      <Row xs={1} md={2} className='gy-4'>
+                        <Col>
+                          <a href="mailto:info@bodlagroup.com">
+                            <Card>
+                              <Card.Body>
+                                <Icon name="envelope" />
+                                <div className='card-content'>
+                                  <Card.Title>Email</Card.Title>
+                                  <p>info@bodlagroup.com</p>
+                                </div>
+                              </Card.Body>
+                            </Card>
+                          </a>
                         </Col>
-                        <Col xs={12} md={6}>
-                          <Card>
-                            <Card.Body>
-                            <Icon name="phone" />
-                            <div className='card-content'>
-                              <Card.Title>Phone</Card.Title>
-                              <p>061-1111-26352</p>
-                              </div>
-                            </Card.Body>
-                          </Card>
+                        <Col>
+                          <a href="tel:061111126352">
+                            <Card>
+                              <Card.Body>
+                                <Icon name="telephone" />
+                                <div className='card-content'>
+                                  <Card.Title>UAN</Card.Title>
+                                  <p> 061-1111-26352</p>
+                                </div>
+                              </Card.Body>
+                            </Card>
+                          </a>
+                        </Col>
+                        <Col>
+                          <a href="tel:0800-26352">
+                            <Card>
+                              <Card.Body>
+                                <Icon name="phone" />
+                                <div className='card-content'>
+                                  <Card.Title>Toll Free</Card.Title>
+                                  <p> 0800-26352</p>
+                                </div>
+                              </Card.Body>
+                            </Card>
+                          </a>
                         </Col>
                       </Row>
                     </Col>
                   </Row>
-
                 </Col>
               </Row>
             </Card.Body>
