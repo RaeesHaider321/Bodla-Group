@@ -4,9 +4,10 @@ import { Container, Row, Col, Button, Image, Table, Accordion, Card } from 'reac
 import "../styles/blogs.css";
 
 const BlogDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams(); // Changed from id to slug
   const navigate = useNavigate();
-  const blog = blogPosts.find(post => post.id === parseInt(id));
+  const blog = blogPosts.find(post => post.slug === slug); // Changed lookup
+
 
   if (!blog) return <p>Blog not found.</p>;
 

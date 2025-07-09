@@ -6,11 +6,9 @@ const BlogCard = ({ blog }) => {
   const navigate = useNavigate();
   
   return (
-    <div 
-      className="blog-card clickable-card" 
-      onClick={() => navigate(`/blog/${blog.id}`)}
-      style={{ cursor: 'pointer' }}
-    >
+    <div className="blog-card clickable-card" 
+      onClick={() => navigate(`/blogs/${blog.slug}`)}
+      style={{ cursor: 'pointer' }}>
       <Card>
         <Card.Img variant="top" src={blog.image} alt={blog.title} />
         <Card.Body>

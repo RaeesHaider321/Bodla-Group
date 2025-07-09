@@ -112,7 +112,7 @@ function App() {
 
 
             <Route path="/blogs" element={<BlogList />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/blogs/:slug" element={<BlogDetail />} />
 
           </Routes>
         </div>
