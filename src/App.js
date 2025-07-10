@@ -36,6 +36,8 @@ import "./components/ScrollToTop.css"; // CSS for Scroll to Top Button
 import "./components/Team.css"; // CSS for Team
 import "./components/Reit.css"; // CSS for Reit
 
+import WhatsAppButton from './components/WhatsAppButton';
+
 import RedirectHandler from "./components/RedirectHandler";
 
 import BlogList from "./components/BlogList";
@@ -125,6 +127,10 @@ function App() {
           </button>
         )}
       </div>
+      <WhatsAppButton 
+        phoneNumber="+923041231234" // Replace with your phone number (include country code)
+        message="Hello! I have a question about your product." // Optional default message
+      />
     </Router>
   );
 }
