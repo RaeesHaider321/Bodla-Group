@@ -1,4 +1,5 @@
 import blog1 from '../images/blogs/Emerging Trends in Real Estate in Pakistan.jpg';
+import blog2 from '../images/blogs/construction.png';
 
 export const blogPosts = [
   {
@@ -134,5 +135,100 @@ export const blogPosts = [
         answer: "Lahore, Islamabad, Karachi, and Multan top the list due to strong infrastructure, demand, and ongoing development projects.",
       },
     ],
+  },
+  {
+    id: 2,
+    title: "DHA Multan Development Charges Waiver 2025",
+    slug: "DHA-Multan-Development-Charges-Waiver-2025",
+    excerpt: "Get 100% Off with Construction Waiver Scheme 2024-25",
+    author: "Ayesha Saleem",
+    date: "2025-07-15",
+    image: blog2,
+    listItems: [
+      "What Is the DHA Multan Construction Waiver 2025?",
+      "Who Is Eligible for the Construction Charges Waiver DHA Multan?",
+      "What Are the Benefits of the DHA Multan 75% Waiver 2024 25?",
+      "How to Pay DHA Multan Development Charges?",
+      "Why Is DHA Multan a Good Investment?",
+    ],
+    contentSections: [
+      { id: "What-Is-the-DHA-Multan", 
+        intro: 'Is DHA Multan a good investment in 2025? With its rising value, expanding infrastructure, and a strong community lifestyle, DHA Multan continues to be one of the most promising investment opportunities in Southern Punjab. Adding to this appeal, the DHA Multan Construction Waiver Scheme 2024 25 brings a golden chance for property owners to save massively on their construction and development charges.', 
+        title: "What Is the DHA Multan Construction Waiver 2025?",
+        description: "The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.",
+        extraParagraph:(
+          <>
+          <p>In addition, those who occupy their houses (with an occupancy certificate) within the same timeframe will receive an additional 25% waiver, making it a 100% exemption on DHA Multan development charges.</p>
+          </>
+        ),
+      },
+      
+        { id: "Who-Is-Eligible", 
+        title: "Who Is Eligible for the Construction Charges Waiver DHA Multan?", 
+        description: "To qualify under the DHA Multan waiver eligibility criteria, property owners must:",
+      listing:(
+          <>
+          <ul>
+  <li>Complete the grey structure of their homes by August 30, 2025 (as per the extended waiver deadline August 30, 2025).</li>
+  <li>Possess plots in DHA Multan possession sectors.</li>
+  <li>Occupy the house to avail the additional 25% benefit (proved via occupancy certificate DHA waiver).</li>
+</ul>
+          </>
+        ),
+        afterULParagraph: (
+          <>
+          <p>The scheme is only applicable in sectors where possession of plots has been officially handed over.</p>
+          </>
+        )
+      },
+      
+        { id: "What-Are-the-Benefits", 
+        title: "What Are the Benefits of the DHA Multan 75% Waiver 2024 25?", 
+        description: "",
+          listing:(
+          <>
+          <ul>
+  <li>Substantial Financial Relief: Save up to 100% on development charges.</li>
+  <li>Faster Property Utilization: Encourages families to shift in and start living.</li>
+  <li>Boosts Sector-Wide Construction: This sector-wide waiver incentive DHA Multan is designed to fast-track area development.</li>
+  <li>Investor Confidence: Increases property value and encourages long-term investment in Multan real estate.</li>
+</ul>
+          </>
+        )
+      },
+      
+        { id: "How-to-Pay-DHA-Multan", 
+        title: "How to Pay DHA Multan Development Charges?", 
+        description: "Owners can check the development charges schedule 2025 on the DHA portal or contact the relevant DHA Multan Construction Company or contractor. Payments can be made through official DHA channels, including bank transfers or payment vouchers. For professional assistance, DHA also offers a DHA Multan contractor registration form for approved builders." },
+      
+        { id: "Why-Is-DHA-Multan", 
+        title: "Why Is DHA Multan a Good Investment?", 
+        description: "DHA Multan is rapidly emerging as the center of urban living in South Punjab. With modern infrastructure, fast-paced development, and incentives such as the construction charges waiver DHA Multan, it offers a secure and high-return opportunity for both short- and long-term investors.",
+          extraParagraph:(
+          <>
+          <p>Whether you're planning to construct your dream home or aiming for strong property appreciation, the DHA Multan construction waiver 2025 makes this the perfect time to invest.</p>
+          </>
+        ),
+      },
+    ],
+    content: (
+      <>
+        <h4 id="What-Is-the-DHA-Multan">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+
+        <h4 id="Who-Is-Eligible">Who Is Eligible for the Construction Charges Waiver DHA Multan?</h4>
+        <p>Pakistan’s GDP growth, increased remittances, and government business-friendly policies have boosted investor confidence. Regulatory stability and improved ease of doing business are accelerating project launches across major cities.</p>
+
+        <h4 id="What-Are-the-Benefits">What Are the Benefits of the DHA Multan 75% Waiver 2024 25?</h4>
+        <p>Urban demand for office, retail, and logistics space is surging. E-commerce, tourism, and hospitality are key drivers of commercial property growth in 2025.</p>
+
+        <h4 id="How-to-Pay-DHA-Multan">How to Pay DHA Multan Development Charges?</h4>
+        <p>The central bank’s reduction of interest rates from 22% to 13% has revived real estate activity. Cheaper loans are enabling more buyers and developers to participate in the market.</p>
+
+        <h4 id="Why-Is-DHA-Multan">Why Is DHA Multan a Good Investment?</h4>
+        <p>Security, amenities, and organized layouts make gated communities the top residential choice for Pakistani families. They’re thriving in Lahore, Islamabad, and Karachi.</p>
+      </>
+    ),
+   
   },
 ];

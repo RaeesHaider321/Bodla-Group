@@ -33,8 +33,12 @@ const BlogDetail = () => {
 
             {blog.contentSections?.map((section, index) => (
               <div id={section.id} key={index} className="scroll-section mb-4">
+                <p>{section.intro}</p>
                 <h4>{section.title}</h4>
                 <p>{section.description}</p>
+                <p>{section.extraParagraph}</p>
+                {section.listing}
+                <p>{section.afterULParagraph}</p>
               </div>
             ))}
 
