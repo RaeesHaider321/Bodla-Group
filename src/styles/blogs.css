@@ -51,3 +51,6 @@ html {
 .tableOfContent ul li a.toc-link:hover {
   text-decoration: underline;
 }
+ .scroll-section ul li{
+  list-style: disc;
+ }
