@@ -54,3 +54,29 @@ html {
  .scroll-section ul li{
   list-style: disc;
  }
+ /* Social Share Buttons */
+.social-share {
+  margin: 20px 0;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.social-share h5 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.social-share .btn-group {
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.social-share .btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-share .btn svg {
+  margin-right: 5px;
+}
