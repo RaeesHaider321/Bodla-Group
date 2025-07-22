@@ -10,28 +10,36 @@ const BlogDetail = () => {
   const navigate = useNavigate();
   const blog = blogPosts.find(post => post.slug === slug);
 
+  // Helper function to get absolute URL
+  const getAbsoluteUrl = (path) => {
+    return path.startsWith('http') ? path : `${window.location.origin}${path}`;
+  };
+
   // Get current URL for sharing
   const currentUrl = window.location.href;
   const shareTitle = encodeURIComponent(blog?.title || '');
   const shareText = encodeURIComponent(`Check out this blog post: ${blog?.title || ''}`);
-  const imageUrl = encodeURIComponent(blog?.image || '');
+  const absoluteImageUrl = blog?.image ? getAbsoluteUrl(blog.image) : '';
+  const encodedImageUrl = encodeURIComponent(absoluteImageUrl);
 
-  // Enhanced Social share URLs with images and better metadata
+  // Enhanced Social share URLs with proper metadata
   const socialLinks = {
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}&picture=${imageUrl}&title=${shareTitle}&description=${shareText}`,
-    twitter: `https://twitter.com/intent/tweet?url=${currentUrl}&text=${shareText}&hashtags=blog`,
-    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${shareTitle}&summary=${shareText}&source=YourBlogName`,
-    whatsapp: `https://wa.me/?text=${shareText}%20${currentUrl}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${currentUrl}&media=${imageUrl}&description=${shareText}`
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${shareText}&hashtags=blog`,
+    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}&title=${shareTitle}&summary=${shareText}`,
+    whatsapp: `https://wa.me/?text=${shareText}%20${encodeURIComponent(currentUrl)}`,
+    pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&media=${encodedImageUrl}&description=${shareText}`
   };
 
-  // Copy URL to clipboard with rich text (title + URL)
+  // Copy URL to clipboard with rich text
   const copyToClipboard = () => {
     const richText = `${blog?.title || ''}\n${currentUrl}`;
-    navigator.clipboard.writeText(richText).then(() => {
-      alert('Blog post link copied to clipboard!');
-    }).catch(err => {
-      console.error('Failed to copy: ', err);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(richText)
+        .then(() => alert('Blog post link copied to clipboard!'))
+        .catch(err => console.error('Failed to copy: ', err));
+    } else {
+      // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = richText;
       document.body.appendChild(textArea);
@@ -43,23 +51,37 @@ const BlogDetail = () => {
         alert('Failed to copy link');
       }
       document.body.removeChild(textArea);
-    });
-  };
-
-  // Dynamic meta tags for social sharing
-  const setMetaTags = () => {
-    document.querySelector('meta[property="og:title"]')?.setAttribute('content', blog?.title || '');
-    document.querySelector('meta[property="og:description"]')?.setAttribute('content', shareText);
-    document.querySelector('meta[property="og:image"]')?.setAttribute('content', blog?.image || '');
-    document.querySelector('meta[property="og:url"]')?.setAttribute('content', currentUrl);
-    document.querySelector('meta[name="twitter:card"]')?.setAttribute('content', 'summary_large_image');
-  };
-
-  useEffect(() => {
-    if (blog) {
-      setMetaTags();
     }
-  }, [blog]);
+  };
+
+  // Set meta tags for social sharing
+  useEffect(() => {
+    if (!blog) return;
+
+    const setMetaTag = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
+    };
+
+    // Standard OpenGraph tags
+    setMetaTag('og:title', blog.title);
+    setMetaTag('og:description', blog.contentSections?.[0]?.intro || blog.title);
+    setMetaTag('og:image', absoluteImageUrl);
+    setMetaTag('og:url', currentUrl);
+    setMetaTag('og:type', 'article');
+
+    // Twitter card tags
+    setMetaTag('twitter:card', 'summary_large_image');
+    setMetaTag('twitter:title', blog.title);
+    setMetaTag('twitter:description', blog.contentSections?.[0]?.intro || blog.title);
+    setMetaTag('twitter:image', absoluteImageUrl);
+
+  }, [blog, currentUrl, absoluteImageUrl]);
 
   if (!blog) return <p>Blog not found.</p>;
 
@@ -72,7 +94,17 @@ const BlogDetail = () => {
 
         <Row className="mb-4">
           <Col>
-            <Image src={blog.image} alt={blog.title} fluid rounded className="blog-featured-image" />
+            <Image 
+              src={blog.image} 
+              alt={blog.title} 
+              fluid 
+              rounded 
+              className="blog-featured-image"
+              onError={(e) => {
+                e.target.onerror = null; 
+                e.target.src = '/default-blog-image.jpg';
+              }}
+            />
           </Col>
         </Row>
 
@@ -118,14 +150,16 @@ const BlogDetail = () => {
                 >
                   <Whatsapp className="me-1" /> Send
                 </Button>
-                <Button 
-                  variant="outline-danger" 
-                  onClick={() => window.open(socialLinks.pinterest, '_blank', 'width=600,height=400')}
-                  aria-label="Share on Pinterest"
-                  className="share-btn"
-                >
-                  <i className="bi bi-pinterest me-1"></i> Pin
-                </Button>
+                {absoluteImageUrl && (
+                  <Button 
+                    variant="outline-danger" 
+                    onClick={() => window.open(socialLinks.pinterest, '_blank', 'width=600,height=400')}
+                    aria-label="Share on Pinterest"
+                    className="share-btn"
+                  >
+                    <i className="bi bi-pinterest me-1"></i> Pin
+                  </Button>
+                )}
                 <Button 
                   variant="outline-secondary" 
                   onClick={copyToClipboard}
@@ -137,6 +171,7 @@ const BlogDetail = () => {
               </ButtonGroup>
             </div>
 
+            {/* Rest of your blog content */}
             {blog.contentSections?.map((section, index) => (
               <div id={section.id} key={index} className="scroll-section mb-4">
                 <p>{section.intro}</p>
