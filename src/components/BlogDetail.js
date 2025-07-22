@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { blogPosts } from "../data/blogData";
-import { Container, Row, Col, Button, Image, Accordion, Card, ButtonGroup } from 'react-bootstrap';
-import { Facebook, Twitter, Linkedin, Link as LinkIcon, Whatsapp } from 'react-bootstrap-icons';
+import { Container, Row, Col, Button, Image, Table, Accordion, Card } from 'react-bootstrap';
+import { FacebookShareButton, TwitterShareButton, LinkedinShareButton, FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share';
+import { useState } from 'react';
 import "../styles/blogs.css";
 
 const BlogDetail = () => {
@@ -10,80 +10,19 @@ const BlogDetail = () => {
   const navigate = useNavigate();
   const blog = blogPosts.find(post => post.slug === slug);
 
-  // Helper function to get absolute URL
-  const getAbsoluteUrl = (path) => {
-    return path.startsWith('http') ? path : `${window.location.origin}${path}`;
-  };
-
-  // Get current URL for sharing
-  const currentUrl = window.location.href;
-  const shareTitle = encodeURIComponent(blog?.title || '');
-  const shareText = encodeURIComponent(`Check out this blog post: ${blog?.title || ''}`);
-  const absoluteImageUrl = blog?.image ? getAbsoluteUrl(blog.image) : '';
-  const encodedImageUrl = encodeURIComponent(absoluteImageUrl);
-
-  // Enhanced Social share URLs with proper metadata
-  const socialLinks = {
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
-    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${shareText}&hashtags=blog`,
-    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}&title=${shareTitle}&summary=${shareText}`,
-    whatsapp: `https://wa.me/?text=${shareText}%20${encodeURIComponent(currentUrl)}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&media=${encodedImageUrl}&description=${shareText}`
-  };
-
-  // Copy URL to clipboard with rich text
-  const copyToClipboard = () => {
-    const richText = `${blog?.title || ''}\n${currentUrl}`;
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(richText)
-        .then(() => alert('Blog post link copied to clipboard!'))
-        .catch(err => console.error('Failed to copy: ', err));
-    } else {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = richText;
-      document.body.appendChild(textArea);
-      textArea.select();
-      try {
-        document.execCommand('copy');
-        alert('Blog post link copied to clipboard!');
-      } catch (err) {
-        alert('Failed to copy link');
-      }
-      document.body.removeChild(textArea);
-    }
-  };
-
-  // Set meta tags for social sharing
-  useEffect(() => {
-    if (!blog) return;
-
-    const setMetaTag = (property, content) => {
-      let tag = document.querySelector(`meta[property="${property}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('property', property);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', content);
-    };
-
-    // Standard OpenGraph tags
-    setMetaTag('og:title', blog.title);
-    setMetaTag('og:description', blog.contentSections?.[0]?.intro || blog.title);
-    setMetaTag('og:image', absoluteImageUrl);
-    setMetaTag('og:url', currentUrl);
-    setMetaTag('og:type', 'article');
-
-    // Twitter card tags
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', blog.title);
-    setMetaTag('twitter:description', blog.contentSections?.[0]?.intro || blog.title);
-    setMetaTag('twitter:image', absoluteImageUrl);
-
-  }, [blog, currentUrl, absoluteImageUrl]);
+  const [copied, setCopied] = useState(false);
 
   if (!blog) return <p>Blog not found.</p>;
+
+  const shareUrl = window.location.href;
+  const shareTitle = blog.title;
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   return (
     <section className="py-4">
@@ -94,84 +33,17 @@ const BlogDetail = () => {
 
         <Row className="mb-4">
           <Col>
-            <Image 
-              src={blog.image} 
-              alt={blog.title} 
-              fluid 
-              rounded 
-              className="blog-featured-image"
-              onError={(e) => {
-                e.target.onerror = null; 
-                e.target.src = '/default-blog-image.jpg';
-              }}
-            />
+            <Image src={blog.image} alt={blog.title} fluid rounded />
           </Col>
         </Row>
 
         <Row>
           <Col xs={12} md={7} lg={8}>
-            <h1 className="blog-title">{blog.title}</h1>
-            <p className="blog-meta">
+            <h1>{blog.title}</h1>
+            <p>
               <small>By {blog.author} on {blog.date}</small>
             </p>
 
-            <div className="social-share mb-4">
-              <h5>Share this post:</h5>
-              <ButtonGroup aria-label="Social share buttons" className="flex-wrap">
-                <Button 
-                  variant="outline-primary" 
-                  onClick={() => window.open(socialLinks.facebook, '_blank', 'width=600,height=400')}
-                  aria-label="Share on Facebook"
-                  className="share-btn"
-                >
-                  <Facebook className="me-1" /> Share
-                </Button>
-                <Button 
-                  variant="outline-info" 
-                  onClick={() => window.open(socialLinks.twitter, '_blank', 'width=600,height=400')}
-                  aria-label="Share on Twitter"
-                  className="share-btn"
-                >
-                  <Twitter className="me-1" /> Tweet
-                </Button>
-                <Button 
-                  variant="outline-primary" 
-                  onClick={() => window.open(socialLinks.linkedin, '_blank', 'width=600,height=400')}
-                  aria-label="Share on LinkedIn"
-                  className="share-btn"
-                >
-                  <Linkedin className="me-1" /> Post
-                </Button>
-                <Button 
-                  variant="outline-success" 
-                  onClick={() => window.open(socialLinks.whatsapp, '_blank', 'width=600,height=400')}
-                  aria-label="Share on WhatsApp"
-                  className="share-btn"
-                >
-                  <Whatsapp className="me-1" /> Send
-                </Button>
-                {absoluteImageUrl && (
-                  <Button 
-                    variant="outline-danger" 
-                    onClick={() => window.open(socialLinks.pinterest, '_blank', 'width=600,height=400')}
-                    aria-label="Share on Pinterest"
-                    className="share-btn"
-                  >
-                    <i className="bi bi-pinterest me-1"></i> Pin
-                  </Button>
-                )}
-                <Button 
-                  variant="outline-secondary" 
-                  onClick={copyToClipboard}
-                  aria-label="Copy link"
-                  className="share-btn"
-                >
-                  <LinkIcon className="me-1" /> Copy
-                </Button>
-              </ButtonGroup>
-            </div>
-
-            {/* Rest of your blog content */}
             {blog.contentSections?.map((section, index) => (
               <div id={section.id} key={index} className="scroll-section mb-4">
                 <p>{section.intro}</p>
@@ -182,6 +54,28 @@ const BlogDetail = () => {
                 <p>{section.afterULParagraph}</p>
               </div>
             ))}
+
+            <div className="share-section mt-5">
+              <h4>Share this article</h4>
+              <div className="d-flex align-items-center gap-3">
+                <TwitterShareButton url={shareUrl} title={shareTitle}>
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+                <FacebookShareButton url={shareUrl} quote={shareTitle}>
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <LinkedinShareButton url={shareUrl} title={shareTitle}>
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+                <Button 
+                  variant="outline-primary" 
+                  onClick={copyToClipboard}
+                  className="d-flex align-items-center"
+                >
+                  {copied ? 'Copied!' : 'Copy Link'}
+                </Button>
+              </div>
+            </div>
 
             {blog.faq && blog.faq.length > 0 && (
               <>
@@ -197,7 +91,6 @@ const BlogDetail = () => {
               </>
             )}
           </Col>
-          
           <Col xs={12} md={5} lg={4} className="sticky-top">
             <Card className="tableOfContent">
               <Card.Body>
@@ -207,9 +100,7 @@ const BlogDetail = () => {
                     <ul>
                       {blog.listItems.map((item, index) => (
                         <li key={index}>
-                          <a href={`#${blog.contentSections[index].id}`} className="toc-link">
-                            {item}
-                          </a>
+                          <a href={`#${blog.contentSections[index].id}`} className="toc-link">{item}</a>
                         </li>
                       ))}
                     </ul>
