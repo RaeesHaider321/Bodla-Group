@@ -19,8 +19,8 @@ const BlogDetail = () => {
   // Social share URLs
   const socialLinks = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`,
-    twitter: `https://twitter.com/intent/tweet?url=${currentUrl}&text=${shareText}`,
-    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${shareTitle}`,
+    twitter: `https://twitter.com/intent/tweet?url=${currentUrl}&text=${currentUrl}`,
+    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${currentUrl}`,
     whatsapp: `https://wa.me/?text=${shareText}%20${currentUrl}`
   };
 
