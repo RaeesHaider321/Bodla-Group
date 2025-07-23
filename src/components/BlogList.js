@@ -3,7 +3,6 @@ import { blogPosts } from "../data/blogData";
 import { Container, Row, Col } from 'react-bootstrap';
 import InnerHeader from '../components/InnerHeader';
 import aboutBg from '../images/construction-site.jpg';
-// import { Helmet } from 'react-helmet-async';
 import { Helmet } from "react-helmet";
 
 const BlogList = () => {
@@ -27,7 +26,6 @@ const BlogList = () => {
             {blogPosts.map(blog => (
               <Col key={blog.id}>
                 <BlogCard blog={blog} slug={blog.slug} />
-                  {/* <BlogCard blog={blog} /> */}
               </Col>
             ))}
           </Row>
