@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { blogPosts } from "../data/blogData";
 import { Container, Row, Col, Button, Image, Accordion, Card, ButtonGroup } from 'react-bootstrap';
-import { Facebook, Twitter, Linkedin, Link as LinkIcon, Whatsapp } from 'react-bootstrap-icons';
+import { Facebook, Linkedin, Link as LinkIcon, Whatsapp } from 'react-bootstrap-icons';
+import { FaXTwitter } from 'react-icons/fa6'; // Using react-icons for X (Twitter) icon
 import "../styles/blogs.css";
 
 const BlogDetail = () => {
@@ -20,63 +21,49 @@ const BlogDetail = () => {
   const currentUrl = window.location.href;
   const absoluteImageUrl = getAbsoluteUrl(blog?.image);
   const shareTitle = encodeURIComponent(blog?.title || '');
-  const shareDescription = encodeURIComponent(
-    blog?.contentSections?.[0]?.intro || blog?.title || ''
+  const shareText = encodeURIComponent(
+    `Check out this blog post: ${blog?.title || ''}\n\n${currentUrl}`
   );
 
-  // Set up explicit meta tags for social sharing
+  // Set up meta tags for social sharing
   useEffect(() => {
     if (!blog) return;
 
-    const setOrCreateMetaTag = (attrs, content) => {
-      // Find existing tag by either property or name
-      let tag = document.querySelector(
-        attrs.property 
-          ? `meta[property="${attrs.property}"]` 
-          : `meta[name="${attrs.name}"]`
-      );
-      
+    const setMetaTag = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
       if (!tag) {
         tag = document.createElement('meta');
-        for (const [key, value] of Object.entries(attrs)) {
-          tag.setAttribute(key, value);
-        }
+        tag.setAttribute('property', property);
         document.head.appendChild(tag);
       }
       tag.setAttribute('content', content);
     };
 
-    // Required OpenGraph tags (explicitly set)
-    setOrCreateMetaTag({ property: 'og:title' }, blog.title);
-    setOrCreateMetaTag({ property: 'og:description' }, shareDescription);
-    setOrCreateMetaTag({ property: 'og:image' }, absoluteImageUrl);
-    setOrCreateMetaTag({ property: 'og:url' }, currentUrl);
-    setOrCreateMetaTag({ property: 'og:type' }, 'article');
-    setOrCreateMetaTag({ property: 'og:image:width' }, '1200');
-    setOrCreateMetaTag({ property: 'og:image:height' }, '630');
-    setOrCreateMetaTag({ property: 'og:image:alt' }, blog.title);
+    // Required OpenGraph tags
+    setMetaTag('og:title', blog.title);
+    setMetaTag('og:description', blog.contentSections?.[0]?.intro || blog.title);
+    setMetaTag('og:image', absoluteImageUrl);
+    setMetaTag('og:url', currentUrl);
+    setMetaTag('og:type', 'article');
+    setMetaTag('og:image:width', '1200');
+    setMetaTag('og:image:height', '630');
 
-    // Twitter Card tags (explicitly set)
-    setOrCreateMetaTag({ name: 'twitter:card' }, 'summary_large_image');
-    setOrCreateMetaTag({ name: 'twitter:title' }, blog.title);
-    setOrCreateMetaTag({ name: 'twitter:description' }, shareDescription);
-    setOrCreateMetaTag({ name: 'twitter:image' }, absoluteImageUrl);
-    setOrCreateMetaTag({ name: 'twitter:image:alt' }, blog.title);
+    // Twitter Card tags
+    setMetaTag('twitter:card', 'summary_large_image');
+    setMetaTag('twitter:title', blog.title);
+    setMetaTag('twitter:description', blog.contentSections?.[0]?.intro || blog.title);
+    setMetaTag('twitter:image', absoluteImageUrl);
 
-    // Additional recommended tags
-    setOrCreateMetaTag({ name: 'description' }, shareDescription);
-
-  }, [blog, currentUrl, absoluteImageUrl, shareDescription]);
+  }, [blog, currentUrl, absoluteImageUrl]);
 
   if (!blog) return <p>Blog not found.</p>;
 
   // Social share URLs with proper parameters
   const socialLinks = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
-    twitter: `https://twitter.com/intent/tweet?text=${shareTitle}&url=${encodeURIComponent(currentUrl)}`,
+    x: `https://twitter.com/intent/tweet?text=${shareTitle}&url=${encodeURIComponent(currentUrl)}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`,
-    whatsapp: `https://wa.me/?text=${shareTitle}%20${encodeURIComponent(currentUrl)}`,
-    pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&media=${encodeURIComponent(absoluteImageUrl)}&description=${shareTitle}`
+    whatsapp: `https://wa.me/?text=${shareText}`
   };
 
   // Copy rich content to clipboard
@@ -101,11 +88,12 @@ const BlogDetail = () => {
       document.body.removeChild(textArea);
     }
   };
+
   return (
     <section className="py-4">
       <Container>
         <Button variant="outline-secondary" onClick={() => navigate("/blogs")} className="mb-3">
-          ← Back to Blog List Test
+          ← Back to Blog List
         </Button>
 
         <Row className="mb-4">
@@ -130,9 +118,9 @@ const BlogDetail = () => {
             <p className="blog-meta">
               <small>By {blog.author} on {blog.date}</small>
             </p>
-
-            <div className="social-share mb-4">
-              <h5>Share this post:</h5>
+            <h6>Share this post:</h6>
+            <div className="social-share">
+              
               <ButtonGroup aria-label="Social share buttons" className="flex-wrap">
                 <Button 
                   variant="outline-primary" 
@@ -140,15 +128,15 @@ const BlogDetail = () => {
                   aria-label="Share on Facebook"
                   className="share-btn"
                 >
-                  <Facebook className="me-1" /> Facebook
+                  <Facebook className="me-1" />
                 </Button>
                 <Button 
-                  variant="outline-info" 
-                  onClick={() => window.open(socialLinks.twitter, '_blank', 'width=600,height=400')}
-                  aria-label="Share on Twitter"
+                  variant="outline-dark" // Changed to dark for X
+                  onClick={() => window.open(socialLinks.x, '_blank', 'width=600,height=400')}
+                  aria-label="Share on X"
                   className="share-btn"
                 >
-                  <Twitter className="me-1" /> Twitter
+                  <FaXTwitter className="me-1" />
                 </Button>
                 <Button 
                   variant="outline-primary" 
@@ -156,7 +144,7 @@ const BlogDetail = () => {
                   aria-label="Share on LinkedIn"
                   className="share-btn"
                 >
-                  <Linkedin className="me-1" /> LinkedIn
+                  <Linkedin className="me-1" />
                 </Button>
                 <Button 
                   variant="outline-success" 
@@ -164,30 +152,19 @@ const BlogDetail = () => {
                   aria-label="Share on WhatsApp"
                   className="share-btn"
                 >
-                  <Whatsapp className="me-1" /> WhatsApp
+                  <Whatsapp className="me-1" /> 
                 </Button>
-                {absoluteImageUrl && (
-                  <Button 
-                    variant="outline-danger" 
-                    onClick={() => window.open(socialLinks.pinterest, '_blank', 'width=600,height=400')}
-                    aria-label="Share on Pinterest"
-                    className="share-btn"
-                  >
-                    <i className="bi bi-pinterest me-1"></i> Pinterest
-                  </Button>
-                )}
                 <Button 
                   variant="outline-secondary" 
                   onClick={copyToClipboard}
                   aria-label="Copy link"
                   className="share-btn"
                 >
-                  <LinkIcon className="me-1" /> Copy Link
+                  <LinkIcon className="me-1" />
                 </Button>
               </ButtonGroup>
             </div>
 
-            {/* Rest of your blog content remains the same */}
             {blog.contentSections?.map((section, index) => (
               <div id={section.id} key={index} className="scroll-section mb-4">
                 <p>{section.intro}</p>
