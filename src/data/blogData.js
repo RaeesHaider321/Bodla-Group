@@ -1,5 +1,6 @@
 import blog1 from '../images/blogs/Emerging Trends in Real Estate in Pakistan.jpg';
 import blog2 from '../images/blogs/construction.png';
+import blog3 from '../images/blogs/Development-Charges-Wavier-Scheme-2025-2026.png';
 
 export const blogPosts = [
   {
@@ -112,7 +113,7 @@ export const blogPosts = [
         <p>Real estate in Pakistan is entering a golden era of innovation, accessibility, and strong returns. Whether you're an investor or buyer, 2025 presents unmatched opportunities in both residential and commercial sectors.</p>
       </>
     ),
-   
+
     faq: [
       {
         question: "What is the future of real estate in Pakistan 2025?",
@@ -152,61 +153,67 @@ export const blogPosts = [
       "Why Is DHA Multan a Good Investment?",
     ],
     contentSections: [
-      { id: "What-Is-the-DHA-Multan", 
-        intro: 'Is DHA Multan a good investment in 2025? With its rising value, expanding infrastructure, and a strong community lifestyle, DHA Multan continues to be one of the most promising investment opportunities in Southern Punjab. Adding to this appeal, the DHA Multan Construction Waiver Scheme 2024 25 brings a golden chance for property owners to save massively on their construction and development charges.', 
+      {
+        id: "What-Is-the-DHA-Multan",
+        intro: 'Is DHA Multan a good investment in 2025? With its rising value, expanding infrastructure, and a strong community lifestyle, DHA Multan continues to be one of the most promising investment opportunities in Southern Punjab. Adding to this appeal, the DHA Multan Construction Waiver Scheme 2024 25 brings a golden chance for property owners to save massively on their construction and development charges.',
         title: "What Is the DHA Multan Construction Waiver 2025?",
         description: "The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.",
-        extraParagraph:(
+        extraParagraph: (
           <>
-          <p>In addition, those who occupy their houses (with an occupancy certificate) within the same timeframe will receive an additional 25% waiver, making it a 100% exemption on DHA Multan development charges.</p>
+            <p>In addition, those who occupy their houses (with an occupancy certificate) within the same timeframe will receive an additional 25% waiver, making it a 100% exemption on DHA Multan development charges.</p>
           </>
         ),
       },
-      
-        { id: "Who-Is-Eligible", 
-        title: "Who Is Eligible for the Construction Charges Waiver DHA Multan?", 
+
+      {
+        id: "Who-Is-Eligible",
+        title: "Who Is Eligible for the Construction Charges Waiver DHA Multan?",
         description: "To qualify under the DHA Multan waiver eligibility criteria, property owners must:",
-      listing:(
+        listing: (
           <>
-          <ul>
-  <li>Complete the grey structure of their homes by August 30, 2025 (as per the extended waiver deadline August 30, 2025).</li>
-  <li>Possess plots in DHA Multan possession sectors.</li>
-  <li>Occupy the house to avail the additional 25% benefit (proved via occupancy certificate DHA waiver).</li>
-</ul>
+            <ul>
+              <li>Complete the grey structure of their homes by August 30, 2025 (as per the extended waiver deadline August 30, 2025).</li>
+              <li>Possess plots in DHA Multan possession sectors.</li>
+              <li>Occupy the house to avail the additional 25% benefit (proved via occupancy certificate DHA waiver).</li>
+            </ul>
           </>
         ),
         afterULParagraph: (
           <>
-          <p>The scheme is only applicable in sectors where possession of plots has been officially handed over.</p>
+            <p>The scheme is only applicable in sectors where possession of plots has been officially handed over.</p>
           </>
         )
       },
-      
-        { id: "What-Are-the-Benefits", 
-        title: "What Are the Benefits of the DHA Multan 75% Waiver 2024 25?", 
+
+      {
+        id: "What-Are-the-Benefits",
+        title: "What Are the Benefits of the DHA Multan 75% Waiver 2024 25?",
         description: "",
-          listing:(
+        listing: (
           <>
-          <ul>
-  <li>Substantial Financial Relief: Save up to 100% on development charges.</li>
-  <li>Faster Property Utilization: Encourages families to shift in and start living.</li>
-  <li>Boosts Sector-Wide Construction: This sector-wide waiver incentive DHA Multan is designed to fast-track area development.</li>
-  <li>Investor Confidence: Increases property value and encourages long-term investment in Multan real estate.</li>
-</ul>
+            <ul>
+              <li>Substantial Financial Relief: Save up to 100% on development charges.</li>
+              <li>Faster Property Utilization: Encourages families to shift in and start living.</li>
+              <li>Boosts Sector-Wide Construction: This sector-wide waiver incentive DHA Multan is designed to fast-track area development.</li>
+              <li>Investor Confidence: Increases property value and encourages long-term investment in Multan real estate.</li>
+            </ul>
           </>
         )
       },
-      
-        { id: "How-to-Pay-DHA-Multan", 
-        title: "How to Pay DHA Multan Development Charges?", 
-        description: "Owners can check the development charges schedule 2025 on the DHA portal or contact the relevant DHA Multan Construction Company or contractor. Payments can be made through official DHA channels, including bank transfers or payment vouchers. For professional assistance, DHA also offers a DHA Multan contractor registration form for approved builders." },
-      
-        { id: "Why-Is-DHA-Multan", 
-        title: "Why Is DHA Multan a Good Investment?", 
+
+      {
+        id: "How-to-Pay-DHA-Multan",
+        title: "How to Pay DHA Multan Development Charges?",
+        description: "Owners can check the development charges schedule 2025 on the DHA portal or contact the relevant DHA Multan Construction Company or contractor. Payments can be made through official DHA channels, including bank transfers or payment vouchers. For professional assistance, DHA also offers a DHA Multan contractor registration form for approved builders."
+      },
+
+      {
+        id: "Why-Is-DHA-Multan",
+        title: "Why Is DHA Multan a Good Investment?",
         description: "DHA Multan is rapidly emerging as the center of urban living in South Punjab. With modern infrastructure, fast-paced development, and incentives such as the construction charges waiver DHA Multan, it offers a secure and high-return opportunity for both short- and long-term investors.",
-          extraParagraph:(
+        extraParagraph: (
           <>
-          <p>Whether you're planning to construct your dream home or aiming for strong property appreciation, the DHA Multan construction waiver 2025 makes this the perfect time to invest.</p>
+            <p>Whether you're planning to construct your dream home or aiming for strong property appreciation, the DHA Multan construction waiver 2025 makes this the perfect time to invest.</p>
           </>
         ),
       },
@@ -229,6 +236,139 @@ export const blogPosts = [
         <p>Security, amenities, and organized layouts make gated communities the top residential choice for Pakistani families. They’re thriving in Lahore, Islamabad, and Karachi.</p>
       </>
     ),
-   
+
+  },
+  {
+    id: 3,
+    title: "Extension of Development Charges Wavier Scheme 2025-2026",
+    slug: "Extension-of-Development-Charges-Wavier-Scheme-2025-2026",
+    excerpt: "Get 100% Off with Development Charges Waiver Scheme 2025-26",
+    author: "Ayesha Saleem",
+    date: "2025-07-22",
+    image: blog3,
+    listItems: [
+      "Understanding the Extended DHA Multan Construction Waiver 2025 26",
+      "100% Waiver on Development Charges – Sectors V, N, B-1, U, I, G",
+      "50% Waiver by Occupying Your Home – Sectors M, Q, R, A, & H",
+      "DHA Multan Waiver Eligibility Criteria",
+      "Why This Matters: Key Benefits of the DHA Multan Waiver Scheme",
+      "How to Pay DHA Multan Development Charges?",
+      "Why Is DHA Multan a Smart Investment in 2025?",
+    ],
+    contentSections: [
+      {
+        id: "Understanding‑the‑Extended‑DHA‑Multan‑Construction‑Waiver‑2025‑26",
+        intro: 'Is DHA Multan still a good investment in 2025? With consistent infrastructure growth, expanding communities, and now extended development charges waiver schemes, DHA Multan continues to attract homebuilders and investors alike. The newly extended DHA Multan Construction Waiver Scheme 2024 26 now provides segmented incentives for early construction and occupancy—giving you the chance to save up to 100% on development charges.',
+        title: "Understanding the Extended DHA Multan Construction Waiver 2025 26",
+        description: "In a recent official announcement, DHA Multan extended its construction charges waiver scheme for plot owners in eligible possession sectors, rewarding those who take swift action toward building and occupying their homes. Here’s a breakdown of the offers now valid until August 31, 2026:",
+
+      },
+
+      {
+        id: "100%-Waiver-on-Development-Charges-Sectors-V-N-B-1-U-I-G",
+        title: "100% Waiver on Development Charges – Sectors V, N, B-1, U, I, G",
+        description: "Plot owners in the above eligible sectors can avail the full waiver on development charges through this two-step process:",
+        listing: (
+          <>
+            <ul>
+              <li>✔ Complete the Grey Structure of your house by August 31, 2026 — earn a 75% waiver</li>
+              <li>✔ Occupy the House right after — get the remaining 25% waiver</li>
+            </ul>
+            <p>This powerful combination gives you a 100% waiver, rewarding both construction and residential activation in these areas.</p>
+          </>
+        ),
+      },
+
+      {
+        id: "50%-Waiver-by-Occupying-Your-Home-Sectors-M-Q-R-A-and-H",
+        title: "What Are the Benefits of the DHA Multan 75% Waiver 2024 25?",
+        description: "For plot owners in Sectors M, Q, R, A, and H, DHA Multan offers a 50% waiver exclusively upon occupying your completed home by the deadline. This is ideal for those who may have already completed the structure and are ready to move in.",
+        
+      },
+
+      {
+        id: "DHA-Multan-Waiver-Eligibility-Criteria",
+        title: "How to Pay DHA Multan Development Charges?",
+        description: "To qualify under the updated DHA Multan waiver eligibility criteria, the following conditions apply:",
+        listing: (
+          <>
+            <ul>
+              <li>You must own a plot in one of the eligible possession sectors listed above.</li>
+              <li>For 100% waiver: You must complete the grey structure and occupy the home before August 31, 2026.</li>
+              <li>For 50% waiver: Only occupancy is required within the deadline in applicable sectors.</li>
+              <li>Must obtain an occupancy certificate DHA waiver from DHA as proof.</li>
+            </ul>
+          </>
+        ),
+      },
+
+      {
+        id: "Why-This-Matters:-Key-Benefits-of-the-DHA-Multan-Waiver-Scheme",
+        title: "Why This Matters: Key Benefits of the DHA Multan Waiver Scheme",
+        listing: (
+          <>
+            <ul>
+              <li>Massive Financial Relief: Save 50% to 100% on DHA Multan development chargesed above.</li>
+              <li>Encourages Residential Activity: Promotes early settlement in growing sectorshe home before August 31, 2026.</li>
+              <li>Speeds Up Sector-Wide Growth: A smart move to boost livability across the regionapplicable sectors.</li>
+              <li>Ideal for Investors and End-Users: Great for those building or planning to resell</li>
+            </ul>
+          </>
+        ),
+      },
+
+      {
+        id: "How-to-Pay-DHA-Multan-Development-Charges?",
+        title: "How to Pay DHA Multan Development Charges?",
+        description: "All payments must be made via DHA’s official methods. Property owners can:",
+        listing: (
+          <>
+            <ul>
+              <li>Check the development charges schedule 2025-26 on the DHA portaled above.</li>
+              <li>Contact a registered DHA Multan construction companyhe home before August 31, 2026.</li>
+              <li>Submit builder credentials through the DHA Multan contractor registration formapplicable sectors.</li>
+              <li>Use vouchers or direct bank channels for payments</li>
+            </ul>
+          </>
+        )
+      },
+      {
+        id: "Why-Is-DHA-Multan-a-Smart-Investment-in-2025?",
+        title: "Why Is DHA Multan a Smart Investment in 2025?",
+        description: "Thanks to fast-paced infrastructure development, an active housing community, and consistent incentives like the DHA Multan construction waiver 2025, this project continues to offer a high-ROI opportunity. The added benefit of waivers tied to construction activity further enhances its appeal to both builders and investors.",
+        listing: (
+          <>
+            <p>Whether you’re planning to construct your dream home or secure long-term gains, this is the best time to take advantage of DHA Multan’s extended construction waiver scheme.</p>
+          </>
+        )
+      },
+      
+    ],
+    content: (
+      <>
+        <h4 id="Understanding‑the‑Extended‑DHA‑Multan‑Construction‑Waiver‑2025‑26">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+        
+        <h4 id="100%-Waiver-on-Development-Charges-Sectors-V-N-B-1-U-I-G">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+        
+        <h4 id="50%-Waiver-by-Occupying-Your-Home-Sectors-M-Q-R-A-and-H">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+        
+        <h4 id="DHA-Multan-Waiver-Eligibility-Criteria">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+        
+        <h4 id="Why-This-Matters:-Key-Benefits-of-the-DHA-Multan-Waiver-Scheme">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+        
+        <h4 id="How-to-Pay-DHA-Multan-Development-Charges?">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
+        
+        <h4 id="Why-Is-DHA-Multan-a-Smart-Investment-in-2025?">What Is the DHA Multan Construction Waiver 2025?</h4>
+        <p>Thanks to fast-paced infrastructure development, an active housing community, and consistent incentives like the DHA Multan construction waiver 2025, this project continues to offer a high-ROI opportunity. The added benefit of waivers tied to construction activity further enhances its appeal to both builders and investors.</p>
+        <p>Whether you’re planning to construct your dream home or secure long-term gains, this is the best time to take advantage of DHA Multan’s extended construction waiver scheme.</p>
+      </>
+    ),
+
   },
 ];
