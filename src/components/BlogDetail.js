@@ -105,7 +105,7 @@ const BlogDetail = () => {
     <section className="py-4">
       <Container>
         <Button variant="outline-secondary" onClick={() => navigate("/blogs")} className="mb-3">
-          ← Back to Blog List
+          ← Back to Blog List Test
         </Button>
 
         <Row className="mb-4">
