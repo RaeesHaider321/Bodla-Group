@@ -20,38 +20,53 @@ const BlogDetail = () => {
   const currentUrl = window.location.href;
   const absoluteImageUrl = getAbsoluteUrl(blog?.image);
   const shareTitle = encodeURIComponent(blog?.title || '');
-  const shareText = encodeURIComponent(
-    `Check out this blog post: ${blog?.title || ''}\n\n${currentUrl}`
+  const shareDescription = encodeURIComponent(
+    blog?.contentSections?.[0]?.intro || blog?.title || ''
   );
 
-  // Set up meta tags for social sharing
+  // Set up explicit meta tags for social sharing
   useEffect(() => {
     if (!blog) return;
 
-    const setMetaTag = (property, content) => {
-      let tag = document.querySelector(`meta[property="${property}"]`);
+    const setOrCreateMetaTag = (attrs, content) => {
+      // Find existing tag by either property or name
+      let tag = document.querySelector(
+        attrs.property 
+          ? `meta[property="${attrs.property}"]` 
+          : `meta[name="${attrs.name}"]`
+      );
+      
       if (!tag) {
         tag = document.createElement('meta');
-        tag.setAttribute('property', property);
+        for (const [key, value] of Object.entries(attrs)) {
+          tag.setAttribute(key, value);
+        }
         document.head.appendChild(tag);
       }
       tag.setAttribute('content', content);
     };
 
-    // Standard OpenGraph tags
-    setMetaTag('og:title', blog.title);
-    setMetaTag('og:description', blog.contentSections?.[0]?.intro || blog.title);
-    setMetaTag('og:image', absoluteImageUrl);
-    setMetaTag('og:url', currentUrl);
-    setMetaTag('og:type', 'article');
+    // Required OpenGraph tags (explicitly set)
+    setOrCreateMetaTag({ property: 'og:title' }, blog.title);
+    setOrCreateMetaTag({ property: 'og:description' }, shareDescription);
+    setOrCreateMetaTag({ property: 'og:image' }, absoluteImageUrl);
+    setOrCreateMetaTag({ property: 'og:url' }, currentUrl);
+    setOrCreateMetaTag({ property: 'og:type' }, 'article');
+    setOrCreateMetaTag({ property: 'og:image:width' }, '1200');
+    setOrCreateMetaTag({ property: 'og:image:height' }, '630');
+    setOrCreateMetaTag({ property: 'og:image:alt' }, blog.title);
 
-    // Twitter Card tags
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', blog.title);
-    setMetaTag('twitter:description', blog.contentSections?.[0]?.intro || blog.title);
-    setMetaTag('twitter:image', absoluteImageUrl);
+    // Twitter Card tags (explicitly set)
+    setOrCreateMetaTag({ name: 'twitter:card' }, 'summary_large_image');
+    setOrCreateMetaTag({ name: 'twitter:title' }, blog.title);
+    setOrCreateMetaTag({ name: 'twitter:description' }, shareDescription);
+    setOrCreateMetaTag({ name: 'twitter:image' }, absoluteImageUrl);
+    setOrCreateMetaTag({ name: 'twitter:image:alt' }, blog.title);
 
-  }, [blog, currentUrl, absoluteImageUrl]);
+    // Additional recommended tags
+    setOrCreateMetaTag({ name: 'description' }, shareDescription);
+
+  }, [blog, currentUrl, absoluteImageUrl, shareDescription]);
 
   if (!blog) return <p>Blog not found.</p>;
 
@@ -60,7 +75,7 @@ const BlogDetail = () => {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
     twitter: `https://twitter.com/intent/tweet?text=${shareTitle}&url=${encodeURIComponent(currentUrl)}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`,
-    whatsapp: `https://wa.me/?text=${shareText}`,
+    whatsapp: `https://wa.me/?text=${shareTitle}%20${encodeURIComponent(currentUrl)}`,
     pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&media=${encodeURIComponent(absoluteImageUrl)}&description=${shareTitle}`
   };
 
@@ -86,7 +101,6 @@ const BlogDetail = () => {
       document.body.removeChild(textArea);
     }
   };
-
   return (
     <section className="py-4">
       <Container>
