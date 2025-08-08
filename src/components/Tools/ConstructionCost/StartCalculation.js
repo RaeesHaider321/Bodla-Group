@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
-
+import Icons from "../../../components/Icon";
+import BodlaButton from '../../../components/Button';
 export default function StartCalculation() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -117,9 +118,8 @@ export default function StartCalculation() {
           <Button variant="secondary" onClick={() => setShowMore(!showMore)}>
             {showMore ? "Show Less" : "Show More"}
           </Button>
-          <Button variant="primary" onClick={handleStart}>
-            Start Calculation
-          </Button>
+          
+         <BodlaButton text="Start Calculation" icon={<Icons name="rightArrow" />} variant="primary" onClick={handleStart}/>
         </div>
       </Form>
     </>
