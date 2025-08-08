@@ -757,16 +757,19 @@ a {
 }
 
 .table thead {
-  background-color: var(--primary);
+  background-color: #027EB2;
 }
 
 .table thead tr th {
-  background: var(--primary) !important;
+  background: #027EB2 !important;
   color: var(--white) !important;
   font-weight: bold;
   padding: 1rem 0.75rem;
 }
-
+.table thead tr th:first-child, .table thead tr th:last-child,
+.table tbody tr td:first-child, .table tbody tr td:last-child{
+  padding: 1rem 2rem !important;
+}
 .table tr td {
   padding: 0.75rem;
   background: var(--card-background) !important;
@@ -779,7 +782,6 @@ a {
 
 .table tr td,
 .table tr th {
-
   color: var(--white) !important;
   border-bottom: 1px solid rgb(255, 255, 255, .1)
 }
@@ -787,7 +789,6 @@ a {
 .projects-cta {
   border-radius: 21px;
   background: var(--primary-gradient);
-
 }
 
 .projects-cta .content {
@@ -1087,13 +1088,13 @@ a {
 .areaUnitConverter .card{
   background: var(--contact-card-gradient);
   border-radius: 21px;
-  padding: 5%;
+  padding: 30px;
 }
 .areaUnitConverter .card:hover{
   background: var(--contact-card-gradient);
 }
 .areaUnitConverter .card-body{
-  padding: 5%;
+  padding: 30px;
   border-radius: 12px;
   background: var(--background);
 }
@@ -1149,4 +1150,67 @@ font-size: 1.2rem;
     transform: none;
     display: flex;
     justify-content: center;
+}
+
+
+/* Add these styles to your existing App.css */
+
+.form-section {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 150px;
+}
+
+.checkbox-group input {
+  width: auto;
+}
+
+.cost-summary {
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.cost-breakdown {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.cost-breakdown h5 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.cost-breakdown ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+.cost-breakdown li {
+  margin-bottom: 5px;
 }

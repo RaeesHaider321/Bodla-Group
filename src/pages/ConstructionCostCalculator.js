@@ -4,6 +4,10 @@ import PageTitle from '../components/PageTitle';
 import BodlaButton from '../components/Button';
 import Icons from "../components/Icon";
 
+import InnerHeader from '../components/InnerHeader';
+import headerBg from '../images/header-bg.jpg';
+import '../components/InnerHeader.css';
+
 const AREA_UNITS = [
   { label: 'Marla', value: 'marla', factor: 272.25 },
   { label: 'Kanal', value: 'kanal', factor: 5445 },
@@ -82,9 +86,10 @@ function ConstructionCostCalculator() {
   };
 
   return (
+    <>
+    <InnerHeader heading="Construction Cost " highlight="Calculator" subtext="Calculate the cost of your construction project" backgroundImage={headerBg} />
     <section>
-      <PageTitle title="Construction Cost" highlight="Calculator" />
-      <Container className="areaUnitConverter mt-2">
+      <Container className="areaUnitConverter">
         <Row className="justify-content-center">
           <Col md={12} lg={8}>
             <Card className="shadow">
@@ -208,6 +213,7 @@ function ConstructionCostCalculator() {
         </Row>
       </Container>
     </section>
+    </>
   );
 }
 

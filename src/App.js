@@ -20,8 +20,6 @@ import DHAMultan from "./pages/DHAMultan";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AreaUnitConverter from "./pages/AreaUnitConverter";
-import ConstructionCostCalculator from "./pages/ConstructionCostCalculator";
-import PlotPriceCalculator from "./pages/PlotPriceCalculator";
 import DHAMaps from "./pages/DhaMaps";
 import Careers from './pages/Careers';
 import MediaCenter from './pages/MediaCenter';
@@ -40,10 +38,20 @@ import WhatsAppButton from './components/WhatsAppButton';
 
 import RedirectHandler from "./components/RedirectHandler";
 
+
 import BlogList from "./components/BlogList";
 import BlogDetail from "./components/BlogDetail";
 
+// Tools
+import ConstructionCost from "./pages/ConstructionCost";
 
+import ConstructionCostCalculator from "./components/Tools/ConstructionCostCalculator";
+import ConstructionInputForm from "./components/Tools/ConstructionForm";
+import ConstructionResults from "./components/Tools/ConstructionResults";
+
+
+import StartCalculation from "./components/Tools/ConstructionCost/StartCalculation";
+import ResultsPage from "./components/Tools/ConstructionCost/ResultsPage";
 
 // This component will handle scrolling to top on route change
 function ScrollToTop() {
@@ -84,6 +92,8 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+
+
   return (
     <Router style={{ cursor: 'url(/logo-cursor.png) 0 0, auto' }}>
       <div className="app-container">
@@ -105,17 +115,24 @@ function App() {
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/AreaUnitConverter" element={<AreaUnitConverter />} />
-            {/* <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
-            <Route path="/PlotPriceCalculator" element={<PlotPriceCalculator />} /> */}
+           
             <Route path="/dhaMaps" element={<DHAMaps />} />
             <Route path="/Careers" element={<Careers />} />
             <Route path="/MediaCenter" element={<MediaCenter />} />
 
-
-
             <Route path="/blogs" element={<BlogList />} />
             <Route path="/blogs/:slug" element={<BlogDetail />} />
 
+            {/* Tool Pages */}
+            <Route path="/ConstructionCost" element={<ConstructionCost />} />
+
+            <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
+            <Route path="/ConstructionInputForm" element={<ConstructionInputForm />} />
+            <Route path="/ConstructionResults" element={<ConstructionResults />} />
+
+
+            <Route path="/StartCalculation" element={<StartCalculation />} />
+        <Route path="/results" element={<ResultsPage />} />
           </Routes>
         </div>
         <Footer />

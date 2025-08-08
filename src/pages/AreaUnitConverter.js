@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Form, Button, Row, Col, ButtonGroup, Table } from 'react-bootstrap';
-import PageTitle from '../components/PageTitle';
-
+import InnerHeader from '../components/InnerHeaderWithCard';
+import headerBg from '../images/header-bg.jpg';
+import '../components/InnerHeader.css';
 const AreaUnitConverter = () => {
   // Conversion factors (base unit is square meters)
   const units = {
@@ -180,13 +181,15 @@ const AreaUnitConverter = () => {
 
   return (
     <>
-      
-
-      <section>
-      <PageTitle title="Area Unit " highlight="Converter" />
+      <InnerHeader
+              heading="Area Unit"
+              highlight="Converter"
+              subtext="Easily convert between square feet, meters, yards, and more."
+              backgroundImage={headerBg}
+            >
         <Container className="areaUnitConverter mt-2">
           <Row className="justify-content-center">
-            <Col md={12} lg={8}>
+            <Col md={12} lg={12}>
               <Card className="shadow">
                 <Card.Body>
                   <Form>
@@ -287,7 +290,15 @@ const AreaUnitConverter = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={12} lg={12} className='my-5 popularConversions'>
+            
+          </Row>
+          
+        </Container>
+        </InnerHeader>
+        <section>
+          <Container>
+          <Row>
+            <Col md={12} lg={12} className='mb-5 popularConversions'>
               <h2>Popular Conversions</h2>
               <div className="d-flex flex-wrap gap-2">
                 {popularConversions.map((conversion, index) => (
@@ -302,12 +313,10 @@ const AreaUnitConverter = () => {
                 ))}
               </div>
             </Col>
-          </Row>
-          <Row>
             <Col md={12} lg={12}>
               <h2>Area Unit Conversion in Pakistan</h2>
               <div className="area-conversion-table">
-                <Table striped bordered hover responsive>
+                <Table striped hover responsive>
                   <thead>
                     <tr>
                       <th>Marla</th>
@@ -332,8 +341,8 @@ const AreaUnitConverter = () => {
               </div>
             </Col>
           </Row>
-        </Container>
-      </section>
+          </Container>
+        </section>
     </>
   );
 };

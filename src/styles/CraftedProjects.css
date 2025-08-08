@@ -1,0 +1,21 @@
+
+.crafted-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+p.footer-item {
+    margin-bottom: 0 !important;
+}
+.footer-icon {
+  color: #fff;
+  fill: var(--white);
+  width: 24px;
+}

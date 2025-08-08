@@ -7,8 +7,9 @@
   justify-content: center;
   color: #fff;
   text-align: center;
-  padding: 3rem 0;
-  background-color: rgba(0, 36, 56);
+  padding: 1rem 0;
+  background-color: rgba(0, 36, 56, 1); /* Added alpha value (1 for full opacity) */
+  background-image: url('../images/header-bg.jpg'); /* Updated path */
   background-blend-mode: soft-light;
 }
 
@@ -17,5 +18,4 @@
 .inner-header-content {
   position: relative;
   z-index: 2;
-  
 }
