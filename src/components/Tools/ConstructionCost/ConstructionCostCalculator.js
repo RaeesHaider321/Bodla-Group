@@ -519,9 +519,9 @@ export default function ConstructionCostCalculator() {
 
                                     <div className="text-xl font-bold mt-3">
                                         Estimated Total Cost:{" "}
-                                        <span className="ml-2">
+                                        <h2 className="ml-2">
                                             {formatCurrency(result.totalCost)}
-                                        </span>
+                                        </h2>
                                     </div>
                                 </Card>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
