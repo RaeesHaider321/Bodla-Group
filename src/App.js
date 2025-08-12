@@ -42,16 +42,15 @@ import RedirectHandler from "./components/RedirectHandler";
 import BlogList from "./components/BlogList";
 import BlogDetail from "./components/BlogDetail";
 
+
 // Tools
-import ConstructionCost from "./pages/ConstructionCost";
+// Construction Cost Calculation
+import ConstructionCostCalculation from "./components/Tools/ConstructionCost/ConstructionCostCalculation";
+import ConstructionCostCalculator from "./components/Tools/ConstructionCost/ConstructionCostCalculator";
+import PopularCalculations from "./components/Tools/ConstructionCost/PopularCalculations";
+import UpdateCalculation from "./components/Tools/ConstructionCost/UpdateCalculation";
+import ConstructionResults from "./components/Tools/ConstructionCost/ConstructionResults";
 
-import ConstructionCostCalculator from "./components/Tools/ConstructionCostCalculator";
-import ConstructionInputForm from "./components/Tools/ConstructionForm";
-import ConstructionResults from "./components/Tools/ConstructionResults";
-
-
-import StartCalculation from "./components/Tools/ConstructionCost/StartCalculation";
-import ResultsPage from "./components/Tools/ConstructionCost/ResultsPage";
 
 // This component will handle scrolling to top on route change
 function ScrollToTop() {
@@ -124,15 +123,13 @@ function App() {
             <Route path="/blogs/:slug" element={<BlogDetail />} />
 
             {/* Tool Pages */}
-            <Route path="/ConstructionCost" element={<ConstructionCost />} />
-
+            
+            <Route path="/ConstructionCostCalculation" element={<ConstructionCostCalculation />} />
             <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
-            <Route path="/ConstructionInputForm" element={<ConstructionInputForm />} />
+            <Route path="/PopularCalculations" element={<PopularCalculations />} />
+            <Route path="/UpdateCalculation" element={<UpdateCalculation />} />
             <Route path="/ConstructionResults" element={<ConstructionResults />} />
-
-
-            <Route path="/StartCalculation" element={<StartCalculation />} />
-        <Route path="/results" element={<ResultsPage />} />
+       
           </Routes>
         </div>
         <Footer />
