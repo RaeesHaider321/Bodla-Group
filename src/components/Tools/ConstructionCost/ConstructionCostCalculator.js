@@ -548,38 +548,23 @@ export default function ConstructionCostCalculator() {
                                 </div>
                             </Col>
                         </Row>
-                        <div className="max-w-3xl mx-auto p-4">
-
-
-
-
-
-
-
-
-                            {/* Popular Calculations in Results */}
-                            <div className="mt-6">
-                                <Card className="p-4 mb-4">
-                                    <h3 className="text-lg font-semibold mb-3">Popular Calculations</h3>
-                                    <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} gap-2`}>
-                                        {POPULAR_CALCULATIONS.map((calc, index) => (
-                                            <button
-                                                key={index}
-                                                onClick={() => handlePopularCalculation(calc)}
-                                                className={`px-3 py-2 border rounded text-sm whitespace-nowrap ${activePreset === calc.label
-                                                    ? 'bg-blue-100 border-blue-500'
-                                                    : 'hover:bg-gray-100'
-                                                    }`}
-                                            >
-                                                {calc.label}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </Card>
+                        <Row>
+                            <h3>Popular Calculations</h3>
+                            <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} gap-2`}>
+                                {POPULAR_CALCULATIONS.map((calc, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handlePopularCalculation(calc)}
+                                        className={`px-3 py-2 border rounded text-sm whitespace-nowrap ${activePreset === calc.label
+                                            ? 'bg-blue-100 border-blue-500'
+                                            : 'hover:bg-gray-100'
+                                            }`}
+                                    >
+                                        {calc.label}
+                                    </button>
+                                ))}
                             </div>
-
-
-                        </div>
+                        </Row>
                     </Container>
                 </section>
             </>
@@ -781,21 +766,21 @@ export default function ConstructionCostCalculator() {
             </InnerHeader>
             <section>
                 <Container>
-                    <h2 className="text-lg font-semibold mb-3">Popular Calculations</h2>
-                        <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} gap-2`}>
-                            {POPULAR_CALCULATIONS.map((calc, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => handlePopularCalculation(calc)}
-                                    className={`px-3 py-2 border rounded text-sm whitespace-nowrap ${activePreset === calc.label
-                                        ? 'bg-blue-100 border-blue-500'
-                                        : 'hover:bg-gray-100'
-                                        }`}
-                                >
-                                    {calc.label}
-                                </button>
-                            ))}
-                        </div>
+                    <h2>Popular Calculations</h2>
+                    <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} gap-2`}>
+                        {POPULAR_CALCULATIONS.map((calc, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handlePopularCalculation(calc)}
+                                className={`px-3 py-2 border rounded text-sm whitespace-nowrap ${activePreset === calc.label
+                                    ? 'bg-blue-100 border-blue-500'
+                                    : 'hover:bg-gray-100'
+                                    }`}
+                            >
+                                {calc.label}
+                            </button>
+                        ))}
+                    </div>
                 </Container>
             </section>
         </>
