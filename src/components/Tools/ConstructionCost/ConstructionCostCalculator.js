@@ -548,20 +548,21 @@ export default function ConstructionCostCalculator() {
                         </Row>
                         <Row>
                             <h3>Popular Calculations</h3>
-                            <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} gap-2`}>
+                            <Row className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'}`}>
                                 {POPULAR_CALCULATIONS.map((calc, index) => (
-                                    <button
+                                    <Col sm={12} md={2}>
+                                    <Card
                                         key={index}
                                         onClick={() => handlePopularCalculation(calc)}
-                                        className={`px-3 py-2 border rounded text-sm whitespace-nowrap ${activePreset === calc.label
+                                        className={`whitespace-nowrap ${activePreset === calc.label
                                             ? 'bg-blue-100 border-blue-500'
                                             : 'hover:bg-gray-100'
                                             }`}
                                     >
-                                        {calc.label}
-                                    </button>
+                                        <Card.Body>{calc.label}</Card.Body>
+                                    </Card></Col>
                                 ))}
-                            </div>
+                            </Row>
                         </Row>
                     </Container>
                 </section>
