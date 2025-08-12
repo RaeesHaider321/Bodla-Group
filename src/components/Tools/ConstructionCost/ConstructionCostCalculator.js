@@ -525,7 +525,7 @@ export default function ConstructionCostCalculator() {
                                     </div>
                                 </Card>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <h2 className="text-lg font-medium mb-2">Breakdown of Overall Construction Cost By Percentage (PKR)</h2>
+                                    <h4>Breakdown of Overall Construction Cost By Percentage (PKR)</h4>
                                     <Row className="aligh-items-center">
                                         <Col md={6}>
                                             <Pie data={chartData} options={chartOptions} />
