@@ -580,8 +580,8 @@ export default function ConstructionCostCalculator() {
                 <Container className="areaUnitConverter mt-2">
                     <Card>
                         <Card.Body>
-                            <Row sm={12} md={4}>
-                                <Col>{/* City */}
+                            <Row>
+                                <Col sm={1} md={4}>{/* City */}
                                     <Form.Group className="mb-3">
                                         <Form.Label>City</Form.Label>
                                         <Form.Select value={city} onChange={(e) => setCity(e.target.value)}>
@@ -591,7 +591,7 @@ export default function ConstructionCostCalculator() {
                                             <option>Karachi</option>
                                         </Form.Select>
                                     </Form.Group></Col>
-                                <Col>{/* Property Type */}
+                                <Col sm={12} md={4}>{/* Property Type */}
                                     <Form.Group className="mb-3">
                                         <Form.Label>Property Type</Form.Label>
                                         <Form.Select value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
@@ -601,7 +601,7 @@ export default function ConstructionCostCalculator() {
                                             <option>Apartment</option>
                                         </Form.Select>
                                     </Form.Group></Col>
-                                <Col>{/* Area size */}
+                                <Col sm={12} md={4}>{/* Area size */}
                                     <Form.Group className="mb-3">
                                         <Form.Label>Area size</Form.Label>
                                         <Row className="g-2">
@@ -624,7 +624,7 @@ export default function ConstructionCostCalculator() {
                                         </Row>
                                         {errors["areaSize"] && <div className="text-danger small mt-1">{errors["areaSize"]}</div>}
                                     </Form.Group></Col>
-                                <Col>{/* Construction Quality */}
+                                <Col sm={12} md={4}>{/* Construction Quality */}
                                     <Form.Group className="mb-3">
                                         <Form.Label>Construction Quality</Form.Label>
                                         <Form.Select value={constructionQuality} onChange={(e) => setConstructionQuality(e.target.value)}>
@@ -639,9 +639,9 @@ export default function ConstructionCostCalculator() {
                             {/* Extra Fields */}
                             {showMore && (
                                 <>
-                                    <Row sm={12} md={4}>
+                                    <Row>
                                         {/* Covered Area */}
-                                        <Col><Form.Group className="mb-3">
+                                        <Col sm={12} md={4}><Form.Group className="mb-3">
                                             <Form.Label>Covered Area (same unit as Area size)</Form.Label>
                                             <Form.Control
                                                 type="number"
@@ -655,7 +655,7 @@ export default function ConstructionCostCalculator() {
                                             )}
                                         </Form.Group></Col>
 
-                                        <Col>{/* Number of Floors */}
+                                        <Col sm={12} md={4}>{/* Number of Floors */}
                                             <Form.Group className="mb-3">
                                                 <Form.Label>Number of Floors</Form.Label>
                                                 <Form.Control
@@ -666,7 +666,7 @@ export default function ConstructionCostCalculator() {
                                                 />
                                             </Form.Group></Col>
 
-                                        <Col>{/* Material Type */}
+                                        <Col sm={12} md={4}>{/* Material Type */}
                                             <Form.Group className="mb-3">
                                                 <Form.Label>Material Type</Form.Label>
                                                 <Form.Select value={materialType} onChange={(e) => setMaterialType(e.target.value)}>
@@ -676,7 +676,7 @@ export default function ConstructionCostCalculator() {
                                                 </Form.Select>
                                             </Form.Group></Col>
 
-                                        <Col>{/* Construction Type */}
+                                        <Col sm={12} md={4}>{/* Construction Type */}
                                             <Form.Group className="mb-3">
                                                 <Form.Label>Construction type</Form.Label>
                                                 <Form.Select value={constructionType} onChange={(e) => setConstructionType(e.target.value)}>
@@ -685,7 +685,7 @@ export default function ConstructionCostCalculator() {
                                                 </Form.Select>
                                             </Form.Group></Col>
 
-                                        <Col>{/* Construction Mode */}
+                                        <Col sm={12} md={4}>{/* Construction Mode */}
                                             <Form.Group className="mb-3">
                                                 <Form.Label>Construction mode</Form.Label>
                                                 <Form.Select value={constructionMode} onChange={(e) => setConstructionMode(e.target.value)}>
@@ -694,7 +694,7 @@ export default function ConstructionCostCalculator() {
                                                 </Form.Select>
                                             </Form.Group></Col>
 
-                                        <Col>{/* Additional Features */}
+                                        <Col sm={12} md={4}>{/* Additional Features */}
                                             <Form.Group className="mb-3">
                                                 <Form.Label>Additional Features</Form.Label>
                                                 <Row>
