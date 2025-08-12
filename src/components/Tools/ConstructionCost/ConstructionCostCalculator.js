@@ -269,8 +269,7 @@ export default function ConstructionCostCalculator() {
                         "#8B5CF6",
                         "#6B7280",
                     ],
-                    borderColor: "#fff",
-                    borderWidth: 2,
+                    
                 },
             ],
         };
@@ -526,22 +525,21 @@ export default function ConstructionCostCalculator() {
                                     </div>
                                 </Card>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <h2 className="text-lg font-medium mb-2">Cost Breakdown</h2>
-                                    <Row>
-                                        <Col md={5}>
+                                    <h2 className="text-lg font-medium mb-2">Breakdown of Overall Construction Cost By Percentage (PKR)</h2>
+                                    <Row className="aligh-items-center">
+                                        <Col md={6}>
                                             <Pie data={chartData} options={chartOptions} />
                                         </Col>
-                                        <Col md={7}>
+                                        <Col md={6}>
                                             {result.breakdown.map((b) => (
-                                                <div key={b.key} className="flex justify-between items-center mb-3">
-                                                    <div>
-                                                        <div className="font-medium">{b.label}</div>
-                                                        <div className="text-sm text-gray-600">{b.pct}%</div>
-                                                    </div>
-                                                    <div className="font-semibold">
-                                                        {formatCurrency(b.amount)}
-                                                    </div>
-                                                </div>
+                                                <Row key={b.key} className="justify-content-justify">
+                                                    <Col><p>{b.label}</p></Col>
+                                                    <Col><p>{b.pct}%</p></Col>
+                                                    <Col>
+                                                    <p>
+                                                        <b>{formatCurrency(b.amount)}</b>
+                                                    </p></Col>
+                                                </Row>
                                             ))}
                                         </Col>
                                     </Row>
