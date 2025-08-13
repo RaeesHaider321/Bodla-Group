@@ -1,11 +1,16 @@
 // ConstructionCostCalculator.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Card, Row, Col, Form, Button } from "react-bootstrap";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import InnerHeader from "../../InnerHeaderWithCard";
 import headerBg from '../../../images/header-bg.jpg';
 import '../../../components/InnerHeader.css';
+
+
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -141,6 +146,116 @@ export default function ConstructionCostCalculator() {
     const [isMobile, setIsMobile] = useState(false);
     const [activePreset, setActivePreset] = useState(null);
 
+    const handleShareResults = () => {
+        if (!result) return;
+
+        const shareText = `Construction Cost Estimate:
+  - Property: ${result.areaSize} ${result.areaUnit} ${result.propertyType}
+  - Total Cost: ${formatCurrency(result.totalCost)}
+  - Rate: ${formatCurrency(result.rate)} per sqft
+  - Quality: ${result.constructionQuality}
+  - Type: ${result.constructionType} (${result.constructionMode})
+  
+  View full details at: ${window.location.href}`;
+
+        if (navigator.share) {
+            navigator.share({
+                title: 'Construction Cost Estimate',
+                text: shareText,
+                url: window.location.href,
+            }).catch(err => {
+                console.error('Error sharing:', err);
+                // Fallback to copy to clipboard
+                navigator.clipboard.writeText(shareText);
+                alert('Results copied to clipboard!');
+            });
+        } else {
+            // Fallback for browsers that don't support Web Share API
+            navigator.clipboard.writeText(shareText);
+            alert('Results copied to clipboard!');
+        }
+    };
+
+    const resultCardRef = useRef(null); // Add this line
+
+    const handleDownloadPDF = async () => {
+        if (!result || !resultCardRef.current) return;
+
+        try {
+            // Create a temporary container for PDF content
+            const pdfContainer = document.createElement('div');
+            pdfContainer.style.position = 'fixed';
+            pdfContainer.style.left = '0';
+            pdfContainer.style.top = '0';
+            pdfContainer.style.width = '800px';
+            pdfContainer.style.padding = '20px';
+            pdfContainer.style.backgroundColor = 'white';
+            pdfContainer.style.zIndex = '10000';
+
+            // Add title
+            const title = document.createElement('h2');
+            title.textContent = `Construction Cost Estimate - ${new Date().toLocaleDateString()}`;
+            title.style.textAlign = 'center';
+            title.style.marginBottom = '20px';
+            pdfContainer.appendChild(title);
+
+            // Clone the result card content
+            const resultCard = resultCardRef.current.cloneNode(true);
+            
+            // Remove the PDF and Share buttons from the clone
+            const buttons = resultCard.querySelector('.pdf-buttons');
+            if (buttons) {
+                buttons.remove();
+            }
+            
+            pdfContainer.appendChild(resultCard);
+
+            // Add the chart separately with higher resolution
+            const chartContainer = document.createElement('div');
+            chartContainer.style.width = '600px';
+            chartContainer.style.height = '400px';
+            chartContainer.style.margin = '0 auto';
+            
+            const chartCanvas = document.querySelector('canvas');
+            if (chartCanvas) {
+                const newCanvas = document.createElement('canvas');
+                newCanvas.width = chartCanvas.width * 2;
+                newCanvas.height = chartCanvas.height * 2;
+                const ctx = newCanvas.getContext('2d');
+                ctx.scale(2, 2);
+                ctx.drawImage(chartCanvas, 0, 0);
+                chartContainer.appendChild(newCanvas);
+            }
+            
+            pdfContainer.appendChild(chartContainer);
+
+            // Add to document
+            document.body.appendChild(pdfContainer);
+
+            // Generate PDF
+            const canvas = await html2canvas(pdfContainer, {
+                scale: 2,
+                logging: true,
+                useCORS: true,
+                allowTaint: true
+            });
+
+            // Clean up
+            document.body.removeChild(pdfContainer);
+
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+            pdf.save(`construction-cost-${result.areaSize}-${result.areaUnit}.pdf`);
+        } catch (error) {
+            console.error('PDF generation error:', error);
+            alert('Failed to generate PDF. Please try again or check the console for errors.');
+        }
+    };
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
@@ -169,6 +284,8 @@ export default function ConstructionCostCalculator() {
     }
 
     function calculateCost() {
+        if (!areaSize) return; // Guard against empty values
+
         const rawArea = parseFloat(areaSize);
         const rawCovered = coveredArea.trim() === "" ? null : parseFloat(coveredArea);
         const usedAreaInInputUnit = rawCovered !== null ? rawCovered : rawArea;
@@ -183,7 +300,8 @@ export default function ConstructionCostCalculator() {
             rateType = "furnished";
         }
 
-        const baseRate = RATES[rateType][constructionQuality][constructionMode];
+        const baseRate = RATES[rateType]?.[constructionQuality]?.[constructionMode];
+        if (!baseRate) return; // Guard against undefined rates
 
         // Apply floor multiplier (10% increase per floor above 1)
         const floorMultiplier = 1 + (Math.max(1, numFloors) - 1) * 0.1;
@@ -191,7 +309,7 @@ export default function ConstructionCostCalculator() {
         // Apply additional features multipliers
         let featureMultiplier = 1;
         Object.entries(additionalFeatures).forEach(([key, value]) => {
-            if (value) {
+            if (value && FEATURE_MULTIPLIERS[key]) {
                 featureMultiplier *= FEATURE_MULTIPLIERS[key];
             }
         });
@@ -231,8 +349,15 @@ export default function ConstructionCostCalculator() {
         calculateCost();
     }
 
-    async function handlePopularCalculation(preset) {
-        // Set all relevant state values from the preset
+    useEffect(() => {
+        if (activePreset) {
+            calculateCost();
+        }
+    }, [activePreset, areaSize, areaUnit, constructionQuality, materialType,
+        constructionType, constructionMode, numFloors, additionalFeatures]);
+
+    // Then simplify handlePopularCalculation to just update state:
+    function handlePopularCalculation(preset) {
         setAreaSize(preset.areaSize.toString());
         setAreaUnit(preset.areaUnit);
         setConstructionQuality(preset.constructionQuality);
@@ -247,12 +372,7 @@ export default function ConstructionCostCalculator() {
             lawn: false,
             boundary: false,
         });
-
         setActivePreset(preset.label);
-
-        // Use a small timeout to ensure state updates before calculation
-        await new Promise(resolve => setTimeout(resolve, 0));
-        calculateCost();
     }
 
     if (page === "result" && result) {
@@ -269,7 +389,7 @@ export default function ConstructionCostCalculator() {
                         "#8B5CF6",
                         "#6B7280",
                     ],
-                    
+
                 },
             ],
         };
@@ -478,7 +598,15 @@ export default function ConstructionCostCalculator() {
                                 </Card>
                             </Col>
                             <Col sm={12} md={8}>
-                                <Card className="mb-4 p-4">
+                                <Card className="mb-4 p-4" ref={resultCardRef}>
+                                    <div className="d-flex justify-content-end gap-2 mb-3 pdf-buttons">
+                                        <Button variant="outline-primary" onClick={handleShareResults}>
+                                            <i className="bi bi-share me-2"></i> Share Results
+                                        </Button>
+                                        <Button variant="outline-danger" onClick={handleDownloadPDF}>
+                                            <i className="bi bi-file-earmark-pdf me-2"></i> Download PDF
+                                        </Button>
+                                    </div>
                                     <div className="mb-2">
                                         <strong>Property Details:</strong>
                                         <div className="grid grid-cols-2 gap-2 mt-1">
@@ -536,9 +664,9 @@ export default function ConstructionCostCalculator() {
                                                     <Col><p>{b.label}</p></Col>
                                                     <Col><p>{b.pct}%</p></Col>
                                                     <Col>
-                                                    <p>
-                                                        <b>{formatCurrency(b.amount)}</b>
-                                                    </p></Col>
+                                                        <p>
+                                                            <b>{formatCurrency(b.amount)}</b>
+                                                        </p></Col>
                                                 </Row>
                                             ))}
                                         </Col>
@@ -546,24 +674,26 @@ export default function ConstructionCostCalculator() {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row className="mt-4">
                             <h3>Popular Calculations</h3>
-                            <Row className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                            <Row>
                                 {POPULAR_CALCULATIONS.map((calc, index) => (
-                                    <Col sm={12} md={2}>
-                                    <Card
-                                        key={index}
-                                        onClick={() => handlePopularCalculation(calc)}
-                                        className={`whitespace-nowrap ${activePreset === calc.label
-                                            ? 'bg-blue-100 border-blue-500'
-                                            : 'hover:bg-gray-100'
-                                            }`}
-                                    >
-                                        <Card.Body>{calc.label}</Card.Body>
-                                    </Card></Col>
+                                    <Col sm={6} md={4} lg={3} key={index} className="mb-3">
+                                        <Card
+                                            onClick={() => handlePopularCalculation(calc)}
+                                            className={`cursor-pointer ${activePreset === calc.label
+                                                ? 'bg-primary text-white'
+                                                : ''}`}
+                                        >
+                                            <Card.Body className="text-center">
+                                                {calc.label}
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
                                 ))}
                             </Row>
                         </Row>
+
                     </Container>
                 </section>
             </>
