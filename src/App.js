@@ -45,11 +45,9 @@ import BlogDetail from "./components/BlogDetail";
 
 // Tools
 // Construction Cost Calculation
-import ConstructionCostCalculation from "./components/Tools/ConstructionCost/ConstructionCostCalculation";
-import ConstructionCostCalculator from "./components/Tools/ConstructionCost/ConstructionCostCalculator";
-import PopularCalculations from "./components/Tools/ConstructionCost/PopularCalculations";
-import UpdateCalculation from "./components/Tools/ConstructionCost/UpdateCalculation";
-import ConstructionResults from "./components/Tools/ConstructionCost/ConstructionResults";
+import ConstructionCostCalculation from "./components/Tools/ConstructionCostCalculator/ConstructionCostCalculator";
+
+
 
 
 // This component will handle scrolling to top on route change
@@ -124,12 +122,8 @@ function App() {
 
             {/* Tool Pages */}
             
-            <Route path="/ConstructionCostCalculation" element={<ConstructionCostCalculation />} />
-            <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculator />} />
-            <Route path="/PopularCalculations" element={<PopularCalculations />} />
-            <Route path="/UpdateCalculation" element={<UpdateCalculation />} />
-            <Route path="/ConstructionResults" element={<ConstructionResults />} />
-       
+            <Route path="/ConstructionCostCalculator" element={<ConstructionCostCalculation />} />
+            
           </Routes>
         </div>
         <Footer />

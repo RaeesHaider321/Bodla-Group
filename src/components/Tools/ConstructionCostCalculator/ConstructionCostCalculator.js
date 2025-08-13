@@ -8,6 +8,8 @@ import headerBg from '../../../images/header-bg.jpg';
 import '../../../components/InnerHeader.css';
 
 
+import CraftedProjects from '../../CraftedProjects';
+
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
@@ -201,13 +203,13 @@ export default function ConstructionCostCalculator() {
 
             // Clone the result card content
             const resultCard = resultCardRef.current.cloneNode(true);
-            
+
             // Remove the PDF and Share buttons from the clone
             const buttons = resultCard.querySelector('.pdf-buttons');
             if (buttons) {
                 buttons.remove();
             }
-            
+
             pdfContainer.appendChild(resultCard);
 
             // Add the chart separately with higher resolution
@@ -215,7 +217,7 @@ export default function ConstructionCostCalculator() {
             chartContainer.style.width = '600px';
             chartContainer.style.height = '400px';
             chartContainer.style.margin = '0 auto';
-            
+
             const chartCanvas = document.querySelector('canvas');
             if (chartCanvas) {
                 const newCanvas = document.createElement('canvas');
@@ -226,7 +228,7 @@ export default function ConstructionCostCalculator() {
                 ctx.drawImage(chartCanvas, 0, 0);
                 chartContainer.appendChild(newCanvas);
             }
-            
+
             pdfContainer.appendChild(chartContainer);
 
             // Add to document
@@ -434,7 +436,6 @@ export default function ConstructionCostCalculator() {
                                         <h5>Update Calculation</h5>
                                         <Form>
                                             <Row className="g-4" md={1}>
-                                                {/* Left Column */}
                                                 <Col>
                                                     <Form.Group className="mb-3">
                                                         <Form.Label>City</Form.Label>
@@ -598,17 +599,18 @@ export default function ConstructionCostCalculator() {
                                 </Card>
                             </Col>
                             <Col sm={12} md={8}>
-                                <Card className="mb-4 p-4" ref={resultCardRef}>
+                                <div className="areaUnitConverter">
+                                <Card className="mb-4 p-4 " ref={resultCardRef}>
                                     <div className="d-flex justify-content-end gap-2 mb-3 pdf-buttons">
-                                        <Button variant="outline-primary" onClick={handleShareResults}>
+                                        <Button variant="light" onClick={handleShareResults}>
                                             <i className="bi bi-share me-2"></i> Share Results
                                         </Button>
-                                        <Button variant="outline-danger" onClick={handleDownloadPDF}>
+                                        <Button variant="info" onClick={handleDownloadPDF}>
                                             <i className="bi bi-file-earmark-pdf me-2"></i> Download PDF
                                         </Button>
                                     </div>
                                     <div className="mb-2">
-                                        <strong>Property Details:</strong>
+                                        <strong>Property Details: </strong>
                                         <div className="grid grid-cols-2 gap-2 mt-1">
                                             <div>Type: <strong>{result.propertyType}</strong></div>
                                             <div>Floors: <strong>{result.numFloors}</strong></div>
@@ -652,9 +654,10 @@ export default function ConstructionCostCalculator() {
                                         </h2>
                                     </div>
                                 </Card>
+                                </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <h4>Breakdown of Overall Construction Cost By Percentage (PKR)</h4>
-                                    <Row className="aligh-items-center">
+                                    <h5>Breakdown of Overall Construction Cost By Percentage (PKR)</h5>
+                                    <Row className="aligh-items-center mt-4">
                                         <Col md={6}>
                                             <Pie data={chartData} options={chartOptions} />
                                         </Col>
@@ -674,26 +677,28 @@ export default function ConstructionCostCalculator() {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="mt-4">
-                            <h3>Popular Calculations</h3>
-                            <Row>
-                                {POPULAR_CALCULATIONS.map((calc, index) => (
-                                    <Col sm={6} md={4} lg={3} key={index} className="mb-3">
-                                        <Card
-                                            onClick={() => handlePopularCalculation(calc)}
-                                            className={`cursor-pointer ${activePreset === calc.label
-                                                ? 'bg-primary text-white'
-                                                : ''}`}
-                                        >
-                                            <Card.Body className="text-center">
-                                                {calc.label}
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                ))}
-                            </Row>
+                        <Row className="mb-4">
+                            <h3>Disclaimer</h3>
+                            <p>This cost is for 3 Marla double storey House. All the information in this calculator is published for general information purpose only. All product prices are subject to change according to the market fluctuation and may not be 100% accurate.</p>
                         </Row>
-
+                        <h2>Popular Calculations</h2>
+                    <Row>
+                        {POPULAR_CALCULATIONS.map((calc, index) => (
+                            <Col sm={6} md={4} lg={3} key={index} className="mb-3">
+                                <Card
+                                    onClick={() => handlePopularCalculation(calc)}
+                                    className={`cursor-pointer ${activePreset === calc.label
+                                        ? 'bg-primary text-white'
+                                        : ''}`}
+                                >
+                                    <Card.Body className="text-center">
+                                        {calc.label}
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                        <CraftedProjects />
                     </Container>
                 </section>
             </>
@@ -896,20 +901,22 @@ export default function ConstructionCostCalculator() {
             <section>
                 <Container>
                     <h2>Popular Calculations</h2>
-                    <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} gap-2`}>
+                    <Row>
                         {POPULAR_CALCULATIONS.map((calc, index) => (
-                            <button
-                                key={index}
-                                onClick={() => handlePopularCalculation(calc)}
-                                className={`px-3 py-2 border rounded text-sm whitespace-nowrap ${activePreset === calc.label
-                                    ? 'bg-blue-100 border-blue-500'
-                                    : 'hover:bg-gray-100'
-                                    }`}
-                            >
-                                {calc.label}
-                            </button>
+                            <Col sm={6} md={4} lg={3} key={index} className="mb-3">
+                                <Card
+                                    onClick={() => handlePopularCalculation(calc)}
+                                    className={`cursor-pointer ${activePreset === calc.label
+                                        ? 'bg-primary text-white'
+                                        : ''}`}
+                                >
+                                    <Card.Body className="text-center">
+                                        {calc.label}
+                                    </Card.Body>
+                                </Card>
+                            </Col>
                         ))}
-                    </div>
+                    </Row>
                 </Container>
             </section>
         </>
