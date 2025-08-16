@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Image, Carousel, Card, CardBody } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Icons from "../components/Icon";
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 
 import oneDestination from '../images/oneDestination.jpg';
 import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
@@ -136,7 +136,7 @@ const Projects = () => {
             </Col>
             <Col xs={12} md={3} className='text-end'>
               <div data-aos="fade-left">
-                <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
+                <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Book a Call</i></Button>
               </div>
             </Col>
           </Row>

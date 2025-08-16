@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image, Card, ListGroup, Accordion } from 'react-bootstrap';
 import Icons from "../components/Icon";
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 import NotFound from '../pages/NotFound'
 
 import service1 from '../images/businessHub.jpg';
@@ -394,7 +394,9 @@ const ServiceDetails = () => {
                       Ready to benefit from our {service.title} service? Contact us today to discuss your requirements.
                     </p>
                     <div className="d-grid gap-2">
-                      <Col className='text-center'><BodlaButton text={service.cta} icon={<Icons name="phone" />} variant="primary" link="/contact"/></Col>
+                      <Col className='text-center'>
+                      <Button variant="light" to="/Contact" icon={<Icons name="phone" />}> <i>{service.cta}</i></Button>
+                      </Col>
                     </div>
                   </div>
                 </Card.Body>
@@ -463,7 +465,7 @@ const ServiceDetails = () => {
               <p className="mb-md-0">Contact us today to discuss your project requirements.</p>
             </Col>
             <Col xs={12} md={4} className="text-md-end">
-              <BodlaButton text={service.getStarted} icon={<Icons name="rightArrow" />} variant="primary"  link="/contact" />
+              <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>{service.getStarted}</i></Button>
             </Col>
           </Row>
         </Container>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Icons from "../components/Icon"; 
-import BodlaButton from './Button';
+import Button from './Button';
 import CardComponent from "./CardComponent";
 import legacy from '../images/ourProjects.png'
 import service from '../images/ourServices.png'
@@ -27,7 +27,7 @@ export default function HistoryTimeline() {
                 <Row className="justify-content align-items-center gy-3">
                     <Col xs={12} md={5} data-aos="fade-right">
                         <h2 className='mb-4'>Bodla Group as your one-stop shop, <span>overseeing every facet</span> of the real estate journey.</h2>
-                        <BodlaButton text="Reach Us Here!" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact"  />
+                        <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Reach Us Here!</i></Button>
                     </Col>
                     <Col xs={12} md={7} data-aos="zoom-in">
                         <Row className='gy-3'>

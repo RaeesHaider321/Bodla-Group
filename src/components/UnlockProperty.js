@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Icons from "../components/Icon";
-import BodlaButton from './Button';
+import Button from './Button';
 
 import logo from '../images/footer-logo.png';
 export default function UnlockProperty() {
@@ -13,7 +13,7 @@ export default function UnlockProperty() {
             <Col xs={12} md={6}>
               <h3>Join the REAL Estate Conversation.</h3>
               <p>By Sending this Form I conform that I’ve read and accepted the privacy policy.</p>
-              <BodlaButton text="Let’s Get Connected! " icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
+              <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Let’s Get Connected!</i></Button>
             </Col>
             <Col xs={12} md={6} className='unlock-blue-card'>
               <div className='logo'>

@@ -1,12 +1,13 @@
 // ConstructionCostCalculator.jsx
 import React, { useState, useEffect, useRef } from "react";
-import { Container, Card, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Card, Row, Col, Form, } from "react-bootstrap";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import InnerHeader from "../../InnerHeaderWithCard";
 import headerBg from '../../../images/header-bg.jpg';
 import '../../../components/InnerHeader.css';
-
+import Icons from "../../../components/Icon";
+import Button from '../../../components/Button';
 
 import CraftedProjects from '../../CraftedProjects';
 
@@ -419,12 +420,13 @@ export default function ConstructionCostCalculator() {
                     backgroundImage={headerBg}
                 >
                     <Container className="areaUnitConverter mt-2">
-                        <button
+                        {/* <button
                             className="mb-4 px-3 py-1 rounded border text-sm hover:bg-gray-100"
                             onClick={() => setPage("form")}
                         >
                             ← Edit inputs
-                        </button>
+                        </button> */}
+                        <Button variant="light" onClick={() => setPage("form")} > <i>← Edit inputs</i></Button>
                     </Container>
                 </InnerHeader>
                 <section>
@@ -580,19 +582,11 @@ export default function ConstructionCostCalculator() {
                                                     </Form.Group>
                                                 </Col>
                                             </Row>
-                                            <Row className="d-flex gap-2 mt-4">
-                                                <Button onClick={handleStartCalculation} variant="light">Recalculate</Button>
-                                                <Button
-                                                    onClick={() => {
-                                                        setAreaSize("");
-                                                        setCoveredArea("");
-                                                        setErrors({});
-                                                        setActivePreset(null);
-                                                    }}
-                                                    variant="dark"
-                                                >
-                                                    Reset
-                                                </Button>
+                                            <Row className="justify-content-center">
+                                                <Col className="text-center d-flex gap-3">
+                                                    <Button variant="light" onClick={handleStartCalculation} icon={<Icons name="rightArrow"/>}> <i>Recalculate</i></Button>
+                                                    <Button variant="primary" onClick={() => {setAreaSize("");setCoveredArea("");setErrors({}); setActivePreset(null);}} icon={<Icons name="rightArrow" />}> <i>Reset</i></Button>
+                                                </Col>
                                             </Row>
                                         </Form>
                                     </Card.Body>
@@ -600,60 +594,56 @@ export default function ConstructionCostCalculator() {
                             </Col>
                             <Col sm={12} md={8}>
                                 <div className="areaUnitConverter">
-                                <Card className="mb-4 p-4 " ref={resultCardRef}>
-                                    <div className="d-flex justify-content-end gap-2 mb-3 pdf-buttons">
-                                        <Button variant="light" onClick={handleShareResults}>
-                                            <i className="bi bi-share me-2"></i> Share Results
-                                        </Button>
-                                        <Button variant="info" onClick={handleDownloadPDF}>
-                                            <i className="bi bi-file-earmark-pdf me-2"></i> Download PDF
-                                        </Button>
-                                    </div>
-                                    <div className="mb-2">
-                                        <strong>Property Details: </strong>
-                                        <div className="grid grid-cols-2 gap-2 mt-1">
-                                            <div>Type: <strong>{result.propertyType}</strong></div>
-                                            <div>Floors: <strong>{result.numFloors}</strong></div>
-                                            <div>Quality: <strong>{result.constructionQuality}</strong></div>
-                                            <div>Material: <strong>{result.materialType}</strong></div>
+                                    <Card className="mb-4 p-4 " ref={resultCardRef}>
+                                        <div className="d-flex justify-content-end gap-2 mb-3 pdf-buttons">
+                                            <Button variant="light" onClick={handleShareResults} icon={<Icons name="rightArrow" />}> <i>Share Results</i></Button>
+                                            <Button variant="light" onClick={handleDownloadPDF} icon={<Icons name="rightArrow" />}> <i>Download</i></Button>
                                         </div>
-                                    </div>
-
-                                    <div className="mb-2">
-                                        Construction Type:{" "}
-                                        <strong>
-                                            {result.constructionType} / {result.constructionMode}
-                                        </strong>
-                                    </div>
-                                    <div className="mb-2">
-                                        Area used for calculation:{" "}
-                                        <strong>
-                                            {result.usedAreaInInputUnit} {result.areaUnit} (
-                                            {formatNumber(result.usedSqft)} sqft)
-                                        </strong>
-                                    </div>
-                                    <div className="mb-2">
-                                        Rate applied:{" "}
-                                        <strong>{formatCurrency(result.rate)} / sqft</strong>
-                                    </div>
-
-                                    {Object.values(result.additionalFeatures).some(v => v) && (
                                         <div className="mb-2">
-                                            <strong>Additional Features:</strong>{" "}
-                                            {Object.entries(result.additionalFeatures)
-                                                .filter(([_, value]) => value)
-                                                .map(([key]) => key.charAt(0).toUpperCase() + key.slice(1))
-                                                .join(", ")}
+                                            <strong>Property Details: </strong>
+                                            <div className="grid grid-cols-2 gap-2 mt-1">
+                                                <div>Type: <strong>{result.propertyType}</strong></div>
+                                                <div>Floors: <strong>{result.numFloors}</strong></div>
+                                                <div>Quality: <strong>{result.constructionQuality}</strong></div>
+                                                <div>Material: <strong>{result.materialType}</strong></div>
+                                            </div>
                                         </div>
-                                    )}
 
-                                    <div className="text-xl font-bold mt-3">
-                                        Estimated Total Cost:{" "}
-                                        <h2 className="ml-2">
-                                            {formatCurrency(result.totalCost)}
-                                        </h2>
-                                    </div>
-                                </Card>
+                                        <div className="mb-2">
+                                            Construction Type:{" "}
+                                            <strong>
+                                                {result.constructionType} / {result.constructionMode}
+                                            </strong>
+                                        </div>
+                                        <div className="mb-2">
+                                            Area used for calculation:{" "}
+                                            <strong>
+                                                {result.usedAreaInInputUnit} {result.areaUnit} (
+                                                {formatNumber(result.usedSqft)} sqft)
+                                            </strong>
+                                        </div>
+                                        <div className="mb-2">
+                                            Rate applied:{" "}
+                                            <strong>{formatCurrency(result.rate)} / sqft</strong>
+                                        </div>
+
+                                        {Object.values(result.additionalFeatures).some(v => v) && (
+                                            <div className="mb-2">
+                                                <strong>Additional Features:</strong>{" "}
+                                                {Object.entries(result.additionalFeatures)
+                                                    .filter(([_, value]) => value)
+                                                    .map(([key]) => key.charAt(0).toUpperCase() + key.slice(1))
+                                                    .join(", ")}
+                                            </div>
+                                        )}
+
+                                        <div className="text-xl font-bold mt-3">
+                                            Estimated Total Cost:{" "}
+                                            <h2 className="ml-2">
+                                                {formatCurrency(result.totalCost)}
+                                            </h2>
+                                        </div>
+                                    </Card>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <h5>Breakdown of Overall Construction Cost By Percentage (PKR)</h5>
@@ -682,22 +672,22 @@ export default function ConstructionCostCalculator() {
                             <p>This cost is for 3 Marla double storey House. All the information in this calculator is published for general information purpose only. All product prices are subject to change according to the market fluctuation and may not be 100% accurate.</p>
                         </Row>
                         <h2>Popular Calculations</h2>
-                    <Row>
-                        {POPULAR_CALCULATIONS.map((calc, index) => (
-                            <Col sm={6} md={4} lg={3} key={index} className="mb-3">
-                                <Card
-                                    onClick={() => handlePopularCalculation(calc)}
-                                    className={`cursor-pointer ${activePreset === calc.label
-                                        ? 'bg-primary text-white'
-                                        : ''}`}
-                                >
-                                    <Card.Body className="text-center">
-                                        {calc.label}
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        ))}
-                    </Row>
+                        <Row>
+                            {POPULAR_CALCULATIONS.map((calc, index) => (
+                                <Col sm={6} md={4} lg={3} key={index} className="mb-3">
+                                    <Card
+                                        onClick={() => handlePopularCalculation(calc)}
+                                        className={`cursor-pointer ${activePreset === calc.label
+                                            ? 'bg-primary text-white'
+                                            : ''}`}
+                                    >
+                                        <Card.Body className="text-center">
+                                            {calc.label}
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))}
+                        </Row>
                         <CraftedProjects />
                     </Container>
                 </section>
@@ -862,30 +852,8 @@ export default function ConstructionCostCalculator() {
                             )}
                             <Row className="g-3 justify-content-end">
                                 <Col className="text-end">{/* Show more button */}
-                                    {/* Buttons */}
-                                    <Button
-                                        variant="outline-secondary"
-                                        size="sm"
-                                        onClick={() => setShowMore(!showMore)}
-                                    >
-                                        {showMore ? "Show less" : "Show more"}
-                                    </Button>
-                                    <Button variant="light" onClick={handleStartCalculation}>
-                                        Start calculation
-                                    </Button>
-                                    <Button
-                                        variant="dark"
-                                        onClick={() => {
-                                            setAreaSize("");
-                                            setCoveredArea("");
-                                            setShowMore(false);
-                                            setErrors({});
-                                            setActivePreset(null);
-                                        }}
-                                    >
-                                        Reset
-                                    </Button>
-
+                                    <Button variant="link" onClick={() => setShowMore(!showMore)} > <i>{showMore ? "Show less" : "Show more"}</i></Button>
+                                    <Button variant="light" onClick={handleStartCalculation} icon={<Icons name="rightArrow" />}><i>Start calculation</i></Button>
                                 </Col>
                             </Row>
 

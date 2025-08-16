@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Row, Col, Image, Carousel, Card, CardBody, Table, Button, } from 'react-bootstrap';
+import { Container, Row, Col, Image, Carousel, Card, CardBody, Table, } from 'react-bootstrap';
 import Icons from "../components/Icon";
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 import NotFound from '../pages/NotFound';
 import PageTitle from '../components/PageTitle';
 
@@ -560,7 +560,8 @@ const projectDetails = {
     status: 'Ongoing',
     videoLink: "https://www.youtube.com/embed/agUm10fzXDQ?si=8rh8psHk6XPFNdL8",
     virtualTour: virtualTourBHome,
-    virtualTourTitle: "Step inside your home and discover it's details from every corner"  }
+    virtualTourTitle: "Step inside your home and discover it's details from every corner"
+  }
 };
 
 const ProjectDetails = () => {
@@ -659,7 +660,7 @@ const ProjectDetails = () => {
                   <h3 className="mb-4">{project.introTitle || project.title}</h3>
                   <p className="lead text-justify">{project.description}</p>
                   <p className="lead text-justify">{project.secondDescription}</p>
-                  <BodlaButton text="Book a Call" icon={<Icons name="rightArrow" />} link="/Contact" />
+                  <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Book a Call</i></Button>
                 </Col>
                 <Col xs={12} md={5} className="text-md-end">
                   <Row className='gy-4'>
@@ -767,8 +768,12 @@ const ProjectDetails = () => {
                     <p>Visit our project — your dream land awaits! Experience the perfect blend of comfort, style, and opportunity.</p>
                   </Col>
                   <Col xs={6} md={4} className='btns'>
-                    <BodlaButton text="Live Visit" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
-                    <BodlaButton text="Download App" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
+                    <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Live Visit</i></Button>
+                    <Button variant="light" onClick={() => window.open(
+                      "https://play.google.com/store/apps/details?id=com.bodlagroup.bodlaapp&pcampaignid=web_share",
+                      "_blank",
+                      "noopener,noreferrer"
+                    )} icon={<Icons name="rightArrow" />}> <i>Download App</i></Button>
                   </Col>
                 </Row>
               </Container>
@@ -794,11 +799,7 @@ const ProjectDetails = () => {
                 <h5>Secure Your Ideal Shop in Just a Few Clicks</h5>
                 <p>Find the perfect space for your business and take the first step toward success. Limited shops available—book yours now!</p>
                 <div className='dflex'>
-                  <BodlaButton
-                    text="Book a Call"
-                    icon={<Icons name="rightArrow" />}
-                    link="/Contact"
-                  />
+                  <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Book a Call</i></Button>
                 </div>
               </Col>
               <Col xs={12} lg={6} className='amblum' >

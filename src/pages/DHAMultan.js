@@ -62,7 +62,7 @@ import colaboration from '../images/CollaborationWithDHA.png'
 import Rumanza from '../components/Rumanza'
 
 import Icons from "../components/Icon";
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 const DHAMultan = () => {
   const dhaDevelopedProjects = [
     { id: 1, title: "Arena Event Complex and Hotel", imgSrc: dhaArenaEventComplex },
@@ -138,7 +138,8 @@ const DHAMultan = () => {
                 <h6>We Work Together to Serve You.</h6>
               </Col>
               <Col xs={12} md={3} className='text-end'>
-              <BodlaButton text="Show Your Work!" icon={<Icons name="rightArrow" />} variant="primary" link="/MediaCenter" />
+              {/* <BodlaButton text="Show Your Work!" icon={<Icons name="rightArrow" />} variant="primary" link="/MediaCenter" /> */}
+              <Button variant="light" to="/MediaCenter" icon={<Icons name="rightArrow" />}> <i>Show Your Work!</i></Button>
               </Col>
             </Row>
           </Container></section>

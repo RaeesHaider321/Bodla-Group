@@ -11,6 +11,7 @@ import BodlaUpdates from '../components/BodlaUpdates';
 import PromotionalSlider from '../components/PromotionalSlider';
 import Testimonial from '../components/Testimonial';
 import BodlaBuildersSEO from '../components/SEO/BodlaBuildersSEO';
+
 const Home = () => {
   const SITE_URL = "https://bodlagroup.com";
   const schemaMarkup = {
@@ -45,7 +46,7 @@ const Home = () => {
   };
   return (
     <>
-    <BodlaBuildersSEO
+      <BodlaBuildersSEO
         title="Bodla Group | DHA Multan's Trusted Real Estate Developers"
         description="Premium real estate development in DHA Multan by Bodla Group."
         keywords="Bodla Group, DHA Multan, real estate Multan, best builders in Multan"
@@ -56,6 +57,7 @@ const Home = () => {
       <div data-aos="fade-up" data-aos-duration="1000">
         <NewsTicker />
       </div>
+      
       <div data-aos="fade-up" data-aos-duration="1300">
         <Slider />
       </div>

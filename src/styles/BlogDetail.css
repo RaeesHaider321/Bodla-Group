@@ -87,3 +87,6 @@ article p {
 .card:hover {
     background: var(--card-background) !important;
 }
+.blog-numberlisting li{
+list-style: decimal;
+}

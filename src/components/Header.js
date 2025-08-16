@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import logo from '../images/header-logo.png';
-import Icons from "../components/Icon"; 
-import BodlaButton from './Button';
+import Icons from "../components/Icon";
+import Button from '../components/Button';
 import { NavLink } from 'react-router-dom'; // Changed from Link to NavLink
 import '../styles/Header.css';
 
@@ -90,12 +90,7 @@ function Header() {
           </Nav>
           
           <Nav className="ms-lg-3"> 
-            <BodlaButton
-              text="Contact Us"
-              icon={<Icons name="rightArrow" />}
-              variant="primary"
-              link="/Contact"
-            />
+            <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Download</i></Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

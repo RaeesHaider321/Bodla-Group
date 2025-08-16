@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button, Card, Container, Row, Col, Alert } from 'react-bootstrap';
+import { Form, Card, Container, Row, Col, Alert } from 'react-bootstrap';
 import PageTitle from '../components/PageTitle';
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 import Icons from "../components/Icon";
 
 const PlotPriceCalculator = () => {
@@ -143,14 +143,7 @@ const PlotPriceCalculator = () => {
                   </Col>
                 </Row>
 
-                  <BodlaButton
-                    icon={<Icons name="rightArrow" />}
-                    variant="primary"
-                    type="button"
-                    text="Calculate Cost"
-                    className="mt-2"
-                    onClick={calculatePrice}
-                  />
+                  <Button variant="light" type="button" onClick={calculatePrice} icon={<Icons name="rightArrow" />}> <i>Calculate Cost</i></Button>
               </Form>
 
               {result && (

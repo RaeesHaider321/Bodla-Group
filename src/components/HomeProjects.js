@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './HomeProjects.css'; 
 import Icons from "../components/Icon";
-import BodlaButton from './Button'; // Ensure this path is correct
+import Button from './Button'; // Ensure this path is correct
 import oneDestination from '../images/oneDestination.jpg';
 import bodlaHomes8Marla from '../images/bodlaHomes8Marla.jpg';
 import businessHub from '../images/businessHub.jpg';
@@ -127,7 +127,7 @@ const HomeProjects = () => {
                                 ))}
                             </Row>
                         </div>
-                        <BodlaButton text="Tell me More!" icon={<Icons name="rightArrow" />} variant="primary" link='/Contact'  />
+                        <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Tell me More!</i></Button>
                     </div>
                 </div>
 

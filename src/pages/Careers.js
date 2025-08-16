@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Col, Row, Card, Badge, Modal, Form, Button, Spinner } from 'react-bootstrap';
+import { Container, Col, Row, Card, Badge, Modal, Form, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 import '../styles/Careers.css';
-import BodlaButton from '../components/Button';
-import Icons from "../components/Icon";
 
+import Icons from "../components/Icon";
+import Button from '../components/Button';
 const CareersPage = () => {
   const [jobs, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
@@ -304,13 +304,8 @@ const CareersPage = () => {
               <Badge bg="success">{job.type}</Badge>
             </div>
             <Card.Text>{job.description}</Card.Text>
-            <BodlaButton
-              text="View Details & Apply"
-              icon={<Icons name="rightArrow" />}
-              variant="primary"
-              onClick={() => handleJobSelect(job)}
-            />
-          </Card.Body>
+            <Button variant="light" onClick={() => handleJobSelect(job)} icon={<Icons name="rightArrow" />}> <i>View Details & Apply</i></Button>
+           </Card.Body>
         </Card>
       </Col>
     ))
@@ -495,20 +490,8 @@ const CareersPage = () => {
         </Modal.Body>
         {!submitSuccess && (
           <Modal.Footer>
-            <Button
-              variant="secondary"
-              onClick={handleModalClose}
-              disabled={submitting}
-            >
-              Cancel
-            </Button>
-            <BodlaButton
-              text={submitting ? 'Submitting...' : 'Submit Application'}
-              icon={submitting ? <Spinner animation="border" size="sm" /> : <Icons name="rightArrow" />}
-              variant="primary"
-              onClick={handleSubmit}
-              disabled={submitting || !!errorMessage}
-            />
+            <Button variant="secondary" disabled={submitting} onClick={handleModalClose}> <i>Cancel</i></Button>
+            <Button variant="light" onClick={handleSubmit} icon={submitting ? <Spinner animation="border" size="sm" disabled={submitting || !!errorMessage}/> : <Icons name="rightArrow" />}> <i>{submitting ? 'Submitting...' : 'Submit Application'}</i></Button>
           </Modal.Footer>
         )}
       </Modal>

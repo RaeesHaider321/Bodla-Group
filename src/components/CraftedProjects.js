@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/CraftedProjects.css";
 import { Card, Col, Row } from "react-bootstrap";
-import BodlaButton from './Button';
+import Button from './Button';
 import Icons from "../components/Icon";
 import gvr from '../images/bHomes.jpg'
 import bHomes from '../images/bHomes.jpg'
@@ -46,12 +46,7 @@ const CraftedProjects = () => {
                     <p>Delivering excellence through every brick — explore the landmarks we’ve proudly built across residential, commercial, and custom developments.</p>
                 </Col>
                 <Col sm={12} md={2} className="mt-3 text-end">
-                    <BodlaButton
-                        text="View All"
-                        icon={<Icons name="rightArrow" />}
-                        variant="primary"
-                        link="/Projects"
-                    />
+                    <Button variant="light" to="/Projects" icon={<Icons name="rightArrow" />}> <i>View All</i></Button>
                 </Col>
             </Row>
             <Row xs={1} sm={2} md={3}>

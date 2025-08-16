@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card, Carousel, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Icons from "../components/Icon";
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 
 import landAcquisition from '../images/landAcquisition.jpg';
 import landTrading from '../images/landPlotTrading.avif';
@@ -159,7 +159,7 @@ const Services = () => {
             </Col>
             <Col xs={12} md={3} className='text-end'>
               <div data-aos="fade-left" data-aos-delay="300">
-                <BodlaButton text="Quick Contact!" icon={<Icons name="rightArrow" />} variant="primary" link="/contact" />
+                <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Quick Contact!</i></Button>
               </div>
             </Col>
           </Row>

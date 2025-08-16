@@ -1,5 +1,5 @@
 import React from 'react';
-import BodlaButton from '../components/Button';
+import Button from '../components/Button';
 import Icons from "../components/Icon"; 
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -13,7 +13,7 @@ const NotFound = () => {
             <p>We're working hard to bring you something amazing.</p>
             {/* <h1>404 - Page Not Found</h1>
             <p>The page you are looking for does not exist.</p> */}
-            <BodlaButton text="Contact Us" icon={<Icons name="rightArrow" />} variant="primary" link="/Contact" />
+            <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Contact Us</i></Button>
           </Col>
         </Row>
       </Container>

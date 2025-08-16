@@ -1,6 +1,7 @@
 import blog1 from '../images/blogs/Emerging Trends in Real Estate in Pakistan.jpg';
 import blog2 from '../images/blogs/construction.png';
 import blog3 from '../images/blogs/Development-Charges-Wavier-Scheme-2025-2026.png';
+import blog4 from '../images/blogs/budget2025.jpg';
 
 export const blogPosts = [
   {
@@ -141,7 +142,7 @@ export const blogPosts = [
     id: 2,
     title: "DHA Multan Development Charges Waiver 2025",
     slug: "DHA-Multan-Development-Charges-Waiver-2025",
-    excerpt: "Get 100% Off with Construction Waiver Scheme 2024-25",
+    excerpt: "Get 100% Off with Construction Waiver Scheme 2024-2025",
     author: "Ayesha Saleem",
     date: "2025-07-15",
     image: blog2,
@@ -283,7 +284,7 @@ export const blogPosts = [
         id: "50%-Waiver-by-Occupying-Your-Home-Sectors-M-Q-R-A-and-H",
         title: "What Are the Benefits of the DHA Multan 75% Waiver 2024 25?",
         description: "For plot owners in Sectors M, Q, R, A, and H, DHA Multan offers a 50% waiver exclusively upon occupying your completed home by the deadline. This is ideal for those who may have already completed the structure and are ready to move in.",
-        
+
       },
 
       {
@@ -342,31 +343,187 @@ export const blogPosts = [
           </>
         )
       },
-      
+
     ],
     content: (
       <>
         <h4 id="Understanding‑the‑Extended‑DHA‑Multan‑Construction‑Waiver‑2025‑26">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
-        
+
         <h4 id="100%-Waiver-on-Development-Charges-Sectors-V-N-B-1-U-I-G">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
-        
+
         <h4 id="50%-Waiver-by-Occupying-Your-Home-Sectors-M-Q-R-A-and-H">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
-        
+
         <h4 id="DHA-Multan-Waiver-Eligibility-Criteria">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
-        
+
         <h4 id="Why-This-Matters:-Key-Benefits-of-the-DHA-Multan-Waiver-Scheme">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
-        
+
         <h4 id="How-to-Pay-DHA-Multan-Development-Charges?">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>The DHA Multan construction waiver 2025 is a limited-time incentive announced on the official Facebook waiver announcement of DHA. Under this scheme, owners who complete the grey structure of their homes between September 1, 2024, and August 30, 2025, will receive a 75% waiver on construction charges.</p>
-        
+
         <h4 id="Why-Is-DHA-Multan-a-Smart-Investment-in-2025?">What Is the DHA Multan Construction Waiver 2025?</h4>
         <p>Thanks to fast-paced infrastructure development, an active housing community, and consistent incentives like the DHA Multan construction waiver 2025, this project continues to offer a high-ROI opportunity. The added benefit of waivers tied to construction activity further enhances its appeal to both builders and investors.</p>
         <p>Whether you’re planning to construct your dream home or secure long-term gains, this is the best time to take advantage of DHA Multan’s extended construction waiver scheme.</p>
+      </>
+    ),
+
+  },
+  {
+    id: 4,
+    title: "Impact of Budget 2025 on Real Estate in Pakistan Tax Relief",
+    slug: "Impact-of-Budget-2025-on-Real-Estate-in-Pakistan-Tax-Relief",
+    excerpt: "Housing Incentives & Market Trends",
+    author: "Ayesha Saleem",
+    date: "2025-08-15",
+    image: blog4,
+    listItems: [
+      "Overview of Federal Government Budget 2025 and the Property Sector?",
+      "Positive Impacts of Budget 2025 on Pakistan’s Real Estate",
+      "Negative Impacts & Challenges from Budget 2025",
+      "Affordable Housing Schemes & Future Growth Potential",
+      "Regional Impact of Budget 2025 on Real Estate",
+      "Impact on Overseas Pakistanis & NRPs",
+      "Conclusion – A Balanced Outlook",
+    ],
+    contentSections: [
+      {
+        intro: 'The impact of Budget 2025 on real estate in Pakistan is one of the most discussed topics in the property sector this year. With the federal government budget 2025 introducing sweeping changes—ranging from tax relief to stricter regulations—buyers, sellers, and overseas Pakistani investors are all rethinking their strategies. This budget reflects the government’s dual priorities: making affordable housing more accessible and ensuring greater compliance in property transactions.',
+        description: "While some measures will boost demand, particularly in Multan, Lahore, Karachi, Islamabad, Bahawalpur, Peshawar and others could temporarily slow market activity.",
+      },
+      {
+        id: "Overview-of-Federal-Government-Budget-2025-and-the-Property-Sector",
+        title: 'Overview of Federal Government Budget 2025 and the Property Sector',
+        description: 'The federal government budget 2025 is designed to encourage legitimate property transactions, stimulate housing construction, and attract both domestic and overseas investment. It introduces reduced withholding tax (WHT) rates for property buyers, abolishes the Federal Excise Duty (FED) on property transactions, and offers a tax credit for affordable housing projects—specifically for houses up to 10 Marlas (about 250 square yards) and apartments up to 2,000 sq. ft.',
+        extraParagraph: (
+          <>
+            <p>In addition, stamp duty in Islamabad has been reduced from 4% to just 1%, while mortgage financing has been given a push through banking sector incentives. The revival of the Pakistan Real Estate Regulatory Authority (PRERA) is also on the agenda, aiming to bring transparency and investor protection to the sector. These measures together suggest a market that is being streamlined for both compliance and growth.</p>
+          </>
+        ),
+      },
+
+      {
+        id: "Positive-Impacts-of-Budget-2025-on-Pakistan’s-Real-Estate",
+        title: "Positive Impacts of Budget 2025 on Pakistan’s Real Estate",
+        listing: (
+          <>
+            <ol type="i" className='blog-numberlisting'>
+              <li><h5>Tax Relief for Property Buyers</h5>
+                <p>For property buyers, the budget 2025 tax relief is one of the most encouraging developments in recent years. The reduction of WHT—from 4% to 2.5%, from 3.5% to 2%, and from 3% to 1.5%—significantly cuts transaction costs. This makes property purchases more affordable, especially for first-time buyers and middle-income families.</p>
+              </li>
+              <li><h5>Abolition of Federal Excise Duty</h5>
+                <p>The abolition of the Federal Excise Duty is another major win. Previously, FED added to the burden of buying and selling property, especially for those involved in commercial real estate. Removing it means both buyers and sellers benefit from reduced costs, encouraging higher transaction volumes.</p>
+              </li>
+              <li><h5>Incentives for Affordable Housing</h5>
+                <p>The introduction of tax credits for affordable housing in Pakistan 2025 is particularly important. By incentivizing purchases of smaller houses and apartments, the government is directly supporting affordable housing schemes and boosting construction activity in the mid-tier market segment. This could lead to increased demand in developing housing societies in cities like Multan and Bahawalpur, as well as suburban areas of Lahore and Karachi.</p>
+              </li>
+              <li><h5>Reduced Stamp Duty in Islamabad</h5>
+                <p>In Islamabad, the dramatic reduction in stamp duty—from 4% to just 1%—is expected to revive market activity. The capital city is already a hotspot for overseas Pakistani property investment, and this change makes it even more competitive compared to other urban centers.</p>
+              </li>
+              <li><h5>Boost to Mortgage Financing</h5>
+                <p>The emphasis on mortgage financing can have a transformative effect on the Pakistan real estate market 2025. Encouraging banks to offer property loans not only opens the door for more buyers but also injects liquidity into the construction sector, leading to more development projects and job creation.</p>
+              </li>
+            </ol>
+          </>
+        ),
+      },
+      {
+        id: "Negative-Impacts-&-Challenges-from-Budget-2025",
+        title: "Negative Impacts & Challenges from Budget 2025",
+        listing: (
+          <>
+            <ol type="i" className='blog-numberlisting'>
+              <li><h5>Higher Taxes for Sellers</h5>
+                <p>While the budget is clearly favorable for buyers, sellers are facing new challenges. The increase in taxes on property sales means reduced profit margins, which could discourage frequent trading of real estate and slow down the secondary market.</p>
+              </li>
+              <li><h5>Restrictions on Non-Filers</h5>
+                <p>The restrictions on non-filers are also a double-edged sword. On one hand, they encourage more individuals to become tax-compliant, which strengthens the formal economy. On the other hand, they limit the number of potential buyers, especially in high-value urban markets like Lahore and Karachi, where a significant portion of transactions traditionally involved non-filers.</p>
+              </li>
+              <li><h5>Regulatory Complexity</h5>
+                <p>Although Section 7E of the Income Tax Ordinance is being simplified, other new regulations could add layers of complexity for investors and developers. For those unfamiliar with the legal and tax framework, navigating these changes may require professional guidance.</p>
+              </li>
+            </ol>
+          </>
+        ),
+      },
+
+      {
+        id: "Affordable-Housing-Schemes-&-Future-Growth-Potential",
+        title: "Affordable Housing Schemes & Future Growth Potential",
+        description: "Looking ahead, the Pakistan real estate market 2025 appears set for gradual but steady growth. The government’s push for low-cost housing projects, combined with tax relief and better financing, is likely to expand the property-owning middle class.",
+        extraParagraph: (
+          <>
+            <p>The focus on affordable housing is not just a social policy—it’s an economic growth strategy. By encouraging more people to invest in property, the government is indirectly boosting construction, creating jobs, and expanding the formal economy.</p>
+          </>
+        ),
+      },
+
+      {
+        id: "Regional-Impact-of-Budget-2025-on-Real-Estate",
+        title: "Regional Impact of Budget 2025 on Real Estate",
+        description: "In Multan, the budget 2025 real estate impact is expected to be highly positive, with lower WHT and affordable housing tax credits attracting local buyers and overseas Pakistanis from the UAE, Saudi Arabia, and Qatar.",
+        extraParagraph: (
+          <>
+            <p>Lahore and Karachi will benefit from reduced transaction costs, which could stimulate both residential and commercial activity. However, the impact of non-filer restrictions in these cities may temper the pace of growth in certain segments.
+            </p>
+            <p>In Islamabad, the combined effect of reduced stamp duty and capital gains tax (CGT) adjustments makes the city more competitive for overseas Pakistani investors from the UK, USA, and Australia.the capital now offers a lower-cost entry into prime property assets.
+            </p>
+            <p>Emerging cities like Bahawalpur and Peshawar could benefit from new affordable housing projects, supported by lower taxes and better mortgage financing options.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "Impact-on-Overseas-Pakistanis-&-NRPs",
+        title: "Impact on Overseas Pakistanis & NRPs",
+        extraParagraph: (
+          <>
+            <p>
+              For Non-Resident Pakistanis (NRPs), the Pakistan budget 2025 real estate tax relief offers several opportunities. Reduced WHT, tax exemptions on affordable housing, and special investment incentives make it easier for them to channel remittances into the property sector.
+            </p>
+            <p>Cities like Multan, Islamabad, and Karachi are particularly attractive for overseas investment because they offer a mix of high-return opportunities and government-supported housing projects. Moreover, the revival of PRERA adds a layer of regulatory confidence, assuring NRPs that their investments are protected.
+            </p>
+            <p>For UAE expats seeking Pakistan property tax relief in 2025, the changes mean lower upfront costs and better financing options, making property ownership in Pakistan more feasible than before.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "Conclusion-A-Balanced-Outlook",
+        title: "Conclusion – A Balanced Outlook",
+        extraParagraph: (
+          <>
+            <p>
+              The impact of budget 2025 on real estate in Pakistan is largely positive for buyers, developers, and overseas Pakistani investors. Lower transaction costs, tax credits, and increased mortgage availability create strong incentives for market growth. However, higher taxes for sellers and restrictions on non-filers could slow some segments of the market.
+            </p><p>Overall, the federal budget 2025 property market impact signals a shift toward a more transparent, regulated, and opportunity-rich real estate sector. For investors who adapt quickly, 2025 could be a highly rewarding year in Pakistan’s property market.
+            </p>
+          </>
+        ),
+      },
+    ],
+    content: (
+      <>
+        <h4 id="Overview-of-Federal-Government-Budget-2025-and-the-Property-Sector">Overview of Federal Government Budget 2025 and the Property Sector?</h4>
+        <p>The federal government budget 2025 is designed to encourage legitimate property transactions, stimulate housing construction, and attract both domestic and overseas investment. It introduces reduced withholding tax (WHT) rates for property buyers, abolishes the Federal Excise Duty (FED) on property transactions, and offers a tax credit for affordable housing projects—specifically for houses up to 10 Marlas (about 250 square yards) and apartments up to 2,000 sq. ft.
+          In addition, stamp duty in Islamabad has been reduced from 4% to just 1%, while mortgage financing has been given a push through banking sector incentives. The revival of the Pakistan Real Estate Regulatory Authority (PRERA) is also on the agenda, aiming to bring transparency and investor protection to the sector. These measures together suggest a market that is being streamlined for both compliance and growth.
+        </p>
+
+        <h4 id="Positive-Impacts-of-Budget-2025-on-Pakistan’s-Real-Estate">Positive Impacts of Budget 2025 on Pakistan’s Real Estate</h4>
+        <p>Pakistan’s GDP growth, increased remittances, and government business-friendly policies have boosted investor confidence. Regulatory stability and improved ease of doing business are accelerating project launches across major cities.</p>
+
+        <h4 id="Negative-Impacts-&-Challenges-from-Budget-2025">Negative Impacts & Challenges from Budget 2025</h4>
+        <p></p>
+        <h4 id="Affordable-Housing-Schemes-&-Future-Growth-Potential">Affordable Housing Schemes & Future Growth Potential</h4>
+        <p></p>
+        <h4 id="Regional-Impact-of-Budget-2025-on-Real-Estate">Regional Impact of Budget 2025 on Real Estate</h4>
+        <p></p>
+        <h4 id="Impact-on-Overseas-Pakistanis-&-NRPs">Impact on Overseas Pakistanis & NRPs</h4>
+        <p></p>
+        <h4 id="Conclusion-–-A-Balanced-Outlook">Conclusion – A Balanced Outlook</h4>
+        <p></p>
       </>
     ),
 

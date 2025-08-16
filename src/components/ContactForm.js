@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form } from 'react-bootstrap';
-import BodlaButton from './Button';
+import Button from './Button';
 import Icons from "../components/Icon";
 
 const ContactForm = () => {
@@ -213,13 +213,14 @@ const ContactForm = () => {
           {errors.message && <div className="invalid-feedback d-block">{errors.message}</div>}
         </Form.Group>
         
-        <BodlaButton
+        {/* <BodlaButton
           disabled={isSubmitting}
           text={isSubmitting ? 'Sending...' : 'Submit'}
           icon={<Icons name="rightArrow" />}
           variant="primary"
           type="submit"
-        />
+        /> */}
+        <Button variant="light" type="submit" to="/Contact" disabled={isSubmitting} icon={<Icons name="rightArrow" />}> <i>{isSubmitting ? 'Sending...' : 'Submit'}</i></Button>
       </form>
     </div>
   );

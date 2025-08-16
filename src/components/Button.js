@@ -1,44 +1,66 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Button as BootstrapButton } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Button.css';
 
-const BodlaButton = ({ 
-  text, 
-  icon, 
-  variant, 
-  size, 
-  disabled, 
-  link, 
-  onClick, 
-  type = 'button' // Add type prop with default value
+const Button = ({
+  variant = 'primary',
+  size = 'md',
+  onClick,
+  disabled = false,
+  children,
+  icon,
+  className = 'btn-custom',
+  type = 'button',
+  to, // New prop for navigation
+  ...props
 }) => {
   const navigate = useNavigate();
 
-  const handleClick = (event) => {
+  const handleClick = (e) => {
+    if (to) {
+      navigate(to);
+    }
     if (onClick) {
-      onClick(event); // Execute the provided function, passing the event
-    } else if (link) {
-      if (link.startsWith('http')) {
-        window.location.href = link; // External links
-      } else {
-        navigate(link); // Internal routing with React Router
-      }
+      onClick(e);
     }
   };
 
   return (
-    <Button 
-      variant={variant} 
-      size={size} 
-      disabled={disabled} 
+    <BootstrapButton
+      variant={variant}
+      size={size}
       onClick={handleClick}
-      type={type} // Set the button type
+      disabled={disabled}
+      className={className}
+      type={type}
+      {...props}
     >
-      {icon && <span className="icon">{icon}</span>} {/* Render the icon as JSX */}
-      <span className="text">{text}</span>
-    </Button>
+      {icon && <span className="icon">{icon}</span>}
+      {children}
+    </BootstrapButton>
   );
 };
+Button.propTypes = {
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'light',
+    'dark',
+    'link',
+  ]),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  icon: PropTypes.node,
+  className: PropTypes.string,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+};
 
-export default BodlaButton;
+export default Button;

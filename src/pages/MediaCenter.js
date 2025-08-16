@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Tab, Tabs, Card, Modal, Image, Row, Col, Container, Button } from 'react-bootstrap';
-
+import { Tab, Tabs, Card, Modal, Image, Row, Col, Container, } from 'react-bootstrap';
+import Icons from "../components/Icon";
+import Button from '../components/Button';
 // Import local images for galleries
 import DHAAwards from '../images/mediaCenter/DHAAwards/DHAAwards.png';
 import DHAAwards1 from '../images/mediaCenter/DHAAwards/DHAAwards1.jpg';
@@ -403,9 +404,7 @@ const MediaCenter = () => {
       <section>
       <Container>
         <h2 className="mb-4">{currentGalleryTitle}</h2>
-        <button className="btn btn-secondary mb-4" onClick={handleBackToGallery}>
-          Back to Media Center
-        </button>
+        <Button variant="secondary" onClick={handleBackToGallery} icon={<Icons name="rightArrow" />}> <i>Back to Media Center</i></Button>
         <Row xs={1} md={2} lg={3} className="g-4">
           {currentGallery.map((item, index) => (
             <Col key={item.id}>
