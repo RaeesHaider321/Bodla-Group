@@ -13,6 +13,7 @@ import CraftedProjects from '../../CraftedProjects';
 
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import ConstructionThing from "../../ConstructionThing";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -64,7 +65,8 @@ const POPULAR_CALCULATIONS = [
         materialType: "Grey Structure",
         constructionType: "grey structure",
         constructionMode: "with material",
-        numFloors: 1
+        numFloors: 1,
+        storey: "Single",
     },
     {
         label: "5 Marla Standard",
@@ -74,7 +76,8 @@ const POPULAR_CALCULATIONS = [
         materialType: "Grey Structure",
         constructionType: "grey structure",
         constructionMode: "with material",
-        numFloors: 1
+        numFloors: 1,
+        storey: "Single",
     },
     {
         label: "7 Marla Premium",
@@ -84,7 +87,8 @@ const POPULAR_CALCULATIONS = [
         materialType: "Grey Structure",
         constructionType: "grey structure",
         constructionMode: "with material",
-        numFloors: 1
+        numFloors: 2,
+        storey: "Double",
     },
     {
         label: "10 Marla Furnished",
@@ -94,7 +98,8 @@ const POPULAR_CALCULATIONS = [
         materialType: "Finishing Only",
         constructionType: "furnished",
         constructionMode: "with material",
-        numFloors: 1
+        numFloors: 1,
+        storey: "Double",
     },
     {
         label: "1 Kanal Turnkey",
@@ -104,7 +109,8 @@ const POPULAR_CALCULATIONS = [
         materialType: "Full Turnkey",
         constructionType: "full turnkey",
         constructionMode: "with material",
-        numFloors: 1
+        numFloors: 1,
+        storey: "Double",
     },
 ];
 
@@ -584,8 +590,8 @@ export default function ConstructionCostCalculator() {
                                             </Row>
                                             <Row className="justify-content-center">
                                                 <Col className="text-center d-flex gap-3">
-                                                    <Button variant="light" onClick={handleStartCalculation} icon={<Icons name="rightArrow"/>}> <i>Recalculate</i></Button>
-                                                    <Button variant="primary" onClick={() => {setAreaSize("");setCoveredArea("");setErrors({}); setActivePreset(null);}} icon={<Icons name="rightArrow" />}> <i>Reset</i></Button>
+                                                    <Button variant="light" onClick={handleStartCalculation} icon={<Icons name="rightArrow" />}> <i>Recalculate</i></Button>
+                                                    <Button variant="primary" onClick={() => { setAreaSize(""); setCoveredArea(""); setErrors({}); setActivePreset(null); }} icon={<Icons name="rightArrow" />}> <i>Reset</i></Button>
                                                 </Col>
                                             </Row>
                                         </Form>
@@ -681,8 +687,9 @@ export default function ConstructionCostCalculator() {
                                             ? 'bg-primary text-white'
                                             : ''}`}
                                     >
-                                        <Card.Body className="text-center">
-                                            {calc.label}
+                                        <Card.Body>
+                                            <h6>{calc.label} Constructing Cost</h6>
+                                            <p>{calc.storey} Storey</p>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -878,13 +885,28 @@ export default function ConstructionCostCalculator() {
                                         ? 'bg-primary text-white'
                                         : ''}`}
                                 >
-                                    <Card.Body className="text-center">
-                                        {calc.label}
+                                    <Card.Body>
+                                        <h6>{calc.label} Constructing Cost</h6>
+                                        <p>{calc.storey} Storey</p>
                                     </Card.Body>
                                 </Card>
                             </Col>
                         ))}
                     </Row>
+                    <Row>
+                        <Col>
+                            <ConstructionThing />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <h2>About Construction Cost Calculator</h2>
+                            <p>The biggest challenge when building a house is often the uncertainty around construction costs, as multiple factors can influence the final price. These factors include the quality and type of materials, the number of floors, and whether you manage the construction yourself or hire a professional company. To simplify this process, Bodla Builders has introduced its innovative House Construction Cost Calculator—a reliable tool that helps users estimate their home construction expenses accurately.</p>
+                            <p>If you're planning to build your dream home, our Construction Cost Calculator allows you to quickly determine the estimated cost. Just enter the city where you plan to build, select the house size in Marla or Kanals, and choose the desired material quality. The tool will then generate a detailed estimate, including the grey structure cost, contractor fees, finishing costs, and price per square foot.</p>
+                            <p>The grey structure cost is calculated by summing up the expenses of foundational elements such as pillars, walls, beams, cement, and steel framework. Meanwhile, the finishing cost accounts for finer details, including tiles, bathroom fixtures, doors, and other essential components. This tool makes it effortless to get a transparent and reliable estimate for your home construction project.</p>
+                        </Col>
+                    </Row>
+                    <CraftedProjects />
                 </Container>
             </section>
         </>

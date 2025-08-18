@@ -29,12 +29,6 @@ const ConstructionThing = () => {
                     </Col>
                 ))}
             </Row>
-            <div className="mt-5">
-                <h2>About Construction Cost Calculator</h2>
-                <p>The biggest challenge when building a house is often the uncertainty around construction costs, as multiple factors can influence the final price. These factors include the quality and type of materials, the number of floors, and whether you manage the construction yourself or hire a professional company. To simplify this process, Bodla Builders has introduced its innovative House Construction Cost Calculator—a reliable tool that helps users estimate their home construction expenses accurately.</p>
-                <p>If you're planning to build your dream home, our Construction Cost Calculator allows you to quickly determine the estimated cost. Just enter the city where you plan to build, select the house size in Marla or Kanals, and choose the desired material quality. The tool will then generate a detailed estimate, including the grey structure cost, contractor fees, finishing costs, and price per square foot.</p>
-                <p>The grey structure cost is calculated by summing up the expenses of foundational elements such as pillars, walls, beams, cement, and steel framework. Meanwhile, the finishing cost accounts for finer details, including tiles, bathroom fixtures, doors, and other essential components. This tool makes it effortless to get a transparent and reliable estimate for your home construction project.</p>
-            </div>
         </div>
     );
 };
