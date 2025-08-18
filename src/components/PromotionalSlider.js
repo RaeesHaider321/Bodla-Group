@@ -68,7 +68,7 @@ const ProductSlider = () => {
         { id: 3, name: 'Unparalleled Living Experience.', image: promotion8marla2, link: '/product/3' },
         { id: 4, name: 'The Payment Plan of your choice.', image: promotion8marla1, link: '/product/4' },
         { id: 5, name: 'Your Home build by DHA Multan.', image: promotionMaym3, link: '/product/5' },
-        { id: 6, name: 'Bodla Group is coming to Qatar!', image: promotionQatar, link: '/product/6' },
+        // { id: 6, name: 'Bodla Group is coming to Qatar!', image: promotionQatar, link: '/product/6' },
         { id: 7, name: 'Big News for DHA Multan Holders!', image: promotionWaiverCharges1, link: '/product/7' },
         { id: 8, name: '50% Waiver – Occupy Your Home Now!', image: promotionWaiverCharges2, link: '/product/8' },
         { id: 8, name: 'DHA Multan Offers Big Savings!', image: promotionNewsFlash17July, link: '/product/8' },
