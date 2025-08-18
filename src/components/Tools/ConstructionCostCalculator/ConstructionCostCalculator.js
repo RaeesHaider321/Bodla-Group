@@ -14,6 +14,7 @@ import CraftedProjects from '../../CraftedProjects';
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import ConstructionThing from "../../ConstructionThing";
+import ConstructionCostFAQs from "../../ConstructionCostFAQs";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -591,7 +592,7 @@ export default function ConstructionCostCalculator() {
                                             <Row className="justify-content-center">
                                                 <Col className="text-center d-flex gap-3">
                                                     <Button variant="light" onClick={handleStartCalculation} icon={<Icons name="rightArrow" />}> <i>Recalculate</i></Button>
-                                                    <Button variant="primary" onClick={() => { setAreaSize(""); setCoveredArea(""); setErrors({}); setActivePreset(null); }} icon={<Icons name="rightArrow" />}> <i>Reset</i></Button>
+                                                    <Button variant="primary" onClick={() => { setAreaSize(""); setCoveredArea(""); setErrors({}); setActivePreset(null); }} icon={<Icons name="refresh" />}> <i>Reset</i></Button>
                                                 </Col>
                                             </Row>
                                         </Form>
@@ -602,8 +603,8 @@ export default function ConstructionCostCalculator() {
                                 <div className="areaUnitConverter">
                                     <Card className="mb-4 p-4 " ref={resultCardRef}>
                                         <div className="d-flex justify-content-end gap-2 mb-3 pdf-buttons">
-                                            <Button variant="light" onClick={handleShareResults} icon={<Icons name="rightArrow" />}> <i>Share Results</i></Button>
-                                            <Button variant="light" onClick={handleDownloadPDF} icon={<Icons name="rightArrow" />}> <i>Download</i></Button>
+                                            <Button variant="light" onClick={handleShareResults} icon={<Icons name="share" />}> <i>Share Results</i></Button>
+                                            <Button variant="light" onClick={handleDownloadPDF} icon={<Icons name="download" />}> <i>Download</i></Button>
                                         </div>
                                         <div className="mb-2">
                                             <strong>Property Details: </strong>
@@ -694,6 +695,9 @@ export default function ConstructionCostCalculator() {
                                     </Card>
                                 </Col>
                             ))}
+                        </Row>
+                        <Row className="my-4">
+                            <ConstructionCostFAQs />
                         </Row>
                         <CraftedProjects />
                     </Container>
@@ -905,6 +909,9 @@ export default function ConstructionCostCalculator() {
                             <p>If you're planning to build your dream home, our Construction Cost Calculator allows you to quickly determine the estimated cost. Just enter the city where you plan to build, select the house size in Marla or Kanals, and choose the desired material quality. The tool will then generate a detailed estimate, including the grey structure cost, contractor fees, finishing costs, and price per square foot.</p>
                             <p>The grey structure cost is calculated by summing up the expenses of foundational elements such as pillars, walls, beams, cement, and steel framework. Meanwhile, the finishing cost accounts for finer details, including tiles, bathroom fixtures, doors, and other essential components. This tool makes it effortless to get a transparent and reliable estimate for your home construction project.</p>
                         </Col>
+                    </Row>
+                    <Row className="my-4">
+                        <ConstructionCostFAQs />
                     </Row>
                     <CraftedProjects />
                 </Container>

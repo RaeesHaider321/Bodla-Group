@@ -971,6 +971,7 @@ a {
 .accordion {
   border-radius: 15px;
   overflow: hidden;
+--bs-accordion-border-width:0;
 }
 
 .accordion-item {
