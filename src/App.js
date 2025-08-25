@@ -48,8 +48,6 @@ import BlogDetail from "./components/BlogDetail";
 import ConstructionCostCalculation from "./components/Tools/ConstructionCostCalculator/ConstructionCostCalculator";
 
 
-
-
 // This component will handle scrolling to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();

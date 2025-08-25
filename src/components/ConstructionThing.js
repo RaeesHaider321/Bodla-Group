@@ -15,7 +15,7 @@ const ConstructionThing = () => {
         <div className="mb-5">
             <h2>Things to Keep in Mind While <span>Constructing Your House</span></h2>
             <p>Careful planning, budgeting, and selecting quality materials are crucial to ensuring a durable, cost-effective, and legally compliant home construction.</p>
-            <Row md={3} className="g-3">
+            <Row xs={1} sm={2} md={3} className="g-3">
                 {constructionItems.map((item, index) => (
                     <Col key={index}>
                         <Card className="mb-4 shadow-sm h-100">

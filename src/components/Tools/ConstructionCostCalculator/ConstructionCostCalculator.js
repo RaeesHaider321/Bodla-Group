@@ -1,6 +1,7 @@
 // ConstructionCostCalculator.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Card, Row, Col, Form, } from "react-bootstrap";
+
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import InnerHeader from "../../InnerHeaderWithCard";
@@ -718,7 +719,7 @@ export default function ConstructionCostCalculator() {
                     <Card>
                         <Card.Body>
                             <Row>
-                                <Col sm={1} md={3}>{/* City */}
+                                <Col sm={12} md={3}>{/* City */}
                                     <Form.Group className="mb-3">
                                         <Form.Label>City</Form.Label>
                                         <Form.Select value={city} onChange={(e) => setCity(e.target.value)}>
@@ -867,8 +868,6 @@ export default function ConstructionCostCalculator() {
                                     <Button variant="light" onClick={handleStartCalculation} icon={<Icons name="rightArrow" />}><i>Start calculation</i></Button>
                                 </Col>
                             </Row>
-
-
                             {/* Tip */}
                             <div className="small mt-2">
                                 Tip: Covered Area should be in the same unit as Area size.
