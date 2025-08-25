@@ -1,0 +1,100 @@
+/* PopularCalculationsSlider.css */
+.popular-calculations-slider {
+    padding: 2rem 0;
+}
+
+.slider-container {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.slider-nav {
+    position: absolute;
+    top: -40px;
+    transform: translateY(-50%);
+    background: white;
+    color: var(--primary);
+    fill: var(--primary);
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider-nav svg {
+    fill: var(--primary);
+    width: 100%;
+}
+
+.slider-nav:hover {
+    background: var(--primary);
+    fill: white;
+    color: white;
+}
+
+.slider-nav svg:hover {
+    background: var(--primary);
+    fill: white;
+    color: white;
+}
+
+.slider-nav-prev {
+    right: 46px;
+}
+
+.slider-nav-next {
+    right: 0;
+}
+.card-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slider-container {
+        padding: 0 30px;
+    }
+
+    .slider-nav {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slider-item {
+        padding: 0 3px;
+    }
+
+    .card-body h6 {
+        font-size: 0.9rem;
+    }
+
+    .card-body p {
+        font-size: 0.8rem;
+    }
+}

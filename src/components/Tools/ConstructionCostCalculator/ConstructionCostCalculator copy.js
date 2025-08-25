@@ -1,7 +1,6 @@
 // ConstructionCostCalculator.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Card, Row, Col, Form, } from "react-bootstrap";
-import PopularCalculationsSlider from "./PopularCalculationsSlider";
 
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
@@ -680,11 +679,24 @@ export default function ConstructionCostCalculator() {
                             <h3>Disclaimer</h3>
                             <p>This cost is for 3 Marla double storey House. All the information in this calculator is published for general information purpose only. All product prices are subject to change according to the market fluctuation and may not be 100% accurate.</p>
                         </Row>
-                        <PopularCalculationsSlider
-                            calculations={POPULAR_CALCULATIONS}
-                            onCalculationClick={handlePopularCalculation}
-                            activePreset={activePreset}
-                        />
+                        <h2>Popular Calculations</h2>
+                        <Row>
+                            {POPULAR_CALCULATIONS.map((calc, index) => (
+                                <Col sm={6} md={4} lg={3} key={index} className="mb-3">
+                                    <Card
+                                        onClick={() => handlePopularCalculation(calc)}
+                                        className={`cursor-pointer ${activePreset === calc.label
+                                            ? 'bg-primary text-white'
+                                            : ''}`}
+                                    >
+                                        <Card.Body>
+                                            <h6>{calc.label} Constructing Cost</h6>
+                                            <p>{calc.storey} Storey</p>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))}
+                        </Row>
                         <Row className="my-4">
                             <ConstructionCostFAQs />
                         </Row>
@@ -866,11 +878,24 @@ export default function ConstructionCostCalculator() {
             </InnerHeader>
             <section>
                 <Container>
-                    <PopularCalculationsSlider
-                        calculations={POPULAR_CALCULATIONS}
-                        onCalculationClick={handlePopularCalculation}
-                        activePreset={activePreset}
-                    />
+                    <h2>Popular Calculations</h2>
+                    <Row>
+                        {POPULAR_CALCULATIONS.map((calc, index) => (
+                            <Col sm={6} md={4} lg={3} key={index} className="mb-3">
+                                <Card
+                                    onClick={() => handlePopularCalculation(calc)}
+                                    className={`cursor-pointer ${activePreset === calc.label
+                                        ? 'bg-primary text-white'
+                                        : ''}`}
+                                >
+                                    <Card.Body>
+                                        <h6>{calc.label} Constructing Cost</h6>
+                                        <p>{calc.storey} Storey</p>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
                     <Row>
                         <Col>
                             <ConstructionThing />
