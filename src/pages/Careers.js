@@ -49,7 +49,88 @@ const CareersPage = () => {
       //     'Familiarity with RESTful APIs',
       //   ],
       // }
-    ];
+
+
+      {
+        "id": 1,
+        "title": "Sales Manager",
+        "department": "Sales",
+        "location": "Onsite",
+        "type": "Full-time",
+        "description": "We are seeking a dynamic and results-driven Sales Manager to lead our high-performing sales team. In this pivotal role, you will be responsible for developing strategic sales plans, driving revenue growth, and forging strong relationships with key clients and partners. If you are a proven leader with a track record of exceeding targets and inspiring teams, we encourage you to apply.",
+        "responsibilities": [
+          "Develop and implement comprehensive sales strategies to achieve and exceed revenue targets for projects, dealer networks, and direct clients.",
+          "Lead, mentor, and motivate a team of sales professionals, fostering a culture of high performance and continuous improvement.",
+          "Conduct in-depth market and competitor analysis to identify new opportunities and recommend data-driven solutions for growth.",
+          "Build and maintain strong, long-lasting relationships with key accounts and strategic partners.",
+          "Prepare and present accurate sales forecasts, pipeline reports, and performance metrics to senior management.",
+          "Oversee the entire sales cycle, from prospecting and negotiation to deal closure and account management."
+        ],
+        "requirements": [
+          "Bachelor's degree in Business Administration, Marketing, or a related field.",
+          "Minimum of 5+ years of proven sales experience, with a strong record of successfully closing major deals and exceeding quotas.",
+          "At least 2+ years of experience in a sales leadership or management role, demonstrating the ability to lead and develop a team.",
+          "Exceptional communication, negotiation, and interpersonal skills.",
+          "Strategic thinker with strong analytical abilities to interpret sales data and market trends.",
+          "Proficient in CRM software (e.g., Salesforce, HubSpot) and the Microsoft Office Suite."
+        ],
+
+      },
+      {
+        "id": 2,
+        "title": "Sales Executive",
+        "department": "Sales",
+        "location": "Onsite", // Can be changed to "Hybrid" or "Remote"
+        "type": "Full-time",
+        "description": "Are you a hungry and results-oriented sales professional ready to take the next step in your career? We are looking for a dynamic Sales Executive to drive our growth by generating new business and nurturing key client relationships. You will be the face of our company for prospects and will play a critical role in expanding our market presence. If you thrive in a fast-paced environment and love the thrill of closing a deal, this is the role for you.",
+        "responsibilities": [
+          "Prospect, identify, and qualify new sales leads and opportunities through strategic outreach (cold calling, email campaigns, networking).",
+          "Manage the full sales cycle from initial contact and needs analysis to product demonstration, negotiation, and successful deal closure.",
+          "Build and maintain a robust pipeline of potential clients, ensuring accurate and timely updates in our CRM system.",
+          "Develop and deliver compelling, tailored pitches and presentations that clearly articulate our value proposition to diverse audiences.",
+          "Cultivate strong, long-term relationships with new and existing clients, acting as a trusted advisor to understand their evolving needs.",
+          "Collaborate closely with the marketing and customer success teams to ensure a seamless client journey from acquisition to onboarding.",
+          "Consistently meet and exceed quarterly sales targets and performance metrics."
+        ],
+        "requirements": [
+          "2-3 years of proven experience in a B2B sales or business development role, with a track record of meeting quotas.",
+          "Exceptional lead management skills, with the ability to prioritize and pursue the highest-value opportunities effectively.",
+          "Strong pitching and presentation skills, with the persuasive influence to overcome objections and win business.",
+          "Excellent verbal and written communication skills, with the ability to build instant rapport and credibility.",
+          "Self-motivated, resilient, and driven by achieving goals in a competitive environment.",
+          "Proficiency with CRM software (e.g., Salesforce, HubSpot) and the Microsoft Office/Google Workspace suites.",
+          "Bachelor’s degree in Business, Marketing, Communications, or a related field is preferred."
+        ],
+
+      },
+      {
+        "id": 3,
+        "title": "Assistant Sales Manager",
+        "department": "Sales",
+        "location": "Onsite", // Can be changed to "Hybrid"
+        "type": "Full-time",
+        "description": "We are seeking a proactive and skilled Assistant Sales Manager to provide crucial support in driving our sales team's success. This role is designed for a top-performing sales professional ready to step into leadership. You will be instrumental in managing key client relationships, resolving complex challenges, and supporting the Sales Manager in coaching the team to exceed targets across our dealer, corporate, and project sales channels.",
+        "responsibilities": [
+          "Support the Sales Manager in achieving team sales targets through active coaching, mentorship, and guidance for junior team members.",
+          "Manage and nurture relationships with key accounts, dealers, and corporate clients, ensuring high levels of satisfaction and repeat business.",
+          "Serve as an expert point of contact for handling complex client queries and providing sophisticated solutions to meet their needs.",
+          "Demonstrate proven deal-closing ability by personally managing and securing high-value opportunities across all sales verticals.",
+          "Coordinate seamlessly between internal teams (marketing, operations) and external partners (dealers, distributors) to ensure smooth execution of sales strategies.",
+          "Assist in analyzing sales data, preparing performance reports, and forecasting for management review.",
+          "Help in developing and implementing training programs to enhance the product knowledge and sales techniques of the team."
+        ],
+        "requirements": [
+          "2-4 years of hands-on experience in a sales role, with a proven and documented track record of consistently closing deals and exceeding targets.",
+          "Experience in a senior sales or team lead capacity, demonstrating skills in mentoring and guiding others.",
+          "Exceptional client relationship management skills, with the ability to build trust and navigate complex negotiations.",
+          "Strong analytical and problem-solving skills to effectively handle complex customer queries and objections.",
+          "Superior coordination and communication skills, with experience managing multiple stakeholders (dealers, corporate clients, internal teams).",
+          "A self-starter with a strong sense of ownership and the ability to operate effectively with minimal supervision.",
+          "Bachelor’s degree in Business Administration, Sales, or a relevant field."
+        ],
+        
+      }
+    ]
 
     setJobs(mockJobs);
     const uniqueDepts = [...new Set(mockJobs.map(job => job.department))];
@@ -287,40 +368,40 @@ const CareersPage = () => {
           </Row>
 
           <Row xs={1} md={2} lg={3} className="g-4">
-  {jobs.length === 0 ? (
-    <Col className="text-center py-5" lg={12}>
-      <h4>We currently don't have any open positions. Please check back later!</h4>
-      <p>You can also follow us on social media to stay updated about new opportunities.</p>
-    </Col>
-  ) : filteredJobs.length > 0 ? (
-    filteredJobs.map(job => (
-      <Col key={job.id}>
-        <Card className="h-100">
-          <Card.Body>
-            <Card.Title>{job.title}</Card.Title>
-            <div className="d-flex flex-wrap gap-2 mb-3">
-              <Badge bg="primary">{job.department}</Badge>
-              <Badge bg="secondary">{job.location}</Badge>
-              <Badge bg="success">{job.type}</Badge>
-            </div>
-            <Card.Text>{job.description}</Card.Text>
-            <Button variant="light" onClick={() => handleJobSelect(job)} icon={<Icons name="rightArrow" />}> <i>View Details & Apply</i></Button>
-           </Card.Body>
-        </Card>
-      </Col>
-    ))
-  ) : (
-    <Col className="text-center py-5">
-      <p className="lead">No job openings match your filters. Please try different criteria.</p>
-      <Button
-        variant="outline-primary"
-        onClick={() => setFilters({ department: '', location: '' })}
-      >
-        Reset Filters
-      </Button>
-    </Col>
-  )}
-</Row>
+            {jobs.length === 0 ? (
+              <Col className="text-center py-5" lg={12}>
+                <h4>We currently don't have any open positions. Please check back later!</h4>
+                <p>You can also follow us on social media to stay updated about new opportunities.</p>
+              </Col>
+            ) : filteredJobs.length > 0 ? (
+              filteredJobs.map(job => (
+                <Col key={job.id}>
+                  <Card className="h-100">
+                    <Card.Body>
+                      <Card.Title>{job.title}</Card.Title>
+                      <div className="d-flex flex-wrap gap-2 mb-3">
+                        <Badge bg="primary">{job.department}</Badge>
+                        <Badge bg="secondary">{job.location}</Badge>
+                        <Badge bg="success">{job.type}</Badge>
+                      </div>
+                      <Card.Text>{job.description}</Card.Text>
+                      <Button variant="light" onClick={() => handleJobSelect(job)} icon={<Icons name="rightArrow" />}> <i>View Details & Apply</i></Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))
+            ) : (
+              <Col className="text-center py-5">
+                <p className="lead">No job openings match your filters. Please try different criteria.</p>
+                <Button
+                  variant="outline-primary"
+                  onClick={() => setFilters({ department: '', location: '' })}
+                >
+                  Reset Filters
+                </Button>
+              </Col>
+            )}
+          </Row>
         </Container>
       </section>
 
@@ -491,7 +572,7 @@ const CareersPage = () => {
         {!submitSuccess && (
           <Modal.Footer>
             <Button variant="secondary" disabled={submitting} onClick={handleModalClose}> <i>Cancel</i></Button>
-            <Button variant="light" onClick={handleSubmit} icon={submitting ? <Spinner animation="border" size="sm" disabled={submitting || !!errorMessage}/> : <Icons name="rightArrow" />}> <i>{submitting ? 'Submitting...' : 'Submit Application'}</i></Button>
+            <Button variant="light" onClick={handleSubmit} icon={submitting ? <Spinner animation="border" size="sm" disabled={submitting || !!errorMessage} /> : <Icons name="rightArrow" />}> <i>{submitting ? 'Submitting...' : 'Submit Application'}</i></Button>
           </Modal.Footer>
         )}
       </Modal>
