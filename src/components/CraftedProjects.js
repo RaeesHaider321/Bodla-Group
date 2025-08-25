@@ -3,36 +3,36 @@ import "../styles/CraftedProjects.css";
 import { Card, Col, Row } from "react-bootstrap";
 import Button from './Button';
 import Icons from "../components/Icon";
-import gvr from '../images/craftedProject1.jpg'
+import AskariVilla from '../images/craftedProject1.jpg'
 import bHomes from '../images/craftedProject3.jpg'
 import bHub from '../images/craftedProject2.jpg'
 
 const projects = [
     {
-        image: gvr,
-        title: "Luxury Villa Construction",
+        image: AskariVilla,
+        title: "Askari Villa 3",
         text: "A beautifully crafted luxury villa with premium finishes and modern architecture.",
         date: "Aug 5, 2025",
         type: "Residential",
-        location: "Lahore, Pakistan",
+        location: "Multan, Pakistan",
         icon: "landProvider",
     },
     {
         image: bHomes,
-        title: "Luxury Villa Construction",
-        text: "A multi-story commercial plaza designed for business excellence.",
+        title: "Bodla Homes",
+        text: "A double storey luxury villa with premium finishes and modern architecture.",
         date: "Jul 20, 2025",
         type: "Commercial",
-        location: "Karachi, Pakistan",
+        location: "Multan, Pakistan",
         icon: "landProvider",
     },
     {
         image: bHub,
-        title: "Commercial Plaza",
+        title: "Business Hub",
         text: "A multi-story commercial plaza designed for business excellence.",
         date: "Jul 20, 2025",
         type: "Commercial",
-        location: "Karachi, Pakistan",
+        location: "Multan, Pakistan",
         icon: "landProvider",
     },
 ];
