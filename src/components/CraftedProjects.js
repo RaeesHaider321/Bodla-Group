@@ -58,11 +58,11 @@ const CraftedProjects = () => {
                                 <Card.Title>{project.title}C</Card.Title>
                                 <Card.Text>{project.text}</Card.Text>
                             </Card.Body>
-                            <Card.Body className="crafted-footer">
+                            <Card.Footer className="crafted-footer">
                                 <Card.Text className="footer-item"><Icons name={project.icon} className="footer-icon" />{project.date}</Card.Text>
                                 <Card.Text className="footer-item"><Icons name={project.icon} className="footer-icon" />{project.type}</Card.Text>
-                                <Card.Text className="footer-item"><Icons name={project.icon} className="footer-icon" />{project.location}</Card.Text>
-                            </Card.Body>
+                                {/* <Card.Text className="footer-item"><Icons name={project.icon} className="footer-icon" />{project.location}</Card.Text> */}
+                            </Card.Footer>
                         </Card>
 
                     </Col>
