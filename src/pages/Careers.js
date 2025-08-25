@@ -29,77 +29,58 @@ const CareersPage = () => {
 
   useEffect(() => {
     const mockJobs = [
-      // {
-      //   id: 1,
-      //   title: 'Frontend Developer (React)',
-      //   department: 'Engineering',
-      //   location: 'Remote',
-      //   type: 'Full-time',
-      //   description: 'We are looking for an experienced React developer to join our growing team.',
-      //   responsibilities: [
-      //     'Develop new user-facing features using React.js',
-      //     'Build reusable components and front-end libraries',
-      //     'Translate designs and wireframes into high-quality code',
-      //     'Optimize components for maximum performance',
-      //   ],
-      //   requirements: [
-      //     '3+ years of experience with React.js',
-      //     'Strong proficiency in JavaScript, including ES6+',
-      //     'Experience with Redux or similar state management',
-      //     'Familiarity with RESTful APIs',
-      //   ],
-      // }
-
-
       {
         "id": 1,
-        "title": "Sales Manager",
+        "title": "Sales Executive ",
         "department": "Sales",
         "location": "Onsite",
         "type": "Full-time",
-        "description": "We are seeking a dynamic and results-driven Sales Manager to lead our high-performing sales team. In this pivotal role, you will be responsible for developing strategic sales plans, driving revenue growth, and forging strong relationships with key clients and partners. If you are a proven leader with a track record of exceeding targets and inspiring teams, we encourage you to apply.",
+        "description": "We are hiring a Sales Executive to manage leads, pitch products/services, and build lasting client relationships. You will drive business growth, achieve sales targets, and serve as the face of the company with strong communication and negotiation skills.",
         "responsibilities": [
-          "Develop and implement comprehensive sales strategies to achieve and exceed revenue targets for projects, dealer networks, and direct clients.",
-          "Lead, mentor, and motivate a team of sales professionals, fostering a culture of high performance and continuous improvement.",
-          "Conduct in-depth market and competitor analysis to identify new opportunities and recommend data-driven solutions for growth.",
-          "Build and maintain strong, long-lasting relationships with key accounts and strategic partners.",
-          "Prepare and present accurate sales forecasts, pipeline reports, and performance metrics to senior management.",
-          "Oversee the entire sales cycle, from prospecting and negotiation to deal closure and account management."
+          "Manage and nurture leads to ensure timely conversion.",
+          "Strong sales pitches and presentations to potential clients.",
+          "Build and maintain effective Client Relationships for repeat business.",
+          "Communicate persuasively to influence client decisions.",
+          "Support sales targets by consistently achieving individual goals.",
         ],
         "requirements": [
-          "Bachelor's degree in Business Administration, Marketing, or a related field.",
-          "Minimum of 5+ years of proven sales experience, with a strong record of successfully closing major deals and exceeding quotas.",
-          "At least 2+ years of experience in a sales leadership or management role, demonstrating the ability to lead and develop a team.",
-          "Exceptional communication, negotiation, and interpersonal skills.",
-          "Strategic thinker with strong analytical abilities to interpret sales data and market trends.",
-          "Proficient in CRM software (e.g., Salesforce, HubSpot) and the Microsoft Office Suite."
+          "Proven experience as a Sales Executive, Sales Representative, or similar role",
+          "Strong communication, presentation, and negotiation skills",
+          "Ability to manage leads effectively and convert them into clients",
+          "Confidence in pitching products/services to diverse audiences",
+          "Strong interpersonal skills with a client-focused approach",
+          "Ability to build and maintain long-term professional relationships",
+          "Results-driven mindset with a track record of meeting or exceeding targets",
+          "Proficiency in MS Office, CRM tools, or other sales software (preferred)",
+          "Bachelor’s degree in Business Administration, Marketing, or a related field (preferred)",
         ],
 
       },
       {
         "id": 2,
-        "title": "Sales Executive",
+        "title": "Sales Manager ",
         "department": "Sales",
-        "location": "Onsite", // Can be changed to "Hybrid" or "Remote"
+        "location": "Onsite",
         "type": "Full-time",
-        "description": "Are you a hungry and results-oriented sales professional ready to take the next step in your career? We are looking for a dynamic Sales Executive to drive our growth by generating new business and nurturing key client relationships. You will be the face of our company for prospects and will play a critical role in expanding our market presence. If you thrive in a fast-paced environment and love the thrill of closing a deal, this is the role for you.",
+        "description": "We are hiring a Sales Manager to lead our team, drive revenue growth, and build client networks. You will develop strategies, mentor the team, and deliver results to keep the company competitive in the market.",
         "responsibilities": [
-          "Prospect, identify, and qualify new sales leads and opportunities through strategic outreach (cold calling, email campaigns, networking).",
-          "Manage the full sales cycle from initial contact and needs analysis to product demonstration, negotiation, and successful deal closure.",
-          "Build and maintain a robust pipeline of potential clients, ensuring accurate and timely updates in our CRM system.",
-          "Develop and deliver compelling, tailored pitches and presentations that clearly articulate our value proposition to diverse audiences.",
-          "Cultivate strong, long-term relationships with new and existing clients, acting as a trusted advisor to understand their evolving needs.",
-          "Collaborate closely with the marketing and customer success teams to ensure a seamless client journey from acquisition to onboarding.",
-          "Consistently meet and exceed quarterly sales targets and performance metrics."
+          "Lead the sales team by setting clear targets and ensuring revenue achievement.",
+          "	Develop and implement sales strategies for Projects, Dealers, and Corporate Clients.",
+          "	Analyze market trends and competitor activities to recommend business solutions.",
+          "	Mentor and train team members to enhance productivity and skills.",
+          "	Provide accurate sales forecasts, pipeline updates, and performance reports to senior management.",
         ],
         "requirements": [
-          "2-3 years of proven experience in a B2B sales or business development role, with a track record of meeting quotas.",
-          "Exceptional lead management skills, with the ability to prioritize and pursue the highest-value opportunities effectively.",
-          "Strong pitching and presentation skills, with the persuasive influence to overcome objections and win business.",
-          "Excellent verbal and written communication skills, with the ability to build instant rapport and credibility.",
-          "Self-motivated, resilient, and driven by achieving goals in a competitive environment.",
-          "Proficiency with CRM software (e.g., Salesforce, HubSpot) and the Microsoft Office/Google Workspace suites.",
-          "Bachelor’s degree in Business, Marketing, Communications, or a related field is preferred."
+          "Proven experience as a Sales Manager, Sales Team Lead, or in a similar leadership role",
+          "Strong understanding of sales principles, strategies, and processes",
+          "Ability to develop and implement effective sales plans to achieve revenue targets",
+          "Excellent leadership and team management skills with experience mentoring sales professionals",
+          "Strong analytical skills to monitor performance, analyze market trends, and present accurate forecasts",
+          "Exceptional communication, negotiation, and presentation abilities",
+          "Ability to build and expand client and dealer networks",
+          "Proficiency in CRM systems, MS Office, and sales reporting tools",
+          "Bachelor’s degree in Business Administration, Marketing, or a related field (Master’s preferred)",
+          "Results-oriented mindset with a proven track record of meeting or exceeding sales goals",
         ],
 
       },
@@ -107,28 +88,29 @@ const CareersPage = () => {
         "id": 3,
         "title": "Assistant Sales Manager",
         "department": "Sales",
-        "location": "Onsite", // Can be changed to "Hybrid"
+        "location": "Onsite",
         "type": "Full-time",
-        "description": "We are seeking a proactive and skilled Assistant Sales Manager to provide crucial support in driving our sales team's success. This role is designed for a top-performing sales professional ready to step into leadership. You will be instrumental in managing key client relationships, resolving complex challenges, and supporting the Sales Manager in coaching the team to exceed targets across our dealer, corporate, and project sales channels.",
+        "description": "We are hiring an Assistant Sales Manager to support sales targets and growth. You will coordinate with management, clients, and dealers, guide executives, and assist in deal closures while ensuring team performance and customer satisfaction.",
         "responsibilities": [
-          "Support the Sales Manager in achieving team sales targets through active coaching, mentorship, and guidance for junior team members.",
-          "Manage and nurture relationships with key accounts, dealers, and corporate clients, ensuring high levels of satisfaction and repeat business.",
-          "Serve as an expert point of contact for handling complex client queries and providing sophisticated solutions to meet their needs.",
-          "Demonstrate proven deal-closing ability by personally managing and securing high-value opportunities across all sales verticals.",
-          "Coordinate seamlessly between internal teams (marketing, operations) and external partners (dealers, distributors) to ensure smooth execution of sales strategies.",
-          "Assist in analyzing sales data, preparing performance reports, and forecasting for management review.",
-          "Help in developing and implementing training programs to enhance the product knowledge and sales techniques of the team."
+          "Assist the Sales Manager in achieving Team Sales Targets",
+          "Guide Sales Executives through monitoring and performance feedback",
+          "Manage client relationships and resolve complex queries",
+          "Coordinate effectively with Dealers, Corporate Clients, and Stakeholders",
+          "Support deal closures by providing strategic input and solutions",
+          "Ensure smooth sales operations through team collaboration",
         ],
         "requirements": [
-          "2-4 years of hands-on experience in a sales role, with a proven and documented track record of consistently closing deals and exceeding targets.",
-          "Experience in a senior sales or team lead capacity, demonstrating skills in mentoring and guiding others.",
-          "Exceptional client relationship management skills, with the ability to build trust and navigate complex negotiations.",
-          "Strong analytical and problem-solving skills to effectively handle complex customer queries and objections.",
-          "Superior coordination and communication skills, with experience managing multiple stakeholders (dealers, corporate clients, internal teams).",
-          "A self-starter with a strong sense of ownership and the ability to operate effectively with minimal supervision.",
-          "Bachelor’s degree in Business Administration, Sales, or a relevant field."
+          "Proven experience as a Sales Executive, Team Lead, or Assistant Sales Manager (preferred)",
+          "Strong understanding of sales operations, client relationship management, and deal processes",
+          "Ability to guide and motivate sales executives to achieve targets",
+          "Excellent communication, negotiation, and interpersonal skills",
+          "Strong organizational and coordination abilities to liaise with management, clients, and dealers",
+          "Problem-solving mindset with the ability to handle client queries effectively",
+          "Proficiency in CRM systems, MS Office, and reporting tools",
+          "Bachelor’s degree in Business Administration, Marketing, or a related field",
+          "Results-driven approach with a commitment to team success and customer satisfaction",
         ],
-        
+
       }
     ]
 

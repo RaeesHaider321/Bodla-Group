@@ -90,7 +90,7 @@ function Header() {
           </Nav>
           
           <Nav className="ms-lg-3"> 
-            <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Download</i></Button>
+            <Button variant="light" to="/Contact" icon={<Icons name="rightArrow" />}> <i>Contact Us</i></Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
