@@ -3,9 +3,9 @@ import "../styles/CraftedProjects.css";
 import { Card, Col, Row } from "react-bootstrap";
 import Button from './Button';
 import Icons from "../components/Icon";
-import gvr from '../images/bHomes.jpg'
-import bHomes from '../images/bHomes.jpg'
-import bHub from '../images/bHomes.jpg'
+import gvr from '../images/craftedProject1.jpg'
+import bHomes from '../images/craftedProject3.jpg'
+import bHub from '../images/craftedProject2.jpg'
 
 const projects = [
     {
@@ -19,7 +19,7 @@ const projects = [
     },
     {
         image: bHomes,
-        title: "Commercial Plaza",
+        title: "Luxury Villa Construction",
         text: "A multi-story commercial plaza designed for business excellence.",
         date: "Jul 20, 2025",
         type: "Commercial",
@@ -55,7 +55,7 @@ const CraftedProjects = () => {
                         <Card>
                             <Card.Body>
                                 <Card.Img className="mb-3" src={project.image} alt={project.title} />
-                                <Card.Title>{project.title}C</Card.Title>
+                                <Card.Title>{project.title}</Card.Title>
                                 <Card.Text>{project.text}</Card.Text>
                             </Card.Body>
                             <Card.Footer className="crafted-footer">
