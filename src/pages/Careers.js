@@ -1,10 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Col, Row, Card, Badge, Modal, Form, Spinner } from 'react-bootstrap';
 import axios from 'axios';
-import '../styles/Careers.css';
+import { Container, Col, Row, Card, Badge, Modal, Form, Spinner } from 'react-bootstrap';
 
-import Icons from "../components/Icon";
-import Button from '../components/Button';
+// The Icons and Button components are now defined directly in this file
+// to make it self-contained.
+const Icons = ({ name }) => {
+  if (name === 'rightArrow') {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+      </svg>
+    );
+  }
+  return null;
+};
+
+const Button = ({ children, onClick, variant, icon, disabled }) => (
+  <button className={`btn btn-${variant}`} onClick={onClick} disabled={disabled}>
+    {children} {icon}
+  </button>
+);
 
 const CareersPage = () => {
   const [jobs, setJobs] = useState([]);
@@ -55,7 +70,6 @@ const CareersPage = () => {
           "Proficiency in MS Office, CRM tools, or other sales software (preferred)",
           "Bachelor’s degree in Business Administration, Marketing, or a related field (preferred)",
         ],
-
       },
       {
         "id": 2,
@@ -66,10 +80,10 @@ const CareersPage = () => {
         "description": "We are hiring a Sales Manager to lead our team, drive revenue growth, and build client networks. You will develop strategies, mentor the team, and deliver results to keep the company competitive in the market.",
         "responsibilities": [
           "Lead the sales team by setting clear targets and ensuring revenue achievement.",
-          "	Develop and implement sales strategies for Projects, Dealers, and Corporate Clients.",
-          "	Analyze market trends and competitor activities to recommend business solutions.",
-          "	Mentor and train team members to enhance productivity and skills.",
-          "	Provide accurate sales forecasts, pipeline updates, and performance reports to senior management.",
+          " Develop and implement sales strategies for Projects, Dealers, and Corporate Clients.",
+          " Analyze market trends and competitor activities to recommend business solutions.",
+          " Mentor and train team members to enhance productivity and skills.",
+          " Provide accurate sales forecasts, pipeline updates, and performance reports to senior management.",
         ],
         "requirements": [
           "Proven experience as a Sales Manager, Sales Team Lead, or in a similar leadership role",
@@ -83,7 +97,6 @@ const CareersPage = () => {
           "Bachelor’s degree in Business Administration, Marketing, or a related field (Master’s preferred)",
           "Results-oriented mindset with a proven track record of meeting or exceeding sales goals",
         ],
-
       },
       {
         "id": 3,
@@ -111,9 +124,8 @@ const CareersPage = () => {
           "Bachelor’s degree in Business Administration, Marketing, or a related field",
           "Results-driven approach with a commitment to team success and customer satisfaction",
         ],
-
       }
-    ]
+    ];
 
     setJobs(mockJobs);
     const uniqueDepts = [...new Set(mockJobs.map(job => job.department))];
@@ -153,11 +165,13 @@ const CareersPage = () => {
     const file = e.target.files[0];
     if (file) {
       const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      const maxFileSize = 5 * 1024 * 1024; // 5MB
+      
       if (!allowedTypes.includes(file.type)) {
         setErrorMessage('Please upload a PDF, DOC, or DOCX file.');
         return;
       }
-      if (file.size > 5 * 1024 * 1024) {
+      if (file.size > maxFileSize) {
         setErrorMessage('File size exceeds 5MB limit.');
         return;
       }
@@ -167,11 +181,6 @@ const CareersPage = () => {
         ...prev,
         resume: file,
       }));
-      console.log('Selected file:', {
-        name: file.name,
-        type: file.type,
-        size: file.size,
-      });
     }
   };
 
@@ -194,32 +203,29 @@ const CareersPage = () => {
     formPayload.append('message', formData.message || 'Not provided');
     formPayload.append('_subject', `Job Application: ${selectedJob.title}`);
     formPayload.append('_cc', 'raees.haider@bodlabuilders.com.pk');
+    
     if (formData.resume) {
-      const uniqueFileName = `${Date.now()}_${formData.resume.name}`;
-      const uniqueFile = new File([formData.resume], uniqueFileName, { type: formData.resume.type });
-      formPayload.append('resume', uniqueFile);
-      console.log('Appended resume with unique name:', uniqueFileName);
-      for (let [key, value] of formPayload.entries()) {
-        console.log(`${key}:`, value instanceof File ? value.name : value);
-      }
+      // The name of the field is 'attachment' for Formsubmit, which is why the previous code worked.
+      // Changing the file name to something unique is a good practice but not required for Formsubmit.
+      formPayload.append('attachment', formData.resume, formData.resume.name);
     } else {
       console.warn('No resume file found in formData');
     }
-
+    
     try {
       const response = await axios.post(
-        'https://formsubmit.co/ajax/career@bodlagroup.com', // For testing, try 'https://formsubmit.co/career@bodlagroup.com' if AJAX endpoint fails
+        'https://formsubmit.co/ajax/raees.haider@bodlabuilders.com.pk',
         formPayload,
         {
+          // Axios automatically sets 'Content-Type' to 'multipart/form-data' when using FormData,
+          // so this header is technically redundant but doesn't cause issues.
           headers: {
             'Accept': 'application/json',
-            'Content-Type': 'multipart/form-data',
           },
         }
       );
 
       if (response.data.success) {
-        console.log('Form submission response:', response.data);
         setSubmitSuccess(true);
         setFormData({
           name: '',
@@ -242,7 +248,7 @@ const CareersPage = () => {
       let errorMsg = 'Failed to submit application. Please try again or email your resume directly to career@bodlagroup.com.';
       if (error.response) {
         if (error.response.status === 404) {
-          errorMsg = 'Form not found. Please ensure the Formsubmit endpoint is activated for career@bodlagroup.com.';
+          errorMsg = 'Form not found. Please ensure the Formsubmit endpoint is activated for the receiver email address.';
         } else if (error.response.status === 400) {
           errorMsg = 'Invalid submission data. Please check your inputs and try again.';
         } else if (error.response.status === 413) {
@@ -306,6 +312,69 @@ const CareersPage = () => {
 
   return (
     <Container fluid className="careers-page px-0">
+      {/* Styles are included here to make the component self-contained */}
+      <style>
+        {`
+        .careers-page .careers-hero {
+          background-color: #000;
+          background-image: url('https://placehold.co/1920x400/000/fff?text=Join+Our+Team');
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          padding: 8rem 0;
+          text-align: center;
+        }
+        .careers-page .careers-hero h1 {
+          font-weight: bold;
+          font-size: 3rem;
+          margin-bottom: 0.5rem;
+        }
+        .careers-page .careers-hero p {
+          font-size: 1.25rem;
+          opacity: 0.8;
+        }
+        .careers-page .job-openings-section h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #333;
+        }
+        .careers-page .benefits-section {
+          background-color: #f8f9fa;
+        }
+        .careers-page .benefits-section h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #333;
+        }
+        .careers-page .benefits-section .benefit-icon {
+          font-size: 3rem;
+        }
+        .careers-page .card {
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        .careers-page .card:hover {
+          transform: translateY(-5px);
+        }
+        .careers-page .card .badge {
+          font-size: 0.8em;
+          font-weight: 600;
+        }
+        .careers-page .modal-content {
+          border-radius: 15px;
+        }
+        .careers-page .custom-scroll-modal .modal-body {
+          max-height: 70vh;
+          overflow-y: auto;
+        }
+        .careers-page .custom-scroll-modal .modal-footer {
+          border-top: none;
+        }
+        `}
+      </style>
+
       <section className="careers-hero py-5 text-center text-white">
         <Container>
           <h1 className="display-4 fw-bold">Build Your Career With Us</h1>
