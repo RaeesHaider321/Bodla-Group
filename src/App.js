@@ -22,6 +22,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AreaUnitConverter from "./pages/AreaUnitConverter";
 import DHAMaps from "./pages/DhaMaps";
 import Careers from './pages/Careers';
+// import Careers from './pages/CareersPage';
 import MediaCenter from './pages/MediaCenter';
 
 

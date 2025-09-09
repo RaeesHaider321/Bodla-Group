@@ -26,11 +26,11 @@ const KANAL_TO_SQFT = MARLA_TO_SQFT * 20;
 
 const RATES = {
     "grey structure": {
-        "Basic": { "with material": 2500, "without material": 1800 },
+        "Basic": { "with material": 2600, "without material": 1800 },
         "Standard": { "with material": 3000, "without material": 2200 },
         "Premium": { "with material": 4000, "without material": 3000 }
     },
-    "furnished": {
+    "finished": {
         "Basic": { "with material": 4000, "without material": 3000 },
         "Standard": { "with material": 5200, "without material": 3800 },
         "Premium": { "with material": 6500, "without material": 5000 }
@@ -94,12 +94,12 @@ const POPULAR_CALCULATIONS = [
         storey: "Double",
     },
     {
-        label: "10 Marla Furnished",
+        label: "10 Marla finished",
         areaSize: 10,
         areaUnit: "marla",
         constructionQuality: "Standard",
         materialType: "Finishing Only",
-        constructionType: "furnished",
+        constructionType: "finished",
         constructionMode: "with material",
         numFloors: 1,
         storey: "Double",
@@ -309,7 +309,7 @@ export default function ConstructionCostCalculator() {
         if (materialType === "Full Turnkey") {
             rateType = "full turnkey";
         } else if (materialType === "Finishing Only") {
-            rateType = "furnished";
+            rateType = "finished";
         }
 
         const baseRate = RATES[rateType]?.[constructionQuality]?.[constructionMode];
@@ -452,9 +452,9 @@ export default function ConstructionCostCalculator() {
                                                         <Form.Label>City</Form.Label>
                                                         <Form.Select value={city} onChange={(e) => setCity(e.target.value)}>
                                                             <option>Multan</option>
-                                                            <option>Lahore</option>
+                                                            {/* <option>Lahore</option>
                                                             <option>Islamabad</option>
-                                                            <option>Karachi</option>
+                                                            <option>Karachi</option> */}
                                                         </Form.Select>
                                                     </Form.Group>
 
@@ -463,8 +463,8 @@ export default function ConstructionCostCalculator() {
                                                         <Form.Select value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
                                                             <option>Residential</option>
                                                             <option>Commercial</option>
-                                                            <option>Duplex</option>
-                                                            <option>Apartment</option>
+                                                            {/* <option>Duplex</option>
+                                                            <option>Apartment</option> */}
                                                         </Form.Select>
                                                     </Form.Group>
 
@@ -548,7 +548,7 @@ export default function ConstructionCostCalculator() {
                                                             onChange={(e) => setConstructionType(e.target.value)}
                                                         >
                                                             <option value="grey structure">Grey structure</option>
-                                                            <option value="furnished">Furnished</option>
+                                                            <option value="finished">Finished</option>
                                                         </Form.Select>
                                                     </Form.Group>
 
@@ -712,9 +712,9 @@ export default function ConstructionCostCalculator() {
                                         <Form.Label>City</Form.Label>
                                         <Form.Select value={city} onChange={(e) => setCity(e.target.value)}>
                                             <option>Multan</option>
-                                            <option>Lahore</option>
+                                            {/* <option>Lahore</option>
                                             <option>Islamabad</option>
-                                            <option>Karachi</option>
+                                            <option>Karachi</option> */}
                                         </Form.Select>
                                     </Form.Group></Col>
                                 <Col sm={12} md={3}>{/* Property Type */}
@@ -723,8 +723,8 @@ export default function ConstructionCostCalculator() {
                                         <Form.Select value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
                                             <option>Residential</option>
                                             <option>Commercial</option>
-                                            <option>Duplex</option>
-                                            <option>Apartment</option>
+                                            {/* <option>Duplex</option>
+                                            <option>Apartment</option> */}
                                         </Form.Select>
                                     </Form.Group></Col>
                                 <Col sm={12} md={3}>{/* Area size */}
@@ -768,7 +768,7 @@ export default function ConstructionCostCalculator() {
                                     <Row>
                                         {/* Covered Area */}
                                         <Col sm={12} md={3}><Form.Group className="mb-3">
-                                            <Form.Label>Covered Area (same unit as Area size)</Form.Label>
+                                            <Form.Label>Covered Area <small>(same unit as Area size)</small></Form.Label>
                                             <Form.Control
                                                 type="number"
                                                 min="0"
@@ -807,7 +807,7 @@ export default function ConstructionCostCalculator() {
                                                 <Form.Label>Construction type</Form.Label>
                                                 <Form.Select value={constructionType} onChange={(e) => setConstructionType(e.target.value)}>
                                                     <option value="grey structure">Grey structure</option>
-                                                    <option value="furnished">Furnished</option>
+                                                    <option value="finished">Finished</option>
                                                 </Form.Select>
                                             </Form.Group></Col>
 
